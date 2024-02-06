@@ -8,7 +8,7 @@
 ;; ** distorted
 
 (defparameter *distorted* (make-stored-file-list 'distorted nil))
-(defparameter *distorted-txt* (format nil "~a~a" *ens-src-dir* "distorted.txt"))
+(defparameter *distorted-txt* (format nil "~a~a" +ens-src-dir+ "distorted.txt"))
 (unless (probe-file *distorted-txt*) (setf *re-analyse-soundfiles* t))
 (when *re-analyse-soundfiles*
   (folder-to-stored-file-list
@@ -34,7 +34,7 @@
 
 ;; ** noise
 (defparameter *noise* (make-stored-file-list 'noise nil))
-(defparameter *noise-txt* (format nil "~a~a" *ens-src-dir* "noise.txt"))
+(defparameter *noise-txt* (format nil "~a~a" +ens-src-dir+ "noise.txt"))
 (unless (probe-file *noise-txt*) (setf *re-analyse-soundfiles* t))
 (when *re-analyse-soundfiles*
   (folder-to-stored-file-list
@@ -59,7 +59,7 @@
 
 ;; ** percussive
 (defparameter *percussive* (make-stored-file-list 'percussive nil))
-(defparameter *percussive-txt* (format nil "~a~a" *ens-src-dir* "percussive.txt"))
+(defparameter *percussive-txt* (format nil "~a~a" +ens-src-dir+ "percussive.txt"))
 (unless (probe-file *percussive-txt*) (setf *re-analyse-soundfiles* t))
 (when *re-analyse-soundfiles*
   (folder-to-stored-file-list

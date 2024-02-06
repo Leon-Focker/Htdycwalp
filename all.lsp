@@ -11,7 +11,7 @@
 
 (in-package :ly)
 
-(defparameter *ens-src-dir*
+(defconstant +ens-src-dir+
   (let ((load-name (or *load-truename* *compile-file-truename*)))
     (make-pathname :directory (pathname-directory load-name)
 		   :device (pathname-device load-name))))
@@ -34,9 +34,9 @@
 
 ;; ** load
 ;; load files:
-(dolist (file '("soundfiles.lsp"
+#+nil(dolist (file '("soundfiles.lsp"
 		"tape-score.lsp"))
-  (load (probe-file (format nil "~a~a" *ens-src-dir* file))))
+  (load (probe-file (format nil "~a~a" +ens-src-dir+ file))))
 
 ;; YAY :)
 (format t "~&done loading!")

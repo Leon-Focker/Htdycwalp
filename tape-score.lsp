@@ -64,7 +64,7 @@
 
 ;; without indisp amps:
 (with-sound (:header-type clm::mus-riff :samplingq-rate 48000
-	     :output (format nil "~a~a" *ens-src-dir* "indisp_test.wav")
+	     :output (format nil "~a~a" +ens-src-dir+ "indisp_test.wav")
 	     :channels 2 :play nil :scaled-to 0.98
 	     :force-recomputation nil)
   (let* ((sound-list (reverse (data *noise*))))
@@ -80,7 +80,7 @@
 
 ;; with indisp-amps:
 (with-sound (:header-type clm::mus-riff :samplingq-rate 48000
-	     :output (format nil "~a~a" *ens-src-dir* "indisp_test!2.wav")
+	     :output (format nil "~a~a" +ens-src-dir+ "indisp_test!2.wav")
 	     :channels 2 :play nil :scaled-to 0.98
 	     :force-recomputation nil)
   (let* ((sound-list (reverse (data *noise*))))
@@ -100,7 +100,7 @@
 
 ;; pulse, no rhythm
 (with-sound (:header-type clm::mus-riff :samplingq-rate 48000
-	     :output (format nil "~a~a" *ens-src-dir* "pulse_train.wav")
+	     :output (format nil "~a~a" +ens-src-dir+ "pulse_train.wav")
 	     :channels 2 :play nil :scaled-to 0.98
 	     :force-recomputation nil)
   (let* ((sound-list (reverse (data *noise*))))
@@ -120,7 +120,7 @@
 	   (degree 0 90))))
 
 (with-sound (:header-type clm::mus-riff :samplingq-rate 48000
-	     :output (format nil "~a~a" *ens-src-dir* "pulse_train_acc.wav")
+	     :output (format nil "~a~a" +ens-src-dir+ "pulse_train_acc.wav")
 	     :channels 2 :play nil :scaled-to 0.98
 	     :force-recomputation nil)
   (let* ((sound-list (reverse (data *noise*))))
@@ -140,7 +140,7 @@
 	   (degree 0 90))))
 
 (with-sound (:header-type clm::mus-riff :samplingq-rate 48000
-	     :output (format nil "~a~a" *ens-src-dir* "pulse_train_mono.wav")
+	     :output (format nil "~a~a" +ens-src-dir+ "pulse_train_mono.wav")
 	     :channels 2 :play nil :scaled-to 0.98
 	     :force-recomputation nil)
   (let* ((sound-list (reverse (data *noise*))))
@@ -160,7 +160,7 @@
 	   (degree 45))))
 
 (with-sound (:header-type clm::mus-riff :samplingq-rate 48000
-	     :output (format nil "~a~a" *ens-src-dir* "pulse_train_mono2.wav")
+	     :output (format nil "~a~a" +ens-src-dir+ "pulse_train_mono2.wav")
 	     :channels 2 :play nil :scaled-to 0.98
 	     :force-recomputation nil)
   (let* ((sound-list (reverse (data *noise*))))
@@ -180,4 +180,3 @@
 	   (degree 45))))
 
 ;; EOF tape-score.lsp
-
