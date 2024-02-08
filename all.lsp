@@ -34,7 +34,8 @@
 
 ;; ** load
 ;; load files:
-#+nil(dolist (file '("soundfiles.lsp"
+(dolist (file '("helpers.lsp"
+		"soundfiles.lsp"
 		"tape-score.lsp"))
   (load (probe-file (format nil "~a~a" +ens-src-dir+ file))))
 
