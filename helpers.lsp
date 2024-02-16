@@ -3,7 +3,7 @@
 (in-package :ly)
 
 ;; *** nth-mod
-(defun nth-mod (rthm-ls i)
+(defun nth-mod (i rthm-ls)
   (nth (mod i (length rthm-ls)) rthm-ls))
 
 ;; *** sections
@@ -76,5 +76,34 @@
 	      :channels 2 :play nil :scaled-to 0.98
 	      :force-recomputation nil)
    ,@body))
+
+;; ** notation
+
+#|
+(defun notate (lst-of-harmonics file &optional (instrument 'viola))
+  (unless (listp lst-of-harmonics) (error "not a list: ~a" lst-of-harmonics))
+  (unless (listp (car lst-of-harmonics))
+    (setf lst-of-harmonics (list lst-of-harmonics)))
+  
+  (let* ((events (loop for i in (flatten lst-of-harmonics)
+			      collect (parse-to-event i)))
+	 (letters (loop for i in lst-of-harmonics
+			with n = 2
+			collect n
+			do (setf n (+ n (length i)))))
+	 (len (length events))
+	 (sc (make-slippery-chicken
+              '+harmonics-to-notation+
+              :ensemble `(((ins (,instrument :midi-channel 1))))
+              :set-palette '((1 ((c4))))
+              :set-map (loop for i from 1 to len collect `(,i (1)))
+              :rthm-seq-palette '((1 ((((1 4) q)))))
+	      :rehearsal-letters letters
+              :rthm-seq-map (loop for i from 1 to len collect `(,i ((ins (1))))))))
+    (map-over-events sc 0 nil 'ins
+		     #'(lambda (e) (setf (pitch-or-chord e)
+				    (pitch-or-chord (pop events)))))
+    (write-xml sc :file file)))
+|#
 
 ;; EOF helpers.lsp
