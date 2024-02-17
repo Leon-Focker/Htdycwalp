@@ -22,7 +22,11 @@
    (number :accessor number :type integer :initarg :number :initform 0)
    ;; ratios by which each minute will be divided
    ;; the duration for each division is = (* (/ 60 sum-of-ratios) ratio)
-   (division-ratios :accessor div-ratios :initarg :div-ratios :initform '(1))))
+   (division-ratios :accessor div-ratios :initarg :div-ratios :initform '(1))
+   ;; every division of the minute will have a state, which is a number
+   ;; depending on the type of layer this number can be something like static,
+   ;; isorhythmic etc.
+   (states :accessor states :initarg :states :initform '(0))))
 
 (defclass tape-layer (minute-layer)
   ())
@@ -55,28 +59,42 @@
   (loop for layer in (layers mn)
 	collect (get-section-durations layer)))
 
+(defmethod interpret-layer ((tl tape-layer)
+			    &rest keyargs &key &allow-other-keys)
+  )
+
+;; (defun test (nr)
+;;   (lambda (&rest args) (unless (= nr (length args)) (warn "wrong nummber of arguments: ~a" (length args)))))
+
+
+(defmethod interpret-layer ((il instrument-layer)
+			    &rest keyargs &key &allow-other-keys)
+  )
+
 ;; ** make
 
 (defun make-minute (id start-time &optional (layers '()))
   (make-instance 'minute :id id :start-time start-time :layers layers))
 
 (defun make-tape-layer (id-uniquifier number start-time
-			&optional (div-ratios '(1)))
+			&optional (div-ratios '(1)) (states '(0)))
   (unless (integerp number) (error "number must be an integer, not ~a" number))
   (make-instance 'tape-layer
 		 :id (intern (format nil "tape-layer-~a" id-uniquifier) :ly)
 		 :number number
 		 :start-time start-time
-		 :div-ratios div-ratios))
+		 :div-ratios div-ratios
+		 :states states))
 
 (defun make-instrument-layer (id-uniquifier number start-time
-			      &optional (div-ratios '(1)))
+			      &optional (div-ratios '(1)) (states '(0)))
   (unless (integerp number) (error "number must be an integer, not ~a" number))
   (make-instance 'instrument-layer
 		 :id (intern (format nil "instr-layer-~a" id-uniquifier) :ly)
 		 :number number
 		 :start-time start-time
-		 :div-ratios div-ratios))
+		 :div-ratios div-ratios
+		 :states states))
 
 ;; ** operations on lists of minutes
 

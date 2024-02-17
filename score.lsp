@@ -2,14 +2,16 @@
 
 (in-package :ly)
 
-#|
-(let ((happenings '()))
-  ;; collect the start of each 1 minute section:
-  (loop for i from 0 to 11 do (push (* 60 i) happenings))
-  
-  (sort happenings #'<))
+;; ** divide (generate divisions and states)
 
-|#
+;; update start-times of all layers just to be sure:
+(loop for i in (access-minutes) do (update-layer-start-times i))
+
+;; ** ...and conquer (handle the minute objects)
+
+;; interpret layers returns a function that can then be filled with arguments
+;;  to form a sections like function.
+
 
 ;; EOF score.lsp
 
