@@ -100,7 +100,12 @@
 
 ;; ** visualize
 
-
+(defun visualize-minutes (list-of-minutes list-of-layer-numbers
+			  path-and-filename
+			  &optional (size-factor 1))
+  (format t "~&visualizing minutes...")
+  (imago::show-minutes list-of-minutes list-of-layer-numbers path-and-filename
+		       size-factor))
 
 ;; ** minutes
 

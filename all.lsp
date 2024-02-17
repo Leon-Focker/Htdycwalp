@@ -36,6 +36,9 @@
 ;; load files:
 (dolist (file '("helpers.lsp"
 		"soundfiles.lsp"
+		"show-minutes.lsp"
+		"minutes.lsp"
+		;; score.lsp
 		;;"tape-score.lsp"
 		))
   (load (probe-file (format nil "~a~a" +ens-src-dir+ file))))
