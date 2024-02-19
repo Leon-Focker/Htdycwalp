@@ -6,6 +6,28 @@
 (defun nth-mod (i rthm-ls)
   (nth (mod i (length rthm-ls)) rthm-ls))
 
+;; *** split-list
+;;; get a list and a list of numbers which stand for the number of elements in
+;;; each sublist of the result. (very lazy implementation)
+(defun split-list (ls div-cnt)
+  (loop while ls for nr in div-cnt
+	collect (loop repeat nr collect (pop ls))))
+
+;; *** distribute-divs
+;;; get list of division-ratios and numbers-of-division and distribute the
+;;; division-ratios to the layers of list-of-minutes with the specified number.
+(defun distribute-divs (division-ratios number-of-divisions list-of-minutes
+			layer-number)
+  (let ((layers (get-related-minute-layers list-of-minutes layer-number)))
+    (unless (= (length layers) (length number-of-divisions))
+      (error "unequal amount of relevant layers and elements in ~
+            number-of-division: ~a ~a"
+	     (length layers) (length number-of-divisions)))
+    (loop for divs in (split-list division-ratios number-of-divisions)
+	  and layer in layers
+	  do (setf (div-ratios layer) divs)))
+  t)
+
 ;; *** sections
 ;;; get pairs of times and values, returns a function that receives a time
 ;;; argument. That function will return the value which time is smaller than
