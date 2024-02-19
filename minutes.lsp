@@ -59,6 +59,7 @@
   (loop for layer in (layers mn)
 	collect (get-section-durations layer)))
 
+;; 
 (defmethod interpret-layer ((tl tape-layer)
 			    &rest keyargs &key &allow-other-keys)
   )
@@ -147,5 +148,10 @@
     minutes)
   (defun (setf access-minutes) (new-value)
     (setf minutes new-value)))
+
+;; add undivided layers for reference when visualizing, number 111
+(loop for minute in (access-minutes) and i from 0
+      do (setf (layers minute)
+	       (append (layers minute) (make-tape-layer 111 111 (* i 60)))))
 
 ;; EOF mintues.lsp
