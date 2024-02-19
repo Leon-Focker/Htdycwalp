@@ -2,6 +2,51 @@
 
 (in-package :ly)
 
+;; abandoned code:
+
+;;; ** using fractal structures to divide minutes
+
+(defparameter *test*
+  (make-fractal-structure '(1 1 2 3 4 5 6 7 1 5 8) ;; 11 min. with different seeds
+			  '((1 (2))
+			    (2 (3))
+			    (3 (5 9))
+			    (4 (5 6))
+			    (5 (9 7))
+			    (6 (7 9))
+			    (7 (9 8))
+			    (8 (9 1))
+			    (9 5))
+			  '((1 1)
+			    (2 1)
+			    (3 1)
+			    (4 1)
+			    (5 1)
+			    (6 1)
+			    (7 1)
+			    (8 1)
+			    (9 2))
+			  :id '11minutes
+			  :duration (* 11 60) ;; 11 minutes
+			  :type 'compartmentalise
+			  :smallest 5))
+
+;; *** split-into-minutes
+;;; get a list of durations and split it in minutes
+;; (defun split-into-minutes (list-of-durations)
+;;   (loop while list-of-durations 
+;; 	collect (loop with sum = 0 for i in list-of-durations
+;; 		      while (and (< sum 60) list-of-durations)
+;; 		      for val = (pop list-of-durations)
+;; 		      collect val
+;; 		      do (incf sum val))))
+
+;;; set layer 0 to the divisions of *test*
+(loop for divs in (split-into-minutes (first (data *Test*)))
+      and minute in (access-minutes)
+      do (setf (div-ratios (first (layers minute)))
+	       divs))
+
 ;; ** trying to use indispensability:
 
 ;; make a structure:
