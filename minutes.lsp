@@ -32,7 +32,8 @@
   ())
     
 (defclass instrument-layer (minute-layer)
-  ())
+  ((instruments :accessor instruments :type list :initarg :instruments
+		:initform '())))
 
 ;; ** print objects
 
@@ -130,28 +131,40 @@
 
 ;;; Michael Edwards challenged me to not use a single global variable, so I 
 ;;; guess I'm going to use closures:
-(let ((minutes '()))
-  ;; minutes holds all 11 minute objects, which are filled with tape and
-  ;; instrument-layers
+;;; minutes holds all 11 minute objects, which are filled with tape and
+;;; instrument-layers.
+;;; number-of-divisions stores the total number of parts in each layer.
+;;; lnrs is a plist with the ids/numbers for the layers. First is tape layer,
+;;; the rest are instrument-layers.
+(let ((minutes '())
+      (number-of-divisions '())
+      (l-nrs '(0 1 2 3)))
+  ;; init minutes:
   (setf minutes
 	(loop for i from 0 to 10
 	      for time = (* i 60)
-	      for tape-layer = (make-tape-layer 0 0 time)
+	      for tape-layer = (make-tape-layer (car l-nrs) (car l-nrs) time)
 	      for instrument-layers = '()
 	      do (setf instrument-layers
-		       (loop for k from 1 to 3 ; 1-3 to discern them from tape
+		       (loop for k in (cdr l-nrs) ; net numbers for layers (1-3)
 			     collect (make-instrument-layer k k time)))
 	      collect (make-minute i time
 				   (cons tape-layer instrument-layers))))
-  ;; closure to access minutes everywhere:
-  (defun access-minutes ()
-    minutes)
-  (defun (setf access-minutes) (new-value)
-    (setf minutes new-value)))
+  ;; init number-of-divisions:
+  (loop for nr in (reverse l-nrs)
+	for layers = (get-related-minute-layers minutes nr #'error)
+	for len = (length (loop for i in layers append (div-ratios i)))
+	do (push-key-value nr len number-of-divisions))
+  ;; closures to access minutes and co everywhere:
+  (defun access-minutes () minutes)
+  (defun (setf access-minutes) (new-value) (setf minutes new-value))
+  (defun minutes-nod () number-of-divisions)
+  (defun (setf minutes-nod) (new-value) (setf number-of-divisions new-value))
+  (defun minutes-layer-numbers () l-nrs))
 
 ;; add undivided layers for reference when visualizing, number 111
 (loop for minute in (access-minutes) and i from 0
       do (setf (layers minute)
-	       (append (layers minute) (make-tape-layer 111 111 (* i 60)))))
+	       (append (layers minute) `(,(make-tape-layer 111 111 (* i 60))))))
 
 ;; EOF mintues.lsp

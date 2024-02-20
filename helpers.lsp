@@ -13,20 +13,35 @@
   (loop while ls for nr in div-cnt
 	collect (loop repeat nr collect (pop ls))))
 
+;; *** distribute-to-minute-layers
+;;; get list of something and distribute its contents according to a second list
+;;; each number in the second list specifies how many elements to give to the
+;;; according layer. slot-name specifies the slot in which to put the lists.
+(defun distribute-to-minute-layers (content distribution list-of-minutes
+				    layer-number slot-name)
+  (let ((layers (get-related-minute-layers list-of-minutes layer-number)))
+    (unless (= (length layers) (length distribution))
+      (error "unqueal amount of relevant layers and elements in distribution: ~
+              ~a ~a" (length layers) (length distribution)))
+    (loop for elements in (split-list content distribution)
+	  and layer in layers
+	  do (setf (slot-value layer slot-name)  elements)))
+  t)
+
 ;; *** distribute-divs
 ;;; get list of division-ratios and numbers-of-division and distribute the
 ;;; division-ratios to the layers of list-of-minutes with the specified number.
 (defun distribute-divs (division-ratios number-of-divisions list-of-minutes
 			layer-number)
-  (let ((layers (get-related-minute-layers list-of-minutes layer-number)))
-    (unless (= (length layers) (length number-of-divisions))
-      (error "unequal amount of relevant layers and elements in ~
-            number-of-division: ~a ~a"
-	     (length layers) (length number-of-divisions)))
-    (loop for divs in (split-list division-ratios number-of-divisions)
-	  and layer in layers
-	  do (setf (div-ratios layer) divs)))
-  t)
+  (distribute-to-minute-layers division-ratios number-of-divisions
+			       list-of-minutes layer-number 'division-ratios))
+
+;; *** distribute-states
+;;; same as distribute-divs but for states
+(defun distribute-states (list-of-states distribution list-of-minutes
+			  layer-number)
+  (distribute-to-minute-layers list-of-states distribution
+			       list-of-minutes layer-number 'states))
 
 ;; *** sections
 ;;; get pairs of times and values, returns a function that receives a time
