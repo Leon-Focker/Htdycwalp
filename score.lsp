@@ -24,7 +24,7 @@
 	do (distribute-divs divs nr-of-divs (access-minutes) i)))
 
 ;; VISUALIZE MINUTES
-(visualize-minutes (access-minutes) '(0 1 2 111) "/E/code/ensemble/test_wta" 1/4)
+(visualize-minutes (access-minutes) '(0 1 2 3) "/E/code/ensemble/test_wts" 1/4 nil)
 
 ;; update start-times of all layers just to be sure:
 (loop for i in (access-minutes) do (update-layer-start-times i))
