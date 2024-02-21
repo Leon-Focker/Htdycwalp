@@ -33,10 +33,6 @@
 	 (color 0)
 	 (element 0)
 	 (name (format nil "~a~a" path-and-filename ".png")))
-    (print durations)
-    (print states)
-    (print nr-of-states)
-    
     (loop for y from 0 to (1- height) do
 	 (setf n (floor y h))
 	 (setf sublist (nth n durations))
