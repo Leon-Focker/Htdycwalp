@@ -79,6 +79,16 @@
 (defun section-val (time &rest times-and-values)
   (funcall (apply #'sections times-and-values) time))
 
+;; *** pad-lists
+;;; if one list is shorter than the other, loop it until is has the same length
+(defun pad-lists (ls1 ls2)
+  (if (> (length ls1) (length ls2))
+      (setf ls2 (loop for i from 0 below (length ls1)
+		      collect (nth-mod i ls2)))
+      (setf ls1 (loop for i from 0 below (length ls2)
+		      collect (nth-mod i ls1))))
+  (values ls1 ls2))
+
 ;; *** env-fun1
 (defun env-fun1 (breakpoint &optional (exponent 0.3))
   (let ((bp (max 0 (min 100 (round breakpoint)))))
@@ -123,31 +133,66 @@
 
 ;; ** notation
 
-#|
-(defun notate (lst-of-harmonics file &optional (instrument 'viola))
-  (unless (listp lst-of-harmonics) (error "not a list: ~a" lst-of-harmonics))
-  (unless (listp (car lst-of-harmonics))
-    (setf lst-of-harmonics (list lst-of-harmonics)))
-  
-  (let* ((events (loop for i in (flatten lst-of-harmonics)
-			      collect (parse-to-event i)))
-	 (letters (loop for i in lst-of-harmonics
-			with n = 2
-			collect n
-			do (setf n (+ n (length i)))))
-	 (len (length events))
-	 (sc (make-slippery-chicken
-              '+harmonics-to-notation+
-              :ensemble `(((ins (,instrument :midi-channel 1))))
-              :set-palette '((1 ((c4))))
-              :set-map (loop for i from 1 to len collect `(,i (1)))
-              :rthm-seq-palette '((1 ((((1 4) q)))))
-	      :rehearsal-letters letters
-              :rthm-seq-map (loop for i from 1 to len collect `(,i ((ins (1))))))))
-    (map-over-events sc 0 nil 'ins
-		     #'(lambda (e) (setf (pitch-or-chord e)
-				    (pitch-or-chord (pop events)))))
+;;; TODO marks (HOW?), composer, title etc... as keys
+;;; TODO if durations don't fill time-sig perfectly, fill with rests.
+;;;
+;;; lists should be a list of lists. These sublists should have this format:
+;;; '(player instrument (list-of-durations) (list-of-pitches))
+;;; file should be the path to and the filename for the resulting .xml file 
+(defun lists-to-xml (lists file &optional (time-sig '(4 4)) (tempo 60))
+  (unless (and (listp lists) (loop for ls in lists always (listp ls)))
+    (error "lists in lists-to-xml seems to be malformed"))
+  (let* (sc)
+    (loop for i in lists
+	  for events = (durations-and-pitches-to-events
+			(third i) (fourth i) time-sig tempo)
+	  for bars = (loop while events
+			   for bar = (make-rthm-seq-bar `(,time-sig))
+			   for ate = (fill-with-rhythms bar events)
+			   do (setf events (when ate (nthcdr ate events)))
+			   collect bar)
+	  do (setf sc (bars-to-sc bars :sc sc :player (first i)
+				       :instrument (second i) :tempo tempo)))
+;;   (add-mark-to-event sc 1 2 'player-two "schneller")
     (write-xml sc :file file)))
-|#
+
+;;; durations in seconds
+(defun durations-and-pitches-to-events (duration-list pitch-list
+					&optional (time-sig '(4 4)) (tempo 60))
+  ;; loop the shorter list to get the same length for both:
+  (multiple-value-bind (ls1 ls2) (pad-lists duration-list pitch-list)
+    (setf duration-list ls1 pitch-list ls2))
+  (let* ((events '())
+	 ;; duration of a bar in seconds:
+	 (duration-of-bar (* 60 (/ 4 (cadr time-sig) tempo) (car time-sig))))
+    (loop while (and duration-list pitch-list)
+	  with is-tied
+	  with current-sum = 0
+	  for is-rest = (not (car pitch-list)) ;; nil means rest
+	  for next-dur = (pop duration-list)
+	  for next-sum = (+ current-sum next-dur)
+	  do (cond ((equal-within-tolerance next-sum duration-of-bar 0.001)
+		    (push (make-event (pop pitch-list) next-dur
+				      :is-tied-to is-tied :duration t
+				      :is-rest is-rest :tempo tempo)
+			  events)
+		    (setf current-sum 0 is-tied nil))
+		   ((< next-sum duration-of-bar)
+		    (push (make-event (make-pitch (pop pitch-list)) next-dur
+				      :is-tied-to is-tied :duration t
+				      :is-rest is-rest :tempo tempo)
+			  events)
+		    (setf current-sum next-sum is-tied nil))
+		   ((> next-sum duration-of-bar)
+		    (let ((diff (- duration-of-bar current-sum)))
+		      (push (make-event (make-pitch (car pitch-list)) diff
+					:is-tied-to is-tied :is-tied-from t
+					:duration t :is-rest is-rest
+					:tempo tempo)
+			    events)
+		      (push (- next-dur diff) duration-list))
+		    (setf current-sum 0 is-tied (unless is-rest t)))))
+    (setf events (reverse events))
+    ))
 
 ;; EOF helpers.lsp
