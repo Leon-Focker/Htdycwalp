@@ -43,6 +43,13 @@
   (distribute-to-minute-layers list-of-states distribution
 			       list-of-minutes layer-number 'states))
 
+;; *** distribute-dynamics
+;;; same as distribute-divs but for states
+(defun distribute-dynamics (list-of-dynamics distribution list-of-minutes
+			    layer-number)
+  (distribute-to-minute-layers list-of-dynamics distribution
+			       list-of-minutes layer-number 'dynamics))
+
 ;; *** sections
 ;;; get pairs of times and values, returns a function that receives a time
 ;;; argument. That function will return the value which time is smaller than

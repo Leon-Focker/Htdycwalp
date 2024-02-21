@@ -26,7 +26,11 @@
    ;; every division of the minute will have a state, which is a number
    ;; depending on the type of layer this number can be something like static,
    ;; isorhythmic etc.
-   (states :accessor states :initarg :states :initform '(0))))
+   (states :accessor states :initarg :states :type list :initform '(0))
+   ;; every division of the minute will have a dynamic, which is a number
+   ;; depending on the type of layer this number can be something like forte,
+   ;; crescendo or even rest.
+   (dynamics :accessor dynamics :initarg :dynamics :type list :initform '(1))))
 
 (defclass tape-layer (minute-layer)
   ())
@@ -165,6 +169,7 @@
 ;; add undivided layers for reference when visualizing, number 111
 (loop for minute in (access-minutes) and i from 0
       do (setf (layers minute)
-	       (append (layers minute) `(,(make-tape-layer 111 111 (* i 60))))))
+	       (append (layers minute)
+		       `(,(make-tape-layer 111 111 (* i 60) '(1) `(,(if (= 0 (mod i 2)) 0 5)))))))
 
 ;; EOF mintues.lsp
