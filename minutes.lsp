@@ -33,7 +33,8 @@
    (dynamics :accessor dynamics :initarg :dynamics :type list :initform '(1))))
 
 (defclass tape-layer (minute-layer)
-  ())
+  ((instruments :accessor instruments :type list :initarg :instruments
+		:initform '(tape))))
     
 (defclass instrument-layer (minute-layer)
   ((instruments :accessor instruments :type list :initarg :instruments
@@ -65,17 +66,44 @@
 	collect (get-section-durations layer)))
 
 ;; 
-(defmethod interpret-layer ((tl tape-layer)
-			    &rest keyargs &key &allow-other-keys)
-  )
+(defmethod interpret-layer ((tl tape-layer))
+  ;;&rest keyargs &key &allow-other-keys)
+  (let* ((durs (get-section-durations tl))
+	 (states (states tl)))
+    (setf states
+	  (mapcar #'(lambda (x) (case x (1 'C4)
+				 (2 'd4)
+				 (3 'e4)
+				 (4 'f4)
+				 (5 'g4)
+				 (6 'a4)
+				 (7 'b4)
+				 (t 'c5)))
+		  states))
+    (loop for ins in (instruments tl)
+	  collect `(,ins ,ins ,durs ,states)) ;; marks
+    ))
 
 ;; (defun test (nr)
 ;;   (lambda (&rest args) (unless (= nr (length args)) (warn "wrong nummber of arguments: ~a" (length args)))))
 
-
-(defmethod interpret-layer ((il instrument-layer)
-			    &rest keyargs &key &allow-other-keys)
-  )
+(defmethod interpret-layer ((il instrument-layer))
+  ;;&rest keyargs &key &allow-other-keys)
+  (let* ((durs (get-section-durations il))
+	 (states (states il)))
+    (setf states
+	  (mapcar #'(lambda (x) (case x (1 'C4)
+				 (2 'd4)
+				 (3 'e4)
+				 (4 'f4)
+				 (5 'g4)
+				 (6 'a4)
+				 (7 'b4)
+				 (t 'c5)))
+		  states))
+    (loop for ins in (instruments il)
+	  collect `(,ins ,ins ,durs ,states)) ;; marks
+    ))
 
 ;; ** make
 
@@ -118,9 +146,29 @@
 
 (defun get-all-related-durations (list-of-minutes layer-number
 				  &optional (error-fun #'warn))
-  (loop for layer in (get-related-minute-layers list-of-minutes
-						layer-number error-fun)
-	    append (get-section-durations layer)))
+  (loop for layer in (get-related-minute-layers
+		      list-of-minutes layer-number error-fun)
+	append (get-section-durations layer)))
+
+(defun interpret-minutes-by-instrument (list-of-minutes instrument)
+  ;; TODO
+  ;; collect layers when instrment is in (instruments layer)
+  ;; check if start-times of layers match the duration in between
+  ;; aka, if an insturment is missing for a minute, insert 60 seconds rest
+  )
+
+;;; interpret all layers of a list-of-minutes unless you provide a list of
+;;; instruments - then only those will be interpreted.
+(defun interpret-minutes (list-of-minutes
+			  &optional instruments (error-fun #'warn))
+  (unless instruments
+    (loop for minute in (list-of-minutes)
+	  do (loop for layer in (layers minute)
+		   do (loop for ins in (instruments layer)
+			    unless (member ins instruments)
+			      do (push ins instruments)))))
+  (loop for ins in instruments
+	collect (interpret-minutes-by-instrument list-of-minutes ins)))
 
 ;; ** visualize
 
