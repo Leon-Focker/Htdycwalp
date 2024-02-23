@@ -11,18 +11,14 @@
 
 (in-package :ly)
 
-(defconstant +ens-src-dir+
-  (let ((load-name (or *load-truename* *compile-file-truename*)))
-    (make-pathname :directory (pathname-directory load-name)
-		   :device (pathname-device load-name))))
+(defconstant +ens-src-dir+ (path-from-same-dir))
 
 (import '(clm::with-sound
 	  clm::with-mix
 	  clm::sound-let
 	  clm::*CLM-MIX-CALLS*
 	  clm::*CLM-MIX-OPTIONS*
-	  clm::add-sound
-	  ))
+	  clm::add-sound))
 
 ;; ** globals
 
