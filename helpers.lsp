@@ -50,6 +50,22 @@
   (distribute-to-minute-layers list-of-dynamics distribution
 			       list-of-minutes layer-number 'dynamics))
 
+;; *** get-lsim (get-layer-slot-in-minutes)
+(defun get-lsim (ls-of-minutes minute layer-number slot-name)
+  "get-layer-slot-in-minutes"
+  (let ((minute (nth minute ls-of-minutes)))
+    (slot-value (car (member layer-number (layers minute) :key 'number))
+		      slot-name)))
+
+;; *** set-lsim (set-layer-slot-in-minutes)
+(defun set-lsim (ls-of-minutes minute layer-number
+		 slot-name new-value)
+  "set-layer-slot-in-minutes"
+  (let ((minute (nth minute ls-of-minutes)))
+    (setf (slot-value (car (member layer-number (layers minute) :key 'number))
+		      slot-name)
+	  new-value)))
+
 ;; *** sections
 ;;; get pairs of times and values, returns a function that receives a time
 ;;; argument. That function will return the value which time is smaller than
