@@ -8,7 +8,8 @@
 (in-package :imago)
 
 (defun show-minutes (list-of-minutes list-of-layer-numbers path-and-filename
-		     &optional (size-factor 1) (specify-time-and-layer t))
+		     &optional (size-factor 1) (specify-time-and-layer t)
+		       show-dynamics-instead-of-state)
   (let* ((h (floor (* 100  size-factor)))
 	 (w (floor (* 1000 size-factor)))
 	 (durations (loop for nr in list-of-layer-numbers
@@ -20,7 +21,11 @@
 	 (states (loop for nr in list-of-layer-numbers
 		       for layers = (ly::get-related-minute-layers
 				     list-of-minutes nr 'error)
-		       collect (loop for i in layers append (ly::states i))))
+		       collect (loop for i in layers
+				     append
+				     (if show-dynamics-instead-of-state
+					 (ly::dynamics i)
+					 (ly::states i)))))
 	 (nr-of-states (apply #'max (ly::flatten states)))
 	 (length (length durations))
 	 (height (* h length))

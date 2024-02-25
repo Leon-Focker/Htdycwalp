@@ -77,7 +77,7 @@
 		    (when (= (number layer) fib2) (push tromb (instruments layer))))))
 
 ;; VISUALIZE MINUTES
-(visualize-minutes (access-minutes) '(3 2 1 0 111) "/E/code/ensemble/test_wts1" 1 nil)
+(visualize-minutes (access-minutes) '(3 2 1 0 111) "/E/code/ensemble/test_wts2d" 1/4 nil t)
 
 ;; update start-times of all layers just to be sure:
 (loop for i in (access-minutes) do (update-layer-start-times i))

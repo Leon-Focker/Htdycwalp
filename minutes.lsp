@@ -136,24 +136,28 @@
   (make-instance 'minute :id id :start-time start-time :layers layers))
 
 (defun make-tape-layer (id-uniquifier number start-time
-			&optional (div-ratios '(1)) (states '(0)))
+			&optional (div-ratios '(1)) (states '(0))
+			  (dynamics '(1)))
   (unless (integerp number) (error "number must be an integer, not ~a" number))
   (make-instance 'tape-layer
 		 :id (intern (format nil "tape-layer-~a" id-uniquifier) :ly)
 		 :number number
 		 :start-time start-time
 		 :div-ratios div-ratios
-		 :states states))
+		 :states states
+		 :dynamics dynamics))
 
 (defun make-instrument-layer (id-uniquifier number start-time
-			      &optional (div-ratios '(1)) (states '(0)))
+			      &optional (div-ratios '(1)) (states '(0))
+				(dynamics '(1)))
   (unless (integerp number) (error "number must be an integer, not ~a" number))
   (make-instance 'instrument-layer
 		 :id (intern (format nil "instr-layer-~a" id-uniquifier) :ly)
 		 :number number
 		 :start-time start-time
 		 :div-ratios div-ratios
-		 :states states))
+		 :states states
+		 :dynamics dynamics))
 
 ;; ** operations on lists of minutes
 
@@ -200,10 +204,12 @@
 
 (defun visualize-minutes (list-of-minutes list-of-layer-numbers
 			  path-and-filename
-			  &optional (size-factor 1) (specify-time-and-layer t))
+			  &optional (size-factor 1) (specify-time-and-layer t)
+			    show-dynamics-instead-of-state)
   (format t "~&visualizing minutes...")
   (imago::show-minutes list-of-minutes list-of-layer-numbers path-and-filename
-		       size-factor specify-time-and-layer))
+		       size-factor specify-time-and-layer
+		       show-dynamics-instead-of-state))
 
 ;; ** minutes
 
@@ -244,6 +250,8 @@
 (loop for minute in (access-minutes) and i from 0
       do (setf (layers minute)
 	       (append (layers minute)
-		       `(,(make-tape-layer 111 111 (* i 60) '(1) `(,(if (= 0 (mod i 2)) 0 5)))))))
+		       `(,(make-tape-layer 111 111 (* i 60) '(1)
+					   `(,(if (= 0 (mod i 2)) 0 5))
+					   `(,(if (= 0 (mod i 2)) 0 5)))))))
 
 ;; EOF mintues.lsp
