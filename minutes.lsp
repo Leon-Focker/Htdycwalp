@@ -14,6 +14,7 @@
    (layers :accessor layers :type list :initarg :layers
 	       :initform '())))
 
+;;; I already named an entire package layers and now this...?
 (defclass minute-layer ()
   ((id :accessor id :initarg :id :initform nil)
    ;; start time of the minute in seconds
@@ -101,8 +102,13 @@
 				 (7 'b4)
 				 (t 'c5)))
 		  states))
-    (loop for ins in (instruments il)
-	  collect `(,ins ,ins ,durs ,states)) ;; marks
+    (loop for ins in (instruments il) and i from 0
+	  collect `(,(intern (format nil "~a-~a~a" ins (number il)
+				     (if (eq ins 'violin)
+					 (format nil "-~a" (1+ (mod i 2)))
+					 ""))
+			     :ly)
+		    ,ins ,durs ,states)) ;; marks
     ))
 
 ;; ** make
@@ -162,7 +168,7 @@
 (defun interpret-minutes (list-of-minutes
 			  &optional instruments (error-fun #'warn))
   (unless instruments
-    (loop for minute in (list-of-minutes)
+    (loop for minute in list-of-minutes
 	  do (loop for layer in (layers minute)
 		   do (loop for ins in (instruments layer)
 			    unless (member ins instruments)

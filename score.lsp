@@ -4,7 +4,6 @@
 
 ;; ** todo
 
-;;; discern between players and instrument
 ;;; actually compose divisions, states and dynamics
 ;;; compose instruments
 ;;; interpret-minutes-by-instrument
@@ -47,17 +46,20 @@
 ;; *** instruments
 
 ;;; very simple distribution for now:
-(let ((strings '(violin viola cello double-bass)) ;; violin2
+(let ((strings '(violin violin viola cello double-bass))
       (woodwinds '(flute oboe b-flat-clarinet bassoon))
-      (brass '(french-horn c-trumpet bass-trombone tuba))
+      (brass '(french-horn c-trumpet tuba))
+      (tromb 'bass-trombone)
       (perc 'percussion))
   (loop for minute in (access-minutes)
-	and i in (fibonacci-transitions (length (access-minutes)) '(3 2 1))
+	and fib1 in (fibonacci-transitions (length (access-minutes)) '(3 2 1))
+	and fib2 in (procession (length (access-minutes)) '(3 3 2 2))
 	do (loop for layer in (layers minute)
 		 do (when (= (number layer) 1) (setf (instruments layer) strings))
 		    (when (= (number layer) 2) (setf (instruments layer) woodwinds))
 		    (when (= (number layer) 3) (setf (instruments layer) brass))
-		    (when (= (number layer) i) (push perc (instruments layer))))))
+		    (when (= (number layer) fib1) (push perc (instruments layer)))
+		    (when (= (number layer) fib2) (push tromb (instruments layer))))))
 
 ;; VISUALIZE MINUTES
 (visualize-minutes (access-minutes) '(0 1 2 3 111) "/E/code/ensemble/test_wts" 1/4 nil)
