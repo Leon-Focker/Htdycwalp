@@ -358,7 +358,7 @@
 		 (loop for m in (fifth i) 
 		       when (< (car m) (length attacks-indices))
 			 do (add-mark (nth (nth (car m) attacks-indices) events)
-				(cadr m)))
+			        (intern (string (cadr m)) :sc)))
 		 ;; generate bars
 		 (push (loop while events
 			     for bar = (make-rthm-seq-bar `(,time-sig))

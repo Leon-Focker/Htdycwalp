@@ -9,18 +9,13 @@
 ;;; interpret-minutes-by-instrument
 ;;; interpretation functions for each instrument, that are then placed within
 ;;;  interpret-minutes-by-instrument and interpret-layer.
-;;; maybe we don't need to discern between tape and instrument layers?
+;;; maybe we don't need to discern between tape and instrument layers? as tape
+;;;  is just another instrument?
+;;; what about crescendi at the end? add extra minute (with rests) to not lose them?
 
 ;; ** divide (generate divisions and states)
 
 ;; *** divisions + states + dynamics
-
-;; ;;; number of divisions:
-;; (kernel-transitions 11 7 '(1 -2 3))
-;; (defparameter *div-cnt* (window-transitions 11 '(2 3 4 7 9 5 2) .5 .5))
-
-;; ;;; division ratios:
-;; (defparameter *divisions* (procession (apply #'+ *div-cnt*) '(1 2 3 4 5)))
 
 (let* ((number-of-division-seeds
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -33,7 +28,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
        (states-seed '(1 2 3 4 5 6 7 8))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-       (dynamics-seed '(0 1 2 3)))
+       (dynamics-seed '(0 1 2 3 4 5)))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   (loop with nr-of-mins = (length (access-minutes))
 	for seed in number-of-division-seeds and i in (minutes-layer-numbers)
@@ -89,11 +84,11 @@
 
 ;; ** ...and conquer (interpret the minute objects)
 
-(lists-to-xml (interpret-layer (nth 1 (layers (nth 8 (access-minutes)))))
+(lists-to-xml (interpret-layer (nth 1 (layers (nth 9 (access-minutes)))))
 	      "/E/code/ensemble/test1.xml")
-(lists-to-xml (interpret-layer (nth 2 (layers (nth 8 (access-minutes)))))
+(lists-to-xml (interpret-layer (nth 2 (layers (nth 9 (access-minutes)))))
 	      "/E/code/ensemble/test2.xml")
-(lists-to-xml (interpret-layer (nth 3 (layers (nth 8 (access-minutes)))))
+(lists-to-xml (interpret-layer (nth 3 (layers (nth 9 (access-minutes)))))
 	      "/E/code/ensemble/test3.xml")
 
 ;; idea: interpret layers returns a function that can then be filled with arguments
