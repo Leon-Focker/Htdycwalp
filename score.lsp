@@ -23,25 +23,45 @@
 ;; (defparameter *divisions* (procession (apply #'+ *div-cnt*) '(1 2 3 4 5)))
 
 (let* ((number-of-division-seeds
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	 '((2 3 4 7 9 5 2)       ; tape
-	   (2 3 7 4 9 2 5)       ; tuba+
-	   (2 3 7 4 5 3 2)))
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	 '((2 3 7 4 9 2 5)		; tape
+	   (2 3 4 7 5 9 2)		; strings
+	   (2 3 2 7 5 4 9)		; ww
+	   (2 3 7 4 5 3 2)))		; brass
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
        (division-ratios-seed '(1 2 3 4 5))
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
        (states-seed '(1 2 3 4 5 6 7 8))
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
        (dynamics-seed '(0 1 2 3)))
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  (loop for seed in number-of-division-seeds and i in (minutes-layer-numbers)
-	for nr-of-divs = (window-transitions (length (access-minutes)) seed .5)
-	for divs = (procession (apply #'+ nr-of-divs) division-ratios-seed)
-	for states = (procession (apply #'+ nr-of-divs) states-seed)
-	for dynamics = (procession (apply #'+ nr-of-divs) dynamics-seed)
-	do (distribute-divs divs nr-of-divs (access-minutes) i)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  (loop with nr-of-mins = (length (access-minutes))
+	for seed in number-of-division-seeds and i in (minutes-layer-numbers)
+	for nr-of-divs = (window-transitions nr-of-mins seed .5)
+	for divs = '() for states = '() for dynamics = '()
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;	REPLACE
+	do (case i
+	     (0)
+	     (1 (setf (cdr (nthcdr (- nr-of-mins 2) nr-of-divs)) '(2)))
+	     (2)
+	     (3))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	   (setf divs (procession (apply #'+ nr-of-divs) division-ratios-seed)
+		 states (procession (apply #'+ nr-of-divs) states-seed)
+		 dynamics (procession (apply #'+ nr-of-divs) dynamics-seed))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	   (distribute-divs divs nr-of-divs (access-minutes) i)
 	   (distribute-states states nr-of-divs (access-minutes) i)
 	   (distribute-dynamics dynamics nr-of-divs (access-minutes) i)))
+
+;; *** replace more
+
+;;; replace division-ratios in layer 2 and 3 with the ratios of 1
+(flet ((helper (x) (get-lsim (access-minutes) 7 x 'division-ratios)))
+  (when (apply #'= (loop for i from 1 to 3 collect (length (helper i))))
+    (set-lsim (access-minutes) 7 2 'division-ratios (helper 1))
+    (set-lsim (access-minutes) 7 3 'division-ratios (helper 1))))
 
 ;; *** instruments
 
@@ -62,7 +82,12 @@
 		    (when (= (number layer) fib2) (push tromb (instruments layer))))))
 
 ;; VISUALIZE MINUTES
-(visualize-minutes (access-minutes) '(0 1 2 3 111) "/E/code/ensemble/test_wts" 1/4 nil)
+(visualize-minutes (access-minutes) '(3 2 1 0 111) "/E/code/ensemble/test_wts1" 1 nil)
+
+;; update start-times of all layers just to be sure:
+(loop for i in (access-minutes) do (update-layer-start-times i))
+
+;; ** ...and conquer (interpret the minute objects)
 
 (lists-to-xml (interpret-layer (nth 1 (layers (nth 8 (access-minutes)))))
 	      "/E/code/ensemble/test1.xml")
@@ -71,12 +96,7 @@
 (lists-to-xml (interpret-layer (nth 3 (layers (nth 8 (access-minutes)))))
 	      "/E/code/ensemble/test3.xml")
 
-;; update start-times of all layers just to be sure:
-(loop for i in (access-minutes) do (update-layer-start-times i))
-
-;; ** ...and conquer (interpret the minute objects)
-
-;; interpret layers returns a function that can then be filled with arguments
+;; idea: interpret layers returns a function that can then be filled with arguments
 ;;  to form a sections like function.
 
 ;; EOF score.lsp
