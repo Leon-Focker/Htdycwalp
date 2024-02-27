@@ -4,14 +4,16 @@
 
 ;; ** todo
 
-;;; actually compose divisions, states and dynamics
+;;; actually compose divisions and states
 ;;; interpretation functions for each instrument, that are then placed within
 ;;;  interpret-layer-by-instrument.
 ;;; maybe we don't need to discern between tape and instrument layers? as tape
 ;;;  is just another instrument?
 ;;; what about crescendi at the end? add extra minute (with rests) to not lose them?
 ;;; crescendi and diminuendi should probably get extra dynamics at their start
-;;;  and end.
+;;;  and end. determine that by an algo seeing what comes before and after.
+;;; idea: double-bass is a solo-instrument and strings are sometimes coupled
+;;;  with ww or bass.
 
 ;; ** divide (generate divisions and states)
 
@@ -28,7 +30,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
        (states-seed '(1 2 3 4 5 6 7 8))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-       (dynamics-seed '(0 1 2 3 4 5)))
+       (dynamics-seed '(0 1 4 2 3 5)))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   (loop with nr-of-mins = (length (access-minutes))
 	for seed in number-of-division-seeds and i in (minutes-layer-numbers)
@@ -38,7 +40,7 @@
 ;;;;;;;	REPLACE
 	do (case i
 	     (0)
-	     (1 (setf (cdr (nthcdr (- nr-of-mins 2) nr-of-divs)) '(2)))
+	     (1 (setf (cdr (nthcdr (- nr-of-mins 2) nr-of-divs)) '(2))) ; last=2
 	     (2)
 	     (3))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -57,6 +59,17 @@
   (when (apply #'= (loop for i from 1 to 3 collect (length (helper i))))
     (set-lsim (access-minutes) 7 2 'division-ratios (helper 1))
     (set-lsim (access-minutes) 7 3 'division-ratios (helper 1))))
+;;; set beginning of minute 0 and 1 to ff in tape:
+(setf (car (dynamics (find 0 (layers (nth 0 (access-minutes))) :key 'number)))5)
+(setf (car (dynamics (find 0 (layers (nth 1 (access-minutes))) :key 'number)))5)
+
+;;; DYNAMICS
+;;; copy dynamics from tape to brass:
+(set-related-dynamics (access-minutes) 0 3
+		      '((0 0) (1 1) (2 2) (3 3) (4 4) (5 5)))
+;;; invert dynamics from tape to strings:
+(set-related-dynamics (access-minutes) 0 1
+		      '((0 5) (1 4) (2 1) (3 0) (4 1) (5 3)) nil)
 
 ;; *** instruments
 
@@ -77,7 +90,7 @@
 		    (when (= (number layer) fib2) (push tromb (instruments layer))))))
 
 ;; VISUALIZE MINUTES
-(visualize-minutes (access-minutes) '(3 2 1 0 111) "/E/code/ensemble/test" 1 nil)
+(visualize-minutes (access-minutes) '(3 2 1 0 111) "/E/code/ensemble/test" 1 nil t)
 
 ;; update start-times of all layers just to be sure:
 (loop for i in (access-minutes) do (update-layer-start-times i))

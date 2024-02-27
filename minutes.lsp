@@ -102,11 +102,11 @@
     (loop for dyn in dynamics and i from 0
 	  unless (= 0 dyn)
 	    do (case dyn
-		 (1 (push `(,i p) marks))
-		 (2 (push `(,i mf) marks))
-		 (3 (push `(,i ff) marks))
-		 (4 (push `(,i cresc-beg) marks) (push `(,(1+ i) cresc-end) marks))
-		 (5 (push `(,i dim-beg) marks) (push `(,(1+ i) dim-end) marks))))
+		 (1 (push `(,i cresc-beg) marks) (push `(,(1+ i) cresc-end) marks))
+		 (2 (push `(,i dim-beg) marks) (push `(,(1+ i) dim-end) marks))
+		 (3 (push `(,i p) marks))
+		 (4 (push `(,i mf) marks))
+		 (5 (push `(,i ff) marks))))
     (setf marks (reverse marks))    ; important, idk why exactly
     ;; assemble lists for lists-to-xml
     `(,instrument

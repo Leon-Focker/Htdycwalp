@@ -66,6 +66,43 @@
 		      slot-name)
 	  new-value)))
 
+;; *** set-related-dynamics
+;;; loop through the dynamics of a source layer and a target layer and decide
+;;; the targets dynamics with the ones of source
+;;; #'case is applied to case-list - determine how to replace/couple dynamics.
+;;; transition fun gets nr-of-elements and list '(t nil), where t means, that a
+;;; value will be replaced. If transition-fun is nil, no transition is made --
+;;; all dynamics are changed.
+(defun set-related-dynamics (list-of-minutes source-layer-nr target-layer-nr
+			     case-list
+			     &optional (transition-fun 'fibonacci-transitions))
+  (let* ((slayers (get-related-minute-layers list-of-minutes source-layer-nr))
+	 (tlayers (get-related-minute-layers list-of-minutes target-layer-nr))
+	 (tdurs (get-all-related-durations list-of-minutes target-layer-nr))
+	 (trans (ml t (apply #'+ tdurs)))
+	 (cnt 0))
+    (when transition-fun
+      (setf trans (funcall transition-fun (apply #'+ tdurs) '(t nil))))
+    (loop for slayer in slayers and tlayer in tlayers
+	  for sdynamics = (dynamics slayer) and tdynamics = (dynamics tlayer)
+	  do (setf (dynamics tlayer)
+		   (loop for d in tdynamics and n from 0
+			 for s = (nth n sdynamics)
+			 collect (if (nth cnt trans)
+				     ;; since case is a macro, not a function,
+				     ;; we can't just use apply...
+				     (loop for ls in case-list
+					   do (when
+						  (find s (if (listp (car ls))
+							      (car ls)
+							      (list (car ls))))
+						(return (cadr ls)))
+					   finally (return d))
+				     d)
+			   into new
+			 do (incf cnt)
+			 finally (return new))))))
+
 ;; *** sections
 ;;; get pairs of times and values, returns a function that receives a time
 ;;; argument. That function will return the value which time is smaller than
