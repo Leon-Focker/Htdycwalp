@@ -5,8 +5,6 @@
 ;; ** todo
 
 ;;; actually compose divisions, states and dynamics
-;;; compose instruments
-;;; interpret-minutes-by-instrument
 ;;; interpretation functions for each instrument, that are then placed within
 ;;;  interpret-minutes-by-instrument and interpret-layer.
 ;;; maybe we don't need to discern between tape and instrument layers? as tape
@@ -61,9 +59,9 @@
 ;; *** instruments
 
 ;;; very simple distribution for now:
-(let ((strings '(violin violin viola cello double-bass))
+(let ((strings '(violin-1 violin-2 viola cello double-bass))
       (woodwinds '(flute oboe b-flat-clarinet bassoon))
-      (brass '(french-horn c-trumpet tuba))
+      (brass '(c-trumpet french-horn tuba))
       (tromb 'bass-trombone)
       (perc 'percussion))
   (loop for minute in (access-minutes)
@@ -75,21 +73,31 @@
 		    (when (= (number layer) 3) (setf (instruments layer) brass))
 		    (when (= (number layer) fib1) (push perc (instruments layer)))
 		    (when (= (number layer) fib2) (push tromb (instruments layer))))))
+(setf (staff-short-name
+       (get-data 'b-flat-clarinet
+		 sc::+slippery-chicken-standard-instrument-palette+))
+      "cl.")
 
 ;; VISUALIZE MINUTES
-(visualize-minutes (access-minutes) '(3 2 1 0 111) "/E/code/ensemble/test_wts2d" 1/4 nil t)
+(visualize-minutes (access-minutes) '(3 2 1 0 111) "/E/code/ensemble/test" 1 nil)
 
 ;; update start-times of all layers just to be sure:
 (loop for i in (access-minutes) do (update-layer-start-times i))
 
 ;; ** ...and conquer (interpret the minute objects)
 
+#|
 (lists-to-xml (interpret-layer (nth 1 (layers (nth 9 (access-minutes)))))
 	      "/E/code/ensemble/test1.xml")
 (lists-to-xml (interpret-layer (nth 2 (layers (nth 9 (access-minutes)))))
 	      "/E/code/ensemble/test2.xml")
 (lists-to-xml (interpret-layer (nth 3 (layers (nth 9 (access-minutes)))))
 	      "/E/code/ensemble/test3.xml")
+|#
+
+;; write entire score
+(lists-to-xml (interpret-minutes (access-minutes))
+	      "/E/code/ensemble/test.xml")
 
 ;; idea: interpret layers returns a function that can then be filled with arguments
 ;;  to form a sections like function.

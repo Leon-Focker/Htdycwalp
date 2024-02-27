@@ -35,7 +35,7 @@
 
 (defclass tape-layer (minute-layer)
   ((instruments :accessor instruments :type list :initarg :instruments
-		:initform '(tape))))
+		:initform '(computer))))
     
 (defclass instrument-layer (minute-layer)
   ((instruments :accessor instruments :type list :initarg :instruments
@@ -49,7 +49,7 @@
 (defmethod print-object ((mnl minute-layer) stream)
   (format stream "<MINUTE-LAYER ~a>" (id mnl)))
 
-;; ** methods
+;; ** some methods
 
 (defmethod update-layer-start-times ((mn minute))
   (let ((time (start-time mn)))
@@ -66,7 +66,7 @@
   (loop for layer in (layers mn)
 	collect (get-section-durations layer)))
 
-;; 
+;; this is a stub, not needed atm
 (defmethod interpret-layer ((tl tape-layer))
   ;;&rest keyargs &key &allow-other-keys)
   (let* ((durs (get-section-durations tl))
@@ -82,12 +82,9 @@
 				 (t 'c5)))
 		  states))
     (loop for ins in (instruments tl)
-	  collect `(,ins ,ins ,durs ,states)) ;; marks
-    ))
+	  collect `(,ins computer ,durs ,states ,(marks tl)))))
 
-;; (defun test (nr)
-;;   (lambda (&rest args) (unless (= nr (length args)) (warn "wrong nummber of arguments: ~a" (length args)))))
-
+;; this is a stub, not needed atm
 (defmethod interpret-layer ((il instrument-layer))
   ;;&rest keyargs &key &allow-other-keys)
   (let* ((durs (get-section-durations il))
@@ -120,15 +117,101 @@
 		 (3 (push `(,i ff) marks))
 		 (4 (push `(,i cresc-beg) marks) (push `(,(1+ i) cresc-end) marks))
 		 (5 (push `(,i dim-beg) marks) (push `(,(1+ i) dim-end) marks))))
-    (setf marks (reverse marks)) ; important, idk why exactly
+    (setf marks (reverse marks))    ; important, idk why exactly
     ;; assemble lists for lists-to-xml
     (loop for ins in (instruments il) and i from 0
-	  collect `(,(intern (format nil "~a-~a~a" ins (number il)
-				     (if (eq ins 'violin)
-					 (format nil "-~a" (1+ (mod i 2)))
-					 ""))
-			     :ly)
-		    ,ins ,durs ,pitches ,marks))))
+	  collect (,instrument
+		      ,(cond ((< (length (string instrument)) 6) instrument)
+			     ((string= (subseq (string instrument) 0 6) "VIOLIN")
+			      'violin)
+			     (t instrument))
+		      ,durs ,pitches ,marks))))
+
+;; ** Interpretation
+
+;; *** interpret-layer-by-instrument
+;;; TODO atm this is just a copy of the same method for instrument-layers
+;;; obvsly this should do something else entirely. Probably not even be notated.
+(defmethod interpret-layer-by-instrument ((tl tape-layer)
+					  &optional instrument)
+  (let* ((durs (get-section-durations tl))
+	 (states (states tl))
+	 (dynamics (dynamics tl))
+	 (new-durs '())
+	 (pitches '())
+	 (marks '()))
+    (loop for state in states and dur in durs and dyn in dynamics
+	  do (if (= 0 dyn)
+		 ;; when dynamics = 0 make a rest:
+		 (progn (push dur new-durs) (push nil pitches))
+		 ;; interpret states
+		 (case state
+		   (1 (push 'c4 pitches))
+		   (2 (push 'd4 pitches))
+		   (3 (push 'e4 pitches))
+		   (4 (push 'f4 pitches))
+		   (5 (push 'g4 pitches))
+		   (6 (push 'a4 pitches))
+		   (7 (push 'b4 pitches))
+		   (t (push 'c5 pitches))))
+	  finally (setf new-durs (reverse new-durs) pitches (reverse pitches)))
+    ;; dynamics into marks
+    (loop for dyn in dynamics and i from 0
+	  unless (= 0 dyn)
+	    do (case dyn
+		 (1 (push `(,i p) marks))
+		 (2 (push `(,i mf) marks))
+		 (3 (push `(,i ff) marks))
+		 (4 (push `(,i cresc-beg) marks) (push `(,(1+ i) cresc-end) marks))
+		 (5 (push `(,i dim-beg) marks) (push `(,(1+ i) dim-end) marks))))
+    (setf marks (reverse marks))    ; important, idk why exactly
+    ;; assemble lists for lists-to-xml
+    `(,instrument
+	 computer ,durs ,pitches ,marks)))
+
+;; (defun test (nr)
+;;   (lambda (&rest args) (unless (= nr (length args)) (warn "wrong nummber of arguments: ~a" (length args)))))
+
+;;; a lot of work to do
+(defmethod interpret-layer-by-instrument ((il instrument-layer)
+					  &optional instrument)
+  (let* ((durs (get-section-durations il))
+	 (states (states il))
+	 (dynamics (dynamics il))
+	 (new-durs '())
+	 (pitches '())
+	 (marks '()))
+    (loop for state in states and dur in durs and dyn in dynamics
+	  do (if (= 0 dyn)
+		 ;; when dynamics = 0 make a rest:
+		 (progn (push dur new-durs) (push nil pitches))
+		 ;; interpret states
+		 (case state
+		   (1 (push 'c4 pitches))
+		   (2 (push 'd4 pitches))
+		   (3 (push 'e4 pitches))
+		   (4 (push 'f4 pitches))
+		   (5 (push 'g4 pitches))
+		   (6 (push 'a4 pitches))
+		   (7 (push 'b4 pitches))
+		   (t (push 'c5 pitches))))
+	  finally (setf new-durs (reverse new-durs) pitches (reverse pitches)))
+    ;; dynamics into marks
+    (loop for dyn in dynamics and i from 0
+	  unless (= 0 dyn)
+	    do (case dyn
+		 (1 (push `(,i p) marks))
+		 (2 (push `(,i mf) marks))
+		 (3 (push `(,i ff) marks))
+		 (4 (push `(,i cresc-beg) marks) (push `(,(1+ i) cresc-end) marks))
+		 (5 (push `(,i dim-beg) marks) (push `(,(1+ i) dim-end) marks))))
+    (setf marks (reverse marks))    ; important, idk why exactly
+    ;; assemble lists for lists-to-xml
+    `(,instrument
+	 ,(cond ((< (length (string instrument)) 6) instrument)
+		((string= (subseq (string instrument) 0 6) "VIOLIN") 'violin)
+		(t instrument))
+	 ,durs ,pitches ,marks)))
 
 ;; ** make
 
@@ -160,45 +243,83 @@
 		 :dynamics dynamics))
 
 ;; ** operations on lists of minutes
-
-(defun get-related-minute-layers (list-of-minutes layer-number
-				  &optional (error-fun #'warn))
+;;; (get-related-minute-layers (access-minutes) 0 'number)
+;;; (get-related-minute-layers (access-minutes) 'french-horn 'instruments)
+(defun get-related-minute-layers (list-of-minutes value
+				  &optional (slot 'number) (error-fun #'warn))
   (loop with flag
 	for minute in list-of-minutes
-	for layer = (car (member layer-number (layers minute) :key 'number))
+	for layer = (car (member value (layers minute)
+				 :key slot
+				 :test (lambda (x y)
+					 (find x (if (listp y) y (list y))))))
 	unless layer do (setf flag t)
 	  when layer collect layer into result
 	    finally (when flag
 		      (funcall error-fun "not all minutes had a layer with ~
-                                          this number: ~a" layer-number))
+                                          this value for ~a: ~a" slot value))
 		    (return result)))
 
 (defun get-all-related-durations (list-of-minutes layer-number
 				  &optional (error-fun #'warn))
   (loop for layer in (get-related-minute-layers
-		      list-of-minutes layer-number error-fun)
+		      list-of-minutes layer-number 'number error-fun)
 	append (get-section-durations layer)))
 
 (defun interpret-minutes-by-instrument (list-of-minutes instrument)
-  ;; TODO
-  ;; collect layers when instrment is in (instruments layer)
-  ;; check if start-times of layers match the duration in between
-  ;; aka, if an insturment is missing for a minute, insert 60 seconds rest
-  ;; indices of marks must be incremented...
-  )
+  (let* ((layers (get-related-minute-layers list-of-minutes instrument
+					    'instruments))
+	 (starts (loop for i in layers collect (start-time i)))
+	 (interpretation '()))
+    (unless layers (error "not a single layer with ~a found in ~a"
+			  instrument list-of-minutes))
+    (do ((i 0 (1+ i)) int)
+	((>= i (length layers)) (setf interpretation (reverse int)))
+      (push (interpret-layer-by-instrument (nth i layers) instrument) int))
+    ;; append durs and pitches, fill in gaps and increment mark-indices.
+    (loop with player = (caar interpretation)
+	  with nr-of-durs = 0
+	  with time = 0
+	  for i in interpretation and start in starts
+	  unless (>= time start)
+	    append (list (- start time)) into durs
+	  unless (>= time start)
+	    append (list nil) into pitches
+	  unless (>= time start)
+	    do (incf time (- start time))
+	       (incf nr-of-durs)
+	  when (> time start)
+	    do (warn "current time greater than next start-time: ~a" time)
+	  append (third i) into durs
+	  append (fourth i) into pitches
+	  append (mapcar #'(lambda (x) (incf (car x) nr-of-durs) x) (fifth i))
+	    into marks
+	  do (incf nr-of-durs (length (third i)))
+	     (incf time (apply #'+ (third i)))
+	  finally (return `(,player ,(second i) ,durs ,pitches ,marks)))))
 
 ;;; interpret all layers of a list-of-minutes unless you provide a list of
 ;;; instruments - then only those will be interpreted.
+;;; TODO - differ between tape and instrument.
 (defun interpret-minutes (list-of-minutes
 			  &optional instruments (error-fun #'warn))
-  (unless instruments
-    (loop for minute in list-of-minutes
-	  do (loop for layer in (layers minute)
-		   do (loop for ins in (instruments layer)
-			    unless (member ins instruments)
-			      do (push ins instruments)))))
-  (loop for ins in instruments
-	collect (interpret-minutes-by-instrument list-of-minutes ins)))
+  (let ((instr '()))
+    (unless instruments
+      (loop for minute in list-of-minutes
+	    do (loop for layer in (layers minute)
+		     do (loop for ins in (instruments layer)
+			      unless (member ins instruments)
+				do (push ins instruments))))
+      (setf instruments (reverse instruments)))
+    ;; now collect again but in the order we want:
+    (loop for i in '(double-bass cello viola violin-2 violin-1 percussion tuba
+		     bass-trombone french-horn c-trumpet percussion bassoon
+		     b-flat-clarinet oboe flute)
+	  when (find i instruments) do (push i instr))
+    (loop for i in instruments unless (find i instr) do (push i instr))
+    ;; now go through the new list of instruments.
+    (loop for ins in instr
+	  collect (interpret-minutes-by-instrument list-of-minutes ins))))
 
 ;; ** visualize
 
@@ -236,7 +357,7 @@
 				   (cons tape-layer instrument-layers))))
   ;; init number-of-divisions:
   (loop for nr in (reverse l-nrs)
-	for layers = (get-related-minute-layers minutes nr #'error)
+	for layers = (get-related-minute-layers minutes nr 'number #'error)
 	for len = (length (loop for i in layers append (div-ratios i)))
 	do (push-key-value nr len number-of-divisions))
   ;; closures to access minutes and co everywhere:

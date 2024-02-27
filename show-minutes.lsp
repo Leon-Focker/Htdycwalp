@@ -20,7 +20,7 @@
 				   durs)))
 	 (states (loop for nr in list-of-layer-numbers
 		       for layers = (ly::get-related-minute-layers
-				     list-of-minutes nr 'error)
+				     list-of-minutes nr 'number 'error)
 		       collect (loop for i in layers
 				     append
 				     (if show-dynamics-instead-of-state
