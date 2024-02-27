@@ -66,66 +66,9 @@
   (loop for layer in (layers mn)
 	collect (get-section-durations layer)))
 
-;; replace its body with a loop through interpret-layer-by-instrument
-(defmethod interpret-layer ((tl tape-layer))
-  ;;&rest keyargs &key &allow-other-keys)
-  (let* ((durs (get-section-durations tl))
-	 (states (states tl)))
-    (setf states
-	  (mapcar #'(lambda (x) (case x (1 'C4)
-				 (2 'd4)
-				 (3 'e4)
-				 (4 'f4)
-				 (5 'g4)
-				 (6 'a4)
-				 (7 'b4)
-				 (t 'c5)))
-		  states))
-    (loop for ins in (instruments tl)
-	  collect `(,ins computer ,durs ,states ,(marks tl)))))
-
-;; replace its body with a loop through interpret-layer-by-instrument
-(defmethod interpret-layer ((il instrument-layer))
-  ;;&rest keyargs &key &allow-other-keys)
-  (let* ((durs (get-section-durations il))
-	 (states (states il))
-	 (dynamics (dynamics il))
-	 (new-durs '())
-	 (pitches '())
-	 (marks '()))
-    (loop for state in states and dur in durs and dyn in dynamics
-	  do (if (= 0 dyn)
-		 ;; when dynamics = 0 make a rest:
-		 (progn (push dur new-durs) (push nil pitches))
-		 ;; interpret states
-		 (case state
-		   (1 (push 'c4 pitches))
-		   (2 (push 'd4 pitches))
-		   (3 (push 'e4 pitches))
-		   (4 (push 'f4 pitches))
-		   (5 (push 'g4 pitches))
-		   (6 (push 'a4 pitches))
-		   (7 (push 'b4 pitches))
-		   (t (push 'c5 pitches))))
-	  finally (setf new-durs (reverse new-durs) pitches (reverse pitches)))
-    ;; dynamics into marks
-    (loop for dyn in dynamics and i from 0
-	  unless (= 0 dyn)
-	    do (case dyn
-		 (1 (push `(,i p) marks))
-		 (2 (push `(,i mf) marks))
-		 (3 (push `(,i ff) marks))
-		 (4 (push `(,i cresc-beg) marks) (push `(,(1+ i) cresc-end) marks))
-		 (5 (push `(,i dim-beg) marks) (push `(,(1+ i) dim-end) marks))))
-    (setf marks (reverse marks))    ; important, idk why exactly
-    ;; assemble lists for lists-to-xml
-    (loop for ins in (instruments il) and i from 0
-	  collect `(,instrument
-		      ,(cond ((< (length (string instrument)) 6) instrument)
-			     ((string= (subseq (string instrument) 0 6) "VIOLIN")
-			      'violin)
-			     (t instrument))
-		      ,durs ,pitches ,marks))))
+(defmethod interpret-layer ((ml minute-layer))
+  (loop for ins in (instruments ml)
+	collect (interpret-layer-by-instrument ml ins)))
 
 ;; ** Interpretation
 
