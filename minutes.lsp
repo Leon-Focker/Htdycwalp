@@ -120,7 +120,7 @@
     (setf marks (reverse marks))    ; important, idk why exactly
     ;; assemble lists for lists-to-xml
     (loop for ins in (instruments il) and i from 0
-	  collect (,instrument
+	  collect `(,instrument
 		      ,(cond ((< (length (string instrument)) 6) instrument)
 			     ((string= (subseq (string instrument) 0 6) "VIOLIN")
 			      'violin)
