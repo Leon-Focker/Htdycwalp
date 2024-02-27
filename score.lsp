@@ -12,7 +12,6 @@
 ;;; what about crescendi at the end? add extra minute (with rests) to not lose them?
 ;;; crescendi and diminuendi should probably get extra dynamics at their start
 ;;;  and end.
-;;; replace body of interpret-layer with interpret-layer-by-instrument.
 
 ;; ** divide (generate divisions and states)
 
