@@ -312,7 +312,7 @@
 				do (push ins instruments))))
       (setf instruments (reverse instruments)))
     ;; now collect again but in the order we want:
-    (loop for i in '(double-bass cello viola violin-2 violin-1 percussion tuba
+    (loop for i in '(double-bass cello viola violin-2 violin-1 tuba
 		     bass-trombone french-horn c-trumpet percussion bassoon
 		     b-flat-clarinet oboe flute)
 	  when (find i instruments) do (push i instr))
