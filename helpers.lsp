@@ -142,6 +142,33 @@
 		      collect (nth-mod i ls1))))
   (values ls1 ls2))
 
+;; *** get-cresc-dyns
+#+nil(defun get-cresc-dyns (dyn-before dyn-after)
+  )
+
+;; *** add-crescendo-dynamics
+(defun add-crescendo-dynamics (event-list)
+  (let ((begs '())
+	(ends '())
+	(len (length event-list)))
+    (loop for i from 0 and e in event-list
+          do (when (find (intern (string 'cresc-beg) :sc) (marks e))
+	       (push i begs))
+	     (when (find (intern (string 'cresc-end) :sc) (marks e))
+	       (push i ends))
+	  finally (setf begs (reverse begs)
+			ends (reverse ends)))
+    (loop for beg in begs and end in ends
+	  do
+	     ;; (get-dynamic)
+	     ;; when dynamic at beg - use it
+	     ;; else read beg - 1
+	     ;; read end + 1
+	     ;; decide for start and end, where start < end with get-cresc-dyns
+	     ;; set accordingly
+    ;; (add-mark e (get-cresc-dyns ))
+    event-list))
+
 ;; *** env-fun1
 (defun env-fun1 (breakpoint &optional (exponent 0.3))
   (let ((bp (max 0 (min 100 (round breakpoint)))))
@@ -396,6 +423,8 @@
 		       when (< (car m) (length attacks-indices))
 			 do (add-mark (nth (nth (car m) attacks-indices) events)
 			        (intern (string (cadr m)) :sc)))
+		 ;; arbitrarily set dynamics before and after crescendo
+		 (setf events (add-crescendo-dynamics events))
 		 ;; generate bars
 		 (push (loop while events
 			     for bar = (make-rthm-seq-bar `(,time-sig))
