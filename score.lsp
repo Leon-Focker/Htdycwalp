@@ -6,10 +6,13 @@
 
 ;;; actually compose divisions, states and dynamics
 ;;; interpretation functions for each instrument, that are then placed within
-;;;  interpret-minutes-by-instrument and interpret-layer.
+;;;  interpret-layer-by-instrument.
 ;;; maybe we don't need to discern between tape and instrument layers? as tape
 ;;;  is just another instrument?
 ;;; what about crescendi at the end? add extra minute (with rests) to not lose them?
+;;; crescendi and diminuendi should probably get extra dynamics at their start
+;;;  and end.
+;;; replace body of interpret-layer with interpret-layer-by-instrument.
 
 ;; ** divide (generate divisions and states)
 
@@ -73,10 +76,6 @@
 		    (when (= (number layer) 3) (setf (instruments layer) brass))
 		    (when (= (number layer) fib1) (push perc (instruments layer)))
 		    (when (= (number layer) fib2) (push tromb (instruments layer))))))
-(setf (staff-short-name
-       (get-data 'b-flat-clarinet
-		 sc::+slippery-chicken-standard-instrument-palette+))
-      "cl.")
 
 ;; VISUALIZE MINUTES
 (visualize-minutes (access-minutes) '(3 2 1 0 111) "/E/code/ensemble/test" 1 nil)

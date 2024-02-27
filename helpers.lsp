@@ -389,4 +389,10 @@
       ;; call write-xml on sc-object
       (write-xml sc :file file))))
 
+;; some dirty work (replacing names in staffs):
+(setf (staff-short-name
+       (get-data 'b-flat-clarinet
+		 sc::+slippery-chicken-standard-instrument-palette+))
+      "cl.")
+
 ;; EOF helpers.lsp

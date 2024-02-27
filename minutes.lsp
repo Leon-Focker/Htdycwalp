@@ -66,7 +66,7 @@
   (loop for layer in (layers mn)
 	collect (get-section-durations layer)))
 
-;; this is a stub, not needed atm
+;; replace its body with a loop through interpret-layer-by-instrument
 (defmethod interpret-layer ((tl tape-layer))
   ;;&rest keyargs &key &allow-other-keys)
   (let* ((durs (get-section-durations tl))
@@ -84,7 +84,7 @@
     (loop for ins in (instruments tl)
 	  collect `(,ins computer ,durs ,states ,(marks tl)))))
 
-;; this is a stub, not needed atm
+;; replace its body with a loop through interpret-layer-by-instrument
 (defmethod interpret-layer ((il instrument-layer))
   ;;&rest keyargs &key &allow-other-keys)
   (let* ((durs (get-section-durations il))
