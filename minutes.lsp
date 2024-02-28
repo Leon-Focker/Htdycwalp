@@ -31,7 +31,8 @@
    ;; every division of the minute will have a dynamic, which is a number
    ;; depending on the type of layer this number can be something like forte,
    ;; crescendo or even rest.
-   (dynamics :accessor dynamics :initarg :dynamics :type list :initform '(1))))
+   (dynamics :accessor dynamics :initarg :dynamics :type list :initform '(1))
+   (chord :accessor chord :initarg :chord :type list :initform '())))
 
 (defclass tape-layer (minute-layer)
   ((instruments :accessor instruments :type list :initarg :instruments
