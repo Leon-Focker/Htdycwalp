@@ -13,6 +13,8 @@
 ;;; idea: double-bass is a solo-instrument and strings are sometimes coupled
 ;;;  with ww or bass.
 ;;; respect lowest and highest notes for each instrument.
+;;; should interpret-layer-by-instrument be able to see other layers in minute?
+;;;  this way it knows wheter it is solo etc.
 
 ;; ** divide (generate divisions and states)
 
@@ -27,13 +29,17 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
        (division-ratios-seed '(1 2 3 4 5))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-       (states-seed '(1 2 3 4 5 6 7 8))
+       (states-seeds '((1 2 3 4 5 6 7 8)
+		       (1 7 2 3 4 5 6 8)
+		       (1 7 2 3 4 5 6 8)
+		       (1 7 2 3 4 5 6 8)))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
        (dynamics-seed '(0 1 4 2 3 5)))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   (loop with nr-of-mins = (length (access-minutes))
-	for seed in number-of-division-seeds and i in (minutes-layer-numbers)
-	for nr-of-divs = (window-transitions nr-of-mins seed .5)
+	for dseed in number-of-division-seeds and sseed in states-seeds
+	for i in (minutes-layer-numbers)
+	for nr-of-divs = (window-transitions nr-of-mins dseed .5)
 	for divs = '() for states = '() for dynamics = '()
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;	REPLACE
@@ -44,7 +50,7 @@
 	     (3))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	   (setf divs (procession (apply #'+ nr-of-divs) division-ratios-seed)
-		 states (procession (apply #'+ nr-of-divs) states-seed)
+		 states (procession (apply #'+ nr-of-divs) sseed)
 		 dynamics (procession (apply #'+ nr-of-divs) dynamics-seed))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	   (distribute-divs divs nr-of-divs (access-minutes) i)
