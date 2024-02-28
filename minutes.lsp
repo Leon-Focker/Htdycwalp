@@ -143,19 +143,18 @@
   (let* ((durs (get-section-durations il))
 	 (states (states il))
 	 (dynamics (dynamics il))
-	 (indices '())
+	 (indices '(0))
 	 (new-durs '())
 	 (pitches '())
 	 (marks '()))
     (loop for state in states and dur in durs and dyn in dynamics
 	  with index = 0
-	  collect index into i-list
 	  do (if (= 0 dyn)
 		 ;; when dynamics = 0 make a rest:
 		 (progn (push dur new-durs) (push nil pitches) (incf index))
 		 ;; interpret states
 		 (case state
-		   (1 (push 'cs4 pitches) (push dur new-durs) (incf index))
+		   (1 (ins-get-static))
 		   (2 (push 'd4 pitches) (push dur new-durs) (incf index))
 		   (3 (push 'e4 pitches) (push dur new-durs) (incf index))
 		   (4 (push 'f4 pitches) (push dur new-durs) (incf index))
@@ -163,16 +162,19 @@
 		   (6 (push 'a4 pitches) (push dur new-durs) (incf index))
 		   (7 (get-drifting-pitches))
 		   (t (push 'c5 pitches) (push dur new-durs) (incf index))))
+	     (push index indices)
 	  sum dur into sum
 	  finally (setf new-durs (reverse new-durs)
 			pitches (reverse pitches)
-			indices i-list))
+			indices (reverse indices)))
     ;; dynamics into marks
-    (loop for dyn in dynamics and i in indices
+    (loop for dyn in dynamics and i from 0
 	  unless (= 0 dyn)
 	    do (case dyn
-		 (1 (push `(,i cresc-beg) marks) (push `(,(1+ i) cresc-end) marks))
-		 (2 (push `(,i dim-beg) marks) (push `(,(1+ i) dim-end) marks))
+		 (1 (push `(,(nth i indices) cresc-beg) marks)
+		  (push `(,(nth (1+ i) indices) cresc-end) marks))
+		 (2 (push `(,(nth i indices) dim-beg) marks)
+		  (push `(,(nth (1+ i) indices) dim-end) marks))
 		 (3 (push `(,i p) marks))
 		 (4 (push `(,i mf) marks))
 		 (5 (push `(,i ff) marks))))
@@ -184,12 +186,18 @@
 		(t instrument))
 	 ,new-durs ,pitches ,marks)))
 
+;; *** ins-get-static
+(defmacro ins-get-static ()
+  `(case instrument
+     ((tuba) (push 'bf0 pitches) (push dur new-durs) (incf index))
+     (t (push nil pitches) (push dur new-durs) (incf index))))
+
 ;; doing these as macros for my sanity's sake.
 (defmacro get-drifting-pitches ()
   `(let* ((rest (mod (- 4 (mod sum 4)) 4)) ; time until first bar is full
-	  (st (if (> rest dur) dur rest)) ; time in first, not full, bar
-	  (md (* (floor (- dur st) 4) 4)) ; time within full bars
-	  (nd (- dur st md))              ; time in last, not full, bar
+	  (st (if (> rest dur) dur rest))  ; time in first, not full, bar
+	  (md (* (floor (- dur st) 4) 4))  ; time within full bars
+	  (nd (- dur st md))               ; time in last, not full, bar
 	  (nr 0)
 	  (spitch (note-to-midi 'g6))
 	  (tpitch (note-to-midi 'e6)))
