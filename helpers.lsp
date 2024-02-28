@@ -6,6 +6,10 @@
 (defun nth-mod (n rthm-ls)
   (nth (mod n (length rthm-ls)) rthm-ls))
 
+;; *** sc-intern
+(defun sc-intern (symbol)
+  (intern (string symbol) :sc))
+
 ;; *** split-list
 ;;; get a list and a list of numbers which stand for the number of elements in
 ;;; each sublist of the result. (very lazy implementation)
@@ -422,7 +426,7 @@
 		 (loop for m in (fifth i) 
 		       when (< (car m) (length attacks-indices))
 			 do (add-mark (nth (nth (car m) attacks-indices) events)
-			        (intern (string (cadr m)) :sc)))
+			        (sc-intern (cadr m))))
 		 ;; arbitrarily set dynamics before and after crescendo
 		 (setf events (add-crescendo-dynamics events))
 		 ;; generate bars
