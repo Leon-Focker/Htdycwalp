@@ -74,6 +74,18 @@
 ;; ** Interpretation
 
 ;; *** interpret-layer-by-instrument
+;; **** interpret tape
+;;; STATES: 1 - static
+;;;         2 - static rhythms
+;;;         3 - morphing rhythms
+;;;         4 - changing rhythmic speed
+;;;         5 - changing pulse speed
+;;;         6 - changing timbres
+;;;         7 - drifting rhythmic speeds
+;;;         8 - drifting pulse speeds
+;;;
+;;; Each state is allowed to also use methods described in any state above it.
+;;;
 ;;; TODO atm this is just a copy of the same method for instrument-layers
 ;;; obvsly this should do something else entirely. Probably not even be notated.
 (defmethod interpret-layer-by-instrument ((tl tape-layer)
@@ -116,7 +128,18 @@
 ;; (defun test (nr)
 ;;   (lambda (&rest args) (unless (= nr (length args)) (warn "wrong nummber of arguments: ~a" (length args)))))
 
-;;; a lot of work to do
+;;; **** interpret instruments
+;;; STATES: 1 - static
+;;;         2 - static rhythms
+;;;         3 - morphing rhythms
+;;;         4 - changing timbres
+;;;         5 - isorhythmic rhythms
+;;;         6 - converging pitches (glissandi)
+;;;         7 - drifting pitches (glissandi)
+;;;         8 - drifting metres (notes per section)
+;;;
+;;; Each state is allowed to also use methods described in any state above it.
+;;;
 (defmethod interpret-layer-by-instrument ((il instrument-layer)
 					  &optional instrument)
   (let* ((durs (get-section-durations il))
