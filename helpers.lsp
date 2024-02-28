@@ -190,6 +190,21 @@
   (setf (marks event)
 	(remove mark (marks event))))
 
+;; *** dyn=
+;;; compare dynamics.
+;;; when diff = 1 ->  pp == p, pp == ppp, pp == pp
+;;; when diff = 0 ->  pp =/= p, pp =/= ppp, pp == pp
+(defun dyn= (dynx dyny &optional (diff 1))
+  (setf dynx (intern (string dynx) :ly)
+	dyny (intern (string dyny) :ly))
+  (let* ((dyns '(pppp ppp pp p mp mf f ff fff ffff))
+	 (len (length dyns))
+	 ix
+	 iy)
+    (setf ix (- len (length (member dynx dyns)))
+	  iy (- len (length (member dyny dyns))))
+    (<= (abs (- ix iy)) diff)))
+
 ;; *** add-crescendo-dynamics
 ;;; if optional-arg crescendo is nil, do diminuendos.
 (defun add-crescendo-dynamics (event-list &optional (crescendo t))
@@ -219,14 +234,14 @@
 				  finally (return 'p))
 	  do (multiple-value-bind (st nd)
 		 (get-dyns dyn-before dyn-after dyn-st crescendo)
-	       (if (eq st (get-dynamic (nth (1- beg) event-list)))
+	       (if (dyn= st (get-dynamic (nth (1- beg) event-list)))
 		   ;; move crescendo start:
 		   (progn (remove-mark (nth beg event-list) cresc-beg)
 			  (push cresc-beg (marks (nth (1- beg) event-list))))
 		   ;; don't move:
 		   (unless dyn-st (add-mark (nth beg event-list) st)))
-	       (if (or (and dyn-nd (not (eq dyn-nd nd)))
-		       (and cre-st (not (eq dyn-nd nd))))
+	       (if (or (and dyn-nd (not (dyn= dyn-nd nd)))
+		       (and cre-st (not (dyn= dyn-nd nd))))
 		   ;; move crescendo end:
 		   (progn (remove-mark (nth end event-list) cresc-end)
 			  (add-mark (nth (1- end) event-list) nd)
