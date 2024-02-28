@@ -88,8 +88,7 @@
 ;;;
 ;;; TODO atm this is just a copy of the same method for instrument-layers
 ;;; obvsly this should do something else entirely. Probably not even be notated.
-(defmethod interpret-layer-by-instrument ((tl tape-layer)
-					  &optional instrument)
+(defmethod interpret-layer-by-instrument ((tl tape-layer) instrument)
   (let* ((durs (get-section-durations tl))
 	 (states (states tl))
 	 (dynamics (dynamics tl))
@@ -140,31 +139,36 @@
 ;;;
 ;;; Each state is allowed to also use methods described in any state above it.
 ;;;
-(defmethod interpret-layer-by-instrument ((il instrument-layer)
-					  &optional instrument)
+(defmethod interpret-layer-by-instrument ((il instrument-layer) instrument)
   (let* ((durs (get-section-durations il))
 	 (states (states il))
 	 (dynamics (dynamics il))
+	 (indices '())
 	 (new-durs '())
 	 (pitches '())
 	 (marks '()))
     (loop for state in states and dur in durs and dyn in dynamics
+	  with index = 0
+	  collect index into i-list
 	  do (if (= 0 dyn)
 		 ;; when dynamics = 0 make a rest:
-		 (progn (push dur new-durs) (push nil pitches))
+		 (progn (push dur new-durs) (push nil pitches) (incf index))
 		 ;; interpret states
 		 (case state
-		   (1 (push 'c4 pitches))
-		   (2 (push 'd4 pitches))
-		   (3 (push 'e4 pitches))
-		   (4 (push 'f4 pitches))
-		   (5 (push 'g4 pitches))
-		   (6 (push 'a4 pitches))
-		   (7 (push 'b4 pitches))
-		   (t (push 'c5 pitches))))
-	  finally (setf new-durs (reverse new-durs) pitches (reverse pitches)))
+		   (1 (push 'cs4 pitches) (push dur new-durs) (incf index))
+		   (2 (push 'd4 pitches) (push dur new-durs) (incf index))
+		   (3 (push 'e4 pitches) (push dur new-durs) (incf index))
+		   (4 (push 'f4 pitches) (push dur new-durs) (incf index))
+		   (5 (push 'g4 pitches) (push dur new-durs) (incf index))
+		   (6 (push 'a4 pitches) (push dur new-durs) (incf index))
+		   (7 (get-drifting-pitches))
+		   (t (push 'c5 pitches) (push dur new-durs) (incf index))))
+	  sum dur into sum
+	  finally (setf new-durs (reverse new-durs)
+			pitches (reverse pitches)
+			indices i-list))
     ;; dynamics into marks
-    (loop for dyn in dynamics and i from 0
+    (loop for dyn in dynamics and i in indices
 	  unless (= 0 dyn)
 	    do (case dyn
 		 (1 (push `(,i cresc-beg) marks) (push `(,(1+ i) cresc-end) marks))
@@ -178,7 +182,35 @@
 	 ,(cond ((< (length (string instrument)) 6) instrument)
 		((string= (subseq (string instrument) 0 6) "VIOLIN") 'violin)
 		(t instrument))
-	 ,durs ,pitches ,marks)))
+	 ,new-durs ,pitches ,marks)))
+
+;; doing these as macros for my sanity's sake.
+(defmacro get-drifting-pitches ()
+  `(let* ((rest (mod (- 4 (mod sum 4)) 4)) ; time until first bar is full
+	  (st (if (> rest dur) dur rest)) ; time in first, not full, bar
+	  (md (* (floor (- dur st) 4) 4)) ; time within full bars
+	  (nd (- dur st md))              ; time in last, not full, bar
+	  (nr 0)
+	  (spitch (note-to-midi 'g6))
+	  (tpitch (note-to-midi 'e6)))
+     (unless (= 0 st) (incf nr))
+     (unless (= 0 nd) (incf nr))
+     (incf nr (/ md 4))
+     ;;(push `(,(+ index (1- nr)) "end-gliss") marks)
+     ;;(push `(,index "beg-gliss") marks)
+     (loop for i from 0 below nr
+	   do (cond ((and (= i 0) (not (= 0 st)))
+		     (push st new-durs))
+		    ((and (= i (1- nr)) (not (= 0 nd)))
+		     (push nd new-durs))
+		    (t (push 4 new-durs)))
+	      (when (< i (1- nr))
+		(push `(,(+ index i 1) end-gliss) marks)
+		(push `(,(+ index i) beg-gliss) marks))
+	      (push (midi-to-note (round (+ (* (/ i nr) (- tpitch spitch))
+					    spitch)))
+		    pitches))
+     (incf index nr)))
 
 ;; ** make
 
