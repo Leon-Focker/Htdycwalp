@@ -8,7 +8,7 @@
 
 ;; *** sc-intern
 (defun sc-intern (symbol)
-  (intern (string symbol) :sc))
+  (if (stringp symbol) symbol (intern (string symbol) :sc)))
 
 ;; *** split-list
 ;;; get a list and a list of numbers which stand for the number of elements in
@@ -234,18 +234,20 @@
 				  finally (return 'p))
 	  do (multiple-value-bind (st nd)
 		 (get-dyns dyn-before dyn-after dyn-st crescendo)
-	       (if (dyn= st (get-dynamic (nth (1- beg) event-list)))
+	       (if (dyn= st (get-dynamic (nth (max (1- beg) 0) event-list)))
 		   ;; move crescendo start:
 		   (progn (remove-mark (nth beg event-list) cresc-beg)
-			  (push cresc-beg (marks (nth (1- beg) event-list))))
+			  (push cresc-beg (marks (nth (max (1- beg) 0)
+						      event-list))))
 		   ;; don't move:
 		   (unless dyn-st (add-mark (nth beg event-list) st)))
 	       (if (or (and dyn-nd (not (dyn= dyn-nd nd)))
 		       (and cre-st (not (dyn= dyn-nd nd))))
 		   ;; move crescendo end:
 		   (progn (remove-mark (nth end event-list) cresc-end)
-			  (add-mark (nth (1- end) event-list) nd)
-			  (push cresc-end (marks (nth (1- end) event-list))))
+			  (add-mark (nth (max (1- end) 0) event-list) nd)
+			  (push cresc-end (marks (nth (max (1- end) 0)
+						      event-list))))
 		   ;; don't move:
 		   (add-mark (nth end event-list) nd))))
     event-list))
@@ -337,7 +339,7 @@
       (setf quantised (nearest normalised-duration possible-divisions))
       (loop for i in (append (ml 1 full-bars)
 			     (split-into-simpler-ratios quantised))
-	    collect (/ i tempo-mult)))))
+	    unless (= 0 i) collect (/ i tempo-mult)))))
 
 ;; *** split-durations-for-bars
 ;;; returns a list of sublists of durations. These durations can be fit into
