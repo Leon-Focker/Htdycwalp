@@ -10,10 +10,9 @@
 ;;; maybe we don't need to discern between tape and instrument layers? as tape
 ;;;  is just another instrument?
 ;;; what about crescendi at the end? add extra minute (with rests) to not lose them?
-;;; crescendi and diminuendi should probably get extra dynamics at their start
-;;;  and end. determine that by an algo seeing what comes before and after.
 ;;; idea: double-bass is a solo-instrument and strings are sometimes coupled
 ;;;  with ww or bass.
+;;; respect lowest and highest notes for each instrument.
 
 ;; ** divide (generate divisions and states)
 
