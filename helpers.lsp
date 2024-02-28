@@ -242,14 +242,18 @@
 		   ;; don't move:
 		   (unless dyn-st (add-mark (nth beg event-list) st)))
 	       (if (or (and dyn-nd (not (dyn= dyn-nd nd)))
-		       (and cre-st (not (dyn= dyn-nd nd))))
+		       (and cre-st (not (dyn= dyn-nd nd)))
+		       (is-rest (nth end event-list)))
 		   ;; move crescendo end:
 		   (progn (remove-mark (nth end event-list) cresc-end)
 			  (add-mark (nth (max (1- end) 0) event-list) nd)
 			  (push cresc-end (marks (nth (max (1- end) 0)
 						      event-list))))
-		   ;; don't move:
-		   (add-mark (nth end event-list) nd))))
+		   ;; move end but not dynamic:
+		   (progn (remove-mark (nth end event-list) cresc-end)
+			  (add-mark (nth end event-list) nd)
+			  (push cresc-end (marks (nth (max (1- end) 0)
+						      event-list)))))))
     event-list))
 
 ;; *** env-fun1
@@ -437,7 +441,7 @@
     (loop for e in result
 	  do (when (= -1 (letter-value e))
 	       (setf (letter-value e)
-		     (floor (/ 4 (* (duration e))))))) ; ? crude aprox
+		     (round (/ 4 (duration e)))))) ; ? crude aprox
     (values result indices-of-attacks)))
 
 ;; *** lists-to-xml
