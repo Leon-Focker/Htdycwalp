@@ -146,31 +146,93 @@
 		      collect (nth-mod i ls1))))
   (values ls1 ls2))
 
-;; *** get-cresc-dyns
-#+nil(defun get-cresc-dyns (dyn-before dyn-after)
-  )
+;; *** get-dyns
+;;; first and second argument are dynamics before and after crescendo/diminuendo
+;;; third arugment is dynamic at start of crescendo/diminuendo, might be nil.
+;;; fourth argument ist wheter to od crescendo (t) or diminuendo (nil)
+(defun get-dyns (dyn-before dyn-after dyn-current &optional (crescendo t))
+  (setf dyn-before (intern (string dyn-before) :ly)
+	dyn-after (intern (string dyn-after) :ly)
+	dyn-current (intern (string dyn-current) :ly))
+  (let* ((dyns (if crescendo '(ppp pp p mp mf f ff fff)
+		   '(fff ff f mf mp p pp ppp)))
+	 (len (length dyns))
+	 new-start
+	 new-end)
+    (flet ((get-target (x &optional (div 2))
+	     (let ((i (- len (length (member x dyns)))))
+	       (nth (max (min (+ (floor (- len i) div) i) (1- len)) 0) dyns)))
+	   (get-some-start (x)
+	     (let ((i (- len (length (member x dyns)))))
+	       (nth (mod (floor (* i 5.5)) (1- len)) dyns))))
+      (if dyn-current
+	  (progn (setf new-start dyn-current
+		       new-end (get-target new-start)))
+	  (progn (setf new-start (get-some-start dyn-before)
+		       new-end (get-target new-start 1.5))))
+      (values (sc-intern new-start) (sc-intern new-end)))))
+
+;; *** get-dynamic
+;;; get the dynamic mark for an event
+(defun get-dynamic (event)
+  (loop for mark in (marks event)
+	for m = (intern (string mark) :sc)
+	when (is-dynamic m) do (return m)))
+
+;; *** get-cresc-beg
+(defun get-cresc-beg (event)
+  (loop for mark in (marks event)
+	for m = (intern (string mark) :ly)
+	when (find m '(cresc-beg dim-beg)) do (return m)))
+
+;; *** remove-mark
+(defun remove-mark (event mark)
+  (setf (marks event)
+	(remove mark (marks event))))
 
 ;; *** add-crescendo-dynamics
-(defun add-crescendo-dynamics (event-list)
-  (let ((begs '())
-	(ends '())
-	(len (length event-list)))
+;;; if optional-arg crescendo is nil, do diminuendos.
+(defun add-crescendo-dynamics (event-list &optional (crescendo t))
+  (let ((len (length event-list))
+	(cresc-beg (sc-intern (if crescendo 'cresc-beg 'dim-beg)))
+	(cresc-end (sc-intern (if crescendo 'cresc-end 'dim-end)))	
+	(begs '())
+	(ends '()))
+    ;; find beginnings and ends of crescendo-marks
     (loop for i from 0 and e in event-list
-          do (when (find (intern (string 'cresc-beg) :sc) (marks e))
-	       (push i begs))
-	     (when (find (intern (string 'cresc-end) :sc) (marks e))
-	       (push i ends))
+          do (when (find cresc-beg (marks e)) (push i begs))
+	     (when (find cresc-end (marks e)) (push i ends))
 	  finally (setf begs (reverse begs)
 			ends (reverse ends)))
+    ;; find dynamics before and after each crescendo and set new ones
     (loop for beg in begs and end in ends
-	  do
-	     ;; (get-dynamic)
-	     ;; when dynamic at beg - use it
-	     ;; else read beg - 1
-	     ;; read end + 1
-	     ;; decide for start and end, where start < end with get-cresc-dyns
-	     ;; set accordingly
-    ;; (add-mark e (get-cresc-dyns ))
+	  for dyn-st = (get-dynamic (nth beg event-list))
+	  for dyn-nd = (get-dynamic (nth end event-list))
+	  for cre-st = (get-cresc-beg (nth end event-list))
+	  for dyn-before = (loop for i from beg downto 0
+				 for dyn = (get-dynamic (nth i event-list))
+				 when dyn do (return dyn)
+				   finally (return 'p))
+	  for dyn-after = (loop for i from end below len
+				for dyn = (get-dynamic (nth i event-list))
+				when dyn do (return dyn)
+				  finally (return 'p))
+	  do (multiple-value-bind (st nd)
+		 (get-dyns dyn-before dyn-after dyn-st crescendo)
+	       (if (eq st (get-dynamic (nth (1- beg) event-list)))
+		   ;; move crescendo start:
+		   (progn (remove-mark (nth beg event-list) cresc-beg)
+			  (push cresc-beg (marks (nth (1- beg) event-list))))
+		   ;; don't move:
+		   (unless dyn-st (add-mark (nth beg event-list) st)))
+	       (if (or (and dyn-nd (not (eq dyn-nd nd)))
+		       (and cre-st (not (eq dyn-nd nd))))
+		   ;; move crescendo end:
+		   (progn (remove-mark (nth end event-list) cresc-end)
+			  (add-mark (nth (1- end) event-list) nd)
+			  (push cresc-end (marks (nth (1- end) event-list))))
+		   ;; don't move:
+		   (add-mark (nth end event-list) nd))))
     event-list))
 
 ;; *** env-fun1
@@ -429,6 +491,7 @@
 			        (sc-intern (cadr m))))
 		 ;; arbitrarily set dynamics before and after crescendo
 		 (setf events (add-crescendo-dynamics events))
+		 (setf events (add-crescendo-dynamics events nil))
 		 ;; generate bars
 		 (push (loop while events
 			     for bar = (make-rthm-seq-bar `(,time-sig))

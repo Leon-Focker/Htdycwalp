@@ -90,7 +90,7 @@
 		    (when (= (number layer) fib2) (push tromb (instruments layer))))))
 
 ;; VISUALIZE MINUTES
-(visualize-minutes (access-minutes) '(3 2 1 0 111) "/E/code/ensemble/test" 1 nil t)
+;(visualize-minutes (access-minutes) '(3 2 1 0 111) "/E/code/ensemble/test1" 1 nil t)
 
 ;; update start-times of all layers just to be sure:
 (loop for i in (access-minutes) do (update-layer-start-times i))
@@ -109,6 +109,12 @@
 ;; write entire score
 (lists-to-xml (interpret-minutes (access-minutes))
 	      "/E/code/ensemble/test.xml")
+
+(lists-to-xml (interpret-minutes (access-minutes) '(tuba percussion double-bass flute computer))
+	      "/E/code/ensemble/test2.xml")
+
+(lists-to-xml (interpret-minutes (subseq (access-minutes) 2 4) '(tuba))
+	      "/E/code/ensemble/test1.xml")
 
 ;; idea: interpret layers returns a function that can then be filled with arguments
 ;;  to form a sections like function.
