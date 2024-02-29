@@ -70,6 +70,19 @@
 		      slot-name)
 	  new-value)))
 
+;; *** get-st-md-nd
+;;; gets a time and a duration. Assumes bar = '(4 4), 60bpm.
+;;; returns 3 values:
+;;;  - the duration at the beginning, that is needed to fill the first bar
+;;;  - the duration in the middle that fills entire bars
+;;;  - the duration at the end, that doesn't fill another bar
+(defun get-st-md-nd (time dur)
+  (let* ((remain (mod (- 4 (mod time 4)) 4))  ; time until first bar is full
+	 (st (if (> remain dur) dur remain)) ; time in first, not full, bar
+	 (md (* (floor (- dur st) 4) 4))     ; time within full bars
+	 (nd (- dur st md)))                 ; time in last, not full, bar
+    (values st md nd)))
+
 ;; *** set-related-dynamics
 ;;; loop through the dynamics of a source layer and a target layer and decide
 ;;; the targets dynamics with the ones of source

@@ -149,24 +149,26 @@
 	 (marks '()))
     (loop for state in states and dur in durs and dyn in dynamics
 	  with index = 0
-	  do (if (= 0 dyn)
-		 ;; when dynamics = 0 make a rest:
-		 (progn (push dur new-durs) (push nil pitches) (incf index))
-		 ;; interpret states
-		 (case state
-		   (2 (ins-get-static-rhythm))
-		   (3 (ins-get-morphing-rhythms))
-		   (4 (ins-get-changing-timbres))
-		   (5 (ins-get-isorhythmic-rhythms))
-		   (6 (ins-get-converging-pitches))
-		   (7 (get-drifting-pitches))
-		   (8 (ins-get-drifting-metres))
-		   (t (ins-get-static))))
-	     (push index indices)
-	  sum dur into sum
-	  finally (setf new-durs (reverse new-durs)
-			pitches (reverse pitches)
-			indices (reverse indices)))
+	  do (multiple-value-bind (d p m)
+		 (if (= 0 dyn)
+		     ;; when dynamics = 0 make a rest:
+		     (ins-get-rest dur)
+		     ;; interpret states
+		     (case state
+		       (2 (ins-get-static-rhythm instrument dur))
+		       (3 (ins-get-morphing-rhythms instrument dur))
+		       (4 (ins-get-changing-timbres instrument dur))
+		       (5 (ins-get-isorhythmic-rhythms instrument dur))
+		       (6 (ins-get-converging-pitches instrument dur))
+		       (7 (ins-get-drifting-pitches instrument dur index sum))
+		       (8 (ins-get-drifting-metres instrument dur))
+		       (t (ins-get-static instrument dur))))
+	       (incf index (length d))
+	       (setf new-durs (append new-durs d)
+		     pitches (append pitches p)
+		     marks (append marks m)
+		     indices (append indices (list index))))
+	  sum dur into sum)
     ;; dynamics into marks
     (loop for dyn in dynamics and i from 0
 	  unless (= 0 dyn)
@@ -186,73 +188,82 @@
 		(t instrument))
 	 ,new-durs ,pitches ,marks)))
 
-;;; doing these as macros for my sanity's sake.
+;; *** ins-get-rest
+(defun ins-get-rest (dur)
+  (values `(,dur) '(nil) '() 1))
 
 ;; *** ins-get-static
-(defmacro ins-get-static ()
-  `(case instrument
-     ((tuba) (push 'bf0 pitches) (push dur new-durs) (incf index))
-     ((violin-1 violin-2 viola cello double-bass)
-      (push 'c4 pitches) (push dur new-durs) (incf index))
-     (t (push nil pitches) (push dur new-durs) (incf index))))
+(defun ins-get-static (instrument dur)
+  (case instrument
+    ((tuba) (values `(,dur) '(bf0) '()))
+    ((violin-1 violin-2 viola cello double-bass)
+     (values `(,dur) '(c4) '()))
+    (t (values `(,dur) '(nil) '()))))
 
 ;; *** ins-get-static-rhythm
-(defmacro ins-get-static-rhythm ()
-  `(case instrument
-     (t (push 'd4 pitches) (push dur new-durs) (incf index))))
+(defun ins-get-static-rhythm (instrument dur)
+  (case instrument
+    (t (values `(,dur) '(d4) '()))))
 
 ;; *** ins-get-morphing-rhythms
-(defmacro ins-get-morphing-rhythms ()
-  `(case instrument
-     (t (push 'e4 pitches) (push dur new-durs) (incf index))))
+(defun ins-get-morphing-rhythms (instrument dur)
+  (case instrument
+    (t (values `(,dur) '(e4) '()))))
 
 ;; *** ins-get-changing-timbres
-(defmacro ins-get-changing-timbres ()
-  `(case instrument
-     (t (push 'f4 pitches) (push dur new-durs) (incf index))))
+(defun ins-get-changing-timbres (instrument dur)
+  (case instrument
+    (t (values `(,dur) '(f4) '()))))
 
 ;; *** ins-get-isorhythmic-rhythms
-(defmacro ins-get-isorhythmic-rhythms ()
-  `(case instrument
-     (t (push 'g4 pitches) (push dur new-durs) (incf index))))
+(defun ins-get-isorhythmic-rhythms (instrument dur)
+  (case instrument
+    (t (values `(,dur) '(g4) '()))))
 
 ;; *** ins-get-converging-pitches
-(defmacro ins-get-converging-pitches ()
-  `(case instrument
-     (t (push 'a4 pitches) (push dur new-durs) (incf index))))
+(defun ins-get-converging-pitches (instrument dur)
+  (case instrument
+    (t (values `(,dur) '(a4) '()))))
 
 ;; *** get-drifting-pitches
-(defmacro get-drifting-pitches ()
-  `(let* ((rest (mod (- 4 (mod sum 4)) 4)) ; time until first bar is full
-	  (st (if (> rest dur) dur rest))  ; time in first, not full, bar
-	  (md (* (floor (- dur st) 4) 4))  ; time within full bars
-	  (nd (- dur st md))               ; time in last, not full, bar
-	  (nr 0)
-	  (spitch (note-to-midi 'e5))
-	  (tpitch (+ 72 (random 8))))
-     (unless (= 0 st) (incf nr))
-     (unless (= 0 nd) (incf nr))
-     (incf nr (/ md 4))
-     ;;(push `(,(+ index (1- nr)) "end-gliss") marks)
-     ;;(push `(,index "beg-gliss") marks)
-     (loop for i from 0 below nr
-	   do (cond ((and (= i 0) (not (= 0 st)))
-		     (push st new-durs))
-		    ((and (= i (1- nr)) (not (= 0 nd)))
-		     (push nd new-durs))
-		    (t (push 4 new-durs)))
-	      (when (< i (1- nr))
-		(push `(,(+ index i 1) end-gliss) marks)
-		(push `(,(+ index i) beg-gliss) marks))
-	      (push (midi-to-note (round (+ (* (/ i nr) (- tpitch spitch))
-					    spitch)))
-		    pitches))
-     (incf index nr)))
+(defun ins-get-drifting-pitches (instrument dur index sum)
+  (let* ((new-durs '())
+	 (pitches '())
+	 (marks '())
+	 (nr 0)	 
+	 spitch
+	 tpitch)
+    (multiple-value-bind (st md nd) (get-st-md-nd sum dur)
+      ;; get start and target pitch
+      (setf spitch (note-to-midi 'e5)
+	    tpitch (+ 72 (random 8)))
+      ;; set number of notes
+      (unless (= 0 st) (incf nr))
+      (unless (= 0 nd) (incf nr))
+      (incf nr (/ md 4))
+      ;; custom stuff:
+      (case instrument
+	(tuba (incf nr) (setf st dur) (setf spitch (note-to-midi 'bf0))))
+      ;; get notes and gliss marks
+      (loop for i from 0 below nr
+	    do (cond ((and (= i 0) (not (= 0 st)))
+		      (push st new-durs))
+		     ((and (= i (1- nr)) (not (= 0 nd)))
+		      (push nd new-durs))
+		     (t (push 4 new-durs)))
+	       (push (midi-to-note
+		      (round (+ (* (/ i nr) (- tpitch spitch)) spitch)))
+		     pitches)
+	       (when (< i (1- nr))
+		 (push `(,(+ index i) beg-gliss) marks)
+		 (push `(,(+ index i 1) end-gliss) marks)))
+      ;; Return list of durations pitches marks
+      (values (reverse new-durs) (reverse pitches) (reverse marks)))))
 
 ;; *** ins-get-drifting-metres
-(defmacro ins-get-drifting-metres ()
-  `(case instrument
-     (t (push 'b4 pitches) (push dur new-durs) (incf index))))
+(defun ins-get-drifting-metres (instrument dur)
+  (case instrument
+    (t (values `(,dur) '(b4) '()))))
 
 ;; ** make
 
