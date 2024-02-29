@@ -300,6 +300,17 @@
 
 ;; ** notation
 
+(defun update-transposing-pitches (events instrument)
+  (loop for e in events
+	with trans = (transposition-semitones
+		      (get-data
+		       instrument
+		       sc::+slippery-chicken-standard-instrument-palette+))
+	for pitch-or-chord = (pitch-or-chord e)
+	for is-rest = (is-rest e)
+	do (unless is-rest
+	     (set-pitch-or-chord e (transpose pitch-or-chord (- trans))))))
+
 ;; *** split-into-simpler-ratios
 ;;; returns a list
 ;;; very simple, could be imprived.
@@ -504,6 +515,11 @@
 		    ;; 60 because events do that anyways.
 		    (loop for k in (third i) collect (* k (/ tempo 60)))
 		    (fourth i) time-sig)
+		 ;; loop through transposing instruments and change written
+		 ;; this only has to be done when exporting xml (for musescore),
+		 ;; as the in-c argument i missing.
+		 (when (find (second i) '(b-flat-clarinet))
+		   (update-transposing-pitches events (second i)))
 		 ;; add marks to events (using a list of indices of the events
 		 ;; before they were split into bars).
 		 (loop for m in (fifth i) 
