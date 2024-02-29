@@ -64,17 +64,21 @@
   (when (apply #'= (loop for i from 1 to 3 collect (length (helper i))))
     (set-lsim (access-minutes) 7 2 'division-ratios (helper 1))
     (set-lsim (access-minutes) 7 3 'division-ratios (helper 1))))
+
+;;; DYNAMICS
+
 ;;; set beginning of minute 0 and 1 to ff in tape:
 (setf (car (dynamics (find 0 (layers (nth 0 (access-minutes))) :key 'number)))5)
 (setf (car (dynamics (find 0 (layers (nth 1 (access-minutes))) :key 'number)))5)
-
-;;; DYNAMICS
 ;;; copy dynamics from tape to brass:
 (set-related-dynamics (access-minutes) 0 3
 		      '((0 0) (1 1) (2 2) (3 3) (4 4) (5 5)))
 ;;; invert dynamics from tape to strings:
 (set-related-dynamics (access-minutes) 0 1
 		      '((0 5) (1 4) (2 1) (3 0) (4 1) (5 3)) nil)
+;;; set second dynamic of minute 0 and 1 to cresc in strings:
+(setf (cadr (dynamics (find 1 (layers (nth 0 (access-minutes))) :key 'number)))1)
+(setf (cadr (dynamics (find 1 (layers (nth 1 (access-minutes))) :key 'number)))1)
 
 ;; *** instruments
 
@@ -95,21 +99,12 @@
 		    (when (= (number layer) fib2) (push tromb (instruments layer))))))
 
 ;; VISUALIZE MINUTES
-;(visualize-minutes (access-minutes) '(3 2 1 0 111) "/E/code/ensemble/test1" 1 nil t)
+(visualize-minutes (access-minutes) '(3 2 1 0 111) "/E/code/ensemble/test_secs" 1 nil)
 
 ;; update start-times of all layers just to be sure:
 (loop for i in (access-minutes) do (update-layer-start-times i))
 
 ;; ** ...and conquer (interpret the minute objects)
-
-#|
-(lists-to-xml (interpret-layer (nth 1 (layers (nth 9 (access-minutes)))))
-	      "/E/code/ensemble/test1.xml")
-(lists-to-xml (interpret-layer (nth 2 (layers (nth 9 (access-minutes)))))
-	      "/E/code/ensemble/test2.xml")
-(lists-to-xml (interpret-layer (nth 3 (layers (nth 9 (access-minutes)))))
-	      "/E/code/ensemble/test3.xml")
-|#
 
 ;; write entire score
 (lists-to-xml (interpret-minutes (access-minutes))
@@ -118,11 +113,10 @@
 (lists-to-xml (interpret-minutes (access-minutes) '(tuba percussion double-bass flute computer))
 	      "/E/code/ensemble/test2.xml")
 
-(lists-to-xml (interpret-minutes (subseq (access-minutes) 2 4) '(tuba))
+(lists-to-xml (interpret-minutes (subseq (access-minutes) 0 1) '(tuba))
 	      "/E/code/ensemble/test1.xml")
 
 ;; idea: interpret layers returns a function that can then be filled with arguments
 ;;  to form a sections like function.
 
 ;; EOF score.lsp
-

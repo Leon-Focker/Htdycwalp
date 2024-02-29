@@ -300,6 +300,9 @@
 
 ;; ** notation
 
+;; *** update-transposing-pitches
+;;; transpose events opposite of what set-written-pitch-or-chord would do,
+;;; so that musescore then "corrects" it.
 (defun update-transposing-pitches (events instrument)
   (loop for e in events
 	with trans = (transposition-semitones
