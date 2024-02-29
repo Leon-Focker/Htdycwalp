@@ -154,14 +154,14 @@
 		 (progn (push dur new-durs) (push nil pitches) (incf index))
 		 ;; interpret states
 		 (case state
-		   (1 (ins-get-static))
-		   (2 (push 'd4 pitches) (push dur new-durs) (incf index))
-		   (3 (push 'e4 pitches) (push dur new-durs) (incf index))
-		   (4 (push 'f4 pitches) (push dur new-durs) (incf index))
-		   (5 (push 'g4 pitches) (push dur new-durs) (incf index))
-		   (6 (push 'a4 pitches) (push dur new-durs) (incf index))
+		   (2 (ins-get-static-rhythm))
+		   (3 (ins-get-morphing-rhythms))
+		   (4 (ins-get-changing-timbres))
+		   (5 (ins-get-isorhythmic-rhythms))
+		   (6 (ins-get-converging-pitches))
 		   (7 (get-drifting-pitches))
-		   (t (push 'c5 pitches) (push dur new-durs) (incf index))))
+		   (8 (ins-get-drifting-metres))
+		   (t (ins-get-static))))
 	     (push index indices)
 	  sum dur into sum
 	  finally (setf new-durs (reverse new-durs)
@@ -186,21 +186,50 @@
 		(t instrument))
 	 ,new-durs ,pitches ,marks)))
 
+;;; doing these as macros for my sanity's sake.
+
 ;; *** ins-get-static
 (defmacro ins-get-static ()
   `(case instrument
      ((tuba) (push 'bf0 pitches) (push dur new-durs) (incf index))
+     ((violin-1 violin-2 viola cello double-bass)
+      (push 'c4 pitches) (push dur new-durs) (incf index))
      (t (push nil pitches) (push dur new-durs) (incf index))))
 
-;; doing these as macros for my sanity's sake.
+;; *** ins-get-static-rhythm
+(defmacro ins-get-static-rhythm ()
+  `(case instrument
+     (t (push 'd4 pitches) (push dur new-durs) (incf index))))
+
+;; *** ins-get-morphing-rhythms
+(defmacro ins-get-morphing-rhythms ()
+  `(case instrument
+     (t (push 'e4 pitches) (push dur new-durs) (incf index))))
+
+;; *** ins-get-changing-timbres
+(defmacro ins-get-changing-timbres ()
+  `(case instrument
+     (t (push 'f4 pitches) (push dur new-durs) (incf index))))
+
+;; *** ins-get-isorhythmic-rhythms
+(defmacro ins-get-isorhythmic-rhythms ()
+  `(case instrument
+     (t (push 'g4 pitches) (push dur new-durs) (incf index))))
+
+;; *** ins-get-converging-pitches
+(defmacro ins-get-converging-pitches ()
+  `(case instrument
+     (t (push 'a4 pitches) (push dur new-durs) (incf index))))
+
+;; *** get-drifting-pitches
 (defmacro get-drifting-pitches ()
   `(let* ((rest (mod (- 4 (mod sum 4)) 4)) ; time until first bar is full
 	  (st (if (> rest dur) dur rest))  ; time in first, not full, bar
 	  (md (* (floor (- dur st) 4) 4))  ; time within full bars
 	  (nd (- dur st md))               ; time in last, not full, bar
 	  (nr 0)
-	  (spitch (note-to-midi 'g6))
-	  (tpitch (note-to-midi 'e6)))
+	  (spitch (note-to-midi 'e5))
+	  (tpitch (+ 72 (random 8))))
      (unless (= 0 st) (incf nr))
      (unless (= 0 nd) (incf nr))
      (incf nr (/ md 4))
@@ -219,6 +248,11 @@
 					    spitch)))
 		    pitches))
      (incf index nr)))
+
+;; *** ins-get-drifting-metres
+(defmacro ins-get-drifting-metres ()
+  `(case instrument
+     (t (push 'b4 pitches) (push dur new-durs) (incf index))))
 
 ;; ** make
 
@@ -307,9 +341,7 @@
 
 ;;; interpret all layers of a list-of-minutes unless you provide a list of
 ;;; instruments - then only those will be interpreted.
-;;; TODO - differ between tape and instrument.
-(defun interpret-minutes (list-of-minutes
-			  &optional instruments (error-fun #'warn))
+(defun interpret-minutes (list-of-minutes &optional instruments)
   (let ((instr '()))
     (unless instruments
       (loop for minute in list-of-minutes

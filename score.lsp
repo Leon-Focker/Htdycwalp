@@ -15,6 +15,7 @@
 ;;; respect lowest and highest notes for each instrument.
 ;;; should interpret-layer-by-instrument be able to see other layers in minute?
 ;;;  this way it knows wheter it is solo etc.
+;;; each layer/minute should have 1 consonant chord and 1 dissonant.
 
 ;; ** divide (generate divisions and states)
 
