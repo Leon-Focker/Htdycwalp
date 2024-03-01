@@ -31,6 +31,7 @@
 ;; ** load
 ;; load files:
 (dolist (file '("helpers.lsp"
+		"chords.lsp"
 		"soundfiles.lsp"
 		"show-minutes.lsp"
 		"minutes.lsp"

@@ -41,7 +41,8 @@
 	for dseed in number-of-division-seeds and sseed in states-seeds
 	for i in (minutes-layer-numbers)
 	for nr-of-divs = (window-transitions nr-of-mins dseed .5)
-	for divs = '() for states = '() for dynamics = '()
+	for nr-of-items = (apply #'+ nr-of-divs)
+	for divs = '() and states = '() and dynamics = '() and chords = '()
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;	REPLACE
 	do (case i
@@ -50,13 +51,28 @@
 	     (2)
 	     (3))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	   (setf divs (procession (apply #'+ nr-of-divs) division-ratios-seed)
-		 states (procession (apply #'+ nr-of-divs) sseed)
-		 dynamics (procession (apply #'+ nr-of-divs) dynamics-seed))
+	   (setf divs (procession nr-of-items division-ratios-seed)
+		 states (procession nr-of-items sseed)
+		 dynamics (procession nr-of-items dynamics-seed))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	   (setf chords
+		 (gen-chords-from-lines nr-of-items '(50 51 40 41)
+					'((46 58) (46 58) (34 46) (34 46))
+					'(0 7  1 0) '(0 0  1 0) '(0 0 0 0)))
+	   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	   (distribute-divs divs nr-of-divs (access-minutes) i)
 	   (distribute-states states nr-of-divs (access-minutes) i)
-	   (distribute-dynamics dynamics nr-of-divs (access-minutes) i)))
+	   (distribute-dynamics dynamics nr-of-divs (access-minutes) i)
+	   (distribute-chords chords nr-of-divs (access-minutes) i)))
+
+#+nil(lists-to-midi
+      (append
+       (gen-melodic-line nr-of-items 50 '(46 58) '(0 7  1 0) '(0 0  1 0))
+       (gen-melodic-line nr-of-items 51 '(46 58) '(0 7  1 0) '(0 0  1 0) 1)
+       (gen-melodic-line nr-of-items 40 '(34 46) '(0 7  1 0) '(0 0  1 0))
+       (gen-melodic-line nr-of-items 41 '(34 46) '(0 7  1 0) '(0 0  1 0) 1))
+      '(1) (loop for i from 0 below nr-of-items collect i)
+      :file "/E/code/ensemble/line1.mid")
 
 ;; *** replace more
 

@@ -32,7 +32,7 @@
    ;; depending on the type of layer this number can be something like forte,
    ;; crescendo or even rest.
    (dynamics :accessor dynamics :initarg :dynamics :type list :initform '(1))
-   (chord :accessor chord :initarg :chord :type list :initform '())))
+   (chords :accessor chords :initarg :chords :type list :initform '(() ()))))
 
 (defclass tape-layer (minute-layer)
   ((instruments :accessor instruments :type list :initarg :instruments
@@ -225,7 +225,7 @@
   (case instrument
     (t (values `(,dur) '(a4) '()))))
 
-;; *** get-drifting-pitches
+;; *** ins-get-drifting-pitches
 (defun ins-get-drifting-pitches (instrument dur index sum)
   (let* ((new-durs '())
 	 (pitches '())

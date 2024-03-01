@@ -54,12 +54,19 @@
   (distribute-to-minute-layers list-of-dynamics distribution
 			       list-of-minutes layer-number 'dynamics))
 
+;; *** distribute-chords
+;;; same as distribute-divs but for chords
+(defun distribute-chords (list-of-chords distribution list-of-minutes
+			    layer-number)
+  (distribute-to-minute-layers list-of-chords distribution
+			       list-of-minutes layer-number 'chords))
+
 ;; *** get-lsim (get-layer-slot-in-minutes)
 (defun get-lsim (ls-of-minutes minute layer-number slot-name)
   "get-layer-slot-in-minutes"
   (let ((minute (nth minute ls-of-minutes)))
     (slot-value (car (member layer-number (layers minute) :key 'number))
-		      slot-name)))
+		slot-name)))
 
 ;; *** set-lsim (set-layer-slot-in-minutes)
 (defun set-lsim (ls-of-minutes minute layer-number
@@ -119,6 +126,18 @@
 			   into new
 			 do (incf cnt)
 			 finally (return new))))))
+
+;; *** gen-chords-from-lines
+(defun gen-chords-from-lines (length list-of-starting-notes list-of-ambitus
+			      dissonance-env variation-env list-of-offsets)
+  (let ((result (ml '() length)))
+    (loop for st in list-of-starting-notes and amb in list-of-ambitus
+	  and ofs in list-of-offsets and i = 0
+	  do (dolist (note (gen-melodic-line length st amb dissonance-env
+					     variation-env ofs))
+	       (push (midi-to-note note) (nth i result))
+	       (incf i)))
+    result))
 
 ;; *** sections
 ;;; get pairs of times and values, returns a function that receives a time
@@ -263,9 +282,9 @@
 			  (push cresc-end (marks (nth (max (1- end) 0)
 						      event-list))))
 		   ;; move end but not dynamic:
-		   (progn (remove-mark (nth end event-list) cresc-end)
+		   (progn #+nil(remove-mark (nth end event-list) cresc-end)
 			  (add-mark (nth end event-list) nd)
-			  (push cresc-end (marks (nth (max (1- end) 0)
+			  #+nil(push cresc-end (marks (nth (max (1- end) 0)
 						      event-list)))))))
     event-list))
 
