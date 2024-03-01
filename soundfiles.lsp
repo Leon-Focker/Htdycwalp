@@ -84,7 +84,7 @@
   (setf *re-analyse-soundfiles* t))
 (when *re-analyse-soundfiles*
   (folder-to-stored-file-list
-   *percussive*
+   (getf *soundfiles* :percussive)
    "/E/Keks_Feedback/samples/percussive/polished/"
    :auto-map t
    :auto-scale-mapping t
