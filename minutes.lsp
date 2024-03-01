@@ -243,7 +243,7 @@
       (incf nr (/ md 4))
       ;; custom stuff:
       (case instrument
-	(tuba (incf nr) (setf st dur) (setf spitch (note-to-midi 'bf0))))
+	(tuba (setf nr 1 st dur md 0 nd 0 spitch (note-to-midi 'bf0))))
       ;; get notes and gliss marks
       (loop for i from 0 below nr
 	    do (cond ((and (= i 0) (not (= 0 st)))
