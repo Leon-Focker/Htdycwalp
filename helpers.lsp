@@ -343,7 +343,9 @@
 		       sc::+slippery-chicken-standard-instrument-palette+))
 	for pitch-or-chord = (pitch-or-chord e)
 	for is-rest = (is-rest e)
-	do (unless is-rest
+	do (when (equal instrument 'double-bass)
+	     (setf trans -12))
+	   (unless is-rest
 	     (set-pitch-or-chord e (transpose pitch-or-chord (- trans))))))
 
 ;; *** split-into-simpler-ratios
@@ -553,7 +555,7 @@
 		 ;; loop through transposing instruments and change written
 		 ;; this only has to be done when exporting xml (for musescore),
 		 ;; as the in-c argument i missing.
-		 (when (find (second i) '(b-flat-clarinet))
+		 (when (find (second i) '(b-flat-clarinet double-bass))
 		   (update-transposing-pitches events (second i)))
 		 ;; add marks to events (using a list of indices of the events
 		 ;; before they were split into bars).
