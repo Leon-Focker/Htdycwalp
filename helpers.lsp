@@ -474,6 +474,8 @@
 			     for is-rest = (not pitch)
 			     for tied-from = (unless is-rest (< k len))
 			     for tied-to = (unless is-rest (> k 0))
+			     do (when (numberp pitch)
+				  (setf pitch (midi-to-note pitch)))
 			     collect (make-event pitch dur
 						 :duration t :tempo tempo
 						 :is-tied-from tied-from
@@ -571,6 +573,7 @@
 			     for bar = (make-rthm-seq-bar `(,time-sig))
 			     for ate = (fill-with-rhythms bar events)
 			     do (setf events (when ate (nthcdr ate events)))
+				(consolidate-rests bar :auto-tuplets t)
 			     collect bar)
 		       list-of-list-of-bars)))
       ;; pad list-of-bars that are shorter than others in list-of-list-of-bars
