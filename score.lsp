@@ -16,6 +16,7 @@
 ;;; should interpret-layer-by-instrument be able to see other layers in minute?
 ;;;  this way it knows wheter it is solo etc.
 ;;; each layer/minute should have 1 consonant chord and 1 dissonant.
+;;; HOW does the piece end??
 
 ;; ** divide (generate divisions and states)
 
@@ -87,11 +88,11 @@
 ;;; set beginning of minute 0 and 1 to ff in tape:
 (setf (car (dynamics (find 0 (layers (nth 0 (access-minutes))) :key 'number)))5)
 (setf (car (dynamics (find 0 (layers (nth 1 (access-minutes))) :key 'number)))5)
-;;; copy dynamics from tape to brass:
+;;; copy dynamics from tape to brass (crescendo = rest):
 (set-related-dynamics (access-minutes) 0 3
-		      '((0 0) (1 1) (2 2) (3 3) (4 4) (5 5)))
-;;; invert dynamics from tape to strings:
-(set-related-dynamics (access-minutes) 0 1
+		      '((0 0) (1 0) (2 2) (3 3) (4 4) (5 5)))
+;;; invert dynamics from brass to strings:
+(set-related-dynamics (access-minutes) 3 1
 		      '((0 5) (1 4) (2 1) (3 0) (4 1) (5 3)) nil)
 ;;; set second dynamic of minute 0 and 1 to cresc in strings:
 (setf (cadr (dynamics (find 1 (layers (nth 0 (access-minutes))) :key 'number)))1)
@@ -127,7 +128,9 @@
 (lists-to-xml (interpret-minutes (access-minutes))
 	      "/E/code/ensemble/test.xml")
 
-(lists-to-xml (interpret-minutes (access-minutes) '(tuba percussion double-bass flute computer))
+(lists-to-xml (interpret-minutes (access-minutes)
+				 '(bass-trombone tuba percussion double-bass
+				   flute computer))
 	      "/E/code/ensemble/test2.xml")
 
 (lists-to-xml (interpret-minutes (subseq (access-minutes) 0 1) '(tuba))
