@@ -36,7 +36,7 @@
 		       (1 7 2 3 4 5 6 8)
 		       (1 7 2 3 4 5 6 8)))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-       (dynamics-seed '(0 1 4 2 3 5)))
+       (dynamics-seed '(0 1 4 0 2 3 5)))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   (loop with nr-of-mins = (length (access-minutes))
 	for dseed in number-of-division-seeds and sseed in states-seeds
