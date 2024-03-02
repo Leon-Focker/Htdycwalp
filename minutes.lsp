@@ -455,7 +455,8 @@
 		      list-of-minutes layer-number 'number error-fun)
 	append (get-section-durations layer)))
 
-(defun interpret-minutes-by-instrument (list-of-minutes instrument)
+(defun interpret-minutes-by-instrument (list-of-minutes instrument
+					&optional separate)
   (let* ((layers (get-related-minute-layers list-of-minutes instrument
 					    'instruments))
 	 (starts (loop for i in layers collect (start-time i)))
@@ -479,17 +480,17 @@
 	       (incf nr-of-durs)
 	  when (> time start)
 	    do (warn "current time greater than next start-time: ~a" time)
-	  append (third i) into durs
-	  append (fourth i) into pitches
+	  append (third i) into durs when separate append '(4) into durs
+	  append (fourth i) into pitches when separate append '(()) into pitches
 	  append (mapcar #'(lambda (x) (incf (car x) nr-of-durs) x) (fifth i))
 	    into marks
-	  do (incf nr-of-durs (length (third i)))
+	  do (incf nr-of-durs (+ (length (third i)) (if separate 1 0)))
 	     (incf time (apply #'+ (third i)))
 	  finally (return `(,player ,(second i) ,durs ,pitches ,marks)))))
 
 ;;; interpret all layers of a list-of-minutes unless you provide a list of
 ;;; instruments - then only those will be interpreted.
-(defun interpret-minutes (list-of-minutes &optional instruments)
+(defun interpret-minutes (list-of-minutes &optional instruments (separate t))
   (let ((instr '()))
     (unless instruments
       (loop for minute in list-of-minutes
@@ -506,7 +507,8 @@
     (loop for i in instruments unless (find i instr) do (push i instr))
     ;; now go through the new list of instruments.
     (loop for ins in instr
-	  collect (interpret-minutes-by-instrument list-of-minutes ins))))
+	  collect (interpret-minutes-by-instrument list-of-minutes ins
+						   separate))))
 
 ;; ** visualize
 
