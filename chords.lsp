@@ -26,7 +26,7 @@
 ;; offset: if 1, the first note gets treated like its the second, and so on.
 ;;  setting this to a multiple of length is useful to get varations of a line
 (defun gen-melodic-line (length first-note ambitus dissonance-env variation-env
-		      &optional (offset 0))
+			 &optional (offset 0))
   (unless (integerp first-note)
     (error "first-note is not an integer but: ~a" first-note))
   (loop for i from 0 below length
@@ -58,7 +58,8 @@
     (gen-melodic-line len 40 '(28 52) dissonance-env variation-env)
     (gen-melodic-line len 47 '(35 59) dissonance-env variation-env len)
     (gen-melodic-line len 44 '(32 56) dissonance-env variation-env (* 2 len)))
-   '(1) (loop for i from 0 below len collect i) :file "/E/code/ensemble/line1.mid"))
+   '(1) (loop for i from 0 below len collect i)
+   :file (format nil "~a~a" +ens-src-dir+ "line1.mid")))
 
 (let* ((len 10)
        (dissonance-env '(0 1  .3 4  .5 2  .9 6  1 0))
@@ -67,7 +68,8 @@
    (append (gen-melodic-line len 40 '(28 52) dissonance-env variation-env)
 	   (gen-melodic-line len 45 '(33 57) dissonance-env variation-env 1)
 	   (gen-melodic-line len 50 '(38 62) dissonance-env variation-env 2))
-   '(1) (loop for i from 0 below len collect i) :file "/E/code/ensemble/line1.mid"))
+   '(1) (loop for i from 0 below len collect i)
+   :file (format nil "~a~a" +ens-src-dir+ "line1.mid")))
 
 
 ;; make it a function!
@@ -105,12 +107,18 @@
        (permutation '(0 1 2 3 4 5 6 7 8 9 10 11)))
   (gen-bassline-permutations '(74 75 76 78) '((62 76) (50 64) (38 52) (26 30)) max-len 4
 			     dissonance-env variation-env permutation
-			     "/E/code/ensemble/bassline_permutation_chord_11.mid")
+			     (format nil "~a~a"
+				     +ens-src-dir+
+				     "bassline_permutation_chord_11.mid"))
   (gen-bassline-permutations '(65 68 70 71 72) '((26 96) (26 96) (26 96) (26 96) (26 96)) max-len 5
 			     dissonance-env variation-env permutation
-			     "/E/code/ensemble/bassline_permutation_chord_22.mid")
+			     (format nil "~a~a"
+				     +ens-src-dir+
+				     "bassline_permutation_chord_22.mid"))
   (gen-bassline-permutations '(67 69 61) '((50 90) (50 90) (50 90)) max-len 3
 			     dissonance-env variation-env permutation
-			     "/E/code/ensemble/bassline_permutation_chord_33.mid"))
+			     (format nil "~a~a"
+				     +ens-src-dir+
+				     "bassline_permutation_chord_33.mid")))
 
 ;; EOF chords.lsp
