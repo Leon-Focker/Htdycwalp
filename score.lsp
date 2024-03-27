@@ -134,7 +134,7 @@
 ;;; very simple distribution for now:
 (let ((strings '(violin-1 violin-2 viola cello double-bass))
       (woodwinds '(flute oboe b-flat-clarinet bassoon))
-      (brass '(c-trumpet french-horn tuba))
+      (brass '(c-trumpet french-horn tuBa))
       (tromb 'bass-trombone)
       (perc 'percussion))
   (loop for minute in (access-minutes)
@@ -157,15 +157,15 @@
 
 ;; write entire score
 (lists-to-xml (interpret-minutes (access-minutes))
-	      "/E/code/ensemble/test.xml")
+	      (format nil "~a~a" +ens-src-dir+ "test.xml"))
 
 (lists-to-xml (interpret-minutes (access-minutes)
 				 '(bass-trombone tuba percussion double-bass
 				   flute computer))
-	      "/E/code/ensemble/test2.xml")
+	      (format nil "~a~a" +ens-src-dir+ "test2.xml"))
 
 (lists-to-xml (interpret-minutes (subseq (access-minutes) 0 1) '(tuba))
-	      "/E/code/ensemble/test1.xml")
+	      (format nil "~a~a" +ens-src-dir+ "test1.xml"))
 
 ;; idea: interpret layers returns a function that can then be filled with arguments
 ;;  to form a sections like function.
