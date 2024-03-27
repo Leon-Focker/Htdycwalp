@@ -37,24 +37,7 @@
 		       (1 7 2 3 4 5 6 8)
 		       (1 7 2 3 4 5 6 8)))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-       (dynamics-seed '(0 1 4 0 2 3 5))
-       ;; chords, starting with consonant
-       (all-chords '(((c2 g2 d3 b3 gf4 d5 g5)
-		  (c2 g2 d3 b3 gf4 d5 a5)
-		  (c2 g2 d3 c4 gf4 d5 a5)
-		  (c2 g2 d3 c4 g4 d5 b5)
-		  (c2 g2 d3 c4 g4 d5 bf5))
-		 ;; medi
-		 ((c2 g2 d3 b3 fs4 g4 d5 g5 d6)
-		  (c2 g2 d3 b3 fs4 a4 e5 gs5 ds6)
-		  (c2 g2 d3 b3 fs4 gs4 cs5 g5 d6)
-		  (c2 g2 d3 cs4 fs4 a4 e5 g5 d6)
-		  (c2 g2 d3 cs4 fs4 g4 d5 fs5 d5))
-		 ;; dissonant
-		 ((c2 g2 d3 gf3 b3 df4 f4 bf4 e5 b5)
-		  (c2 g2 d3 gf3 b3 df4 f4 bf4 ef5 a5)
-		  (c2 g2 d3 gf3 bf3 df4 e4 a4 ef5 af5)
-		  (c2 g2 d3 f3 a3 b4 e4 bf4 gf5 af5)))))
+       (dynamics-seed '(0 1 4 0 2 3 5)))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   (loop with nr-of-mins = (length (access-minutes))
 	for dseed in number-of-division-seeds and sseed in states-seeds
@@ -74,26 +57,56 @@
 		 states (procession nr-of-items sseed)
 		 dynamics (procession nr-of-items dynamics-seed))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	   (unless chords
-	     (setf chords (loop repeat nr-of-items
-			      collect (list (mapcar #'note-to-midi
-						    (nth (random 5) (first all-chords)))
-					    (mapcar #'note-to-midi
-						    (nth (random 4) (third all-chords)))))))
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	   (distribute-divs divs nr-of-divs (access-minutes) i)
 	   (distribute-states states nr-of-divs (access-minutes) i)
 	   (distribute-dynamics dynamics nr-of-divs (access-minutes) i)
 	   (distribute-chords chords nr-of-divs (access-minutes) i)))
 
-#+nil(lists-to-midi
-      (append
-       (gen-melodic-line nr-of-items 50 '(46 58) '(0 7  1 0) '(0 0  1 0))
-       (gen-melodic-line nr-of-items 51 '(46 58) '(0 7  1 0) '(0 0  1 0) 1)
-       (gen-melodic-line nr-of-items 40 '(34 46) '(0 7  1 0) '(0 0  1 0))
-       (gen-melodic-line nr-of-items 41 '(34 46) '(0 7  1 0) '(0 0  1 0) 1))
-      '(1) (loop for i from 0 below nr-of-items collect i)
-      :file "/E/code/ensemble/line1.mid")
+;; *** chords
+
+(let* ((all-chords '(((c2 g2 d3 b3 gf4 d5 g5) ; chords, starting with consonant
+		      (c2 g2 d3 b3 gf4 d5 a5)
+		      (c2 g2 d3 c4 gf4 d5 a5)
+		      (c2 g2 d3 c4 g4 d5 b5)
+		      (c2 g2 d3 c4 g4 d5 bf5)
+		      (c2 g2 d3 c4 g4 ef5 bf5)
+		      (c2 g2 e3 b3 gf4 b4 b5)
+		      (c2 g2 e3 b3 gf4 c4 bf5)
+		      (c2 g2 ef3 bf3 d4 a4 c4 bf5))
+		     ;; medi
+		     ((c2 g2 d3 b3 fs4 g4 d5 g5 d6)
+		      (c2 g2 d3 b3 fs4 a4 e5 gs5 ds6)
+		      (c2 g2 d3 b3 fs4 gs4 cs5 g5 d6)
+		      (c2 g2 d3 cs4 fs4 a4 e5 g5 d6)
+		      (c2 g2 d3 cs4 fs4 g4 d5 fs5 d5)
+		      (c2 g2 d3 fs3 cs4 fs4 as4 f5)
+		      (c2 g2 ds3 as3 f4 c5 fs5)
+		      (c2 g2 ds3 as3 f4 cs5 fs5 c6)
+		      (c2 g2 ds3 b3 c4 fs4 cs5 a5))
+		     ;; dissonant
+		     ((c2 g2 d3 gf3 b3 df4 f4 bf4 e5 b5)
+		      (c2 g2 d3 gf3 b3 df4 f4 bf4 ef5 a5)
+		      (c2 g2 d3 gf3 bf3 df4 e4 a4 ef5 af5)
+		      (c2 g2 d3 f3 a3 b4 e4 bf4 gf5 af5))))
+       (transpose-chords
+	 (kernel-transitions 11 '(10 9 8 7 6 5 4 3 2 1 0) '(3 -3))))
+  (loop for minute in (access-minutes) and offset in transpose-chords
+	with last-i = 0
+	for max-nr = 0
+	do (flet ((tr (x) (+ (note-to-midi x) offset)))
+	     (loop for layer in (layers minute)
+		   for nr = (length (states layer))
+		   do (setf
+		       max-nr
+		       (max max-nr nr)
+		       (chords layer)
+		       (loop repeat nr for i from last-i
+			     collect
+			     (list
+			      (mapcar #'tr (nth-mod i (nth 0 all-chords)))
+			      (mapcar #'tr (nth-mod i (nth 1 all-chords)))
+			      (mapcar #'tr (nth-mod i (nth 2 all-chords))))))))
+	   (incf last-i max-nr)))
 
 ;; *** replace more
 
@@ -102,17 +115,6 @@
   (when (apply #'= (loop for i from 1 to 3 collect (length (helper i))))
     (set-lsim (access-minutes) 7 2 'division-ratios (helper 1))
     (set-lsim (access-minutes) 7 3 'division-ratios (helper 1))))
-
-;;; CHORDS
-
-(let ((transpose-chords
-	(kernel-transitions 11 '(10 9 8 7 6 5 4 3 2 1 0) '(3 -3))))
-  (loop for minute in (access-minutes) and offset in transpose-chords
-	do (loop for layer in (layers minute)
-		 do (setf (chords layer)
-			  (loop for div-chords in (chords layer)
-				collect (loop for chord in div-chords
-					      collect (mapcar #'(lambda (x) (+ x offset)) chord)))))))
 
 ;;; DYNAMICS
 
@@ -160,8 +162,7 @@
 	      (format nil "~a~a" +ens-src-dir+ "test.xml"))
 
 (lists-to-xml (interpret-minutes (access-minutes)
-				 '(bass-trombone tuba percussion double-bass
-				   flute computer))
+				 '(double-bass violin-1 tuba bass-trombone flute bassoon percussion computer))
 	      (format nil "~a~a" +ens-src-dir+ "test2.xml"))
 
 (lists-to-xml (interpret-minutes (subseq (access-minutes) 0 1) '(tuba))
