@@ -2,6 +2,9 @@
 
 (in-package :ly)
 
+;; not the prettiest solution but avoids style-warnings for now:
+(declaim (ftype (function) imago::show-minutes))
+
 ;; ** classes
 
 ;;; one minute of the entire piece with mainly structural information
@@ -66,10 +69,6 @@
 (defmethod get-section-durations ((mn minute))
   (loop for layer in (layers mn)
 	collect (get-section-durations layer)))
-
-(defmethod interpret-layer ((ml minute-layer))
-  (loop for ins in (instruments ml)
-	collect (interpret-layer-by-instrument ml ins)))
 
 ;; ** Interpretation
 
@@ -465,6 +464,10 @@
 		(t instrument))
 	 ,new-durs ,pitches ,marks)))
 
+(defmethod interpret-layer ((ml minute-layer))
+  (loop for ins in (instruments ml)
+	collect (interpret-layer-by-instrument ml ins)))
+
 ;; ** make
 
 (defun make-minute (id start-time &optional (layers '()))
@@ -517,6 +520,43 @@
   (loop for layer in (get-related-minute-layers
 		      list-of-minutes layer-number 'number error-fun)
 	append (get-section-durations layer)))
+
+;; *** set-related-dynamics
+;;; loop through the dynamics of a source layer and a target layer and decide
+;;; the targets dynamics with the ones of source
+;;; #'case is applied to case-list - determine how to replace/couple dynamics.
+;;; transition fun gets nr-of-elements and list '(t nil), where t means, that a
+;;; value will be replaced. If transition-fun is nil, no transition is made --
+;;; all dynamics are changed.
+(defun set-related-dynamics (list-of-minutes source-layer-nr target-layer-nr
+			     case-list
+			     &optional (transition-fun 'fibonacci-transitions))
+  (let* ((slayers (get-related-minute-layers list-of-minutes source-layer-nr))
+	 (tlayers (get-related-minute-layers list-of-minutes target-layer-nr))
+	 (tdurs (get-all-related-durations list-of-minutes target-layer-nr))
+	 (trans (ml t (apply #'+ tdurs)))
+	 (cnt 0))
+    (when transition-fun
+      (setf trans (funcall transition-fun (apply #'+ tdurs) '(t nil))))
+    (loop for slayer in slayers and tlayer in tlayers
+	  for sdynamics = (dynamics slayer) and tdynamics = (dynamics tlayer)
+	  do (setf (dynamics tlayer)
+		   (loop for d in tdynamics and n from 0
+			 for s = (nth n sdynamics)
+			 collect (if (nth cnt trans)
+				     ;; since case is a macro, not a function,
+				     ;; we can't just use apply...
+				     (loop for ls in case-list
+					   do (when
+						  (find s (if (listp (car ls))
+							      (car ls)
+							      (list (car ls))))
+						(return (cadr ls)))
+					   finally (return d))
+				     d)
+			   into new
+			 do (incf cnt)
+			 finally (return new))))))
 
 (defun interpret-minutes-by-instrument (list-of-minutes instrument
 					&optional separate)

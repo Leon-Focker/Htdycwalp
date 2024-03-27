@@ -30,11 +30,11 @@
 
 ;; ** load
 ;; load files:
-(dolist (file '("helpers.lsp"
-		"chords.lsp"
+(dolist (file '("chords.lsp"
+		"helpers.lsp"
 		"soundfiles.lsp"
-		"show-minutes.lsp"
 		"minutes.lsp"
+		"show-minutes.lsp"
 		;; score.lsp
 		;;"tape-score.lsp"
 		))

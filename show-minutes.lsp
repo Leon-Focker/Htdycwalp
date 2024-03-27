@@ -36,7 +36,6 @@
 	 (sublength 0)
 	 (index 0)
 	 (color 0)
-	 (element 0)
 	 (name (format nil "~a~a" path-and-filename ".png")))
     (loop for y from 0 to (1- height) do
 	 (setf n (floor y h))
@@ -45,7 +44,6 @@
 	 (setf sublength (length sublist))
 	 (loop for x from 0 to (1- w) do
 	      (setf index (sc::decider (/ x w) sublist))
-	      (setf element (nth index sublist))
 	      (setf color (make-color (floor (* (/ (nth index ssublist) nr-of-states) 255)) ;; state
 				       ;; different layers
 				      (if specify-time-and-layer (floor (* (/ n length) 100)) 100)
