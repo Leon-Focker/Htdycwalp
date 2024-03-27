@@ -118,16 +118,42 @@
 	       (push (if (= 0 (random 2)) nil spitch) pitches))
       (values (reverse new-durs) (reverse pitches) '()))))
 
+;; *** tape-get-changing-rhythmic-speed
+(defun tape-get-changing-rhythmic-speed (dur index)
+  (values `(,dur) '(c4) `((,index "changing-rhythimc-speed"))))
+
+;; *** tape-get-changing-pulse-speed
+(defun tape-get-changing-pulse-speed (dur index)
+  (values `(,dur) '(c4) `((,index "changing-pulse-speed"))))
+
+;; *** tape-get-changing-timbres
+(defun tape-get-changing-timbres (dur index)
+  (values `(,dur) '(c4) `((,index "tape-get-changing-timbres"))))
+
+;; *** tape-get-changing-timbres
+(defun tape-get-changing-timbres (dur index)
+  (values `(,dur) '(c4) `((,index "tape-get-changing-timbres"))))
+
+;; *** tape-get-drifting-rhythmic-speeds
+(defun tape-get-drifting-rhythmic-speeds (dur index)
+  (values `(,dur) '(c4) `((,index "tape-get-drifting-rhythmic-speeds"))))
+
+;; *** tape-get-drifting-pulse-speed
+(defun tape-get-drifting-pulse-speed (dur index)
+  (values `(,dur) '(c4) `((,index "tape-get-drifting-pulse-speed"))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; *** ins-get-static
 (defun ins-get-static (instrument dur chord)
   (case instrument
     ((tuba) (values `(,dur) '(bf0) '()))
-    (double-bass (values `(,dur) '(e1) '()))
-    (bass-trombone (values `(,dur) `(,(second (second chord))) '()))
-    ((french-horn c-trumpet b-flat-clarinet bassoon oboe flute)
-     (values `(,dur) `(,(note-for-ins instrument (second chord))) '()))
-    (percussion (values `(,dur) `(,(nth (random (length chord)) (second chord))) '()))
+    (double-bass (values `(,dur) '(b0) '()))
+    (bass-trombone (values `(,dur) `(,(second (nth 2 chord))) '()))
+    ((french-horn c-trumpet b-flat-clarinet bassoon oboe flute
+		  violin-1 violin-2 viola cello)
+     (values `(,dur) `(,(note-for-ins instrument (nth 2 chord))) '()))
+    (percussion (values `(,dur) `(,(nth (random (length chord)) (nth 2 chord))) '()))
     (t (ins-get-rest dur))))
 
 ;; *** ins-get-static-rhythm
@@ -148,8 +174,8 @@
       ;; custom stuff:
       (case instrument
 	(tuba (setf spitch nil))
-	(double-bass (setf spitch 'e1))
-	(t (setf spitch (note-for-ins instrument (second chord)))))
+	(double-bass (setf spitch 'b0))
+	(t (setf spitch (note-for-ins instrument (nth 2 chord)))))
       (loop for i from 0 below nr
 	    do (push (cond ((and (= i 0) (not (= 0 st))) st)
 			   ((and (= i (1- nr)) (not (= 0 nd))) nd)
@@ -174,8 +200,8 @@
       ;; custom stuff:
       (case instrument
 	(tuba (setf spitch nil))
-	(double-bass (setf spitch 'e1))
-	(t (setf spitch (note-for-ins instrument (first chord)))))
+	(double-bass (setf spitch 'b0))
+	(t (setf spitch (note-for-ins instrument (nth 1 chord)))))
       (loop for i from 0 below nr
 	    do (push (cond ((and (= i 0) (not (= 0 st))) st)
 			   ((and (= i (1- nr)) (not (= 0 nd))) nd)
@@ -187,7 +213,7 @@
 ;; *** ins-get-changing-timbres
 (defun ins-get-changing-timbres (instrument dur chord)
   (case instrument
-    (t (values `(,dur) `(,(note-for-ins instrument (first chord))) '()))))
+    (t (values `(,dur) `(,(note-for-ins instrument (nth 2 chord))) '()))))
 
 ;; *** ins-get-isorhythmic-rhythms
 ;;; strings: start clb unisono and then drift apart.
@@ -205,14 +231,14 @@
       ;; custom stuff:
       (case instrument
 	((violin-2 violin-1)
-	 (setf spitch (note-for-ins instrument (first chord))) (push `(,index clb) marks)
+	 (setf spitch (note-for-ins instrument (nth 0 chord))) (push `(,index clb) marks)
 	 (push `(,(+ index (min (1- nr) 2)) "schneller werden") marks))
 	((viola cello)
-	 (setf spitch (note-for-ins instrument (first chord))) (push `(,index clb) marks)
+	 (setf spitch (note-for-ins instrument (nth 0 chord))) (push `(,index clb) marks)
 	 (push `(,(+ index (min (1- nr) 2)) "langsamer werden") marks))
 	((double-bass)
-	 (setf spitch 'e1) (push `(,index clb) marks))
-	(t (setf spitch (note-for-ins instrument (first chord)))
+	 (setf spitch 'b0) (push `(,index clb) marks))
+	(t (setf spitch (note-for-ins instrument (nth 0 chord)))
 	 (decf nr (* (/ md 4) 16)) (incf nr (* (/ md 4) 20))))
       (loop for i from 0 below nr
 	    do (push (cond ((and (= i 0) (not (= 0 st))) st)
@@ -235,8 +261,9 @@
 	 tpitch)
     (multiple-value-bind (st md nd) (get-st-md-nd sum dur)
       ;; get start and target pitch
-      (setf tpitch (note-for-ins instrument (first chord))
-	    spitch (+ tpitch (1+ (random 7))))
+      (setf tpitch (note-for-ins instrument (nth 0 chord))
+	    ;; spitch (+ tpitch (1+ (random 7))))
+	    spitch (note-for-ins instrument (nth 2 chord)))
       ;; set number of notes
       (unless (= 0 st) (incf nr))
       (unless (= 0 nd) (incf nr))
@@ -244,7 +271,7 @@
       ;; custom stuff:
       (case instrument
 	(tuba (setf nr 1 st dur md 0 nd 0 spitch (note-to-midi 'bf0)))
-	(double-bass (setf spitch (note-to-midi 'g0) tpitch (note-to-midi 'e1))))
+	(double-bass (setf spitch (note-to-midi 'b0) tpitch (note-to-midi 'e1))))
       ;; get notes and gliss marks
       (loop for i from 0 below nr
 	    do (cond ((and (= i 0) (not (= 0 st)))
@@ -271,8 +298,9 @@
 	 tpitch)
     (multiple-value-bind (st md nd) (get-st-md-nd sum dur)
       ;; get start and target pitch
-      (setf spitch (note-for-ins instrument (first chord))
-	    tpitch (+ spitch (1+ (random 7))))
+      (setf spitch (note-for-ins instrument (nth 0 chord))
+	    ;; tpitch (+ spitch (1+ (random 7))))
+	    tpitch (note-for-ins instrument (nth 2 chord)))
       ;; set number of notes
       (unless (= 0 st) (incf nr))
       (unless (= 0 nd) (incf nr))
@@ -280,7 +308,7 @@
       ;; custom stuff:
       (case instrument
 	(tuba (setf nr 1 st dur md 0 nd 0 spitch (note-to-midi 'bf0)))
-	(double-bass (setf spitch (note-to-midi 'e1) tpitch (note-to-midi 'g0))))
+	(double-bass (setf spitch (note-to-midi 'e1) tpitch (note-to-midi 'b0))))
       ;; get notes and gliss marks
       (loop for i from 0 below nr
 	    do (cond ((and (= i 0) (not (= 0 st)))
@@ -317,13 +345,14 @@
       (unless (= 0 nd) (incf nr))
       ;; custom stuff:
       (case instrument
-	((violin-2 violin-1) (setf spitch (note-for-ins instrument (first chord)) divisor 3)
+	((violin-2 violin-1) (setf spitch (note-for-ins instrument (nth 0 chord)) divisor 3)
 	 (incf nr (* (/ md 4) divisor)))
-	(viola (setf spitch (note-for-ins instrument (first chord)) divisor 4)
+	(viola (setf spitch (note-for-ins instrument (nth 0 chord)) divisor 4)
 	 (incf nr (* (/ md 4) divisor)))
-	(cello (setf spitch (note-for-ins instrument (first chord)) divisor 5)
+	(cello (setf spitch (note-for-ins instrument (nth 0 chord)) divisor 5)
 	 (incf nr (* (/ md 4) divisor)))
-	(t (setf spitch (note-for-ins instrument (first chord))) (incf nr (* (/ md 4) divisor))))
+	(t (setf spitch (note-for-ins instrument (nth 0 chord)))
+	 (incf nr (* (/ md 4) divisor))))
       ;; get melodic line
       (setf pitches (gen-melodic-line nr spitch ambitus diss-env var-env))
       ;; get notes and gliss marks
@@ -370,11 +399,11 @@
 		     (case state
 		       (2 (tape-get-static-rhythm dur sum))
 		       (3 (tape-get-morphing-rhythm dur sum))
-		       (4 (tape-get-static dur))
-		       (5 (tape-get-static dur))
-		       (6 (tape-get-static dur))
-		       ;(7 (ins-get-drifting-pitches instrument dur index sum))
-		       (8 (ins-get-rest dur))
+		       (4 (tape-get-changing-rhythmic-speed dur index))
+		       (5 (tape-get-changing-pulse-speed dur index))
+		       (6 (tape-get-changing-timbres dur index))
+		       (7 (tape-get-drifting-rhythmic-speeds dur index))
+		       (8 (tape-get-drifting-pulse-speed dur index))
 		       (t (tape-get-static dur))))
 	       (incf index (length d))
 	       (setf new-durs (append new-durs d)
