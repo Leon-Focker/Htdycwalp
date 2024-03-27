@@ -16,6 +16,7 @@
 ;;; should interpret-layer-by-instrument be able to see other layers in minute?
 ;;;  this way it knows wheter it is solo etc.
 ;;; each layer/minute should have 1 consonant chord and 1 dissonant.
+;;;  chose chords from all-chords and modify (transpose)
 ;;; HOW does the piece end??
 
 ;; ** divide (generate divisions and states)
@@ -36,7 +37,24 @@
 		       (1 7 2 3 4 5 6 8)
 		       (1 7 2 3 4 5 6 8)))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-       (dynamics-seed '(0 1 4 0 2 3 5)))
+       (dynamics-seed '(0 1 4 0 2 3 5))
+       ;; chords, starting with consonant
+       (all-chords '(((c2 g2 d3 b3 gf4 d5 g5)
+		  (c2 g2 d3 b3 gf4 d5 a5)
+		  (c2 g2 d3 c4 gf4 d5 a5)
+		  (c2 g2 d3 c4 g4 d5 b5)
+		  (c2 g2 d3 c4 g4 d5 bf5))
+		 ;; medi
+		 ((c2 g2 d3 b3 fs4 g4 d5 g5 d6)
+		  (c2 g2 d3 b3 fs4 a4 e5 gs5 ds6)
+		  (c2 g2 d3 b3 fs4 gs4 cs5 g5 d6)
+		  (c2 g2 d3 cs4 fs4 a4 e5 g5 d6)
+		  (c2 g2 d3 cs4 fs4 g4 d5 fs5 d5))
+		 ;; dissonant
+		 ((c2 g2 d3 gf3 b3 df4 f4 bf4 e5 b5)
+		  (c2 g2 d3 gf3 b3 df4 f4 bf4 ef5 a5)
+		  (c2 g2 d3 gf3 bf3 df4 e4 a4 ef5 af5)
+		  (c2 g2 d3 f3 a3 b4 e4 bf4 gf5 af5)))))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   (loop with nr-of-mins = (length (access-minutes))
 	for dseed in number-of-division-seeds and sseed in states-seeds
@@ -56,11 +74,13 @@
 		 states (procession nr-of-items sseed)
 		 dynamics (procession nr-of-items dynamics-seed))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	   (setf chords
-		 (gen-chords-from-lines nr-of-items '(50 51 40 41)
-					'((46 58) (46 58) (34 46) (34 46))
-					'(0 7  1 0) '(0 0  1 0) '(0 0 0 0)))
-	   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	   (unless chords
+	     (setf chords (loop repeat nr-of-items
+			      collect (list (mapcar #'note-to-midi
+						    (nth (random 5) (first all-chords)))
+					    (mapcar #'note-to-midi
+						    (nth (random 4) (third all-chords)))))))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	   (distribute-divs divs nr-of-divs (access-minutes) i)
 	   (distribute-states states nr-of-divs (access-minutes) i)
 	   (distribute-dynamics dynamics nr-of-divs (access-minutes) i)
@@ -82,6 +102,17 @@
   (when (apply #'= (loop for i from 1 to 3 collect (length (helper i))))
     (set-lsim (access-minutes) 7 2 'division-ratios (helper 1))
     (set-lsim (access-minutes) 7 3 'division-ratios (helper 1))))
+
+;;; CHORDS
+
+(let ((transpose-chords
+	(kernel-transitions 11 '(10 9 8 7 6 5 4 3 2 1 0) '(3 -3))))
+  (loop for minute in (access-minutes) and offset in transpose-chords
+	do (loop for layer in (layers minute)
+		 do (setf (chords layer)
+			  (loop for div-chords in (chords layer)
+				collect (loop for chord in div-chords
+					      collect (mapcar #'(lambda (x) (+ x offset)) chord)))))))
 
 ;;; DYNAMICS
 
@@ -117,7 +148,7 @@
 		    (when (= (number layer) fib2) (push tromb (instruments layer))))))
 
 ;; VISUALIZE MINUTES
-(visualize-minutes (access-minutes) '(3 2 1 0 111) "/E/code/ensemble/test_secs" 1 nil)
+;(visualize-minutes (access-minutes) '(3 2 1 0 111) "/E/code/ensemble/test_secs" 1 nil)
 
 ;; update start-times of all layers just to be sure:
 (loop for i in (access-minutes) do (update-layer-start-times i))

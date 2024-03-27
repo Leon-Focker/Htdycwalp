@@ -121,19 +121,21 @@
 
 
 ;; *** ins-get-static
-(defun ins-get-static (instrument dur)
+(defun ins-get-static (instrument dur chord)
   (case instrument
     ((tuba) (values `(,dur) '(bf0) '()))
-    ((violin-1 violin-2 viola cello)
-     (values `(,dur) '(nil) '()))
     (double-bass (values `(,dur) '(e1) '()))
+    (bass-trombone (values `(,dur) `(,(second (second chord))) '()))
+    ((french-horn c-trumpet b-flat-clarinet bassoon oboe flute)
+     (values `(,dur) `(,(note-for-ins instrument (second chord))) '()))
+    (percussion (values `(,dur) `(,(nth (random (length chord)) (second chord))) '()))
     (t (ins-get-rest dur))))
 
 ;; *** ins-get-static-rhythm
 ;;; pulse goes through instruments and number of instruments playing one pulse
 ;;; is determined by the "weight" of that pulse
 ;;; (by indisp with 13 pulses = 1 "bar")
-(defun ins-get-static-rhythm (instrument dur index sum)
+(defun ins-get-static-rhythm (instrument dur index sum chord)
   (declare (ignore index))
   (let* ((new-durs '())
 	 (pitches '())
@@ -146,12 +148,9 @@
       (incf nr (* (/ md 4) 16))
       ;; custom stuff:
       (case instrument
-	((violin-2 violin-1 flute) (setf spitch 'd5))
-	((viola c-trumpet) (setf spitch 'ds3))
-	((cello french-horn) (setf spitch 'df3))
-	((oboe bass-trombone) (setf spitch 'd4))
+	(tuba (setf spitch nil))
 	(double-bass (setf spitch 'e1))
-	(t (setf spitch 'd4)))
+	(t (setf spitch (note-for-ins instrument (second chord)))))
       (loop for i from 0 below nr
 	    do (push (cond ((and (= i 0) (not (= 0 st))) st)
 			   ((and (= i (1- nr)) (not (= 0 nd))) nd)
@@ -162,7 +161,7 @@
 
 ;; *** ins-get-morphing-rhythms
 ;;; like ins-get-static-rhythm but morph rhythm (indisp-fun).
-(defun ins-get-morphing-rhythms (instrument dur index sum)
+(defun ins-get-morphing-rhythms (instrument dur index sum chord)
   (declare (ignore index))
   (let* ((new-durs '())
 	 (pitches '())
@@ -175,12 +174,9 @@
       (incf nr (* (/ md 4) 16))
       ;; custom stuff:
       (case instrument
-	((violin-2 violin-1 flute) (setf spitch 'd5))
-	((viola c-trumpet) (setf spitch 'ds3))
-	((cello french-horn) (setf spitch 'df3))
-	((oboe bass-trombone) (setf spitch 'd4))
+	(tuba (setf spitch nil))
 	(double-bass (setf spitch 'e1))
-	(t (setf spitch 'd4)))
+	(t (setf spitch (note-for-ins instrument (first chord)))))
       (loop for i from 0 below nr
 	    do (push (cond ((and (= i 0) (not (= 0 st))) st)
 			   ((and (= i (1- nr)) (not (= 0 nd))) nd)
@@ -190,13 +186,13 @@
       (values (reverse new-durs) (reverse pitches) '()))))
 
 ;; *** ins-get-changing-timbres
-(defun ins-get-changing-timbres (instrument dur)
+(defun ins-get-changing-timbres (instrument dur chord)
   (case instrument
-    (t (values `(,dur) '(f4) '()))))
+    (t (values `(,dur) `(,(note-for-ins instrument (first chord))) '()))))
 
 ;; *** ins-get-isorhythmic-rhythms
 ;;; strings: start clb unisono and then drift apart.
-(defun ins-get-isorhythmic-rhythms (instrument dur index sum)
+(defun ins-get-isorhythmic-rhythms (instrument dur index sum chord)
   (let* ((new-durs '())
 	 (pitches '())
 	 (marks '())
@@ -210,14 +206,14 @@
       ;; custom stuff:
       (case instrument
 	((violin-2 violin-1)
-	 (setf spitch 'g3) (push `(,index clb) marks)
+	 (setf spitch (note-for-ins instrument (first chord))) (push `(,index clb) marks)
 	 (push `(,(+ index (min (1- nr) 2)) "schneller werden") marks))
 	((viola cello)
-	 (setf spitch 'c3) (push `(,index clb) marks)
+	 (setf spitch (note-for-ins instrument (first chord))) (push `(,index clb) marks)
 	 (push `(,(+ index (min (1- nr) 2)) "langsamer werden") marks))
 	((double-bass)
 	 (setf spitch 'e1) (push `(,index clb) marks))
-	(t (setf spitch 'g4)
+	(t (setf spitch (note-for-ins instrument (first chord)))
 	 (decf nr (* (/ md 4) 16)) (incf nr (* (/ md 4) 20))))
       (loop for i from 0 below nr
 	    do (push (cond ((and (= i 0) (not (= 0 st))) st)
@@ -231,7 +227,7 @@
 
 ;; *** ins-get-converging-pitches
 ;;; for now just the opposite of driftig-pitches
-(defun ins-get-converging-pitches (instrument dur index sum)
+(defun ins-get-converging-pitches (instrument dur index sum chord)
   (let* ((new-durs '())
 	 (pitches '())
 	 (marks '())
@@ -240,8 +236,8 @@
 	 tpitch)
     (multiple-value-bind (st md nd) (get-st-md-nd sum dur)
       ;; get start and target pitch
-      (setf spitch (+ 72 (random 8))
-	    tpitch (note-to-midi 'e5))
+      (setf tpitch (note-for-ins instrument (first chord))
+	    spitch (+ tpitch (1+ (random 7))))
       ;; set number of notes
       (unless (= 0 st) (incf nr))
       (unless (= 0 nd) (incf nr))
@@ -267,7 +263,7 @@
       (values (reverse new-durs) (reverse pitches) (reverse marks)))))
 
 ;; *** ins-get-drifting-pitches
-(defun ins-get-drifting-pitches (instrument dur index sum)
+(defun ins-get-drifting-pitches (instrument dur index sum chord)
   (let* ((new-durs '())
 	 (pitches '())
 	 (marks '())
@@ -276,8 +272,8 @@
 	 tpitch)
     (multiple-value-bind (st md nd) (get-st-md-nd sum dur)
       ;; get start and target pitch
-      (setf spitch (note-to-midi 'e5)
-	    tpitch (+ 72 (random 8)))
+      (setf spitch (note-for-ins instrument (first chord))
+	    tpitch (+ spitch (1+ (random 7))))
       ;; set number of notes
       (unless (= 0 st) (incf nr))
       (unless (= 0 nd) (incf nr))
@@ -306,7 +302,7 @@
 #|
 (lists-to-midi (gen-melodic-line 16 55 '(30 65) '(0 0  .2 0 1 7) '(0 0 .2 0  1 1)) '(1) (loop for i from 0 below 16 collect i) :file "/E/code/ensemble/test4.mid")
 |#
-(defun ins-get-drifting-metres (instrument dur index sum)
+(defun ins-get-drifting-metres (instrument dur index sum chord)
   (let* ((new-durs '())
 	 (pitches '())
 	 (marks '())
@@ -322,13 +318,13 @@
       (unless (= 0 nd) (incf nr))
       ;; custom stuff:
       (case instrument
-	((violin-2 violin-1) (setf spitch (note-to-midi 'b4) divisor 3)
+	((violin-2 violin-1) (setf spitch (note-for-ins instrument (first chord)) divisor 3)
 	 (incf nr (* (/ md 4) divisor)))
-	(viola (setf spitch (note-to-midi 'b4) divisor 4)
+	(viola (setf spitch (note-for-ins instrument (first chord)) divisor 4)
 	 (incf nr (* (/ md 4) divisor)))
-	(cello (setf spitch (note-to-midi 'b4) divisor 5)
+	(cello (setf spitch (note-for-ins instrument (first chord)) divisor 5)
 	 (incf nr (* (/ md 4) divisor)))
-	(t (setf spitch (note-to-midi 'b4)) (incf nr (* (/ md 4) divisor))))
+	(t (setf spitch (note-for-ins instrument (first chord))) (incf nr (* (/ md 4) divisor))))
       ;; get melodic line
       (setf pitches (gen-melodic-line nr spitch ambitus diss-env var-env))
       ;; get notes and gliss marks
@@ -422,11 +418,13 @@
   (let* ((durs (get-section-durations il))
 	 (states (states il))
 	 (dynamics (dynamics il))
+	 (chords (chords il))
 	 (indices '(0))
 	 (new-durs '())
 	 (pitches '())
 	 (marks '()))
     (loop for state in states and dur in durs and dyn in dynamics
+	  and chord in chords
 	  with index = 0
 	  do (multiple-value-bind (d p m)
 		 (if (= 0 dyn)
@@ -434,14 +432,14 @@
 		     (ins-get-rest dur)
 		     ;; interpret states
 		     (case state
-		       (2 (ins-get-static-rhythm instrument dur index sum))
-		       (3 (ins-get-morphing-rhythms instrument dur index sum))
-		       (4 (ins-get-changing-timbres instrument dur))
-		       (5 (ins-get-isorhythmic-rhythms instrument dur index sum))
-		       (6 (ins-get-converging-pitches instrument dur index sum))
-		       (7 (ins-get-drifting-pitches instrument dur index sum))
-		       (8 (ins-get-drifting-metres instrument dur index sum))
-		       (t (ins-get-static instrument dur))))
+		       (2 (ins-get-static-rhythm instrument dur index sum chord))
+		       (3 (ins-get-morphing-rhythms instrument dur index sum chord))
+		       (4 (ins-get-changing-timbres instrument dur chord))
+		       (5 (ins-get-isorhythmic-rhythms instrument dur index sum chord))
+		       (6 (ins-get-converging-pitches instrument dur index sum chord))
+		       (7 (ins-get-drifting-pitches instrument dur index sum chord))
+		       (8 (ins-get-drifting-metres instrument dur index sum chord))
+		       (t (ins-get-static instrument dur chord))))
 	       (incf index (length d))
 	       (setf new-durs (append new-durs d)
 		     pitches (append pitches p)

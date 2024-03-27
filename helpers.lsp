@@ -178,6 +178,19 @@
 		      collect (nth-mod i ls1))))
   (values ls1 ls2))
 
+;; *** note-for-ins
+(defun note-for-ins (instrument chord)
+  (when (and (>= (length (string instrument)) 6)
+	     (string= (subseq (string instrument) 0 6) "VIOLIN"))
+    (setf instrument 'violin))
+  (let* ((ins (get-standard-ins instrument))
+	 (min (midi-note (lowest-sounding ins)))
+	 (max (midi-note (highest-sounding ins)))
+	 (new-chord '()))
+    (setf new-chord
+	  (loop for i in chord when (<= min (note-to-midi i) max) collect i))
+    (if new-chord (nth (random (length new-chord)) new-chord) nil)))
+
 ;; *** get-dyns
 ;;; first and second argument are dynamics before and after crescendo/diminuendo
 ;;; third arugment is dynamic at start of crescendo/diminuendo, might be nil.
