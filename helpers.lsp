@@ -6,8 +6,8 @@
 (declaim (ftype (function) layers get-related-minute-layers))
 
 ;; *** nth-mod
-(defun nth-mod (n rthm-ls)
-  (nth (mod n (length rthm-ls)) rthm-ls))
+(defun nth-mod (n ls)
+  (nth (mod n (length ls)) ls))
 
 ;; *** sc-intern
 (defun sc-intern (symbol)
@@ -146,16 +146,35 @@
 
 ;; *** note-for-ins
 (defun note-for-ins (instrument chord)
-  (when (and (>= (length (string instrument)) 6)
-	     (string= (subseq (string instrument) 0 6) "VIOLIN"))
-    (setf instrument 'violin))
-  (let* ((ins (get-standard-ins instrument))
+  (let* ((ins (get-standard-ins
+	       (if (and (>= (length (string instrument)) 6)
+			(string= (subseq (string instrument) 0 6)
+				 "VIOLIN"))
+		   'violin
+		   instrument)))
 	 (min (midi-note (lowest-sounding ins)))
 	 (max (midi-note (highest-sounding ins)))
 	 (new-chord '()))
     (setf new-chord
 	  (loop for i in chord when (<= min (note-to-midi i) max) collect i))
-    (if new-chord (nth (random (length new-chord)) new-chord) nil)))
+    (if new-chord
+	(nth-mod (case instrument
+		   (flute 10)
+		   (oboe 9)
+		   (b-flat-clarinet 8)
+		   (bassoon 4)
+		   (c-trumpet 5)
+		   (french-horn 4)
+		   (bass-trombone 1)
+		   (tuba 1)
+		   (violin-1 (- (length new-chord) 1))
+		   (violin-2 (- (length new-chord) 2))
+		   (viola 7)
+		   (cello 0)
+		   (double-bass 0)
+		   (t 100))
+		 new-chord)
+	nil)))
 
 ;; *** get-dyns
 ;;; first and second argument are dynamics before and after crescendo/diminuendo
