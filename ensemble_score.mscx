@@ -4699,7 +4699,7 @@
                   </Tie>
                 <next>
                   <location>
-                    <fractions>5/18</fractions>
+                    <fractions>13/54</fractions>
                     </location>
                   </next>
                 </Spanner>
@@ -4715,15 +4715,7 @@
               </Note>
             </Chord>
           <location>
-            <fractions>-1/12</fractions>
-            </location>
-          <Rest>
-            <dots>2</dots>
-            <durationType>16th</durationType>
-            <duration>64/576</duration>
-            </Rest>
-          <location>
-            <fractions>-1/12</fractions>
+            <fractions>-5/54</fractions>
             </location>
           <Chord>
             <BeamMode>no</BeamMode>
@@ -4732,7 +4724,7 @@
               <Spanner type="Tie">
                 <prev>
                   <location>
-                    <fractions>-5/18</fractions>
+                    <fractions>-13/54</fractions>
                     </location>
                   </prev>
                 </Spanner>
@@ -4740,7 +4732,14 @@
               <tpc>14</tpc>
               </Note>
             </Chord>
-          <endTuplet/>
+          <location>
+            <fractions>-2/27</fractions>
+            </location>
+          <Rest>
+            <dots>2</dots>
+            <durationType>16th</durationType>
+            <duration>128/1728</duration>
+            </Rest>
           <Rest>
             <durationType>half</durationType>
             </Rest>
@@ -4764,6 +4763,11 @@
             <dots>3</dots>
             <durationType>32nd</durationType>
             <duration>26/576</duration>
+            </Rest>
+          <Rest>
+            <dots>2</dots>
+            <durationType>32nd</durationType>
+            <duration>64/1728</duration>
             </Rest>
           </voice>
         </Measure>
@@ -5831,7 +5835,7 @@
                   </Tie>
                 <next>
                   <location>
-                    <fractions>2/9</fractions>
+                    <fractions>4/27</fractions>
                     </location>
                   </next>
                 </Spanner>
@@ -5850,9 +5854,9 @@
             <fractions>-5/24</fractions>
             </location>
           <Rest>
-            <dots>2</dots>
+            <dots>1</dots>
             <durationType>eighth</durationType>
-            <duration>128/576</duration>
+            <duration>256/1728</duration>
             </Rest>
           <location>
             <fractions>-1/8</fractions>
@@ -5873,7 +5877,7 @@
               <Spanner type="Tie">
                 <prev>
                   <location>
-                    <fractions>-2/9</fractions>
+                    <fractions>-4/27</fractions>
                     </location>
                   </prev>
                 </Spanner>
@@ -5944,7 +5948,7 @@
                 <next>
                   <location>
                     <measures>1</measures>
-                    <fractions>-61/72</fractions>
+                    <fractions>-167/216</fractions>
                     </location>
                   </next>
                 </Spanner>
@@ -5968,6 +5972,11 @@
             <durationType>16th</durationType>
             <duration>61/576</duration>
             </Rest>
+          <Rest>
+            <dots>2</dots>
+            <durationType>16th</durationType>
+            <duration>128/1728</duration>
+            </Rest>
           </voice>
         </Measure>
       <Measure>
@@ -5988,7 +5997,7 @@
                 <prev>
                   <location>
                     <measures>-1</measures>
-                    <fractions>61/72</fractions>
+                    <fractions>167/216</fractions>
                     </location>
                   </prev>
                 </Spanner>
@@ -16299,6 +16308,9 @@
                 </next>
               </Spanner>
             <Note>
+              <Accidental>
+                <subtype>accidentalSharp</subtype>
+                </Accidental>
               <Spanner type="Tie">
                 <Tie>
                   <visible>0</visible>
@@ -16312,8 +16324,8 @@
                     </location>
                   </next>
                 </Spanner>
-              <pitch>74</pitch>
-              <tpc>16</tpc>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -16347,8 +16359,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
-              <tpc>16</tpc>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -16382,8 +16394,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
-              <tpc>16</tpc>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -16417,8 +16429,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
-              <tpc>16</tpc>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -16452,8 +16464,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
-              <tpc>16</tpc>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -16493,8 +16505,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
-              <tpc>16</tpc>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
               <Spanner type="Glissando">
                 <Glissando>
                   <glissandoStyle>portamento</glissandoStyle>
@@ -16540,8 +16552,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
-              <tpc>16</tpc>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -16575,8 +16587,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
-              <tpc>16</tpc>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -16597,8 +16609,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
-              <tpc>16</tpc>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -16623,10 +16635,10 @@
             <durationType>whole</durationType>
             <Note>
               <Accidental>
-                <subtype>accidentalFlat</subtype>
+                <subtype>accidentalSharp</subtype>
                 </Accidental>
-              <pitch>75</pitch>
-              <tpc>11</tpc>
+              <pitch>70</pitch>
+              <tpc>24</tpc>
               <Spanner type="Glissando">
                 <prev>
                   <location>
@@ -26011,7 +26023,7 @@
                     </location>
                   </next>
                 </Spanner>
-              <pitch>50</pitch>
+              <pitch>74</pitch>
               <tpc>16</tpc>
               <tpc2>18</tpc2>
               </Note>
@@ -26047,7 +26059,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>50</pitch>
+              <pitch>74</pitch>
               <tpc>16</tpc>
               <tpc2>18</tpc2>
               </Note>
@@ -26083,7 +26095,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>50</pitch>
+              <pitch>74</pitch>
               <tpc>16</tpc>
               <tpc2>18</tpc2>
               </Note>
@@ -26125,7 +26137,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>50</pitch>
+              <pitch>74</pitch>
               <tpc>16</tpc>
               <tpc2>18</tpc2>
               <Spanner type="Glissando">
@@ -26173,7 +26185,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>50</pitch>
+              <pitch>74</pitch>
               <tpc>16</tpc>
               <tpc2>18</tpc2>
               </Note>
@@ -26209,7 +26221,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>50</pitch>
+              <pitch>74</pitch>
               <tpc>16</tpc>
               <tpc2>18</tpc2>
               </Note>
@@ -26245,7 +26257,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>50</pitch>
+              <pitch>74</pitch>
               <tpc>16</tpc>
               <tpc2>18</tpc2>
               </Note>
@@ -26281,7 +26293,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>50</pitch>
+              <pitch>74</pitch>
               <tpc>16</tpc>
               <tpc2>18</tpc2>
               </Note>
@@ -26304,7 +26316,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>50</pitch>
+              <pitch>74</pitch>
               <tpc>16</tpc>
               <tpc2>18</tpc2>
               </Note>
@@ -26330,9 +26342,12 @@
           <Chord>
             <durationType>whole</durationType>
             <Note>
-              <pitch>58</pitch>
-              <tpc>12</tpc>
-              <tpc2>14</tpc2>
+              <Accidental>
+                <subtype>accidentalSharp</subtype>
+                </Accidental>
+              <pitch>52</pitch>
+              <tpc>18</tpc>
+              <tpc2>20</tpc2>
               <Spanner type="Glissando">
                 <prev>
                   <location>
@@ -36595,6 +36610,9 @@
                 </next>
               </Spanner>
             <Note>
+              <Accidental>
+                <subtype>accidentalSharp</subtype>
+                </Accidental>
               <Spanner type="Tie">
                 <Tie>
                   <visible>0</visible>
@@ -36608,8 +36626,8 @@
                     </location>
                   </next>
                 </Spanner>
-              <pitch>50</pitch>
-              <tpc>16</tpc>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -36643,8 +36661,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>50</pitch>
-              <tpc>16</tpc>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -36678,8 +36696,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>50</pitch>
-              <tpc>16</tpc>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -36713,8 +36731,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>50</pitch>
-              <tpc>16</tpc>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -36754,8 +36772,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>50</pitch>
-              <tpc>16</tpc>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
               <Spanner type="Glissando">
                 <Glissando>
                   <glissandoStyle>portamento</glissandoStyle>
@@ -36801,8 +36819,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>50</pitch>
-              <tpc>16</tpc>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -36836,8 +36854,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>50</pitch>
-              <tpc>16</tpc>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -36871,8 +36889,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>50</pitch>
-              <tpc>16</tpc>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -36893,8 +36911,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>50</pitch>
-              <tpc>16</tpc>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -83224,8 +83242,8 @@
                     </location>
                   </next>
                 </Spanner>
-              <pitch>80</pitch>
-              <tpc>22</tpc>
+              <pitch>73</pitch>
+              <tpc>21</tpc>
               <Spanner type="Glissando">
                 <prev>
                   <location>
@@ -83266,8 +83284,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>80</pitch>
-              <tpc>22</tpc>
+              <pitch>73</pitch>
+              <tpc>21</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -83305,8 +83323,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>80</pitch>
-              <tpc>22</tpc>
+              <pitch>73</pitch>
+              <tpc>21</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -89480,10 +89498,38 @@
         </Measure>
       <Measure>
         <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
+          <Dynamic>
+            <subtype>ppp</subtype>
+            <velocity>16</velocity>
+            <visible>0</visible>
+            </Dynamic>
+          <Spanner type="HairPin">
+            <HairPin>
+              <subtype>0</subtype>
+              <hairpinCircledTip>1</hairpinCircledTip>
+              </HairPin>
+            <next>
+              <location>
+                <measures>1</measures>
+                </location>
+              </next>
+            </Spanner>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <Spanner type="Tie">
+                <Tie>
+                  </Tie>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    </location>
+                  </next>
+                </Spanner>
+              <pitch>59</pitch>
+              <tpc>19</tpc>
+              </Note>
+            </Chord>
           <BarLine>
             <subtype>dashed</subtype>
             <span>1</span>
@@ -89501,6 +89547,13 @@
             <frameType>1</frameType>
             <text>ca. 40&quot; until conductor signals to stop</text>
             </StaffText>
+          <Spanner type="HairPin">
+            <prev>
+              <location>
+                <measures>-1</measures>
+                </location>
+              </prev>
+            </Spanner>
           <Spanner type="HairPin">
             <HairPin>
               <subtype>0</subtype>
@@ -89540,8 +89593,15 @@
                     </location>
                   </next>
                 </Spanner>
-              <pitch>74</pitch>
-              <tpc>16</tpc>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    </location>
+                  </prev>
+                </Spanner>
+              <pitch>59</pitch>
+              <tpc>19</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -89575,8 +89635,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
-              <tpc>16</tpc>
+              <pitch>59</pitch>
+              <tpc>19</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -89616,8 +89676,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
-              <tpc>16</tpc>
+              <pitch>59</pitch>
+              <tpc>19</tpc>
               <Spanner type="Glissando">
                 <Glissando>
                   <glissandoStyle>portamento</glissandoStyle>
@@ -89663,8 +89723,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
-              <tpc>16</tpc>
+              <pitch>59</pitch>
+              <tpc>19</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -89698,8 +89758,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
-              <tpc>16</tpc>
+              <pitch>59</pitch>
+              <tpc>19</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -89733,8 +89793,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
-              <tpc>16</tpc>
+              <pitch>59</pitch>
+              <tpc>19</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -89755,8 +89815,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
-              <tpc>16</tpc>
+              <pitch>59</pitch>
+              <tpc>19</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -89783,7 +89843,7 @@
               </Spanner>
             <Note>
               <Accidental>
-                <subtype>accidentalFlat</subtype>
+                <subtype>accidentalSharp</subtype>
                 </Accidental>
               <Spanner type="Tie">
                 <Tie>
@@ -89798,8 +89858,8 @@
                     </location>
                   </next>
                 </Spanner>
-              <pitch>70</pitch>
-              <tpc>12</tpc>
+              <pitch>73</pitch>
+              <tpc>21</tpc>
               <Spanner type="Glissando">
                 <prev>
                   <location>
@@ -89840,8 +89900,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>70</pitch>
-              <tpc>12</tpc>
+              <pitch>73</pitch>
+              <tpc>21</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -89879,8 +89939,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>70</pitch>
-              <tpc>12</tpc>
+              <pitch>73</pitch>
+              <tpc>21</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -89957,15 +90017,6 @@
             <durationType>whole</durationType>
             <Note>
               <Spanner type="Tie">
-                <Tie>
-                  </Tie>
-                <next>
-                  <location>
-                    <measures>1</measures>
-                    </location>
-                  </next>
-                </Spanner>
-              <Spanner type="Tie">
                 <prev>
                   <location>
                     <measures>-1</measures>
@@ -89974,6 +90025,18 @@
                 </Spanner>
               <pitch>70</pitch>
               <tpc>12</tpc>
+              <Spanner type="Glissando">
+                <Glissando>
+                  <glissandoStyle>portamento</glissandoStyle>
+                  <diagonal>1</diagonal>
+                  <anchor>3</anchor>
+                  </Glissando>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    </location>
+                  </next>
+                </Spanner>
               </Note>
             </Chord>
           </voice>
@@ -89992,15 +90055,15 @@
                     </location>
                   </next>
                 </Spanner>
-              <Spanner type="Tie">
+              <pitch>71</pitch>
+              <tpc>19</tpc>
+              <Spanner type="Glissando">
                 <prev>
                   <location>
                     <measures>-1</measures>
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>70</pitch>
-              <tpc>12</tpc>
               </Note>
             </Chord>
           </voice>
@@ -90017,8 +90080,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>70</pitch>
-              <tpc>12</tpc>
+              <pitch>71</pitch>
+              <tpc>19</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -96140,18 +96203,65 @@
         </Measure>
       <Measure>
         <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
+          <Dynamic>
+            <subtype>ppp</subtype>
+            <velocity>16</velocity>
+            <visible>0</visible>
+            </Dynamic>
+          <Spanner type="HairPin">
+            <HairPin>
+              <subtype>0</subtype>
+              <hairpinCircledTip>1</hairpinCircledTip>
+              </HairPin>
+            <next>
+              <location>
+                <measures>2</measures>
+                </location>
+              </next>
+            </Spanner>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <Spanner type="Tie">
+                <Tie>
+                  </Tie>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    </location>
+                  </next>
+                </Spanner>
+              <pitch>59</pitch>
+              <tpc>19</tpc>
+              </Note>
+            </Chord>
           </voice>
         </Measure>
       <Measure>
         <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <Spanner type="Tie">
+                <Tie>
+                  </Tie>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    </location>
+                  </next>
+                </Spanner>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    </location>
+                  </prev>
+                </Spanner>
+              <pitch>59</pitch>
+              <tpc>19</tpc>
+              </Note>
+            </Chord>
           <BarLine>
             <subtype>dashed</subtype>
             <span>1</span>
@@ -96169,6 +96279,13 @@
             <frameType>1</frameType>
             <text>ca. 40&quot; until conductor signals to stop</text>
             </StaffText>
+          <Spanner type="HairPin">
+            <prev>
+              <location>
+                <measures>-2</measures>
+                </location>
+              </prev>
+            </Spanner>
           <Spanner type="HairPin">
             <HairPin>
               <subtype>0</subtype>
@@ -96191,8 +96308,15 @@
                     </location>
                   </next>
                 </Spanner>
-              <pitch>74</pitch>
-              <tpc>16</tpc>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    </location>
+                  </prev>
+                </Spanner>
+              <pitch>59</pitch>
+              <tpc>19</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -96225,8 +96349,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
-              <tpc>16</tpc>
+              <pitch>59</pitch>
+              <tpc>19</tpc>
               <Spanner type="Glissando">
                 <Glissando>
                   <glissandoStyle>portamento</glissandoStyle>
@@ -96272,8 +96396,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
-              <tpc>16</tpc>
+              <pitch>59</pitch>
+              <tpc>19</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -96307,8 +96431,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
-              <tpc>16</tpc>
+              <pitch>59</pitch>
+              <tpc>19</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -96342,8 +96466,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
-              <tpc>16</tpc>
+              <pitch>59</pitch>
+              <tpc>19</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -96377,8 +96501,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
-              <tpc>16</tpc>
+              <pitch>59</pitch>
+              <tpc>19</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -96412,8 +96536,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
-              <tpc>16</tpc>
+              <pitch>59</pitch>
+              <tpc>19</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -96434,8 +96558,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
-              <tpc>16</tpc>
+              <pitch>59</pitch>
+              <tpc>19</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -96601,15 +96725,6 @@
             <durationType>whole</durationType>
             <Note>
               <Spanner type="Tie">
-                <Tie>
-                  </Tie>
-                <next>
-                  <location>
-                    <measures>1</measures>
-                    </location>
-                  </next>
-                </Spanner>
-              <Spanner type="Tie">
                 <prev>
                   <location>
                     <measures>-1</measures>
@@ -96618,6 +96733,18 @@
                 </Spanner>
               <pitch>67</pitch>
               <tpc>15</tpc>
+              <Spanner type="Glissando">
+                <Glissando>
+                  <glissandoStyle>portamento</glissandoStyle>
+                  <diagonal>1</diagonal>
+                  <anchor>3</anchor>
+                  </Glissando>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    </location>
+                  </next>
+                </Spanner>
               </Note>
             </Chord>
           </voice>
@@ -96628,14 +96755,23 @@
             <durationType>whole</durationType>
             <Note>
               <Spanner type="Tie">
+                <Tie>
+                  </Tie>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    </location>
+                  </next>
+                </Spanner>
+              <pitch>69</pitch>
+              <tpc>17</tpc>
+              <Spanner type="Glissando">
                 <prev>
                   <location>
                     <measures>-1</measures>
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>67</pitch>
-              <tpc>15</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -96672,6 +96808,13 @@
                     <measures>1</measures>
                     </location>
                   </next>
+                </Spanner>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    </location>
+                  </prev>
                 </Spanner>
               <pitch>69</pitch>
               <tpc>17</tpc>
@@ -102821,26 +102964,92 @@
         </Measure>
       <Measure>
         <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
+          <Dynamic>
+            <subtype>ppp</subtype>
+            <velocity>16</velocity>
+            <visible>0</visible>
+            </Dynamic>
+          <Spanner type="HairPin">
+            <HairPin>
+              <subtype>0</subtype>
+              <hairpinCircledTip>1</hairpinCircledTip>
+              </HairPin>
+            <next>
+              <location>
+                <measures>3</measures>
+                </location>
+              </next>
+            </Spanner>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <Spanner type="Tie">
+                <Tie>
+                  </Tie>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    </location>
+                  </next>
+                </Spanner>
+              <pitch>36</pitch>
+              <tpc>14</tpc>
+              </Note>
+            </Chord>
           </voice>
         </Measure>
       <Measure>
         <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <Spanner type="Tie">
+                <Tie>
+                  </Tie>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    </location>
+                  </next>
+                </Spanner>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    </location>
+                  </prev>
+                </Spanner>
+              <pitch>36</pitch>
+              <tpc>14</tpc>
+              </Note>
+            </Chord>
           </voice>
         </Measure>
       <Measure>
         <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <Spanner type="Tie">
+                <Tie>
+                  </Tie>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    </location>
+                  </next>
+                </Spanner>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    </location>
+                  </prev>
+                </Spanner>
+              <pitch>36</pitch>
+              <tpc>14</tpc>
+              </Note>
+            </Chord>
           <BarLine>
             <subtype>dashed</subtype>
             <span>1</span>
@@ -102859,6 +103068,13 @@
             <text>ca. 40&quot; until conductor signals to stop</text>
             </StaffText>
           <Spanner type="HairPin">
+            <prev>
+              <location>
+                <measures>-3</measures>
+                </location>
+              </prev>
+            </Spanner>
+          <Spanner type="HairPin">
             <HairPin>
               <subtype>0</subtype>
               </HairPin>
@@ -102873,14 +103089,14 @@
             <Spanner type="Slur">
               <Slur>
                 <SlurSegment no="0">
-                  <o2 x="-0.516633" y="-0.387475"/>
-                  <o3 x="-0.516633" y="-0.387475"/>
+                  <o2 x="0" y="-2.19569"/>
+                  <o3 x="0" y="-2.19569"/>
                   </SlurSegment>
                 <up>down</up>
                 </Slur>
               <next>
                 <location>
-                  <measures>2</measures>
+                  <measures>9</measures>
                   </location>
                 </next>
               </Spanner>
@@ -102898,8 +103114,15 @@
                     </location>
                   </next>
                 </Spanner>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    </location>
+                  </prev>
+                </Spanner>
+              <pitch>36</pitch>
+              <tpc>14</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -102933,61 +103156,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              </Note>
-            </Chord>
-          <BarLine>
-            <visible>0</visible>
-            </BarLine>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Spanner type="Slur">
-              <prev>
-                <location>
-                  <measures>-2</measures>
-                  </location>
-                </prev>
-              </Spanner>
-            <Note>
-              <Spanner type="Tie">
-                <Tie>
-                  <visible>0</visible>
-                  <TieSegment no="0">
-                    <visible>0</visible>
-                    </TieSegment>
-                  </Tie>
-                <next>
-                  <location>
-                    <measures>1</measures>
-                    </location>
-                  </next>
-                </Spanner>
-              <Spanner type="Tie">
-                <prev>
-                  <location>
-                    <measures>-1</measures>
-                    </location>
-                  </prev>
-                </Spanner>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              <Spanner type="Glissando">
-                <Glissando>
-                  <glissandoStyle>portamento</glissandoStyle>
-                  <diagonal>1</diagonal>
-                  <anchor>3</anchor>
-                  </Glissando>
-                <next>
-                  <location>
-                    <measures>6</measures>
-                    </location>
-                  </next>
-                </Spanner>
+              <pitch>36</pitch>
+              <tpc>14</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -103021,8 +103191,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
+              <pitch>36</pitch>
+              <tpc>14</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -103056,8 +103226,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
+              <pitch>36</pitch>
+              <tpc>14</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -103091,8 +103261,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
+              <pitch>36</pitch>
+              <tpc>14</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -103126,8 +103296,43 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
+              <pitch>36</pitch>
+              <tpc>14</tpc>
+              </Note>
+            </Chord>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
+              <Spanner type="Tie">
+                <Tie>
+                  <visible>0</visible>
+                  <TieSegment no="0">
+                    <visible>0</visible>
+                    </TieSegment>
+                  </Tie>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    </location>
+                  </next>
+                </Spanner>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    </location>
+                  </prev>
+                </Spanner>
+              <pitch>36</pitch>
+              <tpc>14</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -103148,8 +103353,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
+              <pitch>36</pitch>
+              <tpc>14</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -103162,24 +103367,9 @@
           <Chord>
             <durationType>whole</durationType>
             <Note>
-              <Spanner type="Tie">
-                <Tie>
-                  </Tie>
-                <next>
-                  <location>
-                    <measures>1</measures>
-                    </location>
-                  </next>
-                </Spanner>
-              <pitch>65</pitch>
-              <tpc>13</tpc>
-              <Spanner type="Glissando">
-                <prev>
-                  <location>
-                    <measures>-6</measures>
-                    </location>
-                  </prev>
-                </Spanner>
+              <visible>0</visible>
+              <pitch>36</pitch>
+              <tpc>14</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -103202,16 +103392,16 @@
             </Spanner>
           <Chord>
             <durationType>whole</durationType>
+            <Spanner type="Slur">
+              <prev>
+                <location>
+                  <measures>-9</measures>
+                  </location>
+                </prev>
+              </Spanner>
             <Note>
-              <Spanner type="Tie">
-                <prev>
-                  <location>
-                    <measures>-1</measures>
-                    </location>
-                  </prev>
-                </Spanner>
-              <pitch>65</pitch>
-              <tpc>13</tpc>
+              <pitch>36</pitch>
+              <tpc>14</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -103261,15 +103451,6 @@
             <durationType>whole</durationType>
             <Note>
               <Spanner type="Tie">
-                <Tie>
-                  </Tie>
-                <next>
-                  <location>
-                    <measures>1</measures>
-                    </location>
-                  </next>
-                </Spanner>
-              <Spanner type="Tie">
                 <prev>
                   <location>
                     <measures>-1</measures>
@@ -103296,6 +103477,17 @@
                     </location>
                   </next>
                 </Spanner>
+              <pitch>71</pitch>
+              <tpc>19</tpc>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
               <Spanner type="Tie">
                 <prev>
                   <location>
@@ -103303,8 +103495,8 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>70</pitch>
-              <tpc>12</tpc>
+              <pitch>71</pitch>
+              <tpc>19</tpc>
               </Note>
             </Chord>
           </voice>
@@ -103323,33 +103515,8 @@
                     </location>
                   </next>
                 </Spanner>
-              <Spanner type="Tie">
-                <prev>
-                  <location>
-                    <measures>-1</measures>
-                    </location>
-                  </prev>
-                </Spanner>
-              <pitch>70</pitch>
-              <tpc>12</tpc>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <Spanner type="Tie">
-                <prev>
-                  <location>
-                    <measures>-1</measures>
-                    </location>
-                  </prev>
-                </Spanner>
-              <pitch>70</pitch>
-              <tpc>12</tpc>
+              <pitch>59</pitch>
+              <tpc>19</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -103408,6 +103575,13 @@
                     <measures>1</measures>
                     </location>
                   </next>
+                </Spanner>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    </location>
+                  </prev>
                 </Spanner>
               <pitch>59</pitch>
               <tpc>19</tpc>
