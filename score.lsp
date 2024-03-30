@@ -150,7 +150,8 @@
 		    (when (= (number layer) fib2) (push tromb (instruments layer))))))
 
 ;; VISUALIZE MINUTES
-;(visualize-minutes (access-minutes) '(3 2 1 0 111) "/E/code/ensemble/test_secs" 1 nil)
+#+nil(visualize-minutes (access-minutes) '(3 2 1 0 111)
+		   (format nil "~a~a" +ens-src-dir+ "test.png") 1 nil)
 
 ;; update start-times of all layers just to be sure:
 (loop for i in (access-minutes) do (update-layer-start-times i))

@@ -161,7 +161,7 @@
 	(nth-mod (case instrument
 		   (flute 10)
 		   (oboe 9)
-		   (b-flat-clarinet 8)
+		   (b-flat-clarinet 11)
 		   (bassoon 4)
 		   (c-trumpet 5)
 		   (french-horn 4)
@@ -236,6 +236,7 @@
     (<= (abs (- ix iy)) diff)))
 
 ;; *** add-crescendo-dynamics
+;;; this is a hot mess...
 ;;; if optional-arg crescendo is nil, do diminuendos.
 (defun add-crescendo-dynamics (event-list &optional (crescendo t))
   (let ((len (length event-list))
@@ -348,14 +349,26 @@
 
 ;; *** split-into-simpler-ratios
 ;;; returns a list
-;;; very simple, could be imprived.
-(defun split-into-simpler-ratios (num)
-  (setf num (rationalize num))
-  (if (and (> (numerator num) 1) (= 0 (mod (denominator num) 2)))
-      (let* ((simpler (/ (floor (numerator num) 2) (/ (denominator num) 2))))
-	(append (split-into-simpler-ratios simpler)
-		(split-into-simpler-ratios (- num simpler))))
-      (list num)))
+;;; very simple, could be improved.
+#|
+(split-into-simpler-ratios 3/4) =>  (1/2 1/4)
+(split-into-simpler-ratios 8/6) => (1 1/3)
+(split-into-simpler-ratios 3/5) => (3/5)
+|#
+(defun split-into-simpler-ratios (number)
+  (setf number (rationalize number))
+  (cond
+    ;; check if > 1 (I guess this could just be (> number 1)...
+    ((> (numerator number) (denominator number))
+     (append (split-into-simpler-ratios 1)
+	     (split-into-simpler-ratios (- number 1))))
+    ;; divide by 2
+    ((and (> (numerator number) 1) (= 0 (mod (denominator number) 2)))
+     (let* ((simpler (/ (floor (numerator number) 2) (/ (denominator number) 2))))
+       (append (split-into-simpler-ratios simpler)
+	       (split-into-simpler-ratios (- number simpler)))))
+    ;; do nothing
+    (t (list number))))
 
 ;; *** quantise-for-notation
 ;;; quantising to some hopefully notatable durations
