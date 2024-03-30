@@ -144,14 +144,17 @@
 		      collect (nth-mod i ls1))))
   (values ls1 ls2))
 
+;; *** my-get-standard-ins
+(defun my-get-standard-ins (instrument)
+  (get-standard-ins (if (and (>= (length (string instrument)) 6)
+			     (string= (subseq (string instrument) 0 6)
+				      "VIOLIN"))
+			'violin
+			instrument)))
+
 ;; *** note-for-ins
 (defun note-for-ins (instrument chord)
-  (let* ((ins (get-standard-ins
-	       (if (and (>= (length (string instrument)) 6)
-			(string= (subseq (string instrument) 0 6)
-				 "VIOLIN"))
-		   'violin
-		   instrument)))
+  (let* ((ins (my-get-standard-ins instrument))
 	 (min (midi-note (lowest-sounding ins)))
 	 (max (midi-note (highest-sounding ins)))
 	 (new-chord '()))

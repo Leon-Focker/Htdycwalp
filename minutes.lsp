@@ -395,7 +395,9 @@
 	 (marks '())
 	 spitch
 	 (divisor 2)
-	 (ambitus '(40 75))
+	 (ins (my-get-standard-ins instrument))
+	 (ambitus (list (midi-note (lowest-sounding ins))
+			(- (midi-note (highest-sounding ins)) 5)))
 	 (diss-env '(0 0 .3 0  1 7))
 	 (var-env '(0 0  .3 0  1 1))
 	 (nr 0))
@@ -405,11 +407,14 @@
       (unless (= 0 nd) (incf nr))
       ;; custom stuff:
       (case instrument
-	((violin-2 violin-1) (setf spitch (note-for-ins instrument (nth 0 chord)) divisor 3)
+	((violin-2 violin-1 flute)
+	 (setf spitch (note-for-ins instrument (nth 0 chord)) divisor 3)
 	 (incf nr (* (/ md 4) divisor)))
-	(viola (setf spitch (note-for-ins instrument (nth 0 chord)) divisor 4)
+	((viola b-flat-clarinet)
+	 (setf spitch (note-for-ins instrument (nth 0 chord)) divisor 4)
 	 (incf nr (* (/ md 4) divisor)))
-	(cello (setf spitch (note-for-ins instrument (nth 0 chord)) divisor 5)
+	((cello bassoon oboe)
+	 (setf spitch (note-for-ins instrument (nth 0 chord)) divisor 5)
 	 (incf nr (* (/ md 4) divisor)))
 	(t (setf spitch (note-for-ins instrument (nth 0 chord)))
 	 (incf nr (* (/ md 4) divisor))))
