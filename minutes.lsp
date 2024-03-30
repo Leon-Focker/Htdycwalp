@@ -160,7 +160,7 @@
 ;;; pulse goes through instruments and number of instruments playing one pulse
 ;;; is determined by the "weight" of that pulse
 ;;; (by indisp with 13 pulses = 1 "bar")
-(defun ins-get-static-rhythm (instrument dur index sum chord)
+#+nil(defun ins-get-static-rhythm (instrument dur index sum chord)
   (declare (ignore index))
   (let* ((new-durs '())
 	 (pitches '())
@@ -183,6 +183,66 @@
 		     new-durs)
 	       (push (if (or (= i (1- nr)) (= 0 i)) nil spitch) pitches))
       (values (reverse new-durs) (reverse pitches) '()))))
+
+
+(defun ins-get-static-rhythm (instrument dur index sum chord)
+  ;;(declare (ignore index))
+  (let* ((new-durs '())
+	 (pitches '())
+	 (marks '())
+	 (spitch (note-for-ins instrument (nth 2 chord)))
+	 (divisor 4) ;; divide one bar (= 4 seconds)
+	 (active-ls '(1 1 0 0 0 0 0 1)))
+    (multiple-value-bind (st md nd) (get-st-md-nd sum dur)
+      ;; custom stuff:
+      (case instrument
+	(tuba (setf spitch nil))
+	(percussion (setf spitch nil marks `((,index "solo"))))
+	((flute oboe cello)
+	 (setf active-ls '(1 1 1 0 0 1 1 0 1)))
+	((b-flat-clarinet c-trumpet)
+	 (setf active-ls '(1 1 1 0 0 1 1 0 1) divisor 6))
+	((bassoon french-horn bass-trombone)
+	 (setf active-ls '(0 0 1 1 0 0 0 1 1 0 0 0 1 1 0 0)))
+	(double-bass (setf spitch 'b0)
+	 (setf active-ls '(0 0 0 1 1 1 0 0 0 0 1 1 1 1 0 0)))
+	((violin-1 violin-2 viola)
+	 (setf active-ls '(0 0 0 1 1 1 0 0 0 0 0 1 1 1 1 0 0))))
+      ;; get durations:
+      (loop for i from 0 below (round (* (/ md 4) divisor)) and last = 0 then el
+	    for el = (nth-mod i active-ls)
+	    with ind = (if (= st 0) 0 1)
+	    with cnt = 0
+	    with chord-cnt = 2
+	    do (when (= el 0)
+		 (when (= last 1)
+		   (push (* cnt (/ 4 divisor)) new-durs)
+		   (push spitch pitches)
+		   (push `(,ind pp) marks)
+		   (push `(,ind cresc-beg) marks)
+		   (push `(,(1+ ind) f) marks)
+		   (push `(,ind cresc-end) marks)
+		   (incf ind)
+		   (incf chord-cnt -1)
+		   (setf spitch
+			 (note-for-ins instrument
+				       (nth-mod chord-cnt chord))))
+		 (push (/ 4 divisor) new-durs)
+		 (push nil pitches)
+		 (incf ind))
+	       (if (= el 1) (incf cnt) (setf cnt 0))
+	    finally (when (and el (= 1 el))
+		      (push (* cnt (/ 4 divisor)) new-durs)
+		      (push spitch pitches))
+		    (unless (= 0 nd)
+		      (push nd new-durs)
+		      (push nil pitches))
+		    (setf new-durs (reverse new-durs))
+		    (setf pitches (reverse pitches))
+		    (unless (= 0 st)
+		      (push st new-durs)
+		      (push nil pitches)))
+      (values new-durs pitches (reverse marks)))))
 
 ;; *** ins-get-morphing-rhythms
 ;;; like ins-get-static-rhythm but morph rhythm (indisp-fun).
