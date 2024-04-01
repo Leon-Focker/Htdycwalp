@@ -146,4 +146,22 @@
 ;; ** minute 10
 ;; ** minute 11
 
+
+
+(wsound "minute_interpret_test6"
+  (let* ((sound-list (reverse (data (getf *soundfiles* :noise)))))
+    (multiple-value-bind (score-indisp score-rhythm score-srt score-amp)
+	(interpret-tape (first (layers (sixth (access-minutes)))))
+      (fplay 0 60
+	     (sound (nth 6 sound-list))
+	     (rhythm (funcall (funcall score-rhythm time) 'line line))
+	     (indisp-fun (funcall score-indisp 'time time))
+	     (indisp-fun (lambda (x) x))
+	     (duration .01)
+	     (tim-mult (- 5 (* line 2.5)))
+	     (amp-val (* 1/13 (1+ (funcall indisp-fun (mod (* time tim-mult) 1)))))
+	     (srt (funcall (funcall score-srt time) 'amp-val amp-val 'line line))
+	     (amp (* (interpolate time score-amp) amp-val))
+	     (degree 45)))))
+
 ;; EOF tape-score.lsp

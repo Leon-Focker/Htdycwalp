@@ -562,6 +562,116 @@
   (loop for ins in (instruments ml)
 	collect (interpret-layer-by-instrument ml ins)))
 
+
+;; this is a monster and could have been avoided with propper planning:
+;; return a function that wants pairs of variable names and values
+;; the body can contain any variables, as long as they are then given to the
+;; generated function. For example:
+#|
+(funcall (variadic (progn (+ 5 6) (+ 1 y))) 'x 1 'y 2)
+=> 3
+|#
+(defmacro variadic (&body body)
+  `(lambda (&rest args)
+     (let* ((vars (loop for i in args by #'cddr collect i))
+	    (vals (loop for i in (cdr args) by #'cddr collect i))
+	    (unused (loop for i in vars unless (find i (flatten ',body))
+			  collect i)))
+       (eval `(let ,(mapcar #'(lambda (var val) `(,var ,val)) vars vals)
+		(declare (ignore ,@unused))
+		,',@body)))))
+
+(defun tape-get-indisp (start-time)
+  (cond ((>= start-time 0)
+	 (variadic (rqq-to-indispensability-function
+		    '(13 (1 1 1 1 1 1 1 1 1 1 1 1 1)) t)))
+	((>= start-time 60)
+	 (variadic (rqq-to-indispensability-function
+		    '(13 ((8 (1 1 1 1 1 1 1 1)) (5 (1 1 1 1 1)))) t)))
+	;;((>= start-time 120) (rqq-to-indispensability-function
+	;;		'(13 ((3 (1 1 1)) (5 (1 1 1 1 1)) (2 (1 1)) (3 (1 1 1)))) t))
+	((>= start-time 180)
+	 (variadic (rqq-to-indispensability-function
+		    '(13 ((3 (1 1 1)) (5 (1 1 1 1 1)) (2 (1 1)) (3 (1 1 1)))) t)))
+	((>= start-time 240)
+	 (variadic (rqq-to-indispensability-function
+		    '(13 ((3 (1 1 1)) (5 (1 1 1 1 1)) (2 (1 1)) (3 (1 1 1)))) t)))
+	;;((>= start-time 300) (variadic ))
+	((>= start-time 360)
+	 (variadic (funcall
+		    (sections
+		     0
+		     (rqq-to-indispensability-function
+		      '(13 ((4 (1 1 1 1)) (4 (1 1 1 1)) (4 (1 1 1 1)) (1 (1)))) t)
+		     20
+		     (rqq-to-indispensability-function
+		      '(13 ((5 (1 1 1 1)) (4 (1 1 1 1)) (3 (1 1 1 1)) (1 (1)))) t)
+		     40
+		     (rqq-to-indispensability-function
+		      '(13 ((5 (1 1 1 1)) (2 (1 1 1 1)) (4 (1 1 1 1)) (2 (1)))) t))
+		    time)))
+	((>= start-time 420)
+	 (variadic (rqq-to-indispensability-function
+		    '(13 ((4 (1 1 1 1)) (4 (1 1 1 1)) (4 (1 1 1 1)) (1 (1)))) t)))
+	((>= start-time 480) (variadic ))
+	((>= start-time 540) (variadic ))
+	((>= start-time 600) (variadic ))
+	(t (rqq-to-indispensability-function
+	    '(13 (1 1 1 1 1 1 1 1 1 1 1 1 1)) t))))
+
+(defmethod interpret-tape ((tl tape-layer))
+  (flet ((get-amp-env (d)
+	   (case d
+	     (1 `(0 0  1 1))
+	     (2 `(0 1  1 0))
+	     (3 `(0 .2  1 .2))
+	     (4 `(0 .7  1 .7))
+	     (5 `(0 .95  1 .95))))
+	 (get-rhythm (s)
+	   (case s
+	     (1 (variadic 1/13))
+	     (2 (variadic 1/13))
+	     (3 (variadic 1/13))
+	     (4 (variadic 1/13))
+	     (5 (variadic 1/13)) ;;
+	     (6 (variadic 1/13))
+	     (7 (variadic 1/13))
+	     (8 (variadic 1/13))))
+	 (get-srt (s)
+	   (case s
+	     (1 (variadic .5))
+	     (2 (variadic .5))
+	     (3 (variadic (dry-wet 0.9 amp-val (* line 2))))
+	     (4 (variadic (dry-wet 0.9 amp-val (* line 2))))
+	     (5 (variadic (dry-wet 0.9 amp-val (* line 2))))
+	     (6 (variadic (dry-wet 0.9 amp-val (* line 2))))
+	     (7 (variadic (dry-wet 0.9 amp-val (* line 2))))
+	     (8 (variadic (dry-wet 0.9 amp-val (* line 2)))))))
+    (let* ((durs (get-section-durations tl))
+	   (start-times (get-start-times durs))
+	   (dynamics (dynamics tl))
+	   (states (states tl))
+	   (envelopes '())
+	   (rhythm '())
+	   (srt '()))
+      (setf envelopes (loop for d in dynamics collect (get-amp-env d)))
+      (setf rhythm (loop for s in start-times and st in states
+			 for rhythm = (get-rhythm st)
+			 collect s collect rhythm)
+	    srt (loop for s in start-times and st in states
+		      for srt = (get-srt st)
+		      collect s collect srt))
+      ;; returns:
+      ;; indisp-fun
+      ;; rhythm
+      ;; srt
+      ;; duration
+      ;; amp
+      (values (tape-get-indisp (start-time tl))
+	      (apply #'sections rhythm)
+	      (apply #'sections srt)
+	      (combine-envelopes envelopes durs)))))
+
 ;; ** make
 
 (defun make-minute (id start-time &optional (layers '()))
