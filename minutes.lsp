@@ -582,22 +582,22 @@
 		,',@body)))))
 
 (defun tape-get-indisp (start-time)
-  (cond ((>= start-time 0)
+  (cond ((< start-time 60)
 	 (variadic (rqq-to-indispensability-function
 		    '(13 (1 1 1 1 1 1 1 1 1 1 1 1 1)) t)))
-	((>= start-time 60)
+	((< start-time 120)
 	 (variadic (rqq-to-indispensability-function
 		    '(13 ((8 (1 1 1 1 1 1 1 1)) (5 (1 1 1 1 1)))) t)))
-	;;((>= start-time 120) (rqq-to-indispensability-function
+	;;((< start-time 180) (rqq-to-indispensability-function
 	;;		'(13 ((3 (1 1 1)) (5 (1 1 1 1 1)) (2 (1 1)) (3 (1 1 1)))) t))
-	((>= start-time 180)
+	((< start-time 240)
 	 (variadic (rqq-to-indispensability-function
 		    '(13 ((3 (1 1 1)) (5 (1 1 1 1 1)) (2 (1 1)) (3 (1 1 1)))) t)))
-	((>= start-time 240)
+	((< start-time 300)
 	 (variadic (rqq-to-indispensability-function
 		    '(13 ((3 (1 1 1)) (5 (1 1 1 1 1)) (2 (1 1)) (3 (1 1 1)))) t)))
-	;;((>= start-time 300) (variadic ))
-	((>= start-time 360)
+	;;((< start-time 360) (variadic ))
+	((< start-time 420)
 	 (variadic (funcall
 		    (sections
 		     0
@@ -610,23 +610,24 @@
 		     (rqq-to-indispensability-function
 		      '(13 ((5 (1 1 1 1)) (2 (1 1 1 1)) (4 (1 1 1 1)) (2 (1)))) t))
 		    time)))
-	((>= start-time 420)
+	((< start-time 480)
 	 (variadic (rqq-to-indispensability-function
 		    '(13 ((4 (1 1 1 1)) (4 (1 1 1 1)) (4 (1 1 1 1)) (1 (1)))) t)))
-	((>= start-time 480) (variadic ))
-	((>= start-time 540) (variadic ))
-	((>= start-time 600) (variadic ))
-	(t (rqq-to-indispensability-function
-	    '(13 (1 1 1 1 1 1 1 1 1 1 1 1 1)) t))))
+	;((< start-time 540) (variadic ))
+	;((< start-time 600) (variadic ))
+	;((< start-time 660) (variadic ))
+	(t (variadic (rqq-to-indispensability-function
+	    '(13 (1 1 1 1 1 1 1 1 1 1 1 1 1)) t)))))
 
 (defmethod interpret-tape ((tl tape-layer))
   (flet ((get-amp-env (d)
 	   (case d
-	     (1 `(0 0  1 1))
-	     (2 `(0 1  1 0))
-	     (3 `(0 .2  1 .2))
-	     (4 `(0 .7  1 .7))
-	     (5 `(0 .95  1 .95))))
+	     (0 '(0 0  1 0))
+	     (1 '(0 0  1 1))
+	     (2 '(0 1  1 0))
+	     (3 '(0 .2  1 .2))
+	     (4 '(0 .7  1 .7))
+	     (5 '(0 .95  1 .95))))
 	 (get-rhythm (s)
 	   (case s
 	     (1 (variadic 1/13))
