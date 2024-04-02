@@ -246,12 +246,14 @@
 
 ;; *** ins-get-morphing-rhythms
 ;;; like ins-get-static-rhythm but morph rhythm (indisp-fun).
-(defun ins-get-morphing-rhythms (instrument dur index sum chord)
+(defun ins-get-morphing-rhythms (instrument dur index sum chord start-time)
   (declare (ignore index))
   (let* ((new-durs '())
 	 (pitches '())
 	 (nr 0)
-	 spitch)
+	 (spitch (note-for-ins instrument (nth 1 chord)))
+	 (thrsld .2)
+	 (indisp (funcall (tape-get-indisp start-time) 'time 0)))
     (multiple-value-bind (st md nd) (get-st-md-nd sum dur)
       ;; set number of notes
       (unless (= 0 st) (incf nr))
@@ -260,14 +262,18 @@
       ;; custom stuff:
       (case instrument
 	(tuba (setf spitch nil))
-	(double-bass (setf spitch 'b0))
-	(t (setf spitch (note-for-ins instrument (nth 1 chord)))))
+	(double-bass (setf spitch 'b0 thrsld 0))
+	(violin-1 (setf thrsld 1/3))
+	(violin-2 (setf thrsld 1/4))
+	(viola (setf thrsld 1/6))
+	(cello (setf thrsld 1/8)))
       (loop for i from 0 below nr
+	    for ind = (/ (1+ (funcall indisp (mod (/ i 13) 1))))
 	    do (push (cond ((and (= i 0) (not (= 0 st))) st)
 			   ((and (= i (1- nr)) (not (= 0 nd))) nd)
 			   (t .25))
 		     new-durs)
-	       (push (if (= 0 (random 2)) nil spitch) pitches))
+	       (push (if (>= ind thrsld) spitch nil) pitches))
       (values (reverse new-durs) (reverse pitches) '()))))
 
 ;; *** ins-get-changing-timbres
@@ -512,6 +518,7 @@
 	 (states (states il))
 	 (dynamics (dynamics il))
 	 (chords (chords il))
+	 (start-time (start-time il))
 	 (indices '(0))
 	 (new-durs '())
 	 (pitches '())
@@ -526,7 +533,7 @@
 		     ;; interpret states
 		     (case state
 		       (2 (ins-get-static-rhythm instrument dur index sum chord))
-		       (3 (ins-get-morphing-rhythms instrument dur index sum chord))
+		       (3 (ins-get-morphing-rhythms instrument dur index sum chord start-time))
 		       (4 (ins-get-changing-timbres instrument dur chord))
 		       (5 (ins-get-isorhythmic-rhythms instrument dur index sum chord))
 		       (6 (ins-get-converging-pitches instrument dur index sum chord))
