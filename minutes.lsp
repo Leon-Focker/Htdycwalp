@@ -253,7 +253,13 @@
 	 (nr 0)
 	 (spitch (note-for-ins instrument (nth 1 chord)))
 	 (thrsld .2)
-	 (indisp (funcall (tape-get-indisp start-time) 'time 0)))
+	 (indisp1 (funcall (tape-get-indisp start-time) 'time 0))
+	 (indisp2 (funcall (tape-get-indisp start-time) 'time 60))
+	 (pitches1 '())
+	 (pitches2 '())
+	 (ptrn1 '())
+	 (ptrn2 '())
+	 (morph '()))
     (multiple-value-bind (st md nd) (get-st-md-nd sum dur)
       ;; set number of notes
       (unless (= 0 st) (incf nr))
@@ -267,14 +273,27 @@
 	(violin-2 (setf thrsld 1/4))
 	(viola (setf thrsld 1/6))
 	(cello (setf thrsld 1/8)))
+      ;; get durations and different pitch lists
       (loop for i from 0 below nr
-	    for ind = (/ (1+ (funcall indisp (mod (/ i 13) 1))))
+	    for ind1 = (/ (1+ (funcall indisp1 (mod (/ i 13) 1))))
+	    for ind2 = (/ (1+ (funcall indisp2 (mod (/ i 13) 1))))
 	    do (push (cond ((and (= i 0) (not (= 0 st))) st)
 			   ((and (= i (1- nr)) (not (= 0 nd))) nd)
 			   (t .25))
 		     new-durs)
-	       (push (if (>= ind thrsld) spitch nil) pitches))
-      (values (reverse new-durs) (reverse pitches) '()))))
+	       (push (if (>= ind1 thrsld) spitch nil) pitches1)
+	       (push (if (>= ind2 thrsld) spitch nil) pitches2))
+      ;; make "patterns" with only 1s, because we want the indices
+      (setf ptrn1 (make-list (length pitches1) :initial-element 1)
+	    ptrn2 (make-list (length pitches2) :initial-element 1))
+      ;; morph patterns and get indices
+      (setf morph (morph-patterns `(,(reverse ptrn1) ,(reverse ptrn2))
+				  0 nil nil (length ptrn1) t))
+      ;; collect pitches from indices
+      (setf pitches
+	    (loop for m in morph
+		  collect (nth (cadr m) (if (= 0 (car m)) pitches1 pitches2))))
+      (values (reverse new-durs) pitches '()))))
 
 ;; *** ins-get-changing-timbres
 (defun ins-get-changing-timbres (instrument dur chord)
@@ -588,6 +607,8 @@
 		(declare (ignore ,@unused))
 		,',@body)))))
 
+;; *** tape-get-indisp
+;;; determine indisp-fun by start-time (of a layer)
 (defun tape-get-indisp (start-time)
   (cond ((< start-time 60)
 	 (variadic (rqq-to-indispensability-function
@@ -598,8 +619,15 @@
 	;;((< start-time 180) (rqq-to-indispensability-function
 	;;		'(13 ((3 (1 1 1)) (5 (1 1 1 1 1)) (2 (1 1)) (3 (1 1 1)))) t))
 	((< start-time 240)
-	 (variadic (rqq-to-indispensability-function
-		    '(13 ((3 (1 1 1)) (5 (1 1 1 1 1)) (2 (1 1)) (3 (1 1 1)))) t)))
+	 (variadic (funcall
+		    (sections
+		     0
+		     (rqq-to-indispensability-function
+		      '(13 ((8 (1 1 1 1 1 1 1 1)) (5 (1 1 1 1 1)))) t)
+		     45
+		     (rqq-to-indispensability-function
+		      '(13 ((4 (1 1 1 1)) (5 (1 1 1 1 1)) (4 (1 1 1 1)))) t))
+		    time)))
 	((< start-time 300)
 	 (variadic (rqq-to-indispensability-function
 		    '(13 ((3 (1 1 1)) (5 (1 1 1 1 1)) (2 (1 1)) (3 (1 1 1)))) t)))
@@ -624,7 +652,20 @@
 	;((< start-time 600) (variadic ))
 	;((< start-time 660) (variadic ))
 	(t (variadic (rqq-to-indispensability-function
-	    '(13 (1 1 1 1 1 1 1 1 1 1 1 1 1)) t)))))
+		      '(13 (1 1 1 1 1 1 1 1 1 1 1 1 1)) t)))))
+
+;; *** tape-get-rhythm
+;;; determine rhythm(-fun) by state (1-8)
+(defun tape-get-rhythm (s)
+  (case s
+    (1 (variadic 1/13))
+    (2 (variadic 1/13))
+    (3 (variadic 1/13))
+    (4 (variadic 1/13))
+    (5 (variadic (float (dry-wet 1/13 7/13 (expt (- (* 2 line) 1) 2)))))
+    (6 (variadic (float (dry-wet 11/26 1/26 (expt (- (* 2 line) 1) 2)))))
+    (7 (variadic 1/8))
+    (8 (variadic (float (dry-wet 1/13 7/13 (expt (- (* 2 line) 1) 2)))))))
 
 (defmethod interpret-tape ((tl tape-layer))
   (flet ((get-amp-env (d)
@@ -635,16 +676,6 @@
 	     (3 '(0 .2  1 .2))
 	     (4 '(0 .7  1 .7))
 	     (5 '(0 .95  1 .95))))
-	 (get-rhythm (s)
-	   (case s
-	     (1 (variadic 1/13))
-	     (2 (variadic 1/13))
-	     (3 (variadic 1/13))
-	     (4 (variadic 1/13))
-	     (5 (variadic 1/13)) ;;
-	     (6 (variadic 1/13))
-	     (7 (variadic 1/13))
-	     (8 (variadic 1/13))))
 	 (get-srt (s)
 	   (case s
 	     (1 (variadic .5))
@@ -652,7 +683,7 @@
 	     (3 (variadic (dry-wet 0.9 amp-val (* line 2))))
 	     (4 (variadic (dry-wet 0.9 amp-val (* line 2))))
 	     (5 (variadic (dry-wet 0.9 amp-val (* line 2))))
-	     (6 (variadic (dry-wet 0.9 amp-val (* line 2))))
+	     (6 (variadic (dry-wet 0.9 amp-val (expt (- (* 2 line) 1) 2))))
 	     (7 (variadic (dry-wet 0.9 amp-val (* line 2))))
 	     (8 (variadic (dry-wet 0.9 amp-val (* line 2)))))))
     (let* ((durs (get-section-durations tl))
@@ -664,7 +695,7 @@
 	   (srt '()))
       (setf envelopes (loop for d in dynamics collect (get-amp-env d)))
       (setf rhythm (loop for s in start-times and st in states
-			 for rhythm = (get-rhythm st)
+			 for rhythm = (tape-get-rhythm st)
 			 collect s collect rhythm)
 	    srt (loop for s in start-times and st in states
 		      for srt = (get-srt st)
