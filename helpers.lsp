@@ -558,7 +558,10 @@
     ;; sanity checks:
     (unless (and (listp lists) (loop for ls in lists always (listp ls)))
       (error "lists in lists-to-xml seems to be malformed"))
-    (let* (sc list-of-list-of-bars)
+    (let* ((list-of-list-of-bars '())
+	   (page-height (if (> (length lists) 8) 429 297)) ;; a3 or a4
+	   (page-width (if (> (length lists) 8) 297 210))  ;; a3 or a4
+	   sc)
       (loop for i in lists
 	    ;; split durations so they fit into bars and parse to (tied) events
 	    do (multiple-value-bind (events attacks-indices)
@@ -614,7 +617,9 @@
       (loop for i from 1 and bar from 1 to (num-bars sc) by 16
 	    do (set-rehearsal-letter sc (if (= bar 1) 2 bar) i))
       ;; call write-xml on sc-object
-      (write-xml sc :file file))))
+      (write-xml sc :file file
+		    :page-height page-height
+		    :page-width page-width))))
 
 ;; some dirty work (replacing names in staffs):
 (setf (staff-short-name
