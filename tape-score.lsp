@@ -69,20 +69,21 @@
 ;; simple, steady pulse train
 ;; rthm = 1/13, rqq rhythm with 13 units divided by 3 5 2 3.
 ;; the srt is slowly going up and the soundfile is rhythmically changed.
-(wsound "minute_4"
+(wsound "minute_4_Test"
   (let* ((sound-list (reverse (data (getf *soundfiles* :noise)))))
     (multiple-value-bind (score-indisp score-rhythm score-srt score-amp)
 	(interpret-tape (first (layers (fourth (access-minutes)))))
       (fplay 0 60
-	     (indisp-fun (rqq-to-indispensability-function
-			  '(13 ((3 (1 1 1)) (5 (1 1 1 1 1)) (2 (1 1)) (3 (1 1 1)))) t))
+	     ;; don't use dynamics, would be a kind of cresc anyways
+	     ;; (dynamics (interpolate (min time 60) score-amp))
+	     (indisp-fun (funcall score-indisp))
 	     (sound (nth (case (funcall indisp-fun (* time 1/3))
 			   ((0 1 2) 0)
 			   ((3 4 5 6 7) 2)
 			   ((8 9) 4)
 			   (t 6))
 			 sound-list))
-	     (rhythm 1/13)
+	     (rhythm (funcall (funcall score-rhythm time) 'line line))
 	     (srt (interpolate line '(0 .5  1 2) :warn nil))
 	     (duration .01)
 	     (amp (* 1/13 (1+ (funcall indisp-fun (mod time 1)))))
