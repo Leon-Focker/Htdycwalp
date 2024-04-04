@@ -9,8 +9,10 @@
 ;; displacements.
 (wsound "minute_1"
   (let* ((sound-list (reverse (data (getf *soundfiles* :noise)))))
-    (multiple-value-bind (score-indisp score-rhythm score-srt score-amp)
+    (multiple-value-bind (score-indisp score-rhythm score-srt score-amp
+			  score-time-mult)
 	(interpret-tape (first (layers (first (access-minutes)))))
+      (declare (ignore score-rhythm score-srt score-amp score-time-mult))
       (fplay 0 60
 	     (sound (nth 6 sound-list))
 	     (rhythm 1/13)
@@ -31,15 +33,17 @@
 ;; displacements.
 (wsound "minute_2"
   (let* ((sound-list (reverse (data (getf *soundfiles* :noise)))))
-    (multiple-value-bind (score-indisp score-rhythm score-srt score-amp)
+    (multiple-value-bind (score-indisp score-rhythm score-srt score-amp
+			  score-time-mult)
 	(interpret-tape (first (layers (second (access-minutes)))))
+      (declare (ignore score-rhythm score-srt score-amp score-time-mult))
       (fplay 0 60
 	     (sound (nth 6 sound-list))
 	     (rhythm 1/13)
 	     (indisp-fun (funcall score-indisp))
 	     (srt (interpolate line '(0 .5  1 1.3) :warn nil))
 	     (duration .01)
-	     (tim-mult (- 5 (* line 2.5)))
+	     (tim-mult (- 5 (* line 2.5))(- 5 (* line 2.5)))
 	     (amp-val (* 1/13 (1+ (funcall indisp-fun (mod (* time tim-mult) 1)))))
 	     (amp (funcall (sections 0  .9
 				     (* 8/13 60) amp-val)
@@ -48,20 +52,23 @@
 
 ;; ** minute 3
 
+;; solos with percussion, break in between.
 (wsound "minute_3"
   (let* ((sound-list (reverse (data (getf *soundfiles* :noise)))))
-    (multiple-value-bind (score-indisp score-rhythm score-srt score-amp)
+    (multiple-value-bind (score-indisp score-rhythm score-srt score-amp score-time-mult)
 	(interpret-tape (first (layers (third (access-minutes)))))
+      (declare (ignore score-rhythm))
       (fplay 0 60
 	     (sound (nth 6 sound-list))
-	     (rhythm (funcall (funcall score-rhythm time) 'line line))
-	     (indisp-fun (funcall score-indisp))
-	     (indisp-fun (lambda (x) x))
+	     (rhythm 1/8)
+	     (indisp-fun (funcall score-indisp 'time time))
 	     (duration .01)
-	     (tim-mult (- 5 (* line 2.5)))
-	     (amp-val (* 1/13 (1+ (funcall indisp-fun (mod (* time tim-mult) 1)))))
+	     (time-mult (funcall (funcall score-time-mult time) 'time time))
+	     (amp-val (* 1/13 (1+ (funcall indisp-fun (mod (* time time-mult) 1)))))
 	     (srt (funcall (funcall score-srt time) 'amp-val amp-val 'line line))
-	     (amp (* (interpolate time score-amp) amp-val))
+	     (amp (dry-wet (* (interpolate (min time 60) score-amp) amp-val)
+			   .9
+			   (max (- 1 (* line 3)) 0)))
 	     (degree 45)))))
 
 ;; ** minute 4
@@ -71,7 +78,8 @@
 ;; the srt is slowly going up and the soundfile is rhythmically changed.
 (wsound "minute_4_Test"
   (let* ((sound-list (reverse (data (getf *soundfiles* :noise)))))
-    (multiple-value-bind (score-indisp score-rhythm score-srt score-amp)
+    (multiple-value-bind (score-indisp score-rhythm score-srt score-amp
+			  score-time-mult)
 	(interpret-tape (first (layers (fourth (access-minutes)))))
       (fplay 0 60
 	     ;; don't use dynamics, would be a kind of cresc anyways
@@ -100,7 +108,8 @@
 (wsound "minute_5"
   (let* ((sound-list (reverse (data (getf *soundfiles* :noise))))
 	 (cnt 0))
-    (multiple-value-bind (score-indisp score-rhythm score-srt score-amp)
+    (multiple-value-bind (score-indisp score-rhythm score-srt score-amp
+			  score-time-mult)
 	(interpret-tape (first (layers (fifth (access-minutes)))))
       (fplay 0 60
 	     (indisp-fun (funcall score-indisp))
@@ -123,7 +132,8 @@
 
 (wsound "minute_6"
   (let* ((sound-list (reverse (data (getf *soundfiles* :noise)))))
-    (multiple-value-bind (score-indisp score-rhythm score-srt score-amp)
+    (multiple-value-bind (score-indisp score-rhythm score-srt score-amp
+			  score-time-mult)
 	(interpret-tape (first (layers (sixth (access-minutes)))))
       (fplay 0 60
 	     (dynamics (interpolate (min time 60) score-amp))
@@ -144,7 +154,7 @@
 ;; difference in amplitude is increased, until smaller amp values go into the negative
 (wsound "minute_7"
   (let* ((sound-list (reverse (data (getf *soundfiles* :noise)))))
-    (multiple-value-bind (score-indisp score-rhythm score-srt score-amp)
+    (multiple-value-bind (score-indisp score-rhythm score-srt score-amp score-time-mult)
 	(interpret-tape (first (layers (seventh (access-minutes)))))
       (setf *test* score-indisp)
       (fplay 0 60
@@ -168,7 +178,7 @@
 ;; left channel accelerates (sides) while right channel decelerates (mid)
 (wsound "minute_8"
   (let* ((sound-list (reverse (data (getf *soundfiles* :noise)))))
-    (multiple-value-bind (score-indisp score-rhythm score-srt score-amp)
+    (multiple-value-bind (score-indisp score-rhythm score-srt score-amp score-time-mult)
 	(interpret-tape (first (layers (eighth (access-minutes)))))
       (fplay 0 60
 	     (sound (nth 6 sound-list))
@@ -188,7 +198,7 @@
 
 (wsound "minute_9"
   (let* ((sound-list (reverse (data (getf *soundfiles* :noise)))))
-    (multiple-value-bind (score-indisp score-rhythm score-srt score-amp)
+    (multiple-value-bind (score-indisp score-rhythm score-srt score-amp score-time-mult)
 	(interpret-tape (first (layers (ninth (access-minutes)))))
       (fplay 0 60
 	     (sound (nth 6 sound-list))
@@ -206,7 +216,7 @@
 
 (wsound "minute_10"
   (let* ((sound-list (reverse (data (getf *soundfiles* :noise)))))
-    (multiple-value-bind (score-indisp score-rhythm score-srt score-amp)
+    (multiple-value-bind (score-indisp score-rhythm score-srt score-amp score-time-mult)
 	(interpret-tape (first (layers (tenth (access-minutes)))))
       (fplay 0 60
 	     (sound (nth 6 sound-list))
@@ -224,7 +234,7 @@
 
 (wsound "minute_11"
   (let* ((sound-list (reverse (data (getf *soundfiles* :noise)))))
-    (multiple-value-bind (score-indisp score-rhythm score-srt score-amp)
+    (multiple-value-bind (score-indisp score-rhythm score-srt score-amp score-time-mult)
 	(interpret-tape (first (layers (nth 10 (access-minutes)))))
       (fplay 0 60
 	     (sound (nth 6 sound-list))

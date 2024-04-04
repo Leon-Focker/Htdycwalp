@@ -185,64 +185,96 @@
       (values (reverse new-durs) (reverse pitches) '()))))
 
 
-(defun ins-get-static-rhythm (instrument dur index sum chord)
+(defun ins-get-static-rhythm (instrument dur index sum chord start-time)
+  (if (equal instrument 'percussion)
+      (perc-get-static-rhythm dur index sum chord start-time)
+      (let* ((new-durs '())
+	     (pitches '())
+	     (marks '())
+	     (spitch (note-for-ins instrument (nth 2 chord)))
+	     (divisor 4) ;; divide one bar (= 4 seconds)
+	     (active-ls '(1 1 0 0 0 0 0 1)))
+	(multiple-value-bind (st md nd) (get-st-md-nd sum dur)
+	  ;; custom stuff:
+	  (case instrument
+	    (tuba (setf spitch nil))
+	    ((flute oboe cello)
+	     (setf active-ls '(1 1 1 0 0 1 1 0 1)))
+	    ((b-flat-clarinet c-trumpet)
+	     (setf active-ls '(1 1 1 0 0 1 1 0 1) divisor 6))
+	    ((bassoon french-horn bass-trombone)
+	     (setf active-ls '(0 0 1 1 0 0 0 1 1 0 0 0 1 1 0 0)))
+	    (double-bass (setf spitch 'b0)
+	     (setf active-ls '(0 0 0 1 1 1 0 0 0 0 1 1 1 1 0 0)))
+	    ((violin-1 violin-2 viola)
+	     (setf active-ls '(0 0 0 1 1 1 0 0 0 0 0 1 1 1 1 0 0))))
+	  ;; get durations, pitches and marks
+	  (loop for i from 0 below (round (* (/ md 4) divisor))
+		and last = 0 then el
+		for el = (nth-mod i active-ls)
+		with ind = (if (= st 0) 0 1)
+		with cnt = 0
+		with chord-cnt = 2
+		do (when (= el 0)
+		     (when (= last 1)
+		       (push (* cnt (/ 4 divisor)) new-durs)
+		       (push spitch pitches)
+		       ;; the dynamic marks somehow create a mess...
+		       (push `(,ind pp) marks)
+		       (push `(,ind cresc-beg) marks)
+		       (push `(,(1+ ind) f) marks)
+		       (push `(,ind cresc-end) marks)
+		       (incf ind)
+		       (incf chord-cnt -1)
+		       (setf spitch
+			     (note-for-ins instrument
+					   (nth-mod chord-cnt chord))))
+		     (push (/ 4 divisor) new-durs)
+		     (push nil pitches)
+		     (incf ind))
+		   (if (= el 1) (incf cnt) (setf cnt 0))
+		finally (when (and el (= 1 el))
+			  (push (* cnt (/ 4 divisor)) new-durs)
+			  (push spitch pitches))
+			(unless (= 0 nd)
+			  (push nd new-durs)
+			  (push nil pitches))
+			(setf new-durs (reverse new-durs))
+			(setf pitches (reverse pitches))
+			(unless (= 0 st)
+			  (push st new-durs)
+			  (push nil pitches))))
+	(values new-durs pitches (reverse marks)))))
+
+(defun perc-get-static-rhythm (dur index sum chord start-time)
   ;;(declare (ignore index))
   (let* ((new-durs '())
 	 (pitches '())
-	 (marks '())
-	 (spitch (note-for-ins instrument (nth 2 chord)))
-	 (divisor 4) ;; divide one bar (= 4 seconds)
-	 (active-ls '(1 1 0 0 0 0 0 1)))
+	 (nr 0)
+	 (thrsld 1/4)
+	 (indisp (funcall (tape-get-indisp start-time) 'time sum))
+	 (spitch (list (note-for-ins 'percussion (nth-mod 0 chord))
+		       (note-for-ins 'percussion (nth-mod 2 chord)))))
+    (declare (ignore spitch))
     (multiple-value-bind (st md nd) (get-st-md-nd sum dur)
-      ;; custom stuff:
-      (case instrument
-	(tuba (setf spitch nil))
-	(percussion (setf spitch nil marks `((,index "solo"))))
-	((flute oboe cello)
-	 (setf active-ls '(1 1 1 0 0 1 1 0 1)))
-	((b-flat-clarinet c-trumpet)
-	 (setf active-ls '(1 1 1 0 0 1 1 0 1) divisor 6))
-	((bassoon french-horn bass-trombone)
-	 (setf active-ls '(0 0 1 1 0 0 0 1 1 0 0 0 1 1 0 0)))
-	(double-bass (setf spitch 'b0)
-	 (setf active-ls '(0 0 0 1 1 1 0 0 0 0 1 1 1 1 0 0)))
-	((violin-1 violin-2 viola)
-	 (setf active-ls '(0 0 0 1 1 1 0 0 0 0 0 1 1 1 1 0 0))))
-      ;; get durations:
-      (loop for i from 0 below (round (* (/ md 4) divisor)) and last = 0 then el
-	    for el = (nth-mod i active-ls)
-	    with ind = (if (= st 0) 0 1)
-	    with cnt = 0
-	    with chord-cnt = 2
-	    do (when (= el 0)
-		 (when (= last 1)
-		   (push (* cnt (/ 4 divisor)) new-durs)
-		   (push spitch pitches)
-		   (push `(,ind pp) marks)
-		   (push `(,ind cresc-beg) marks)
-		   (push `(,(1+ ind) f) marks)
-		   (push `(,ind cresc-end) marks)
-		   (incf ind)
-		   (incf chord-cnt -1)
-		   (setf spitch
-			 (note-for-ins instrument
-				       (nth-mod chord-cnt chord))))
-		 (push (/ 4 divisor) new-durs)
-		 (push nil pitches)
-		 (incf ind))
-	       (if (= el 1) (incf cnt) (setf cnt 0))
-	    finally (when (and el (= 1 el))
-		      (push (* cnt (/ 4 divisor)) new-durs)
-		      (push spitch pitches))
-		    (unless (= 0 nd)
-		      (push nd new-durs)
-		      (push nil pitches))
-		    (setf new-durs (reverse new-durs))
-		    (setf pitches (reverse pitches))
-		    (unless (= 0 st)
-		      (push st new-durs)
-		      (push nil pitches)))
-      (values new-durs pitches (reverse marks)))))
+      ;; set number of notes
+      (unless (= 0 st) (incf nr))
+      (unless (= 0 nd) (incf nr))
+      (incf nr (* (/ md 4) 16))
+      ;; get durations and pitches
+      (loop for i from 0 below nr
+	    for ind = (/ (1+ (funcall indisp (mod (/ i 13) 1))))
+	    for note = (+ (if (= 0 (nth i (fibonacci-transition nr))) 0 12)
+			  (if (> ind thrsld) 61 60))
+	    for double = (and (find ind '(1/4 1/3 1/7 1/8)) ;; (= (mod i 7) 0)
+			      (not (or (= i (1- nr)) (= i 0))))
+	    do (push (cond ((and (= i 0) (not (= 0 st))) st)
+			   ((and (= i (1- nr)) (not (= 0 nd))) nd)
+			   (t (if double 1/8 1/4)))
+		     new-durs)
+	       (push (if (or (= i (1- nr)) (= 0 i)) nil note) pitches)
+	       (when double (push note pitches) (push 1/8 new-durs)))
+      (values (reverse new-durs) (reverse pitches) `((,index f))))))
 
 ;; *** ins-get-morphing-rhythms
 ;;; like ins-get-static-rhythm but morph rhythm (indisp-fun).
@@ -252,9 +284,10 @@
 	 (pitches '())
 	 (nr 0)
 	 (spitch (note-for-ins instrument (nth 1 chord)))
-	 (thrsld .2)
-	 (indisp1 (funcall (tape-get-indisp start-time) 'time 0))
-	 (indisp2 (funcall (tape-get-indisp start-time) 'time 60))
+	 (spitch2 nil)
+	 (thrsld 1/7)
+	 (indisp1 (funcall (tape-get-indisp start-time) 'time sum))
+	 (indisp2 (funcall (tape-get-indisp start-time) 'time (+ sum dur 1)))
 	 (pitches1 '())
 	 (pitches2 '())
 	 (ptrn1 '())
@@ -272,7 +305,9 @@
 	(violin-1 (setf thrsld 1/3))
 	(violin-2 (setf thrsld 1/4))
 	(viola (setf thrsld 1/6))
-	(cello (setf thrsld 1/8)))
+	(cello (setf thrsld 1/8))
+	(percussion (setf spitch2 (note-for-ins instrument (nth 2 chord))
+			  thrsld 1/2)))
       ;; get durations and different pitch lists
       (loop for i from 0 below nr
 	    for ind1 = (/ (1+ (funcall indisp1 (mod (/ i 13) 1))))
@@ -281,8 +316,8 @@
 			   ((and (= i (1- nr)) (not (= 0 nd))) nd)
 			   (t .25))
 		     new-durs)
-	       (push (if (>= ind1 thrsld) spitch nil) pitches1)
-	       (push (if (>= ind2 thrsld) spitch nil) pitches2))
+	       (push (if (>= ind1 thrsld) spitch spitch2) pitches1)
+	       (push (if (>= ind2 thrsld) spitch spitch2) pitches2))
       ;; make "patterns" with only 1s, because we want the indices
       (setf ptrn1 (make-list (length pitches1) :initial-element 1)
 	    ptrn2 (make-list (length pitches2) :initial-element 1))
@@ -551,7 +586,7 @@
 		     (ins-get-rest dur)
 		     ;; interpret states
 		     (case state
-		       (2 (ins-get-static-rhythm instrument dur index sum chord))
+		       (2 (ins-get-static-rhythm instrument dur index sum chord start-time))
 		       (3 (ins-get-morphing-rhythms instrument dur index sum chord start-time))
 		       (4 (ins-get-changing-timbres instrument dur chord))
 		       (5 (ins-get-isorhythmic-rhythms instrument dur index sum chord))
@@ -610,14 +645,26 @@
 ;; *** tape-get-indisp
 ;;; determine indisp-fun by start-time (of a layer)
 (defun tape-get-indisp (start-time)
+  ;; minute 1
   (cond ((< start-time 60)
 	 (variadic (rqq-to-indispensability-function
 		    '(13 (1 1 1 1 1 1 1 1 1 1 1 1 1)) t)))
+	;; minute 2
 	((< start-time 120)
 	 (variadic (rqq-to-indispensability-function
 		    '(13 ((8 (1 1 1 1 1 1 1 1)) (5 (1 1 1 1 1)))) t)))
-	;;((< start-time 180) (rqq-to-indispensability-function
-	;;		'(13 ((3 (1 1 1)) (5 (1 1 1 1 1)) (2 (1 1)) (3 (1 1 1)))) t))
+	;; minute 3
+	((< start-time 180)
+	 (variadic (funcall
+		    (sections
+		     0
+		     (rqq-to-indispensability-function
+		      '(13 ((8 (1 1 1 1 1 1 1 1)) (5 (1 1 1 1 1)))) t)
+		     30
+		     (rqq-to-indispensability-function
+		      '(13 ((7 (1 1 1 1 1 1 1)) (6 (1 1 1 1 1 1)))) t))
+		    time)))
+	;; minute 4
 	((< start-time 240)
 	 (variadic (funcall
 		    (sections
@@ -648,7 +695,8 @@
 	((< start-time 480)
 	 (variadic (rqq-to-indispensability-function
 		    '(13 ((4 (1 1 1 1)) (4 (1 1 1 1)) (4 (1 1 1 1)) (1 (1)))) t)))
-	;((< start-time 540) (variadic ))
+	;;((< start-time 540) (variadic (rqq-to-indispensability-function
+	;;	      '(13 ((3 (1 1 1)) (5 (1 1 1 1 1)) (2 (1 1)) (3 (1 1 1)))) t)))
 	;((< start-time 600) (variadic ))
 	;((< start-time 660) (variadic ))
 	(t (variadic (rqq-to-indispensability-function
@@ -685,31 +733,47 @@
 	     (5 (variadic (dry-wet 0.9 amp-val (* line 2))))
 	     (6 (variadic (dry-wet 0.9 amp-val (expt (- (* 2 line) 1) 2))))
 	     (7 (variadic (dry-wet 0.9 amp-val (* line 2))))
-	     (8 (variadic (dry-wet 0.9 amp-val (* line 2)))))))
+	     (8 (variadic (dry-wet 0.9 amp-val (* line 2))))))
+	 (get-time-mult (s)
+	   (case s
+	     (1 (variadic 1))
+	     (2 (variadic 1))
+	     (3 (variadic 1))
+	     (4 (variadic (- 5 (* line 2.5))))
+	     (5 (variadic (+ 1 (* line 5))))
+	     (6 (variadic (- 5 (* line 2.5))))
+	     (7 (variadic (+ 1 (* line 5))))
+	     (8 (variadic (- 5 (* line 2.5)))))))
     (let* ((durs (get-section-durations tl))
 	   (start-times (get-start-times durs))
 	   (dynamics (dynamics tl))
 	   (states (states tl))
 	   (envelopes '())
 	   (rhythm '())
-	   (srt '()))
+	   (srt '())
+	   (time-mult '()))
       (setf envelopes (loop for d in dynamics collect (get-amp-env d)))
       (setf rhythm (loop for s in start-times and st in states
 			 for rhythm = (tape-get-rhythm st)
 			 collect s collect rhythm)
 	    srt (loop for s in start-times and st in states
 		      for srt = (get-srt st)
-		      collect s collect srt))
+		      collect s collect srt)
+	    time-mult (loop for s in start-times and st in states
+			    for mult = (get-time-mult st)
+			    collect s collect mult))
       ;; returns:
       ;; indisp-fun
       ;; rhythm
       ;; srt
-      ;; duration
       ;; amp
+      ;; time-mult
+      ;; duration
       (values (tape-get-indisp (start-time tl))
 	      (apply #'sections rhythm)
 	      (apply #'sections srt)
-	      (combine-envelopes envelopes durs)))))
+	      (combine-envelopes envelopes durs)
+	      (apply #'sections time-mult)))))
 
 ;; ** make
 
