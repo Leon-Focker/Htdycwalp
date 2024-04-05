@@ -34,43 +34,48 @@
 		    '(13 ((8 (1 1 1 1 1 1 1 1)) (5 (1 1 1 1 1)))) t)))
 	;; minute 3
 	((< start-time 180)
-	 (variadic (funcall
-		    (sections
-		     0
-		     (rqq-to-indispensability-function
-		      '(13 ((8 (1 1 1 1 1 1 1 1)) (5 (1 1 1 1 1)))) t)
-		     30
-		     (rqq-to-indispensability-function
-		      '(13 ((7 (1 1 1 1 1 1 1)) (6 (1 1 1 1 1 1)))) t))
-		    time)))
+	 (variadic (section-val
+		    time
+		    0
+		    (rqq-to-indispensability-function
+		     '(13 ((8 (1 1 1 1 1 1 1 1)) (5 (1 1 1 1 1)))) t)
+		    30
+		    (rqq-to-indispensability-function
+		     '(13 ((7 (1 1 1 1 1 1 1)) (6 (1 1 1 1 1 1)))) t))))
 	;; minute 4
 	((< start-time 240)
-	 (variadic (funcall
-		    (sections
-		     0
-		     (rqq-to-indispensability-function
-		      '(13 ((8 (1 1 1 1 1 1 1 1)) (5 (1 1 1 1 1)))) t)
-		     45
-		     (rqq-to-indispensability-function
-		      '(13 ((4 (1 1 1 1)) (5 (1 1 1 1 1)) (4 (1 1 1 1)))) t))
-		    time)))
+	 (variadic (section-val
+		    time
+		    0
+		    (rqq-to-indispensability-function
+		     '(13 ((3 (1 1 1)) (5 (1 1 1 1 1)) (2 (1 1)) (3 (1 1 1))))
+		     #+nil'(13 ((8 (1 1 1 1 1 1 1 1)) (5 (1 1 1 1 1)))) t)
+		    45
+		    (rqq-to-indispensability-function
+		     '(13 ((4 (1 1 1 1)) (5 (1 1 1 1 1)) (4 (1 1 1 1)))) t))))
+	;; minute 5
 	((< start-time 300)
-	 (variadic (rqq-to-indispensability-function
-		    '(13 ((3 (1 1 1)) (5 (1 1 1 1 1)) (2 (1 1)) (3 (1 1 1)))) t)))
+	 (variadic (section-val
+		    time
+		    0
+		    (rqq-to-indispensability-function
+		     '(13 ((3 (1 1 1)) (5 (1 1 1 1 1)) (2 (1 1)) (3 (1 1 1)))) t)
+		    30
+		    (rqq-to-indispensability-function
+		     '(13 ((8 (1 2 1 1 5)) (5 (1 1 3 1)))) t))))
 	;;((< start-time 360) (variadic ))
 	((< start-time 420)
-	 (variadic (funcall
-		    (sections
-		     0
-		     (rqq-to-indispensability-function
-		      '(13 ((4 (1 1 1 1)) (4 (1 1 1 1)) (4 (1 1 1 1)) (1 (1)))) t)
-		     20
-		     (rqq-to-indispensability-function
-		      '(13 ((5 (1 1 1 1)) (4 (1 1 1 1)) (3 (1 1 1 1)) (1 (1)))) t)
-		     40
-		     (rqq-to-indispensability-function
-		      '(13 ((5 (1 1 1 1)) (2 (1 1 1 1)) (4 (1 1 1 1)) (2 (1)))) t))
-		    time)))
+	 (variadic (section-val
+		    time
+		    0
+		    (rqq-to-indispensability-function
+		     '(13 ((4 (1 1 1 1)) (4 (1 1 1 1)) (4 (1 1 1 1)) (1 (1)))) t)
+		    20
+		    (rqq-to-indispensability-function
+		     '(13 ((5 (1 1 1 1)) (4 (1 1 1 1)) (3 (1 1 1 1)) (1 (1)))) t)
+		    40
+		    (rqq-to-indispensability-function
+		     '(13 ((5 (1 1 1 1)) (2 (1 1 1 1)) (4 (1 1 1 1)) (2 (1)))) t))))
 	((< start-time 480)
 	 (variadic (rqq-to-indispensability-function
 		    '(13 ((4 (1 1 1 1)) (4 (1 1 1 1)) (4 (1 1 1 1)) (1 (1)))) t)))
@@ -96,6 +101,7 @@
 
 ;; *** interpret-tape
 ;;; returns:
+;;; start-times
 ;;; indisp-fun
 ;;; rhythm
 ;;; srt
@@ -149,7 +155,8 @@
 	    time-mult (loop for s in start-times and st in states
 			    for mult = (get-time-mult st)
 			    collect s collect mult))
-      (values (get-indisp (start-time tl))
+      (values start-times
+	      (get-indisp (start-time tl))
 	      (apply #'sections rhythm)
 	      (apply #'sections srt)
 	      (combine-envelopes envelopes durs)
