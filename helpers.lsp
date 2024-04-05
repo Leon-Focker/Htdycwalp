@@ -3,7 +3,8 @@
 (in-package :ly)
 
 ;; not the prettiest solution but avoids style-warnings for now:
-(declaim (ftype (function) layers get-related-minute-layers))
+(declaim (ftype (function) layers get-related-minute-layers
+		quantise-for-notation))
 
 ;; *** nth-mod
 (defun nth-mod (n ls)

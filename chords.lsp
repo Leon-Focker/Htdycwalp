@@ -1,7 +1,16 @@
 ;; * chords.lsp
 
+;;; not so pretty file to generate strings of notes. Similar generations can
+;;; then be layerd as chords.
+
 (in-package :ly)
 
+;;; when compiling, SBCL complains about a function being undefined when it was
+;;; defined in a let (like #'access-intervalls). So let's avoid that warning:
+(declaim (ftype (function) access-intervals))
+
+;;; this is only a hash-table because I wanted to learn how to use them. There
+;;; is no need for this to be a hash-table.
 (let ((intervals (make-hash-table)))
   (defun access-intervals ()
     intervals))
@@ -50,28 +59,6 @@
 	      (helper (+ i offset)))
 	    (setf last next)))))
 
-(let* ((len 30)
-       (dissonance-env '(0 1  .3 4  .5 2  .9 6  1 0))
-       (variation-env '(0 0  .7 3  1 1)))
-  (lists-to-midi 
-   (append
-    (gen-melodic-line len 40 '(28 52) dissonance-env variation-env)
-    (gen-melodic-line len 47 '(35 59) dissonance-env variation-env len)
-    (gen-melodic-line len 44 '(32 56) dissonance-env variation-env (* 2 len)))
-   '(1) (loop for i from 0 below len collect i)
-   :file (format nil "~a~a" +ens-src-dir+ "line1.mid")))
-
-(let* ((len 10)
-       (dissonance-env '(0 1  .3 4  .5 2  .9 6  1 0))
-       (variation-env '(0 0  .7 3  1 1)))
-  (lists-to-midi 
-   (append (gen-melodic-line len 40 '(28 52) dissonance-env variation-env)
-	   (gen-melodic-line len 45 '(33 57) dissonance-env variation-env 1)
-	   (gen-melodic-line len 50 '(38 62) dissonance-env variation-env 2))
-   '(1) (loop for i from 0 below len collect i)
-   :file (format nil "~a~a" +ens-src-dir+ "line1.mid")))
-
-
 ;; make it a function!
 (defun gen-bassline-permutations
     (first-notes ambitus-list
@@ -84,23 +71,28 @@
 				permutation))
     (setf pitches
 	  (flatten 
-	   (loop for n in permutation do (incf n) collect
-		(loop for i from 0 below voices append
-		     (gen-melodic-line n (nth i first-notes) (nth i ambitus-list)
-				    dissonance-env variation-env (* n i))))))
+	   (loop for n in permutation do (incf n)
+		 collect
+		 (loop for i from 0 below voices
+		       append
+		       (gen-melodic-line n (nth i first-notes)
+					 (nth i ambitus-list)
+					 dissonance-env
+					 variation-env (* n i))))))
     (setf start-times
 	  (flatten
 	   (loop for n in permutation with start = 0
-	      collect (loop repeat voices
-			 with ls = (loop for i from start to (+ start n) collect i)
-			 append ls)
-	      do (incf start (1+ n)))))
+		 collect (loop repeat voices
+			       with ls = (loop for i from start to (+ start n)
+					       collect i)
+			       append ls)
+		 do (incf start (1+ n)))))
     (lists-to-midi pitches durations start-times
 		   :file file)))
 
-
 ;; ** three chords:
 
+#|
 (let* ((max-len 11)
        (dissonance-env '(0 1       .3 2  .45 2  .5 6  .8 1  1 4))
        (variation-env '(0 1  .2 0  .3 2  .4 1       .6 1    1 5))
@@ -120,5 +112,6 @@
 			     (format nil "~a~a"
 				     +ens-src-dir+
 				     "bassline_permutation_chord_33.mid")))
+|#
 
 ;; EOF chords.lsp

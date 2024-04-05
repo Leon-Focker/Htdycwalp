@@ -3,3 +3,7 @@
 *.reapeaks
 *.png
 *.mid
+*.fasl
+*.m4a
+sketch/
+test*.xml

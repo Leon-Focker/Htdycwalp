@@ -35,10 +35,11 @@
 		"soundfiles.lsp"
 		"minutes.lsp"
 		"show-minutes.lsp"
+		"interpretation.lsp"
 		;; score.lsp
 		;;"tape-score.lsp"
 		))
-  (load (probe-file (format nil "~a~a" +ens-src-dir+ file))))
+  (load (compile-file (probe-file (format nil "~a~a" +ens-src-dir+ file)))))
 
 ;; YAY :)
 (format t "~&done loading!")
