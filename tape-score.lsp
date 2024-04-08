@@ -153,7 +153,7 @@
 				   (nth-mod 3 start-times) 1))
 	     (srt (interpolate (* line srt-mod) '(0 .5  1 8) :warn nil)
 		  srt
-		  .25)
+		  5)
 	     (duration 0.01)
 	     (time-mult (funcall (funcall score-time-mult time)))
 	     (amp (if (or (<= 44 time 48) (> time 58))
@@ -174,15 +174,49 @@
       (declare (ignore start-times score-time-mult))
       (fplay 0 60
 	     (dynamics (interpolate (min time 60) score-amp))
-	     (sound (nth 6 sound-list))
-	     (rhythm (funcall (funcall score-rhythm time) 'line line))
+	     (score-rthm (funcall (funcall score-rhythm time) 'line line)
+			 (funcall (funcall score-rhythm time2) 'line line)
+			 (funcall (funcall score-rhythm time3) 'line line)
+			 (funcall (funcall score-rhythm time4) 'line line))
+	     (rhythm (section-val time
+				  0 score-rthm
+				  20 1/26
+				  40 1/26)
+		     rhythm
+		     rhythm
+		     score-rthm4)
 	     (indisp-fun (funcall score-indisp 'time time))
+	     (sound (section-val time
+				 0 (nth 6 sound-list)
+				 40 (nth (if (< (funcall indisp-fun (* time 1/3)) 1/6)
+					     7
+					     6)
+					 sound-list)))
 	     (duration .01)
-	     (tim-mult (- 5 (* line 2.5)))
-	     (amp-val (* 1/13 (1+ (funcall indisp-fun (mod (* time tim-mult) 1)))))
-	     (srt (funcall (funcall score-srt time) 'amp-val amp-val 'line line) 2)
-	     (amp (* (* (interpolate time score-amp) amp-val) dynamics))
-	     (degree 0 90)))))
+	     (tim-mult (section-val time
+				    0 (- 5 (* line 2.5))
+				    20 line))
+	     (amp-val (* 1/13 (1+ (funcall indisp-fun (mod (* time tim-mult) 1))))
+		      amp-val
+		      (- 1 amp-val)
+		      (1- (* 1/13 (1+ (funcall indisp-fun (mod (* time4 tim-mult) 1))))))
+	     (srt (if (<= time 40)
+		      (funcall (funcall score-srt time) 'amp-val amp-val 'line line)
+		      1)
+		  (if (<= time 40) 2 1)
+		  (if (<= time 40) 4 1)
+		  1)
+	     (amp (if (<= 20 time 40)
+		      (dry-wet (* amp-val dynamics) 0 (/ (- time 20) 20))
+		      (* amp-val dynamics))
+		  amp
+		  (if (<= 20 time2 40)
+		      (dry-wet (* .07 amp-val3 (- 1 dynamics)) 0 (/ (- time 20) 20))
+		      (* .07 amp-val3 (- 1 dynamics)))
+		  (if (<= 20 time4 40)
+		      (- 1 (* amp3 20))
+		      0))
+	     (degree 0 0 90 45)))))
 
 ;; ** minute 7
 
