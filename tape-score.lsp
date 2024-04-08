@@ -167,7 +167,8 @@
 ;; ** minute 6
 
 (wsound "minute_6"
-  (let* ((sound-list (reverse (data (getf *soundfiles* :noise)))))
+  (let* ((sound-list (reverse (data (getf *soundfiles* :noise))))
+	 (sound-list1 (reverse (data (getf *soundfiles* :percussive)))))
     (multiple-value-bind (start-times score-indisp score-rhythm score-srt
 			  score-amp score-time-mult)
 	(interpret-tape (first (layers (sixth (access-minutes)))))
@@ -181,18 +182,21 @@
 	     (rhythm (section-val time
 				  0 score-rthm
 				  20 1/26
-				  40 1/26)
+				  40 (* 3/13 (mirrors (abs (sin (* time 1/2))) .2 1)))
 		     rhythm
 		     rhythm
 		     score-rthm4)
 	     (indisp-fun (funcall score-indisp 'time time))
 	     (sound (section-val time
 				 0 (nth 6 sound-list)
-				 40 (nth (if (< (funcall indisp-fun (* time 1/3)) 1/6)
-					     7
-					     6)
-					 sound-list)))
-	     (duration .01)
+				 40 (nth 6 sound-list1)))
+	     (duration (section-val time
+				    0  .01
+				    40 .02)
+		       duration
+		       (section-val time3
+				    0  .01
+				    40 .02))
 	     (tim-mult (section-val time
 				    0 (- 5 (* line 2.5))
 				    20 line))
@@ -203,19 +207,31 @@
 	     (srt (if (<= time 40)
 		      (funcall (funcall score-srt time) 'amp-val amp-val 'line line)
 		      1)
-		  (if (<= time 40) 2 1)
-		  (if (<= time 40) 4 1)
+		  (if (<= time2 40) 2 25)
+		  (if (<= time3 40) 4 24)
 		  1)
-	     (amp (if (<= 20 time 40)
-		      (dry-wet (* amp-val dynamics) 0 (/ (- time 20) 20))
-		      (* amp-val dynamics))
+	     (start (section-val time
+				 0 0
+				 40 (* (- line 2/3) .2))
+		    start
+		    (section-val time3
+				 0 0
+				 40 (* (- line 2/3) .2)))
+	     (amp (section-val time
+			       0 (* amp-val dynamics)
+			       20 0
+			       24 (dry-wet (* amp-val dynamics) 0 (/ (- time 20) 20))
+			       44 (* amp-val dynamics .07))
 		  amp
-		  (if (<= 20 time2 40)
-		      (dry-wet (* .07 amp-val3 (- 1 dynamics)) 0 (/ (- time 20) 20))
-		      (* .07 amp-val3 (- 1 dynamics)))
-		  (if (<= 20 time4 40)
-		      (- 1 (* amp3 20))
-		      0))
+		  (section-val time
+			       0 (* .07 amp-val3 (- 1 dynamics))
+			       20 0
+			       24 (dry-wet (* .07 amp-val3 (- 1 dynamics)) 0 (/ (- time3 20) 20))
+			       40 (* .07 amp-val3 (- 1 dynamics) .07))
+		  (section-val time
+			       0 0
+			       24 (- 1 (* amp3 20))
+			       40 0))
 	     (degree 0 0 90 45)))))
 
 ;; ** minute 7
