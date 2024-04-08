@@ -221,13 +221,13 @@
 			       0 (* amp-val dynamics)
 			       20 0
 			       24 (dry-wet (* amp-val dynamics) 0 (/ (- time 20) 20))
-			       44 (* amp-val dynamics .07))
+			       44 (* amp-val dynamics .0007))
 		  amp
 		  (section-val time
 			       0 (* .07 amp-val3 (- 1 dynamics))
 			       20 0
 			       24 (dry-wet (* .07 amp-val3 (- 1 dynamics)) 0 (/ (- time3 20) 20))
-			       40 (* .07 amp-val3 (- 1 dynamics) .07))
+			       40 (* .07 amp-val3 (- 1 dynamics) .0007))
 		  (section-val time
 			       0 0
 			       24 (- 1 (* amp3 20))

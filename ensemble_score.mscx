@@ -1931,6 +1931,9 @@
           </voice>
         </Measure>
       <Measure>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
         <voice>
           <Rest>
             <visible>0</visible>
@@ -2533,7 +2536,7 @@
               <name>conductorUnconducted</name>
               <font>Bravura</font>
               <autoplace>0</autoplace>
-              <offset x="12.3045" y="-1.39734"/>
+              <offset x="11.6228" y="-1.28739"/>
               </Symbol>
             </Rest>
           <BarLine>
@@ -2888,7 +2891,6 @@
             <duration>4/4</duration>
             </Rest>
           <BarLine>
-            <visible>0</visible>
             </BarLine>
           </voice>
         </Measure>
@@ -2900,7 +2902,6 @@
             <duration>4/4</duration>
             </Rest>
           <BarLine>
-            <visible>0</visible>
             </BarLine>
           </voice>
         </Measure>
@@ -2912,7 +2913,6 @@
             <duration>4/4</duration>
             </Rest>
           <BarLine>
-            <visible>0</visible>
             </BarLine>
           </voice>
         </Measure>
@@ -2924,7 +2924,6 @@
             <duration>4/4</duration>
             </Rest>
           <BarLine>
-            <visible>0</visible>
             </BarLine>
           </voice>
         </Measure>
@@ -2948,7 +2947,6 @@
             <duration>4/4</duration>
             </Rest>
           <BarLine>
-            <visible>0</visible>
             </BarLine>
           </voice>
         </Measure>
@@ -2960,7 +2958,6 @@
             <duration>4/4</duration>
             </Rest>
           <BarLine>
-            <visible>0</visible>
             </BarLine>
           </voice>
         </Measure>
@@ -2972,19 +2969,6 @@
             <duration>4/4</duration>
             </Rest>
           <BarLine>
-            <visible>0</visible>
-            </BarLine>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <visible>0</visible>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          <BarLine>
-            <subtype>dashed</subtype>
             </BarLine>
           </voice>
         </Measure>
@@ -2997,6 +2981,26 @@
             </Rest>
           <BarLine>
             <subtype>dashed</subtype>
+            <span>1</span>
+            </BarLine>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <visible>0</visible>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            <Symbol>
+              <name>conductorUnconducted</name>
+              <font>Bravura</font>
+              <autoplace>0</autoplace>
+              <offset x="-3.30887" y="-1.5"/>
+              </Symbol>
+            </Rest>
+          <BarLine>
+            <subtype>dashed</subtype>
+            <span>1</span>
             </BarLine>
           </voice>
         </Measure>
@@ -3008,7 +3012,6 @@
             <duration>4/4</duration>
             </Rest>
           <BarLine>
-            <visible>0</visible>
             </BarLine>
           </voice>
         </Measure>
@@ -3020,7 +3023,6 @@
             <duration>4/4</duration>
             </Rest>
           <BarLine>
-            <visible>0</visible>
             </BarLine>
           </voice>
         </Measure>
@@ -3032,7 +3034,6 @@
             <duration>4/4</duration>
             </Rest>
           <BarLine>
-            <visible>0</visible>
             </BarLine>
           </voice>
         </Measure>
@@ -3044,7 +3045,6 @@
             <duration>4/4</duration>
             </Rest>
           <BarLine>
-            <visible>0</visible>
             </BarLine>
           </voice>
         </Measure>
@@ -3057,6 +3057,7 @@
             </Rest>
           <BarLine>
             <subtype>dashed</subtype>
+            <span>1</span>
             </BarLine>
           </voice>
         </Measure>
@@ -6941,12 +6942,6 @@
           <Rest>
             <durationType>measure</durationType>
             <duration>4/4</duration>
-            <Symbol>
-              <name>conductorUnconducted</name>
-              <font>Bravura</font>
-              <autoplace>0</autoplace>
-              <offset x="-4" y="-1.5"/>
-              </Symbol>
             </Rest>
           <BarLine>
             <subtype>dashed</subtype>
@@ -7113,7 +7108,7 @@
               <name>conductorUnconducted</name>
               <font>Bravura</font>
               <autoplace>0</autoplace>
-              <offset x="-4.5" y="-1.5"/>
+              <offset x="-22.1643" y="-7.84421"/>
               </Symbol>
             </Rest>
           </voice>
@@ -87352,6 +87347,7 @@ bzw. überhaupt nötig?</text>
             </Rest>
           <BarLine>
             <subtype>dashed</subtype>
+            <span>1</span>
             </BarLine>
           </voice>
         </Measure>
@@ -87363,6 +87359,7 @@ bzw. überhaupt nötig?</text>
             </Rest>
           <BarLine>
             <subtype>dashed</subtype>
+            <span>1</span>
             </BarLine>
           </voice>
         </Measure>
@@ -87406,6 +87403,7 @@ bzw. überhaupt nötig?</text>
             </Rest>
           <BarLine>
             <subtype>dashed</subtype>
+            <span>1</span>
             </BarLine>
           </voice>
         </Measure>
@@ -116783,46 +116781,34 @@ bzw. überhaupt nötig?</text>
           <Spanner type="Vibrato">
             <Vibrato>
               <subtype>vibratoSawtooth</subtype>
-              <play>0</play>
-              <lineWidth>0.126703</lineWidth>
+              <lineWidth>0.121714</lineWidth>
               <Segment>
-                <subtype>1</subtype>
-                <offset x="-1.5" y="2"/>
-                <off2 x="0.481774" y="0"/>
-                <autoplace>0</autoplace>
-                </Segment>
-              <Segment>
-                <subtype>3</subtype>
-                <offset x="0" y="-1"/>
+                <subtype>0</subtype>
+                <offset x="0" y="2"/>
                 <off2 x="0" y="0"/>
+                <autoplace>0</autoplace>
                 </Segment>
               </Vibrato>
             <next>
               <location>
-                <measures>7</measures>
+                <measures>6</measures>
                 </location>
               </next>
             </Spanner>
           <Spanner type="Vibrato">
             <Vibrato>
               <subtype>vibratoSawtooth</subtype>
-              <play>0</play>
-              <lineWidth>0.125705</lineWidth>
+              <lineWidth>0.121729</lineWidth>
               <Segment>
-                <subtype>1</subtype>
-                <offset x="0" y="2"/>
-                <off2 x="-0.755117" y="0"/>
+                <subtype>0</subtype>
+                <offset x="-1.5" y="2"/>
+                <off2 x="0.370546" y="0"/>
                 <autoplace>0</autoplace>
-                </Segment>
-              <Segment>
-                <subtype>3</subtype>
-                <offset x="0" y="-1"/>
-                <off2 x="0" y="0"/>
                 </Segment>
               </Vibrato>
             <next>
               <location>
-                <measures>7</measures>
+                <measures>6</measures>
                 </location>
               </next>
             </Spanner>
@@ -116967,6 +116953,98 @@ bzw. überhaupt nötig?</text>
         </Measure>
       <Measure>
         <voice>
+          <Spanner type="Vibrato">
+            <prev>
+              <location>
+                <measures>-6</measures>
+                </location>
+              </prev>
+            </Spanner>
+          <Spanner type="Vibrato">
+            <prev>
+              <location>
+                <measures>-6</measures>
+                </location>
+              </prev>
+            </Spanner>
+          <Spanner type="Vibrato">
+            <Vibrato>
+              <subtype>vibratoSawtooth</subtype>
+              <lineWidth>0.121714</lineWidth>
+              <Segment>
+                <subtype>0</subtype>
+                <offset x="0" y="2"/>
+                <off2 x="0" y="0"/>
+                <autoplace>0</autoplace>
+                </Segment>
+              </Vibrato>
+            <next>
+              <location>
+                <measures>3</measures>
+                </location>
+              </next>
+            </Spanner>
+          <Spanner type="Vibrato">
+            <Vibrato>
+              <subtype>vibratoSawtooth</subtype>
+              <lineWidth>0.121714</lineWidth>
+              <Segment>
+                <subtype>0</subtype>
+                <offset x="-1.5" y="2"/>
+                <off2 x="0" y="0"/>
+                <autoplace>0</autoplace>
+                </Segment>
+              </Vibrato>
+            <next>
+              <location>
+                <measures>3</measures>
+                </location>
+              </next>
+            </Spanner>
+          <Chord>
+            <BeamMode>no</BeamMode>
+            <durationType>half</durationType>
+            <Note>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
+              <head>triangle-down</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <BeamMode>no</BeamMode>
+            <durationType>half</durationType>
+            <Note>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
+              <head>triangle-down</head>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Chord>
+            <BeamMode>no</BeamMode>
+            <durationType>half</durationType>
+            <Note>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
+              <head>triangle-down</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <BeamMode>no</BeamMode>
+            <durationType>half</durationType>
+            <Note>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
+              <head>triangle-down</head>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
           <Chord>
             <BeamMode>no</BeamMode>
             <durationType>half</durationType>
@@ -116992,61 +117070,17 @@ bzw. überhaupt nötig?</text>
           <Spanner type="Vibrato">
             <prev>
               <location>
-                <measures>-7</measures>
+                <measures>-3</measures>
                 </location>
               </prev>
             </Spanner>
           <Spanner type="Vibrato">
             <prev>
               <location>
-                <measures>-7</measures>
+                <measures>-3</measures>
                 </location>
               </prev>
             </Spanner>
-          <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>half</durationType>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>triangle-down</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>half</durationType>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>triangle-down</head>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>half</durationType>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>triangle-down</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>half</durationType>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>triangle-down</head>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
           <Spanner type="Vibrato">
             <Vibrato>
               <subtype>vibratoSawtooth</subtype>
