@@ -166,8 +166,18 @@
 				 '(double-bass violin-1 tuba bass-trombone flute bassoon percussion computer))
 	      (format nil "~a~a" +ens-src-dir+ "test2.xml"))
 
-(lists-to-xml (interpret-minutes (subseq (access-minutes) 0 1) '(tuba))
+(lists-to-xml (interpret-minutes (subseq (access-minutes) 3 4) '(tuba))
 	      (format nil "~a~a" +ens-src-dir+ "test1.xml"))
+
+(loop for iter in '(13 26 7 10 5 20)
+      do (setf *test* iter)
+	 (lists-to-xml (interpret-minutes (subseq (access-minutes) 3 4)
+					  '(violin-1 violin-2 viola cello double-bass))
+		       (format nil "~a~a" +ens-src-dir+ (format nil "test5_~a.xml" iter))))
+
+(lists-to-xml (interpret-minutes (subseq (access-minutes) 3 4)
+				 '(violin-1 violin-2 viola cello double-bass))
+	      (format nil "~a~a" +ens-src-dir+ "test5.xml"))
 
 ;; idea: interpret layers returns a function that can then be filled with arguments
 ;;  to form a sections like function.

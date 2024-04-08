@@ -48,10 +48,14 @@
 		    time
 		    0
 		    (rqq-to-indispensability-function
-		     '(13 ((8 (1 1 1 1 1 1 1 1)) (5 (1 1 1 1 1)))) t)
+		     '(13 ((8 (1 1 1 1 1 1 1 1 1)) (5 (1 1 1 1 1 1))))
+		     ;;'(13 ((8 (1 1 1 1 1 1 1 1)) (5 (1 1 1 1 1))))
+		     t)
 		    45
 		    (rqq-to-indispensability-function
-		     '(13 ((4 (1 1 1 1)) (5 (1 1 1 1 1)) (4 (1 1 1 1)))) t))))
+		     '(13 ((4 (1 1 1 1)) (5 (1 1 1 1 1)) (4 (1 1 1 1))))
+		     ;;'(13 ((4 (1 1 1 1)) (5 (1 1 1 1 1)) (4 (1 1 1 1))))
+		     t))))
 	;; minute 5
 	((< start-time 300)
 	 (variadic (section-val
@@ -356,7 +360,8 @@
 	 (pitches2 '())
 	 (ptrn1 '())
 	 (ptrn2 '())
-	 (morph '()))
+	 (morph '())
+	 (i-div 13))
     (multiple-value-bind (st md nd) (get-st-md-nd sum dur)
       ;; set number of notes
       (unless (= 0 st) (incf nr))
@@ -366,16 +371,16 @@
       (case instrument
 	(tuba (setf spitch nil))
 	(double-bass (setf spitch 'b0 thrsld 0))
-	(violin-1 (setf thrsld 1/3))
-	(violin-2 (setf thrsld 1/4))
-	(viola (setf thrsld 1/6))
-	(cello (setf thrsld 1/8))
+	(violin-1 (setf thrsld 1/3 i-div 7.5))
+	(violin-2 (setf thrsld 1/4 i-div 7.5))
+	(viola (setf thrsld 1/6 i-div 7.5))
+	(cello (setf thrsld 1/8 i-div 7.5))
 	(percussion (setf spitch2 (note-for-ins instrument (nth 2 chord))
 			  thrsld 1/2)))
       ;; get durations and different pitch lists
       (loop for i from 0 below nr
-	    for ind1 = (/ (1+ (funcall indisp1 (mod (/ i 13) 1))))
-	    for ind2 = (/ (1+ (funcall indisp2 (mod (/ i 13) 1))))
+	    for ind1 = (/ (1+ (funcall indisp1 (mod (/ i i-div) 1))))
+	    for ind2 = (/ (1+ (funcall indisp2 (mod (/ i i-div) 1))))
 	    do (push (cond ((and (= i 0) (not (= 0 st))) st)
 			   ((and (= i (1- nr)) (not (= 0 nd))) nd)
 			   (t .25))
