@@ -16,10 +16,13 @@
       <pageEvenBottomMargin>0.785433</pageEvenBottomMargin>
       <pageOddTopMargin>0.785433</pageOddTopMargin>
       <pageOddBottomMargin>0.785433</pageOddBottomMargin>
+      <pedalListStyle>0</pedalListStyle>
       <createMultiMeasureRests>1</createMultiMeasureRests>
-      <Spatium>1.75</Spatium>
+      <voltaLineStyle>0</voltaLineStyle>
+      <ottavaLineStyle>0</ottavaLineStyle>
+      <Spatium>1.55</Spatium>
       </Style>
-    <showInvisible>1</showInvisible>
+    <showInvisible>0</showInvisible>
     <showUnprintable>1</showUnprintable>
     <showFrames>1</showFrames>
     <showMargins>0</showMargins>
@@ -1262,6 +1265,7 @@
           <Tempo>
             <tempo>1</tempo>
             <followText>1</followText>
+            <offset x="0" y="-3"/>
             <text><sym>metNoteQuarterUp</sym> = 60</text>
             </Tempo>
           <RehearsalMark>
@@ -1316,17 +1320,15 @@
             <durationType>measure</durationType>
             <duration>4/4</duration>
             </Rest>
-          <BarLine>
-            <subtype>dashed</subtype>
-            <span>1</span>
-            </BarLine>
           </voice>
         </Measure>
       <Measure>
         <voice>
           <StaffText>
+            <minDistance>0.381765</minDistance>
             <size>12</size>
             <bold>1</bold>
+            <offset x="-2" y="-2.92728"/>
             <frameType>1</frameType>
             <frameWidth>0.2</frameWidth>
             <text>do not conduct for 40&quot;</text>
@@ -1435,10 +1437,6 @@
             <durationType>measure</durationType>
             <duration>4/4</duration>
             </Rest>
-          <BarLine>
-            <subtype>dashed</subtype>
-            <span>1</span>
-            </BarLine>
           </voice>
         </Measure>
       <Measure>
@@ -1455,7 +1453,7 @@
               <name>conductorUnconducted</name>
               <font>Bravura</font>
               <autoplace>0</autoplace>
-              <offset x="-3.94459" y="-1.5"/>
+              <offset x="-4.58" y="-1.91"/>
               </Symbol>
             </Rest>
           </voice>
@@ -1705,9 +1703,6 @@
         </Measure>
       <Measure>
         <voice>
-          <BarLine>
-            <span>1</span>
-            </BarLine>
           <Rest>
             <visible>0</visible>
             <durationType>measure</durationType>
@@ -3416,12 +3411,12 @@
               <tpc>13</tpc>
               <Spanner type="TextLine">
                 <TextLine>
-                  <lineWidth>0.4</lineWidth>
+                  <lineWidth>0.354286</lineWidth>
                   <anchor>3</anchor>
                   <Segment>
                     <subtype>0</subtype>
                     <offset x="0" y="0"/>
-                    <off2 x="4.94475" y="0"/>
+                    <off2 x="4.37964" y="0"/>
                     </Segment>
                   </TextLine>
                 <next>
@@ -3480,10 +3475,6 @@
             <durationType>measure</durationType>
             <duration>4/4</duration>
             </Rest>
-          <BarLine>
-            <subtype>dashed</subtype>
-            <span>1</span>
-            </BarLine>
           </voice>
         </Measure>
       <Measure>
@@ -3611,10 +3602,6 @@
                 </Spanner>
               </Note>
             </Chord>
-          <BarLine>
-            <subtype>dashed</subtype>
-            <span>1</span>
-            </BarLine>
           </voice>
         </Measure>
       <Measure>
@@ -3639,12 +3626,12 @@
               <tpc>13</tpc>
               <Spanner type="TextLine">
                 <TextLine>
-                  <lineWidth>0.5</lineWidth>
+                  <lineWidth>0.442857</lineWidth>
                   <anchor>3</anchor>
                   <Segment>
                     <subtype>0</subtype>
                     <offset x="0" y="0"/>
-                    <off2 x="5.71831" y="0"/>
+                    <off2 x="5.06479" y="0"/>
                     </Segment>
                   </TextLine>
                 <next>
@@ -3964,9 +3951,6 @@
         </Measure>
       <Measure>
         <voice>
-          <BarLine>
-            <span>1</span>
-            </BarLine>
           <RepeatMeasure>
             <durationType>measure</durationType>
             <duration>4/4</duration>
@@ -4577,12 +4561,12 @@
               <tpc>13</tpc>
               <Spanner type="TextLine">
                 <TextLine>
-                  <lineWidth>0.5</lineWidth>
+                  <lineWidth>0.442857</lineWidth>
                   <anchor>3</anchor>
                   <Segment>
                     <subtype>0</subtype>
                     <offset x="0" y="0"/>
-                    <off2 x="70.9097" y="0"/>
+                    <off2 x="62.8057" y="0"/>
                     </Segment>
                   </TextLine>
                 <next>
@@ -4641,12 +4625,12 @@
               <tpc>13</tpc>
               <Spanner type="TextLine">
                 <TextLine>
-                  <lineWidth>0.5</lineWidth>
+                  <lineWidth>0.442857</lineWidth>
                   <anchor>3</anchor>
                   <Segment>
                     <subtype>0</subtype>
-                    <offset x="-8.00449" y="0"/>
-                    <off2 x="35.2725" y="0"/>
+                    <offset x="-7.08969" y="0"/>
+                    <off2 x="31.2414" y="0"/>
                     </Segment>
                   </TextLine>
                 <next>
@@ -4704,7 +4688,7 @@
               <tpc>13</tpc>
               <Spanner type="TextLine">
                 <TextLine>
-                  <lineWidth>0.5</lineWidth>
+                  <lineWidth>0.442857</lineWidth>
                   <anchor>3</anchor>
                   </TextLine>
                 <next>
@@ -4775,12 +4759,12 @@
               <tpc>13</tpc>
               <Spanner type="TextLine">
                 <TextLine>
-                  <lineWidth>0.5</lineWidth>
+                  <lineWidth>0.442857</lineWidth>
                   <anchor>3</anchor>
                   <Segment>
                     <subtype>0</subtype>
                     <offset x="0" y="0"/>
-                    <off2 x="5.83817" y="0"/>
+                    <off2 x="5.17095" y="0"/>
                     </Segment>
                   </TextLine>
                 <next>
@@ -4828,12 +4812,12 @@
               <tpc>13</tpc>
               <Spanner type="TextLine">
                 <TextLine>
-                  <lineWidth>0.5</lineWidth>
+                  <lineWidth>0.442857</lineWidth>
                   <anchor>3</anchor>
                   <Segment>
                     <subtype>0</subtype>
-                    <offset x="-6.42298" y="0"/>
-                    <off2 x="28.1923" y="0"/>
+                    <offset x="-5.68893" y="0"/>
+                    <off2 x="24.9703" y="0"/>
                     </Segment>
                   </TextLine>
                 <next>
@@ -4907,12 +4891,12 @@
               <tpc>13</tpc>
               <Spanner type="TextLine">
                 <TextLine>
-                  <lineWidth>0.5</lineWidth>
+                  <lineWidth>0.442857</lineWidth>
                   <anchor>3</anchor>
                   <Segment>
                     <subtype>0</subtype>
                     <offset x="0" y="0"/>
-                    <off2 x="12.2249" y="0"/>
+                    <off2 x="10.8278" y="0"/>
                     </Segment>
                   </TextLine>
                 <next>
@@ -4984,12 +4968,12 @@
               <tpc>13</tpc>
               <Spanner type="TextLine">
                 <TextLine>
-                  <lineWidth>0.5</lineWidth>
+                  <lineWidth>0.442857</lineWidth>
                   <anchor>3</anchor>
                   <Segment>
                     <subtype>0</subtype>
                     <offset x="0" y="0"/>
-                    <off2 x="6.1285" y="0"/>
+                    <off2 x="5.4281" y="0"/>
                     </Segment>
                   </TextLine>
                 <next>
@@ -5037,12 +5021,12 @@
               <tpc>13</tpc>
               <Spanner type="TextLine">
                 <TextLine>
-                  <lineWidth>0.5</lineWidth>
+                  <lineWidth>0.442857</lineWidth>
                   <anchor>3</anchor>
                   <Segment>
                     <subtype>0</subtype>
                     <offset x="0" y="0"/>
-                    <off2 x="38.506" y="0"/>
+                    <off2 x="34.1053" y="0"/>
                     </Segment>
                   </TextLine>
                 <next>
@@ -5093,12 +5077,12 @@
               <tpc>13</tpc>
               <Spanner type="TextLine">
                 <TextLine>
-                  <lineWidth>0.5</lineWidth>
+                  <lineWidth>0.442857</lineWidth>
                   <anchor>3</anchor>
                   <Segment>
                     <subtype>0</subtype>
                     <offset x="0" y="0"/>
-                    <off2 x="25.8604" y="0"/>
+                    <off2 x="22.9049" y="0"/>
                     </Segment>
                   </TextLine>
                 <next>
@@ -5156,12 +5140,12 @@
               <tpc>13</tpc>
               <Spanner type="TextLine">
                 <TextLine>
-                  <lineWidth>0.5</lineWidth>
+                  <lineWidth>0.442857</lineWidth>
                   <anchor>3</anchor>
                   <Segment>
                     <subtype>0</subtype>
-                    <offset x="-6.5164" y="0"/>
-                    <off2 x="46.3059" y="0"/>
+                    <offset x="-5.77167" y="0"/>
+                    <off2 x="41.0138" y="0"/>
                     </Segment>
                   </TextLine>
                 <next>
@@ -5223,12 +5207,12 @@
               <tpc>13</tpc>
               <Spanner type="TextLine">
                 <TextLine>
-                  <lineWidth>0.5</lineWidth>
+                  <lineWidth>0.442857</lineWidth>
                   <anchor>3</anchor>
                   <Segment>
                     <subtype>0</subtype>
                     <offset x="0" y="0"/>
-                    <off2 x="13.6951" y="0"/>
+                    <off2 x="12.1299" y="0"/>
                     </Segment>
                   </TextLine>
                 <next>
@@ -5282,12 +5266,12 @@
               <tpc>13</tpc>
               <Spanner type="TextLine">
                 <TextLine>
-                  <lineWidth>0.5</lineWidth>
+                  <lineWidth>0.442857</lineWidth>
                   <anchor>3</anchor>
                   <Segment>
                     <subtype>0</subtype>
                     <offset x="0" y="0"/>
-                    <off2 x="19.1543" y="0"/>
+                    <off2 x="16.9652" y="0"/>
                     </Segment>
                   </TextLine>
                 <next>
@@ -5374,12 +5358,12 @@
               <tpc>13</tpc>
               <Spanner type="TextLine">
                 <TextLine>
-                  <lineWidth>0.5</lineWidth>
+                  <lineWidth>0.442857</lineWidth>
                   <anchor>3</anchor>
                   <Segment>
                     <subtype>0</subtype>
                     <offset x="0" y="0"/>
-                    <off2 x="71.316" y="0"/>
+                    <off2 x="63.1656" y="0"/>
                     </Segment>
                   </TextLine>
                 <next>
@@ -5395,7 +5379,7 @@
       <Measure>
         <voice>
           <Chord>
-            <offset x="-0.1" y="0"/>
+            <offset x="-0.112903" y="0"/>
             <durationType>whole</durationType>
             <Note>
               <visible>0</visible>
@@ -5465,12 +5449,12 @@
               <tpc>13</tpc>
               <Spanner type="TextLine">
                 <TextLine>
-                  <lineWidth>0.5</lineWidth>
+                  <lineWidth>0.442857</lineWidth>
                   <anchor>3</anchor>
                   <Segment>
                     <subtype>0</subtype>
-                    <offset x="-7.62715" y="0"/>
-                    <off2 x="70.3459" y="0"/>
+                    <offset x="-6.75548" y="0"/>
+                    <off2 x="62.3064" y="0"/>
                     </Segment>
                   </TextLine>
                 <next>
@@ -5486,7 +5470,7 @@
       <Measure>
         <voice>
           <Chord>
-            <offset x="-0.1" y="0"/>
+            <offset x="-0.112903" y="0"/>
             <durationType>whole</durationType>
             <Note>
               <visible>0</visible>
@@ -5543,12 +5527,12 @@
               <tpc>13</tpc>
               <Spanner type="TextLine">
                 <TextLine>
-                  <lineWidth>0.5</lineWidth>
+                  <lineWidth>0.442857</lineWidth>
                   <anchor>3</anchor>
                   <Segment>
                     <subtype>0</subtype>
-                    <offset x="-6.56577" y="0"/>
-                    <off2 x="74.5656" y="0"/>
+                    <offset x="-5.8154" y="0"/>
+                    <off2 x="66.0438" y="0"/>
                     </Segment>
                   </TextLine>
                 <next>
@@ -5590,12 +5574,12 @@
               <tpc>13</tpc>
               <Spanner type="TextLine">
                 <TextLine>
-                  <lineWidth>0.5</lineWidth>
+                  <lineWidth>0.442857</lineWidth>
                   <anchor>3</anchor>
                   <Segment>
                     <subtype>0</subtype>
-                    <offset x="-8.09018" y="0"/>
-                    <off2 x="17.6627" y="0"/>
+                    <offset x="-7.16559" y="0"/>
+                    <off2 x="15.6441" y="0"/>
                     </Segment>
                   </TextLine>
                 <next>
@@ -5661,12 +5645,12 @@
               <tpc>13</tpc>
               <Spanner type="TextLine">
                 <TextLine>
-                  <lineWidth>0.5</lineWidth>
+                  <lineWidth>0.442857</lineWidth>
                   <anchor>3</anchor>
                   <Segment>
                     <subtype>0</subtype>
-                    <offset x="-7.89867" y="0"/>
-                    <off2 x="25.9669" y="0"/>
+                    <offset x="-6.99596" y="0"/>
+                    <off2 x="22.9993" y="0"/>
                     </Segment>
                   </TextLine>
                 <next>
@@ -7797,21 +7781,29 @@
             <duration>1/1</duration>
             </Rest>
           <BarLine>
-            <subtype>dashed</subtype>
+            <visible>0</visible>
             </BarLine>
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>8.93</vspacerDown>
         <voice>
-          <StaffText>
-            <bold>1</bold>
-            <frameType>1</frameType>
-            <text>until conductor signals to stop</text>
-            </StaffText>
           <Dynamic>
             <subtype>p</subtype>
             <velocity>49</velocity>
             </Dynamic>
+          <StaffText>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="2.8" y="2.38"/>
+            <frameType>1</frameType>
+            <framePadding>5</framePadding>
+            <frameWidth>0.3</frameWidth>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                                                  
+</text>
+            </StaffText>
           <Spanner type="HairPin">
             <HairPin>
               <subtype>0</subtype>
@@ -7847,7 +7839,7 @@
                     </location>
                   </next>
                 </Spanner>
-              <pitch>74</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               </Note>
             </Chord>
@@ -7882,7 +7874,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               </Note>
             </Chord>
@@ -7923,7 +7915,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <Spanner type="Glissando">
                 <Glissando>
@@ -7970,7 +7962,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               </Note>
             </Chord>
@@ -8005,7 +7997,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               </Note>
             </Chord>
@@ -8040,7 +8032,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               </Note>
             </Chord>
@@ -8075,7 +8067,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               </Note>
             </Chord>
@@ -8110,7 +8102,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               </Note>
             </Chord>
@@ -8132,7 +8124,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               </Note>
             </Chord>
@@ -8147,6 +8139,9 @@
             <subtype>f</subtype>
             <velocity>96</velocity>
             </Dynamic>
+          <Fermata>
+            <subtype>fermataAbove</subtype>
+            </Fermata>
           <Spanner type="HairPin">
             <prev>
               <location>
@@ -8157,8 +8152,11 @@
           <Chord>
             <durationType>whole</durationType>
             <Note>
-              <pitch>62</pitch>
-              <tpc>16</tpc>
+              <Accidental>
+                <subtype>accidentalSharp</subtype>
+                </Accidental>
+              <pitch>68</pitch>
+              <tpc>22</tpc>
               <Spanner type="Glissando">
                 <prev>
                   <location>
@@ -8168,16 +8166,13 @@
                 </Spanner>
               </Note>
             </Chord>
-          <BarLine>
-            <subtype>dashed</subtype>
-            </BarLine>
           </voice>
         </Measure>
       <Measure>
         <voice>
           <Rest>
             <durationType>measure</durationType>
-            <duration>1/1</duration>
+            <duration>4/4</duration>
             </Rest>
           </voice>
         </Measure>
@@ -8793,8 +8788,6 @@
         </Measure>
       <Measure>
         <voice>
-          <BarLine>
-            </BarLine>
           <Dynamic>
             <subtype>mf</subtype>
             <velocity>80</velocity>
@@ -17564,20 +17557,28 @@
             <duration>1/1</duration>
             </Rest>
           <BarLine>
-            <subtype>dashed</subtype>
+            <visible>0</visible>
             </BarLine>
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>8.43</vspacerDown>
         <voice>
           <Dynamic>
             <subtype>p</subtype>
             <velocity>49</velocity>
             </Dynamic>
           <StaffText>
-            <bold>1</bold>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="2.8" y="2.38"/>
             <frameType>1</frameType>
-            <text>until conductor signals to stop</text>
+            <framePadding>5</framePadding>
+            <frameWidth>0.3</frameWidth>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                                                  
+</text>
             </StaffText>
           <Spanner type="HairPin">
             <HairPin>
@@ -17917,6 +17918,9 @@
             <subtype>f</subtype>
             <velocity>96</velocity>
             </Dynamic>
+          <Fermata>
+            <subtype>fermataAbove</subtype>
+            </Fermata>
           <Spanner type="HairPin">
             <prev>
               <location>
@@ -17927,11 +17931,8 @@
           <Chord>
             <durationType>whole</durationType>
             <Note>
-              <Accidental>
-                <subtype>accidentalSharp</subtype>
-                </Accidental>
-              <pitch>70</pitch>
-              <tpc>24</tpc>
+              <pitch>62</pitch>
+              <tpc>16</tpc>
               <Spanner type="Glissando">
                 <prev>
                   <location>
@@ -17941,16 +17942,13 @@
                 </Spanner>
               </Note>
             </Chord>
-          <BarLine>
-            <subtype>dashed</subtype>
-            </BarLine>
           </voice>
         </Measure>
       <Measure>
         <voice>
           <Rest>
             <durationType>measure</durationType>
-            <duration>1/1</duration>
+            <duration>4/4</duration>
             </Rest>
           </voice>
         </Measure>
@@ -18461,8 +18459,6 @@
         </Measure>
       <Measure>
         <voice>
-          <BarLine>
-            </BarLine>
           <Dynamic>
             <subtype>mf</subtype>
             <velocity>80</velocity>
@@ -27288,20 +27284,29 @@
             <duration>1/1</duration>
             </Rest>
           <BarLine>
-            <subtype>dashed</subtype>
+            <visible>0</visible>
             </BarLine>
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>12.43</vspacerDown>
         <voice>
           <Dynamic>
             <subtype>p</subtype>
             <velocity>49</velocity>
             </Dynamic>
           <StaffText>
-            <bold>1</bold>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="2.8" y="2.88"/>
             <frameType>1</frameType>
-            <text>until conductor signals to stop</text>
+            <framePadding>5</framePadding>
+            <frameWidth>0.3</frameWidth>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                                                  
+
+</text>
             </StaffText>
           <Spanner type="HairPin">
             <HairPin>
@@ -27339,7 +27344,7 @@
                     </location>
                   </next>
                 </Spanner>
-              <pitch>74</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <tpc2>18</tpc2>
               </Note>
@@ -27375,7 +27380,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <tpc2>18</tpc2>
               </Note>
@@ -27411,7 +27416,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <tpc2>18</tpc2>
               </Note>
@@ -27453,7 +27458,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <tpc2>18</tpc2>
               <Spanner type="Glissando">
@@ -27501,7 +27506,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <tpc2>18</tpc2>
               </Note>
@@ -27537,7 +27542,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <tpc2>18</tpc2>
               </Note>
@@ -27573,7 +27578,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <tpc2>18</tpc2>
               </Note>
@@ -27609,7 +27614,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <tpc2>18</tpc2>
               </Note>
@@ -27632,7 +27637,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>74</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <tpc2>18</tpc2>
               </Note>
@@ -27648,6 +27653,9 @@
             <subtype>f</subtype>
             <velocity>96</velocity>
             </Dynamic>
+          <Fermata>
+            <subtype>fermataAbove</subtype>
+            </Fermata>
           <Spanner type="HairPin">
             <prev>
               <location>
@@ -27658,12 +27666,9 @@
           <Chord>
             <durationType>whole</durationType>
             <Note>
-              <Accidental>
-                <subtype>accidentalSharp</subtype>
-                </Accidental>
-              <pitch>52</pitch>
-              <tpc>18</tpc>
-              <tpc2>20</tpc2>
+              <pitch>58</pitch>
+              <tpc>12</tpc>
+              <tpc2>14</tpc2>
               <Spanner type="Glissando">
                 <prev>
                   <location>
@@ -27673,16 +27678,13 @@
                 </Spanner>
               </Note>
             </Chord>
-          <BarLine>
-            <subtype>dashed</subtype>
-            </BarLine>
           </voice>
         </Measure>
       <Measure>
         <voice>
           <Rest>
             <durationType>measure</durationType>
-            <duration>1/1</duration>
+            <duration>4/4</duration>
             </Rest>
           </voice>
         </Measure>
@@ -28491,8 +28493,6 @@
         </Measure>
       <Measure>
         <voice>
-          <BarLine>
-            </BarLine>
           <Dynamic>
             <subtype>mf</subtype>
             <velocity>80</velocity>
@@ -39121,12 +39121,6 @@
         </Measure>
       <Measure>
         <voice>
-          <StaffText>
-            <autoplace>0</autoplace>
-            <color r="255" g="0" b="0" a="255"/>
-            <offset x="-4.77886" y="-4.91948"/>
-            <text>amibuts redizieren</text>
-            </StaffText>
           <Rest>
             <durationType>measure</durationType>
             <duration>1/1</duration>
@@ -39139,10 +39133,6 @@
             <durationType>measure</durationType>
             <duration>1/1</duration>
             </Rest>
-          <BarLine>
-            <subtype>dashed</subtype>
-            <span>1</span>
-            </BarLine>
           </voice>
         </Measure>
       <Measure>
@@ -39152,9 +39142,15 @@
             <velocity>49</velocity>
             </Dynamic>
           <StaffText>
-            <bold>1</bold>
+            <autoplace>0</autoplace>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="2.8" y="1.88"/>
             <frameType>1</frameType>
-            <text>until conductor signals to stop</text>
+            <framePadding>5</framePadding>
+            <frameWidth>0.3</frameWidth>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                                                  
+</text>
             </StaffText>
           <Spanner type="HairPin">
             <HairPin>
@@ -39194,7 +39190,7 @@
                     </location>
                   </next>
                 </Spanner>
-              <pitch>66</pitch>
+              <pitch>54</pitch>
               <tpc>20</tpc>
               </Note>
             </Chord>
@@ -39229,7 +39225,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>66</pitch>
+              <pitch>54</pitch>
               <tpc>20</tpc>
               </Note>
             </Chord>
@@ -39264,7 +39260,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>66</pitch>
+              <pitch>54</pitch>
               <tpc>20</tpc>
               </Note>
             </Chord>
@@ -39299,7 +39295,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>66</pitch>
+              <pitch>54</pitch>
               <tpc>20</tpc>
               </Note>
             </Chord>
@@ -39340,7 +39336,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>66</pitch>
+              <pitch>54</pitch>
               <tpc>20</tpc>
               <Spanner type="Glissando">
                 <Glissando>
@@ -39387,7 +39383,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>66</pitch>
+              <pitch>54</pitch>
               <tpc>20</tpc>
               </Note>
             </Chord>
@@ -39422,7 +39418,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>66</pitch>
+              <pitch>54</pitch>
               <tpc>20</tpc>
               </Note>
             </Chord>
@@ -39457,7 +39453,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>66</pitch>
+              <pitch>54</pitch>
               <tpc>20</tpc>
               </Note>
             </Chord>
@@ -39479,7 +39475,7 @@
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>66</pitch>
+              <pitch>54</pitch>
               <tpc>20</tpc>
               </Note>
             </Chord>
@@ -39494,6 +39490,9 @@
             <subtype>f</subtype>
             <velocity>96</velocity>
             </Dynamic>
+          <Fermata>
+            <subtype>fermataAbove</subtype>
+            </Fermata>
           <Spanner type="HairPin">
             <prev>
               <location>
@@ -39504,7 +39503,7 @@
           <Chord>
             <durationType>whole</durationType>
             <Note>
-              <pitch>60</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <Spanner type="Glissando">
                 <prev>
@@ -39515,10 +39514,6 @@
                 </Spanner>
               </Note>
             </Chord>
-          <BarLine>
-            <subtype>dashed</subtype>
-            <span>1</span>
-            </BarLine>
           </voice>
         </Measure>
       <Measure>
@@ -40088,9 +40083,6 @@
         </Measure>
       <Measure>
         <voice>
-          <BarLine>
-            <span>1</span>
-            </BarLine>
           <Rest>
             <durationType>half</durationType>
             </Rest>
@@ -48841,10 +48833,6 @@
             <durationType>measure</durationType>
             <duration>4/4</duration>
             </Rest>
-          <BarLine>
-            <subtype>dashed</subtype>
-            <span>1</span>
-            </BarLine>
           </voice>
         </Measure>
       <Measure>
@@ -48943,10 +48931,6 @@
             <durationType>measure</durationType>
             <duration>1/1</duration>
             </Rest>
-          <BarLine>
-            <subtype>dashed</subtype>
-            <span>1</span>
-            </BarLine>
           </voice>
         </Measure>
       <Measure>
@@ -49697,9 +49681,6 @@
         </Measure>
       <Measure>
         <voice>
-          <BarLine>
-            <span>1</span>
-            </BarLine>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -54534,8 +54515,13 @@ bzw. überhaupt nötig?</text>
             <sigD>4</sigD>
             </TimeSig>
           <StaffText>
-            <color r="255" g="0" b="0" a="255"/>
-            <text>dämpfer</text>
+            <channelSwitch voice="0" name="mute"/>
+            <channelSwitch voice="1" name="mute"/>
+            <channelSwitch voice="2" name="mute"/>
+            <channelSwitch voice="3" name="mute"/>
+            <style>Expression</style>
+            <offset x="-1.5" y="-0.60052"/>
+            <text>con sord.</text>
             </StaffText>
           <Rest>
             <durationType>measure</durationType>
@@ -54574,7 +54560,6 @@ bzw. überhaupt nötig?</text>
             <duration>4/4</duration>
             </Rest>
           <BarLine>
-            <subtype>dashed</subtype>
             </BarLine>
           </voice>
         </Measure>
@@ -54674,9 +54659,6 @@ bzw. überhaupt nötig?</text>
             <durationType>measure</durationType>
             <duration>1/1</duration>
             </Rest>
-          <BarLine>
-            <subtype>dashed</subtype>
-            </BarLine>
           </voice>
         </Measure>
       <Measure>
@@ -55313,8 +55295,6 @@ bzw. überhaupt nötig?</text>
         </Measure>
       <Measure>
         <voice>
-          <BarLine>
-            </BarLine>
           <Dynamic>
             <subtype>mf</subtype>
             <velocity>80</velocity>
@@ -62352,8 +62332,13 @@ bzw. überhaupt nötig?</text>
             <sigD>4</sigD>
             </TimeSig>
           <StaffText>
-            <color r="255" g="0" b="0" a="255"/>
-            <text>dämpfer</text>
+            <channelSwitch voice="0" name="mute"/>
+            <channelSwitch voice="1" name="mute"/>
+            <channelSwitch voice="2" name="mute"/>
+            <channelSwitch voice="3" name="mute"/>
+            <style>Expression</style>
+            <offset x="-1.5" y="-0.60052"/>
+            <text>con sord.</text>
             </StaffText>
           <Rest>
             <durationType>measure</durationType>
@@ -62392,7 +62377,6 @@ bzw. überhaupt nötig?</text>
             <duration>4/4</duration>
             </Rest>
           <BarLine>
-            <subtype>dashed</subtype>
             </BarLine>
           </voice>
         </Measure>
@@ -62492,9 +62476,6 @@ bzw. überhaupt nötig?</text>
             <durationType>measure</durationType>
             <duration>1/1</duration>
             </Rest>
-          <BarLine>
-            <subtype>dashed</subtype>
-            </BarLine>
           </voice>
         </Measure>
       <Measure>
@@ -62809,8 +62790,6 @@ bzw. überhaupt nötig?</text>
         </Measure>
       <Measure>
         <voice>
-          <BarLine>
-            </BarLine>
           <Rest>
             <durationType>half</durationType>
             </Rest>
@@ -69707,8 +69686,13 @@ bzw. überhaupt nötig?</text>
             <sigD>4</sigD>
             </TimeSig>
           <StaffText>
-            <color r="255" g="0" b="0" a="255"/>
-            <text>dämpfer</text>
+            <channelSwitch voice="0" name="mute"/>
+            <channelSwitch voice="1" name="mute"/>
+            <channelSwitch voice="2" name="mute"/>
+            <channelSwitch voice="3" name="mute"/>
+            <style>Expression</style>
+            <offset x="-1.5" y="-0.60052"/>
+            <text>con sord.</text>
             </StaffText>
           <Rest>
             <durationType>measure</durationType>
@@ -69747,13 +69731,13 @@ bzw. überhaupt nötig?</text>
             <duration>4/4</duration>
             </Rest>
           <BarLine>
-            <subtype>dashed</subtype>
             </BarLine>
           </voice>
         </Measure>
       <Measure>
         <voice>
           <StaffText>
+            <visible>0</visible>
             <bold>1</bold>
             <color r="255" g="0" b="0" a="255"/>
             <text>swap with one of ww?</text>
@@ -69852,9 +69836,6 @@ bzw. überhaupt nötig?</text>
             <durationType>measure</durationType>
             <duration>1/1</duration>
             </Rest>
-          <BarLine>
-            <subtype>dashed</subtype>
-            </BarLine>
           </voice>
         </Measure>
       <Measure>
@@ -70152,8 +70133,6 @@ bzw. überhaupt nötig?</text>
         </Measure>
       <Measure>
         <voice>
-          <BarLine>
-            </BarLine>
           <Rest>
             <durationType>half</durationType>
             </Rest>
@@ -72006,7 +71985,7 @@ bzw. überhaupt nötig?</text>
           <Chord>
             <durationType>quarter</durationType>
             <Stem>
-              <offset x="0" y="1"/>
+              <offset x="0" y="1.12903"/>
               </Stem>
             <Note>
               <visible>0</visible>
@@ -78269,6 +78248,16 @@ bzw. überhaupt nötig?</text>
             <subtype>f</subtype>
             <velocity>96</velocity>
             </Dynamic>
+          <StaffText>
+            <channelSwitch voice="0" name="mute"/>
+            <channelSwitch voice="1" name="mute"/>
+            <channelSwitch voice="2" name="mute"/>
+            <channelSwitch voice="3" name="mute"/>
+            <style>Expression</style>
+            <minDistance>0.5</minDistance>
+            <offset x="-1.5" y="-0.60052"/>
+            <text>con sord.</text>
+            </StaffText>
           <Chord>
             <durationType>whole</durationType>
             <Note>
@@ -78323,15 +78312,6 @@ bzw. überhaupt nötig?</text>
             <durationType>whole</durationType>
             <Note>
               <Spanner type="Tie">
-                <Tie>
-                  </Tie>
-                <next>
-                  <location>
-                    <measures>1</measures>
-                    </location>
-                  </next>
-                </Spanner>
-              <Spanner type="Tie">
                 <prev>
                   <location>
                     <measures>-1</measures>
@@ -78349,6 +78329,9 @@ bzw. überhaupt nötig?</text>
           <Chord>
             <durationType>whole</durationType>
             <Note>
+              <Accidental>
+                <subtype>accidentalFlat</subtype>
+                </Accidental>
               <Spanner type="Tie">
                 <Tie>
                   </Tie>
@@ -78357,13 +78340,6 @@ bzw. überhaupt nötig?</text>
                     <measures>1</measures>
                     </location>
                   </next>
-                </Spanner>
-              <Spanner type="Tie">
-                <prev>
-                  <location>
-                    <measures>-1</measures>
-                    </location>
-                  </prev>
                 </Spanner>
               <pitch>22</pitch>
               <tpc>12</tpc>
@@ -78387,18 +78363,10 @@ bzw. überhaupt nötig?</text>
               <tpc>12</tpc>
               </Note>
             </Chord>
-          <BarLine>
-            <subtype>dashed</subtype>
-            <span>1</span>
-            </BarLine>
           </voice>
         </Measure>
       <Measure>
         <voice>
-          <StaffText>
-            <color r="255" g="0" b="0" a="255"/>
-            <text>dämpfer</text>
-            </StaffText>
           <Rest>
             <durationType>measure</durationType>
             <duration>1/1</duration>
@@ -78493,10 +78461,6 @@ bzw. überhaupt nötig?</text>
             <durationType>measure</durationType>
             <duration>1/1</duration>
             </Rest>
-          <BarLine>
-            <subtype>dashed</subtype>
-            <span>1</span>
-            </BarLine>
           </voice>
         </Measure>
       <Measure>
@@ -78860,9 +78824,6 @@ bzw. überhaupt nötig?</text>
         </Measure>
       <Measure>
         <voice>
-          <BarLine>
-            <span>1</span>
-            </BarLine>
           <Dynamic>
             <subtype>mf</subtype>
             <velocity>80</velocity>
@@ -85931,20 +85892,28 @@ bzw. überhaupt nötig?</text>
             <duration>4/4</duration>
             </Rest>
           <BarLine>
-            <subtype>dashed</subtype>
+            <visible>0</visible>
             </BarLine>
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>8.93</vspacerDown>
         <voice>
           <Dynamic>
             <subtype>mp</subtype>
             <velocity>64</velocity>
             </Dynamic>
           <StaffText>
-            <bold>1</bold>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="2.8" y="2.38"/>
             <frameType>1</frameType>
-            <text>until conductor signals to stop</text>
+            <framePadding>5</framePadding>
+            <frameWidth>0.3</frameWidth>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                                                  
+</text>
             </StaffText>
           <Spanner type="HairPin">
             <HairPin>
@@ -86275,6 +86244,9 @@ bzw. überhaupt nötig?</text>
             <subtype>ff</subtype>
             <velocity>112</velocity>
             </Dynamic>
+          <Fermata>
+            <subtype>fermataAbove</subtype>
+            </Fermata>
           <Spanner type="HairPin">
             <prev>
               <location>
@@ -86304,7 +86276,7 @@ bzw. überhaupt nötig?</text>
               </Note>
             </Chord>
           <BarLine>
-            <subtype>dashed</subtype>
+            <visible>0</visible>
             </BarLine>
           </voice>
         </Measure>
@@ -86996,8 +86968,6 @@ bzw. überhaupt nötig?</text>
         </Measure>
       <Measure>
         <voice>
-          <BarLine>
-            </BarLine>
           <Rest>
             <durationType>measure</durationType>
             <duration>4/4</duration>
@@ -87137,10 +87107,11 @@ bzw. überhaupt nötig?</text>
               <Spanner type="TextLine">
                 <TextLine>
                   <endText>&gt;</endText>
+                  <lineWidth>0.132857</lineWidth>
                   <anchor>3</anchor>
                   <Segment>
                     <subtype>0</subtype>
-                    <offset x="-2.79891" y="-2.55012"/>
+                    <offset x="-2.47903" y="-2.25868"/>
                     <off2 x="0" y="0"/>
                     </Segment>
                   </TextLine>
@@ -87952,7 +87923,7 @@ bzw. überhaupt nötig?</text>
           <Chord>
             <durationType>half</durationType>
             <Stem>
-              <offset x="0" y="-0.5"/>
+              <offset x="0" y="-0.564516"/>
               </Stem>
             <Note>
               <visible>0</visible>
@@ -88058,7 +88029,7 @@ bzw. überhaupt nötig?</text>
           <Chord>
             <durationType>half</durationType>
             <Stem>
-              <offset x="0" y="0.5"/>
+              <offset x="0" y="0.564516"/>
               </Stem>
             <Note>
               <visible>0</visible>
@@ -88089,7 +88060,7 @@ bzw. überhaupt nötig?</text>
           <Chord>
             <durationType>quarter</durationType>
             <Stem>
-              <offset x="0" y="1"/>
+              <offset x="0" y="1.12903"/>
               </Stem>
             <Note>
               <visible>0</visible>
@@ -88171,7 +88142,7 @@ bzw. überhaupt nötig?</text>
           <Chord>
             <durationType>half</durationType>
             <Stem>
-              <offset x="0" y="1"/>
+              <offset x="0" y="1.12903"/>
               </Stem>
             <Note>
               <visible>0</visible>
@@ -92110,20 +92081,29 @@ bzw. überhaupt nötig?</text>
               </Note>
             </Chord>
           <BarLine>
-            <subtype>dashed</subtype>
+            <visible>0</visible>
             </BarLine>
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>11.43</vspacerDown>
         <voice>
           <Dynamic>
             <subtype>mp</subtype>
             <velocity>64</velocity>
             </Dynamic>
           <StaffText>
-            <bold>1</bold>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="2.8" y="2.38"/>
             <frameType>1</frameType>
-            <text>conductor signals to stop</text>
+            <framePadding>5</framePadding>
+            <frameWidth>0.3</frameWidth>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                                                  
+
+</text>
             </StaffText>
           <Spanner type="HairPin">
             <prev>
@@ -92420,9 +92400,6 @@ bzw. überhaupt nötig?</text>
                 </next>
               </Spanner>
             <Note>
-              <Accidental>
-                <subtype>accidentalSharp</subtype>
-                </Accidental>
               <Spanner type="Tie">
                 <Tie>
                   <visible>0</visible>
@@ -92436,8 +92413,8 @@ bzw. überhaupt nötig?</text>
                     </location>
                   </next>
                 </Spanner>
-              <pitch>73</pitch>
-              <tpc>21</tpc>
+              <pitch>64</pitch>
+              <tpc>18</tpc>
               <Spanner type="Glissando">
                 <prev>
                   <location>
@@ -92478,8 +92455,8 @@ bzw. überhaupt nötig?</text>
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>73</pitch>
-              <tpc>21</tpc>
+              <pitch>64</pitch>
+              <tpc>18</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -92493,6 +92470,9 @@ bzw. überhaupt nötig?</text>
             <subtype>ff</subtype>
             <velocity>112</velocity>
             </Dynamic>
+          <Fermata>
+            <subtype>fermataAbove</subtype>
+            </Fermata>
           <Spanner type="HairPin">
             <prev>
               <location>
@@ -92517,12 +92497,12 @@ bzw. überhaupt nötig?</text>
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>73</pitch>
-              <tpc>21</tpc>
+              <pitch>64</pitch>
+              <tpc>18</tpc>
               </Note>
             </Chord>
           <BarLine>
-            <subtype>dashed</subtype>
+            <visible>0</visible>
             </BarLine>
           </voice>
         </Measure>
@@ -92530,7 +92510,7 @@ bzw. überhaupt nötig?</text>
         <voice>
           <Rest>
             <durationType>measure</durationType>
-            <duration>1/1</duration>
+            <duration>4/4</duration>
             </Rest>
           </voice>
         </Measure>
@@ -93239,8 +93219,6 @@ bzw. überhaupt nötig?</text>
         </Measure>
       <Measure>
         <voice>
-          <BarLine>
-            </BarLine>
           <Rest>
             <durationType>measure</durationType>
             <duration>4/4</duration>
@@ -93403,10 +93381,11 @@ bzw. überhaupt nötig?</text>
               <Spanner type="TextLine">
                 <TextLine>
                   <endText>&gt;</endText>
+                  <lineWidth>0.132857</lineWidth>
                   <anchor>3</anchor>
                   <Segment>
                     <subtype>0</subtype>
-                    <offset x="-2.11474" y="-2.36353"/>
+                    <offset x="-1.87306" y="-2.09341"/>
                     <off2 x="0" y="0"/>
                     </Segment>
                   </TextLine>
@@ -94298,7 +94277,7 @@ bzw. überhaupt nötig?</text>
             <dots>1</dots>
             <durationType>half</durationType>
             <Stem>
-              <offset x="0" y="-1.5"/>
+              <offset x="0" y="-1.69355"/>
               </Stem>
             <Note>
               <visible>0</visible>
@@ -94481,7 +94460,7 @@ bzw. überhaupt nötig?</text>
           <Chord>
             <durationType>half</durationType>
             <Stem>
-              <offset x="0" y="1"/>
+              <offset x="0" y="1.12903"/>
               </Stem>
             <Note>
               <visible>0</visible>
@@ -96508,7 +96487,7 @@ bzw. überhaupt nötig?</text>
           <Chord>
             <durationType>quarter</durationType>
             <Stem>
-              <offset x="0" y="1"/>
+              <offset x="0" y="1.12903"/>
               </Stem>
             <Note>
               <visible>0</visible>
@@ -98523,20 +98502,28 @@ bzw. überhaupt nötig?</text>
               </Note>
             </Chord>
           <BarLine>
-            <subtype>dashed</subtype>
+            <visible>0</visible>
             </BarLine>
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>8.93</vspacerDown>
         <voice>
           <Dynamic>
             <subtype>mp</subtype>
             <velocity>64</velocity>
             </Dynamic>
           <StaffText>
-            <bold>1</bold>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="2.8" y="2.38"/>
             <frameType>1</frameType>
-            <text>until conductor signals to stop</text>
+            <framePadding>5</framePadding>
+            <frameWidth>0.3</frameWidth>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                                                  
+</text>
             </StaffText>
           <Spanner type="HairPin">
             <prev>
@@ -98843,7 +98830,7 @@ bzw. überhaupt nötig?</text>
                     </location>
                   </next>
                 </Spanner>
-              <pitch>80</pitch>
+              <pitch>56</pitch>
               <tpc>10</tpc>
               <Spanner type="Glissando">
                 <prev>
@@ -98865,6 +98852,9 @@ bzw. überhaupt nötig?</text>
             <subtype>ff</subtype>
             <velocity>112</velocity>
             </Dynamic>
+          <Fermata>
+            <subtype>fermataAbove</subtype>
+            </Fermata>
           <Spanner type="HairPin">
             <prev>
               <location>
@@ -98882,12 +98872,12 @@ bzw. überhaupt nötig?</text>
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>80</pitch>
+              <pitch>56</pitch>
               <tpc>10</tpc>
               </Note>
             </Chord>
           <BarLine>
-            <subtype>dashed</subtype>
+            <visible>0</visible>
             </BarLine>
           </voice>
         </Measure>
@@ -98895,7 +98885,7 @@ bzw. überhaupt nötig?</text>
         <voice>
           <Rest>
             <durationType>measure</durationType>
-            <duration>1/1</duration>
+            <duration>4/4</duration>
             </Rest>
           </voice>
         </Measure>
@@ -99578,8 +99568,6 @@ bzw. überhaupt nötig?</text>
         </Measure>
       <Measure>
         <voice>
-          <BarLine>
-            </BarLine>
           <Rest>
             <durationType>measure</durationType>
             <duration>4/4</duration>
@@ -99742,10 +99730,11 @@ bzw. überhaupt nötig?</text>
               <Spanner type="TextLine">
                 <TextLine>
                   <endText>&gt;</endText>
+                  <lineWidth>0.132857</lineWidth>
                   <anchor>3</anchor>
                   <Segment>
                     <subtype>0</subtype>
-                    <offset x="-2.17693" y="-2.36353"/>
+                    <offset x="-1.92814" y="-2.09341"/>
                     <off2 x="0" y="0"/>
                     </Segment>
                   </TextLine>
@@ -100609,7 +100598,7 @@ bzw. überhaupt nötig?</text>
             <dots>1</dots>
             <durationType>half</durationType>
             <Stem>
-              <offset x="0" y="1"/>
+              <offset x="0" y="1.12903"/>
               </Stem>
             <Note>
               <visible>0</visible>
@@ -100743,7 +100732,7 @@ bzw. überhaupt nötig?</text>
           <Chord>
             <durationType>half</durationType>
             <Stem>
-              <offset x="0" y="0.5"/>
+              <offset x="0" y="0.564516"/>
               </Stem>
             <Note>
               <visible>0</visible>
@@ -102737,7 +102726,7 @@ bzw. überhaupt nötig?</text>
           <Chord>
             <durationType>quarter</durationType>
             <Stem>
-              <offset x="0" y="-0.5"/>
+              <offset x="0" y="-0.564516"/>
               </Stem>
             <Note>
               <visible>0</visible>
@@ -104697,20 +104686,29 @@ bzw. überhaupt nötig?</text>
               </Note>
             </Chord>
           <BarLine>
-            <subtype>dashed</subtype>
+            <visible>0</visible>
             </BarLine>
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>10.93</vspacerDown>
         <voice>
           <Dynamic>
             <subtype>mp</subtype>
             <velocity>64</velocity>
             </Dynamic>
           <StaffText>
-            <bold>1</bold>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="2.8" y="2.38"/>
             <frameType>1</frameType>
-            <text>until conductor signals to stop</text>
+            <framePadding>5</framePadding>
+            <frameWidth>0.3</frameWidth>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                                                  
+
+</text>
             </StaffText>
           <Spanner type="HairPin">
             <prev>
@@ -105028,6 +105026,9 @@ bzw. überhaupt nötig?</text>
             <subtype>ff</subtype>
             <velocity>112</velocity>
             </Dynamic>
+          <Fermata>
+            <subtype>fermataAbove</subtype>
+            </Fermata>
           <Spanner type="HairPin">
             <prev>
               <location>
@@ -105050,7 +105051,7 @@ bzw. überhaupt nötig?</text>
               </Note>
             </Chord>
           <BarLine>
-            <subtype>dashed</subtype>
+            <visible>0</visible>
             </BarLine>
           </voice>
         </Measure>
@@ -105748,8 +105749,6 @@ bzw. überhaupt nötig?</text>
         </Measure>
       <Measure>
         <voice>
-          <BarLine>
-            </BarLine>
           <Dynamic>
             <subtype>mf</subtype>
             <velocity>80</velocity>
@@ -105953,10 +105952,11 @@ bzw. überhaupt nötig?</text>
               <Spanner type="TextLine">
                 <TextLine>
                   <endText>&gt;</endText>
+                  <lineWidth>0.132857</lineWidth>
                   <anchor>3</anchor>
                   <Segment>
                     <subtype>0</subtype>
-                    <offset x="-2.36353" y="-2.30133"/>
+                    <offset x="-2.09341" y="-2.03832"/>
                     <off2 x="0" y="0"/>
                     </Segment>
                   </TextLine>
@@ -106926,7 +106926,7 @@ bzw. überhaupt nötig?</text>
           <Chord>
             <durationType>quarter</durationType>
             <Stem>
-              <offset x="0" y="1.5"/>
+              <offset x="0" y="1.69355"/>
               </Stem>
             <Note>
               <visible>0</visible>
@@ -107039,7 +107039,7 @@ bzw. überhaupt nötig?</text>
           <Chord>
             <durationType>half</durationType>
             <Stem>
-              <offset x="0" y="-0.5"/>
+              <offset x="0" y="-0.564516"/>
               </Stem>
             <Note>
               <visible>0</visible>
@@ -107071,7 +107071,7 @@ bzw. überhaupt nötig?</text>
           <Chord>
             <durationType>quarter</durationType>
             <Stem>
-              <offset x="0" y="-1"/>
+              <offset x="0" y="-1.12903"/>
               </Stem>
             <Note>
               <visible>0</visible>
@@ -107156,7 +107156,7 @@ bzw. überhaupt nötig?</text>
           <Chord>
             <durationType>half</durationType>
             <Stem>
-              <offset x="0" y="-1"/>
+              <offset x="0" y="-1.12903"/>
               </Stem>
             <Note>
               <visible>0</visible>
@@ -109137,7 +109137,7 @@ bzw. überhaupt nötig?</text>
           <Chord>
             <durationType>quarter</durationType>
             <Stem>
-              <offset x="0" y="-0.5"/>
+              <offset x="0" y="-0.564516"/>
               </Stem>
             <Note>
               <visible>0</visible>
@@ -111352,17 +111352,25 @@ bzw. überhaupt nötig?</text>
               </Note>
             </Chord>
           <BarLine>
-            <subtype>dashed</subtype>
-            <span>1</span>
+            <visible>0</visible>
             </BarLine>
           </voice>
         </Measure>
       <Measure>
         <voice>
           <StaffText>
-            <bold>1</bold>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="2.8" y="2.88"/>
             <frameType>1</frameType>
-            <text>until conductor signals to stop</text>
+            <framePadding>5</framePadding>
+            <frameWidth>0.3</frameWidth>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                                                  
+
+
+</text>
             </StaffText>
           <Spanner type="HairPin">
             <HairPin>
@@ -111701,6 +111709,9 @@ bzw. überhaupt nötig?</text>
             <subtype>ff</subtype>
             <velocity>112</velocity>
             </Dynamic>
+          <Fermata>
+            <subtype>fermataAbove</subtype>
+            </Fermata>
           <Spanner type="HairPin">
             <prev>
               <location>
@@ -111729,10 +111740,6 @@ bzw. überhaupt nötig?</text>
               <tpc>14</tpc>
               </Note>
             </Chord>
-          <BarLine>
-            <subtype>dashed</subtype>
-            <span>1</span>
-            </BarLine>
           </voice>
         </Measure>
       <Measure>
@@ -112568,9 +112575,6 @@ bzw. überhaupt nötig?</text>
         </Measure>
       <Measure>
         <voice>
-          <BarLine>
-            <span>1</span>
-            </BarLine>
           <Rest>
             <durationType>half</durationType>
             </Rest>
@@ -112711,10 +112715,11 @@ bzw. überhaupt nötig?</text>
               <Spanner type="TextLine">
                 <TextLine>
                   <endText>&gt;</endText>
+                  <lineWidth>0.132857</lineWidth>
                   <anchor>3</anchor>
                   <Segment>
                     <subtype>0</subtype>
-                    <offset x="-2.11474" y="-2.36353"/>
+                    <offset x="-1.87306" y="-2.09341"/>
                     <off2 x="0" y="0"/>
                     </Segment>
                   </TextLine>
@@ -113213,12 +113218,17 @@ bzw. überhaupt nötig?</text>
           <Spanner type="Vibrato">
             <Vibrato>
               <subtype>vibratoSawtooth</subtype>
-              <lineWidth>0.121714</lineWidth>
+              <lineWidth>0.181152</lineWidth>
               <Segment>
-                <subtype>0</subtype>
+                <subtype>1</subtype>
                 <offset x="0" y="2"/>
                 <off2 x="0" y="0"/>
                 <autoplace>0</autoplace>
+                </Segment>
+              <Segment>
+                <subtype>3</subtype>
+                <offset x="0" y="-1"/>
+                <off2 x="0" y="0"/>
                 </Segment>
               </Vibrato>
             <next>
@@ -113230,12 +113240,17 @@ bzw. überhaupt nötig?</text>
           <Spanner type="Vibrato">
             <Vibrato>
               <subtype>vibratoSawtooth</subtype>
-              <lineWidth>0.121714</lineWidth>
+              <lineWidth>0.181152</lineWidth>
               <Segment>
-                <subtype>0</subtype>
+                <subtype>1</subtype>
                 <offset x="-1.5" y="2"/>
                 <off2 x="0" y="0"/>
                 <autoplace>0</autoplace>
+                </Segment>
+              <Segment>
+                <subtype>3</subtype>
+                <offset x="0" y="-1"/>
+                <off2 x="0" y="0"/>
                 </Segment>
               </Vibrato>
             <next>
@@ -113828,7 +113843,7 @@ bzw. überhaupt nötig?</text>
           <Chord>
             <durationType>half</durationType>
             <Stem>
-              <offset x="0" y="2.5"/>
+              <offset x="0" y="2.82258"/>
               </Stem>
             <Note>
               <visible>0</visible>
