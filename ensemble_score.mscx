@@ -20,9 +20,10 @@
       <createMultiMeasureRests>1</createMultiMeasureRests>
       <voltaLineStyle>0</voltaLineStyle>
       <ottavaLineStyle>0</ottavaLineStyle>
+      <staffFrameWidth>0.3</staffFrameWidth>
       <Spatium>1.55</Spatium>
       </Style>
-    <showInvisible>0</showInvisible>
+    <showInvisible>1</showInvisible>
     <showUnprintable>1</showUnprintable>
     <showFrames>1</showFrames>
     <showMargins>0</showMargins>
@@ -1644,7 +1645,7 @@
               <name>conductorUnconducted</name>
               <font>Bravura</font>
               <autoplace>0</autoplace>
-              <offset x="-4.93" y="-1.54"/>
+              <offset x="-5.58" y="-1.54"/>
               </Symbol>
             </Rest>
           </voice>
@@ -2155,6 +2156,14 @@
             <frameType>1</frameType>
             <frameWidth>0.2</frameWidth>
             <text>do not conduct for 20&quot;</text>
+            </StaffText>
+          <StaffText>
+            <color r="255" g="0" b="0" a="255"/>
+            <text>Tempokurven, damit individuell bleiben?</text>
+            </StaffText>
+          <StaffText>
+            <color r="255" g="0" b="0" a="255"/>
+            <text>rhythmen klären, dann rahmen setzen (letzter mit wiederholungszeichen)</text>
             </StaffText>
           <Rest>
             <visible>0</visible>
@@ -4519,9 +4528,11 @@
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>8.43</vspacerDown>
         <voice>
           <BarLine>
             <span>1</span>
+            <visible>0</visible>
             </BarLine>
           <Dynamic>
             <subtype>f</subtype>
@@ -7783,7 +7794,6 @@
             <offset x="2.8" y="2.38"/>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
-            <frameWidth>0.3</frameWidth>
             <frameBgColor r="255" g="85" b="0" a="0"/>
             <text>.                                                                                                                                                  
 </text>
@@ -8217,7 +8227,6 @@
             <offset x="2.8" y="2.38"/>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
-            <frameWidth>0.3</frameWidth>
             <frameBgColor r="255" g="85" b="0" a="0"/>
             <text>.                                                                                                                                                              
 </text>
@@ -9852,8 +9861,10 @@
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>7.93</vspacerDown>
         <voice>
           <BarLine>
+            <visible>0</visible>
             </BarLine>
           <Dynamic>
             <subtype>other-dynamics</subtype>
@@ -9861,9 +9872,14 @@
             <text><i></i><font face="ScoreText"></font></text>
             </Dynamic>
           <StaffText>
-            <bold>1</bold>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="-2.44" y="2.38"/>
             <frameType>1</frameType>
-            <text>play independently...</text>
+            <framePadding>5</framePadding>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                                                                                                                                                                                  </text>
             </StaffText>
           <Spanner type="HairPin">
             <HairPin>
@@ -10228,6 +10244,7 @@
               </Note>
             </Chord>
           <BarLine>
+            <visible>0</visible>
             </BarLine>
           </voice>
         </Measure>
@@ -17566,7 +17583,6 @@
             <offset x="2.8" y="2.38"/>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
-            <frameWidth>0.3</frameWidth>
             <frameBgColor r="255" g="85" b="0" a="0"/>
             <text>.                                                                                                                                                  
 </text>
@@ -17998,7 +18014,6 @@
             <offset x="2.8" y="2.38"/>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
-            <frameWidth>0.3</frameWidth>
             <frameBgColor r="255" g="85" b="0" a="0"/>
             <text>.                                                                                                                                                              
 </text>
@@ -19522,17 +19537,24 @@
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>7.93</vspacerDown>
         <voice>
           <BarLine>
+            <visible>0</visible>
             </BarLine>
           <Dynamic>
             <subtype>mp</subtype>
             <velocity>64</velocity>
             </Dynamic>
           <StaffText>
-            <bold>1</bold>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="-2.44" y="2.38"/>
             <frameType>1</frameType>
-            <text>play independently...</text>
+            <framePadding>5</framePadding>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                                                                                                                                                                                  </text>
             </StaffText>
           <Spanner type="HairPin">
             <HairPin>
@@ -19897,6 +19919,7 @@
               </Note>
             </Chord>
           <BarLine>
+            <visible>0</visible>
             </BarLine>
           </voice>
         </Measure>
@@ -27304,7 +27327,6 @@
             <offset x="2.8" y="2.88"/>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
-            <frameWidth>0.3</frameWidth>
             <frameBgColor r="255" g="85" b="0" a="0"/>
             <text>.                                                                                                                                                  
 
@@ -27746,7 +27768,6 @@
             <offset x="2.8" y="1.88"/>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
-            <frameWidth>0.3</frameWidth>
             <frameBgColor r="255" g="85" b="0" a="0"/>
             <text>.                                                                                                                                                              
 
@@ -29644,6 +29665,10 @@
         </Measure>
       <Measure>
         <voice>
+          <StaffText>
+            <color r="255" g="0" b="0" a="255"/>
+            <text>tempo ändern, ntolen benutzen</text>
+            </StaffText>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>quarter</durationType>
@@ -29752,6 +29777,11 @@
             <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
+          <StaffText>
+            <color r="255" g="0" b="0" a="255"/>
+            <offset x="-10.5" y="-2.40055"/>
+            <text>verschiedene generationen zusammenstitchen</text>
+            </StaffText>
           <Chord>
             <durationType>16th</durationType>
             <Articulation>
@@ -30817,17 +30847,25 @@
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>8.93</vspacerDown>
         <voice>
           <BarLine>
+            <visible>0</visible>
             </BarLine>
           <Dynamic>
             <subtype>mp</subtype>
             <velocity>64</velocity>
             </Dynamic>
           <StaffText>
-            <bold>1</bold>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="-2.44" y="2.38"/>
             <frameType>1</frameType>
-            <text>play independently...</text>
+            <framePadding>5</framePadding>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                                                                                                                                                                                  
+</text>
             </StaffText>
           <Spanner type="HairPin">
             <HairPin>
@@ -31224,6 +31262,7 @@
               </Note>
             </Chord>
           <BarLine>
+            <visible>0</visible>
             </BarLine>
           </voice>
         </Measure>
@@ -39154,7 +39193,6 @@
             <offset x="2.8" y="1.88"/>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
-            <frameWidth>0.3</frameWidth>
             <frameBgColor r="255" g="85" b="0" a="0"/>
             <text>.                                                                                                                                                  
 </text>
@@ -39587,7 +39625,6 @@
             <offset x="2.8" y="0.38"/>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
-            <frameWidth>0.3</frameWidth>
             <frameBgColor r="255" g="85" b="0" a="0"/>
             <text>.                                                                                                                                                              
 
@@ -41080,18 +41117,25 @@
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>6.93</vspacerDown>
         <voice>
           <BarLine>
             <span>1</span>
+            <visible>0</visible>
             </BarLine>
           <Dynamic>
             <subtype>mp</subtype>
             <velocity>64</velocity>
             </Dynamic>
           <StaffText>
-            <bold>1</bold>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="-2.44" y="2.38"/>
             <frameType>1</frameType>
-            <text>play independently...</text>
+            <framePadding>5</framePadding>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                                                                                                                                                                                  </text>
             </StaffText>
           <Spanner type="HairPin">
             <HairPin>
@@ -41463,6 +41507,7 @@
               </Note>
             </Chord>
           <BarLine>
+            <visible>0</visible>
             </BarLine>
           </voice>
         </Measure>
@@ -51437,7 +51482,6 @@
       <Measure>
         <voice>
           <BarLine>
-            <span>1</span>
             </BarLine>
           <StaffText>
             <minDistance>-999</minDistance>
@@ -56818,17 +56862,24 @@ bzw. überhaupt nötig?</text>
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>7.43</vspacerDown>
         <voice>
           <BarLine>
+            <visible>0</visible>
             </BarLine>
           <Dynamic>
             <subtype>p</subtype>
             <velocity>49</velocity>
             </Dynamic>
           <StaffText>
-            <bold>1</bold>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="-2.44" y="2.38"/>
             <frameType>1</frameType>
-            <text>play independently...</text>
+            <framePadding>5</framePadding>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                                                                                                                                                                                  </text>
             </StaffText>
           <Tuplet>
             <normalNotes>4</normalNotes>
@@ -63620,17 +63671,24 @@ bzw. überhaupt nötig?</text>
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>7.43</vspacerDown>
         <voice>
           <BarLine>
+            <visible>0</visible>
             </BarLine>
           <Dynamic>
             <subtype>p</subtype>
             <velocity>49</velocity>
             </Dynamic>
           <StaffText>
-            <bold>1</bold>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="-2.44" y="2.38"/>
             <frameType>1</frameType>
-            <text>play independently...</text>
+            <framePadding>5</framePadding>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                                                                                                                                                                                  </text>
             </StaffText>
           <Tuplet>
             <normalNotes>4</normalNotes>
@@ -72309,17 +72367,24 @@ bzw. überhaupt nötig?</text>
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>7.93</vspacerDown>
         <voice>
           <BarLine>
+            <visible>0</visible>
             </BarLine>
           <Dynamic>
             <subtype>p</subtype>
             <velocity>49</velocity>
             </Dynamic>
           <StaffText>
-            <bold>1</bold>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="-2.44" y="2.38"/>
             <frameType>1</frameType>
-            <text>play independently...</text>
+            <framePadding>5</framePadding>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                                                                                                                                                                                  </text>
             </StaffText>
           <Tuplet>
             <normalNotes>4</normalNotes>
@@ -80988,18 +81053,25 @@ bzw. überhaupt nötig?</text>
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>9.93</vspacerDown>
         <voice>
           <BarLine>
             <span>1</span>
+            <visible>0</visible>
             </BarLine>
           <Dynamic>
             <subtype>p</subtype>
             <velocity>49</velocity>
             </Dynamic>
           <StaffText>
-            <bold>1</bold>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="-2.44" y="2.38"/>
             <frameType>1</frameType>
-            <text>play independently...</text>
+            <framePadding>5</framePadding>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                                                                                                                                                                                  </text>
             </StaffText>
           <Tuplet>
             <normalNotes>4</normalNotes>
@@ -85876,7 +85948,6 @@ bzw. überhaupt nötig?</text>
             <offset x="2.8" y="2.38"/>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
-            <frameWidth>0.3</frameWidth>
             <frameBgColor r="255" g="85" b="0" a="0"/>
             <text>.                                                                                                                                                  
 </text>
@@ -86393,7 +86464,6 @@ bzw. überhaupt nötig?</text>
             <offset x="2.8" y="1.88"/>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
-            <frameWidth>0.3</frameWidth>
             <frameBgColor r="255" g="85" b="0" a="0"/>
             <text>.                                                                                                                                                              
 
@@ -87440,6 +87510,13 @@ bzw. überhaupt nötig?</text>
             <subtype>p</subtype>
             <velocity>49</velocity>
             </Dynamic>
+          <StaffText>
+            <size>11</size>
+            <bold>1</bold>
+            <color r="255" g="0" b="0" a="255"/>
+            <offset x="0" y="-2.46889"/>
+            <text>is das schön??</text>
+            </StaffText>
           <Chord>
             <durationType>quarter</durationType>
             <Note>
@@ -88396,17 +88473,25 @@ bzw. überhaupt nötig?</text>
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>7.43</vspacerDown>
         <voice>
           <BarLine>
+            <visible>0</visible>
             </BarLine>
           <Dynamic>
             <subtype>p</subtype>
             <velocity>49</velocity>
             </Dynamic>
           <StaffText>
-            <bold>1</bold>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="-2.44" y="0.88"/>
             <frameType>1</frameType>
-            <text>play independently...</text>
+            <framePadding>5</framePadding>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                                                                                                                                                                                  
+</text>
             </StaffText>
           <Beam>
             <distribute>1</distribute>
@@ -89713,6 +89798,11 @@ bzw. überhaupt nötig?</text>
         </Measure>
       <Measure>
         <voice>
+          <StaffText>
+            <color r="255" g="0" b="0" a="255"/>
+            <offset x="-2" y="-2.8882"/>
+            <text>braucht das einen Rahmen?</text>
+            </StaffText>
           <Chord>
             <BeamMode>mid</BeamMode>
             <durationType>32nd</durationType>
@@ -92077,7 +92167,6 @@ bzw. überhaupt nötig?</text>
             <offset x="2.8" y="2.38"/>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
-            <frameWidth>0.3</frameWidth>
             <frameBgColor r="255" g="85" b="0" a="0"/>
             <text>.                                                                                                                                                  
 
@@ -92634,7 +92723,6 @@ bzw. überhaupt nötig?</text>
             <offset x="2.8" y="2.38"/>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
-            <frameWidth>0.3</frameWidth>
             <frameBgColor r="255" g="85" b="0" a="0"/>
             <text>.                                                                                                                                                              
 
@@ -94718,6 +94806,7 @@ bzw. überhaupt nötig?</text>
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>6.43</vspacerDown>
         <voice>
           <BarLine>
             </BarLine>
@@ -94726,9 +94815,14 @@ bzw. überhaupt nötig?</text>
             <velocity>49</velocity>
             </Dynamic>
           <StaffText>
-            <bold>1</bold>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="-2.44" y="2.38"/>
             <frameType>1</frameType>
-            <text>play independently...</text>
+            <framePadding>5</framePadding>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                                                                                                                                                                                  </text>
             </StaffText>
           <Beam>
             <distribute>1</distribute>
@@ -98506,7 +98600,6 @@ bzw. überhaupt nötig?</text>
             <offset x="2.8" y="2.38"/>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
-            <frameWidth>0.3</frameWidth>
             <frameBgColor r="255" g="85" b="0" a="0"/>
             <text>.                                                                                                                                                  
 </text>
@@ -99023,7 +99116,6 @@ bzw. überhaupt nötig?</text>
             <offset x="2.8" y="1.88"/>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
-            <frameWidth>0.3</frameWidth>
             <frameBgColor r="255" g="85" b="0" a="0"/>
             <text>.                                                                                                                                                              
 </text>
@@ -101076,17 +101168,24 @@ bzw. überhaupt nötig?</text>
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>7.43</vspacerDown>
         <voice>
           <BarLine>
+            <visible>0</visible>
             </BarLine>
           <Dynamic>
             <subtype>p</subtype>
             <velocity>49</velocity>
             </Dynamic>
           <StaffText>
-            <bold>1</bold>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="-2.44" y="3.38"/>
             <frameType>1</frameType>
-            <text>play independently...</text>
+            <framePadding>5</framePadding>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                                                                                                                                                                                  </text>
             </StaffText>
           <Beam>
             <distribute>1</distribute>
@@ -104698,7 +104797,6 @@ bzw. überhaupt nötig?</text>
             <offset x="2.8" y="2.38"/>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
-            <frameWidth>0.3</frameWidth>
             <frameBgColor r="255" g="85" b="0" a="0"/>
             <text>.                                                                                                                                                  
 
@@ -105173,7 +105271,6 @@ bzw. überhaupt nötig?</text>
             <offset x="2.8" y="1.38"/>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
-            <frameWidth>0.3</frameWidth>
             <frameBgColor r="255" g="85" b="0" a="0"/>
             <text>.                                                                                                                                                              
 </text>
@@ -107419,17 +107516,24 @@ bzw. überhaupt nötig?</text>
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>6.93</vspacerDown>
         <voice>
           <BarLine>
+            <visible>0</visible>
             </BarLine>
           <Dynamic>
             <subtype>p</subtype>
             <velocity>49</velocity>
             </Dynamic>
           <StaffText>
-            <bold>1</bold>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="-2.44" y="3.38"/>
             <frameType>1</frameType>
-            <text>play independently...</text>
+            <framePadding>5</framePadding>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                                                                                                                                                                                  </text>
             </StaffText>
           <Beam>
             <distribute>1</distribute>
@@ -111349,7 +111453,6 @@ bzw. überhaupt nötig?</text>
             <offset x="2.8" y="2.88"/>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
-            <frameWidth>0.3</frameWidth>
             <frameBgColor r="255" g="85" b="0" a="0"/>
             <text>.                                                                                                                                                  
 
@@ -111994,7 +112097,6 @@ bzw. überhaupt nötig?</text>
             <offset x="2.8" y="2.88"/>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
-            <frameWidth>0.3</frameWidth>
             <frameBgColor r="255" g="85" b="0" a="0"/>
             <text>.                                                                                                                                                              
 
@@ -113159,13 +113261,13 @@ bzw. überhaupt nötig?</text>
               <subtype>vibratoSawtooth</subtype>
               <lineWidth>0.181152</lineWidth>
               <Segment>
-                <subtype>3</subtype>
+                <subtype>1</subtype>
                 <offset x="0" y="2"/>
                 <off2 x="0" y="0"/>
                 <autoplace>0</autoplace>
                 </Segment>
               <Segment>
-                <subtype>1</subtype>
+                <subtype>3</subtype>
                 <offset x="0" y="-1"/>
                 <off2 x="0" y="0"/>
                 </Segment>
@@ -113181,13 +113283,13 @@ bzw. überhaupt nötig?</text>
               <subtype>vibratoSawtooth</subtype>
               <lineWidth>0.181152</lineWidth>
               <Segment>
-                <subtype>3</subtype>
+                <subtype>1</subtype>
                 <offset x="-1.5" y="2"/>
                 <off2 x="0" y="0"/>
                 <autoplace>0</autoplace>
                 </Segment>
               <Segment>
-                <subtype>1</subtype>
+                <subtype>3</subtype>
                 <offset x="0" y="-1"/>
                 <off2 x="0" y="0"/>
                 </Segment>
@@ -114077,9 +114179,15 @@ bzw. überhaupt nötig?</text>
             <velocity>49</velocity>
             </Dynamic>
           <StaffText>
-            <bold>1</bold>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="-2.44" y="3.88"/>
             <frameType>1</frameType>
-            <text>play independently...</text>
+            <framePadding>5</framePadding>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                                                                                                                                                                                  
+</text>
             </StaffText>
           <Beam>
             <distribute>1</distribute>
