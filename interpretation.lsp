@@ -366,7 +366,7 @@
       ;; set number of notes
       (unless (= 0 st) (incf nr))
       (unless (= 0 nd) (incf nr))
-      (incf nr (* (/ md 4) 16))
+      (incf nr (* (/ md 8) 16)) ;; war (/ md 4)
       ;; custom stuff:
       (case instrument
 	(tuba (setf spitch nil))
@@ -383,7 +383,7 @@
 	    for ind2 = (/ (1+ (funcall indisp2 (mod (/ i i-div) 1))))
 	    do (push (cond ((and (= i 0) (not (= 0 st))) st)
 			   ((and (= i (1- nr)) (not (= 0 nd))) nd)
-			   (t .25))
+			   (t .125)) ;; .25
 		     new-durs)
 	       (push (if (>= ind1 thrsld) spitch spitch2) pitches1)
 	       (push (if (>= ind2 thrsld) spitch spitch2) pitches2))
