@@ -177,7 +177,8 @@
 
 (lists-to-xml (interpret-minutes (subseq (access-minutes) 3 4)
 				 '(violin-1 violin-2 viola cello double-bass))
-	      (format nil "~a~a" +ens-src-dir+ "test5.xml"))
+	      (format nil "~a~a" +ens-src-dir+ "minute_4_3_6.xml")
+	      :tempo 90)
 
 ;; idea: interpret layers returns a function that can then be filled with arguments
 ;;  to form a sections like function.

@@ -361,20 +361,25 @@
 	 (ptrn1 '())
 	 (ptrn2 '())
 	 (morph '())
-	 (i-div 13))
+	 (i-div 13)
+	 ;; modify this for different pulses
+	 ;; tempo 60: 1(q), 4 (s), 6 (ts)
+	 ;; tepmo 90: 6 (s), 9/2 (triplets), 15/2 (quintuplet)
+	 (divisor 9/2)) ;; dividing 1 second (q=60) into this many notes
+    (print i-div)
     (multiple-value-bind (st md nd) (get-st-md-nd sum dur)
       ;; set number of notes
       (unless (= 0 st) (incf nr))
       (unless (= 0 nd) (incf nr))
-      (incf nr (* (/ md 8) 16)) ;; war (/ md 4)
+      (incf nr (* md divisor)) ;; war (* (/ md 4) 16)
       ;; custom stuff:
       (case instrument
 	(tuba (setf spitch nil))
 	(double-bass (setf spitch 'b0 thrsld 0))
-	(violin-1 (setf thrsld 1/3 i-div 7.5))
-	(violin-2 (setf thrsld 1/4 i-div 7.5))
-	(viola (setf thrsld 1/6 i-div 7.5))
-	(cello (setf thrsld 1/8 i-div 7.5))
+	(violin-1 (setf thrsld 1/3)) ; i-div 6.5))
+	(violin-2 (setf thrsld 1/4)) ; i-div 6.5))
+	(viola (setf thrsld 1/6)) ; i-div 6.5))
+	(cello (setf thrsld 1/8)) ; i-div 6.5))
 	(percussion (setf spitch2 (note-for-ins instrument (nth 2 chord))
 			  thrsld 1/2)))
       ;; get durations and different pitch lists
@@ -383,7 +388,7 @@
 	    for ind2 = (/ (1+ (funcall indisp2 (mod (/ i i-div) 1))))
 	    do (push (cond ((and (= i 0) (not (= 0 st))) st)
 			   ((and (= i (1- nr)) (not (= 0 nd))) nd)
-			   (t .125)) ;; .25
+			   (t (/ 1 divisor))) ;; .25
 		     new-durs)
 	       (push (if (>= ind1 thrsld) spitch spitch2) pitches1)
 	       (push (if (>= ind2 thrsld) spitch spitch2) pitches2))
