@@ -9897,11 +9897,6 @@
             <BeamMode>no</BeamMode>
             <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>89</pitch>
               <tpc>13</tpc>
               </Note>
@@ -10005,11 +10000,6 @@
           <Chord>
             <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>89</pitch>
               <tpc>13</tpc>
               </Note>
@@ -10028,13 +10018,8 @@
       <Measure>
         <voice>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>89</pitch>
               <tpc>13</tpc>
               </Note>
@@ -10042,10 +10027,6 @@
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
-            </Rest>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
             </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
@@ -10074,26 +10055,22 @@
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>89</pitch>
-              <tpc>13</tpc>
-              </Note>
-            </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>89</pitch>
-              <tpc>13</tpc>
-              </Note>
-            </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
+            <Note>
+              <pitch>89</pitch>
+              <tpc>13</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>eighth</durationType>
+            <Note>
+              <pitch>89</pitch>
+              <tpc>13</tpc>
+              </Note>
+            </Chord>
+          <Rest>
+            <BeamMode>auto</BeamMode>
+            <durationType>16th</durationType>
             </Rest>
           <Chord>
             <durationType>16th</durationType>
@@ -10111,13 +10088,8 @@
             <durationType>quarter</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>89</pitch>
               <tpc>13</tpc>
               </Note>
@@ -10125,10 +10097,6 @@
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
-            </Rest>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
             </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
@@ -10171,11 +10139,6 @@
           <Chord>
             <durationType>16th</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>89</pitch>
               <tpc>13</tpc>
               </Note>
@@ -10189,16 +10152,12 @@
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>89</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>quarter</durationType>
@@ -10212,21 +10171,12 @@
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>89</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>quarter</durationType>
@@ -20358,7 +20308,7 @@
       <Measure>
         <voice>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <Accidental>
                 <subtype>accidentalFlat</subtype>
@@ -20375,18 +20325,9 @@
             <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalFlat</subtype>
-                </Accidental>
               <pitch>82</pitch>
               <tpc>12</tpc>
               </Note>
@@ -20407,16 +20348,12 @@
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>82</pitch>
               <tpc>12</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -20451,7 +20388,7 @@
             <durationType>quarter</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <Accidental>
                 <subtype>accidentalFlat</subtype>
@@ -20468,18 +20405,9 @@
             <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalFlat</subtype>
-                </Accidental>
               <pitch>82</pitch>
               <tpc>12</tpc>
               </Note>
@@ -20496,7 +20424,7 @@
               </Note>
             </Chord>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>82</pitch>
               <tpc>12</tpc>
@@ -20505,10 +20433,6 @@
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
-            </Rest>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
             </Rest>
           </voice>
         </Measure>
@@ -20537,16 +20461,12 @@
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>82</pitch>
               <tpc>12</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
@@ -20578,7 +20498,7 @@
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <Accidental>
                 <subtype>accidentalFlat</subtype>
@@ -20587,10 +20507,6 @@
               <tpc>12</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
@@ -31320,7 +31236,7 @@
             <text><i></i><font face="ScoreText"/></text>
             </Dynamic>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoBelow</subtype>
               <visible>0</visible>
@@ -31347,14 +31263,10 @@
             </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
-          <Rest>
-            <BeamMode>auto</BeamMode>
             <durationType>quarter</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoBelow</subtype>
               <visible>0</visible>
@@ -31380,155 +31292,8 @@
             <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              <visible>0</visible>
-              </Articulation>
-            <Articulation>
-              <subtype>articAccentBelow</subtype>
-              </Articulation>
-            <Note>
-              <color r="0" g="0" b="0" a="0"/>
-              <Symbol>
-                <name>articAccentAbove</name>
-                <font>Bravura</font>
-                <offset x="0.5" y="0.5"/>
-                </Symbol>
-              <pitch>58</pitch>
-              <tpc>12</tpc>
-              <tpc2>14</tpc2>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
-            </Rest>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>quarter</durationType>
-            </Rest>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              <visible>0</visible>
-              </Articulation>
-            <Note>
-              <color r="0" g="0" b="0" a="0"/>
-              <Symbol>
-                <name>articAccentAbove</name>
-                <font>Bravura</font>
-                <offset x="0.5" y="0.5"/>
-                </Symbol>
-              <pitch>58</pitch>
-              <tpc>12</tpc>
-              <tpc2>14</tpc2>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              <visible>0</visible>
-              </Articulation>
-            <Note>
-              <color r="0" g="0" b="0" a="0"/>
-              <Symbol>
-                <name>articAccentAbove</name>
-                <font>Bravura</font>
-                <offset x="0.5" y="0.5"/>
-                </Symbol>
-              <pitch>58</pitch>
-              <tpc>12</tpc>
-              <tpc2>14</tpc2>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              <visible>0</visible>
-              </Articulation>
-            <Note>
-              <color r="0" g="0" b="0" a="0"/>
-              <Symbol>
-                <name>articAccentAbove</name>
-                <font>Bravura</font>
-                <offset x="0.5" y="0.5"/>
-                </Symbol>
-              <pitch>58</pitch>
-              <tpc>12</tpc>
-              <tpc2>14</tpc2>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              <visible>0</visible>
-              </Articulation>
-            <Note>
-              <color r="0" g="0" b="0" a="0"/>
-              <Symbol>
-                <name>articAccentAbove</name>
-                <font>Bravura</font>
-                <offset x="0.5" y="0.5"/>
-                </Symbol>
-              <pitch>58</pitch>
-              <tpc>12</tpc>
-              <tpc2>14</tpc2>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>quarter</durationType>
-            </Rest>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>eighth</durationType>
-            </Rest>
-          <StaffText>
-            <color r="255" g="0" b="0" a="255"/>
-            <offset x="-10.5" y="-2.40055"/>
-            <text>verschiedene generationen zusammenstitchen</text>
-            </StaffText>
-          <Chord>
-            <durationType>16th</durationType>
             <Articulation>
               <subtype>articStaccatoBelow</subtype>
               <visible>0</visible>
@@ -31553,13 +31318,13 @@
             <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>quarter</durationType>
-            </Rest>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>eighth</durationType>
             </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
@@ -31584,9 +31349,143 @@
               <head>cross</head>
               </Note>
             </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              <visible>0</visible>
+              </Articulation>
+            <Note>
+              <color r="0" g="0" b="0" a="0"/>
+              <Symbol>
+                <name>articAccentAbove</name>
+                <font>Bravura</font>
+                <offset x="0.5" y="0.5"/>
+                </Symbol>
+              <pitch>58</pitch>
+              <tpc>12</tpc>
+              <tpc2>14</tpc2>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Rest>
+            <BeamMode>auto</BeamMode>
+            <durationType>16th</durationType>
+            </Rest>
+          <Rest>
+            <BeamMode>auto</BeamMode>
+            <durationType>16th</durationType>
+            </Rest>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              <visible>0</visible>
+              </Articulation>
+            <Note>
+              <color r="0" g="0" b="0" a="0"/>
+              <Symbol>
+                <name>articAccentAbove</name>
+                <font>Bravura</font>
+                <offset x="0.5" y="0.5"/>
+                </Symbol>
+              <pitch>58</pitch>
+              <tpc>12</tpc>
+              <tpc2>14</tpc2>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              <visible>0</visible>
+              </Articulation>
+            <Note>
+              <color r="0" g="0" b="0" a="0"/>
+              <Symbol>
+                <name>articAccentAbove</name>
+                <font>Bravura</font>
+                <offset x="0.5" y="0.5"/>
+                </Symbol>
+              <pitch>58</pitch>
+              <tpc>12</tpc>
+              <tpc2>14</tpc2>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Rest>
+            <BeamMode>auto</BeamMode>
+            <durationType>16th</durationType>
+            </Rest>
+          <Rest>
+            <BeamMode>auto</BeamMode>
+            <durationType>quarter</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
+            </Rest>
+          <Chord>
+            <durationType>eighth</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              <visible>0</visible>
+              </Articulation>
+            <Articulation>
+              <subtype>articAccentBelow</subtype>
+              </Articulation>
+            <Note>
+              <color r="0" g="0" b="0" a="0"/>
+              <Symbol>
+                <name>articAccentAbove</name>
+                <font>Bravura</font>
+                <offset x="0.5" y="0.5"/>
+                </Symbol>
+              <pitch>58</pitch>
+              <tpc>12</tpc>
+              <tpc2>14</tpc2>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Rest>
+            <BeamMode>auto</BeamMode>
+            <durationType>quarter</durationType>
+            </Rest>
+          <Rest>
+            <BeamMode>auto</BeamMode>
+            <durationType>eighth</durationType>
+            </Rest>
+          <Rest>
+            <BeamMode>auto</BeamMode>
+            <durationType>16th</durationType>
+            </Rest>
+          <Chord>
+            <durationType>eighth</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              <visible>0</visible>
+              </Articulation>
+            <Note>
+              <color r="0" g="0" b="0" a="0"/>
+              <Symbol>
+                <name>articAccentAbove</name>
+                <font>Bravura</font>
+                <offset x="0.5" y="0.5"/>
+                </Symbol>
+              <pitch>58</pitch>
+              <tpc>12</tpc>
+              <tpc2>14</tpc2>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Rest>
+            <BeamMode>auto</BeamMode>
+            <durationType>16th</durationType>
             </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
@@ -31651,7 +31550,7 @@
             <durationType>quarter</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoBelow</subtype>
               <visible>0</visible>
@@ -31672,17 +31571,13 @@
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
-            </Rest>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
             </Rest>
           </voice>
         </Measure>
       <Measure>
         <voice>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoBelow</subtype>
               <visible>0</visible>
@@ -31703,10 +31598,6 @@
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
-            </Rest>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
             </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
@@ -31717,7 +31608,7 @@
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoBelow</subtype>
               <visible>0</visible>
@@ -31737,14 +31628,14 @@
             </Chord>
           <Rest>
             <BeamMode>auto</BeamMode>
-            <durationType>eighth</durationType>
+            <durationType>16th</durationType>
             </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoBelow</subtype>
               <visible>0</visible>
@@ -31763,8 +31654,9 @@
               </Note>
             </Chord>
           <Rest>
+            <offset x="-0.2" y="0"/>
             <BeamMode>auto</BeamMode>
-            <durationType>eighth</durationType>
+            <durationType>16th</durationType>
             </Rest>
           </voice>
         </Measure>
@@ -31811,11 +31703,6 @@
             <BeamMode>no</BeamMode>
             <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>53</pitch>
               <tpc>13</tpc>
               <tpc2>15</tpc2>
@@ -31936,11 +31823,6 @@
           <Chord>
             <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>53</pitch>
               <tpc>13</tpc>
               <tpc2>15</tpc2>
@@ -31966,11 +31848,6 @@
           <Chord>
             <durationType>16th</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>53</pitch>
               <tpc>13</tpc>
               <tpc2>15</tpc2>
@@ -32017,17 +31894,13 @@
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>53</pitch>
               <tpc>13</tpc>
               <tpc2>15</tpc2>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -32061,13 +31934,20 @@
       <Measure>
         <voice>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
+              <pitch>53</pitch>
+              <tpc>13</tpc>
+              <tpc2>15</tpc2>
+              </Note>
+            </Chord>
+          <Rest>
+            <BeamMode>auto</BeamMode>
+            <durationType>eighth</durationType>
+            </Rest>
+          <Chord>
+            <durationType>eighth</durationType>
+            <Note>
               <pitch>53</pitch>
               <tpc>13</tpc>
               <tpc2>15</tpc2>
@@ -32091,30 +31971,18 @@
             </Chord>
           <Rest>
             <BeamMode>auto</BeamMode>
+            <durationType>16th</durationType>
+            </Rest>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>53</pitch>
+              <tpc>13</tpc>
+              <tpc2>15</tpc2>
+              </Note>
+            </Chord>
+          <Chord>
             <durationType>eighth</durationType>
-            </Rest>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
-              <tpc2>15</tpc2>
-              </Note>
-            </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
-          <Chord>
-            <durationType>16th</durationType>
             <Note>
               <pitch>53</pitch>
               <tpc>13</tpc>
@@ -32122,29 +31990,13 @@
               </Note>
             </Chord>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>53</pitch>
               <tpc>13</tpc>
               <tpc2>15</tpc2>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
-              <tpc2>15</tpc2>
-              </Note>
-            </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           </voice>
         </Measure>
       <Measure>
@@ -32160,11 +32012,6 @@
           <Chord>
             <durationType>16th</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>53</pitch>
               <tpc>13</tpc>
               <tpc2>15</tpc2>
@@ -32175,17 +32022,13 @@
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>53</pitch>
               <tpc>13</tpc>
               <tpc2>15</tpc2>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
@@ -32227,34 +32070,21 @@
       <Measure>
         <voice>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>53</pitch>
               <tpc>13</tpc>
               <tpc2>15</tpc2>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>53</pitch>
               <tpc>13</tpc>
               <tpc2>15</tpc2>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
@@ -32296,7 +32126,7 @@
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>53</pitch>
               <tpc>13</tpc>
@@ -32305,7 +32135,7 @@
             </Chord>
           <Rest>
             <BeamMode>auto</BeamMode>
-            <durationType>eighth</durationType>
+            <durationType>16th</durationType>
             </Rest>
           <Chord>
             <durationType>16th</durationType>
@@ -42827,27 +42657,19 @@
               </Note>
             </Chord>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>39</pitch>
               <tpc>11</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>39</pitch>
               <tpc>11</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -42878,7 +42700,7 @@
       <Measure>
         <voice>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <Accidental>
                 <subtype>accidentalFlat</subtype>
@@ -42891,10 +42713,6 @@
             <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -42943,27 +42761,19 @@
               </Note>
             </Chord>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>39</pitch>
               <tpc>11</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>39</pitch>
               <tpc>11</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           </voice>
         </Measure>
       <Measure>
@@ -43049,7 +42859,7 @@
       <Measure>
         <voice>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <Accidental>
                 <subtype>accidentalFlat</subtype>
@@ -43058,10 +42868,6 @@
               <tpc>11</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -43121,15 +42927,15 @@
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
-              </Note>
-            </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
+            <Note>
+              <pitch>39</pitch>
+              <tpc>11</tpc>
+              </Note>
+            </Chord>
+          <Rest>
+            <BeamMode>auto</BeamMode>
+            <durationType>16th</durationType>
             </Rest>
           <Chord>
             <durationType>16th</durationType>
@@ -59072,7 +58878,7 @@ bzw. überhaupt nötig?</text>
             <text><i></i><font face="ScoreText"/></text>
             </Dynamic>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoAbove</subtype>
               <visible>0</visible>
@@ -59095,17 +58901,13 @@ bzw. überhaupt nötig?</text>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
-            </Rest>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
             </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>quarter</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoAbove</subtype>
               <visible>0</visible>
@@ -59130,12 +58932,8 @@ bzw. überhaupt nötig?</text>
             <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoAbove</subtype>
               <visible>0</visible>
@@ -59157,7 +58955,7 @@ bzw. überhaupt nötig?</text>
             </Chord>
           <Rest>
             <BeamMode>auto</BeamMode>
-            <durationType>eighth</durationType>
+            <durationType>16th</durationType>
             </Rest>
           <BarLine>
             </BarLine>
@@ -59174,7 +58972,7 @@ bzw. überhaupt nötig?</text>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoAbove</subtype>
               <visible>0</visible>
@@ -59193,7 +58991,7 @@ bzw. überhaupt nötig?</text>
             </Chord>
           <Rest>
             <BeamMode>auto</BeamMode>
-            <durationType>eighth</durationType>
+            <durationType>16th</durationType>
             </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
@@ -59254,7 +59052,7 @@ bzw. überhaupt nötig?</text>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoAbove</subtype>
               <visible>0</visible>
@@ -59276,10 +59074,6 @@ bzw. überhaupt nötig?</text>
             </Chord>
           <Rest>
             <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
-          <Rest>
-            <BeamMode>auto</BeamMode>
             <durationType>quarter</durationType>
             </Rest>
           <Rest>
@@ -59373,7 +59167,7 @@ bzw. überhaupt nötig?</text>
             <durationType>quarter</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoAbove</subtype>
               <visible>0</visible>
@@ -59393,17 +59187,13 @@ bzw. überhaupt nötig?</text>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
-            </Rest>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
             </Rest>
           </voice>
         </Measure>
       <Measure>
         <voice>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoAbove</subtype>
               <visible>0</visible>
@@ -59421,12 +59211,7 @@ bzw. überhaupt nötig?</text>
               </Note>
             </Chord>
           <Rest>
-            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
-            </Rest>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
             </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
@@ -59437,7 +59222,7 @@ bzw. überhaupt nötig?</text>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoAbove</subtype>
               <visible>0</visible>
@@ -59456,14 +59241,14 @@ bzw. überhaupt nötig?</text>
             </Chord>
           <Rest>
             <BeamMode>auto</BeamMode>
-            <durationType>eighth</durationType>
+            <durationType>16th</durationType>
             </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoAbove</subtype>
               <visible>0</visible>
@@ -59482,7 +59267,7 @@ bzw. überhaupt nötig?</text>
             </Chord>
           <Rest>
             <BeamMode>auto</BeamMode>
-            <durationType>eighth</durationType>
+            <durationType>16th</durationType>
             </Rest>
           </voice>
         </Measure>
@@ -59525,11 +59310,6 @@ bzw. überhaupt nötig?</text>
             <BeamMode>no</BeamMode>
             <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>65</pitch>
               <tpc>13</tpc>
               </Note>
@@ -59606,11 +59386,6 @@ bzw. überhaupt nötig?</text>
             <BeamMode>no</BeamMode>
             <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>65</pitch>
               <tpc>13</tpc>
               </Note>
@@ -59662,11 +59437,6 @@ bzw. überhaupt nötig?</text>
           <Chord>
             <durationType>16th</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>77</pitch>
               <tpc>13</tpc>
               </Note>
@@ -59732,16 +59502,12 @@ bzw. überhaupt nötig?</text>
               </Number>
             </Tuplet>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>77</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -59768,21 +59534,12 @@ bzw. überhaupt nötig?</text>
               </Number>
             </Tuplet>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>77</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -59847,16 +59604,12 @@ bzw. überhaupt nötig?</text>
               </Number>
             </Tuplet>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>77</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -59887,21 +59640,12 @@ bzw. überhaupt nötig?</text>
               </Number>
             </Tuplet>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>77</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -59924,16 +59668,12 @@ bzw. überhaupt nötig?</text>
               </Number>
             </Tuplet>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>77</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -66862,7 +66602,7 @@ bzw. überhaupt nötig?</text>
               </Number>
             </Tuplet>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>70</pitch>
               <tpc>12</tpc>
@@ -66871,20 +66611,16 @@ bzw. überhaupt nötig?</text>
             </Chord>
           <Rest>
             <BeamMode>auto</BeamMode>
-            <durationType>eighth</durationType>
+            <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>70</pitch>
               <tpc>12</tpc>
               <tpc2>13</tpc2>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <endTuplet/>
           <Tuplet>
             <normalNotes>4</normalNotes>
@@ -66944,17 +66680,13 @@ bzw. überhaupt nötig?</text>
               </Number>
             </Tuplet>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>70</pitch>
               <tpc>12</tpc>
               <tpc2>13</tpc2>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -66982,17 +66714,13 @@ bzw. überhaupt nötig?</text>
               </Number>
             </Tuplet>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>70</pitch>
               <tpc>12</tpc>
               <tpc2>13</tpc2>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -67038,7 +66766,7 @@ bzw. überhaupt nötig?</text>
               </Number>
             </Tuplet>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>70</pitch>
               <tpc>12</tpc>
@@ -67047,20 +66775,16 @@ bzw. überhaupt nötig?</text>
             </Chord>
           <Rest>
             <BeamMode>auto</BeamMode>
-            <durationType>eighth</durationType>
+            <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>70</pitch>
               <tpc>12</tpc>
               <tpc2>13</tpc2>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <endTuplet/>
           <Tuplet>
             <normalNotes>4</normalNotes>
@@ -67122,17 +66846,13 @@ bzw. überhaupt nötig?</text>
               </Number>
             </Tuplet>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>70</pitch>
               <tpc>12</tpc>
               <tpc2>13</tpc2>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -67156,17 +66876,13 @@ bzw. überhaupt nötig?</text>
               </Number>
             </Tuplet>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>70</pitch>
               <tpc>12</tpc>
               <tpc2>13</tpc2>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -74431,7 +74147,7 @@ bzw. überhaupt nötig?</text>
             <text><i></i><font face="ScoreText"/></text>
             </Dynamic>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoBelow</subtype>
               <visible>0</visible>
@@ -74454,10 +74170,6 @@ bzw. überhaupt nötig?</text>
               <head>cross</head>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Articulation>
@@ -74525,7 +74237,7 @@ bzw. überhaupt nötig?</text>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoBelow</subtype>
               <visible>0</visible>
@@ -74542,10 +74254,6 @@ bzw. überhaupt nötig?</text>
               <head>cross</head>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
@@ -74642,7 +74350,7 @@ bzw. überhaupt nötig?</text>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoBelow</subtype>
               <visible>0</visible>
@@ -74659,12 +74367,8 @@ bzw. überhaupt nötig?</text>
               <head>cross</head>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoBelow</subtype>
               <visible>0</visible>
@@ -74684,10 +74388,6 @@ bzw. überhaupt nötig?</text>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
-            </Rest>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
             </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
@@ -74829,7 +74529,7 @@ bzw. überhaupt nötig?</text>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoBelow</subtype>
               <visible>0</visible>
@@ -74846,10 +74546,6 @@ bzw. überhaupt nötig?</text>
               <head>cross</head>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Articulation>
@@ -74913,7 +74609,7 @@ bzw. überhaupt nötig?</text>
       <Measure>
         <voice>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoBelow</subtype>
               <visible>0</visible>
@@ -74937,12 +74633,8 @@ bzw. überhaupt nötig?</text>
             <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoBelow</subtype>
               <visible>0</visible>
@@ -74959,12 +74651,8 @@ bzw. überhaupt nötig?</text>
               <head>cross</head>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoBelow</subtype>
               <visible>0</visible>
@@ -74981,10 +74669,6 @@ bzw. überhaupt nötig?</text>
               <head>cross</head>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
@@ -75012,7 +74696,7 @@ bzw. überhaupt nötig?</text>
               </Note>
             </Chord>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoBelow</subtype>
               <visible>0</visible>
@@ -75029,12 +74713,8 @@ bzw. überhaupt nötig?</text>
               <head>cross</head>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoBelow</subtype>
               <visible>0</visible>
@@ -75051,10 +74731,6 @@ bzw. überhaupt nötig?</text>
               <head>cross</head>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           </voice>
         </Measure>
       <Measure>
@@ -75111,7 +74787,7 @@ bzw. überhaupt nötig?</text>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoBelow</subtype>
               <visible>0</visible>
@@ -75128,10 +74804,6 @@ bzw. überhaupt nötig?</text>
               <head>cross</head>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
@@ -75177,7 +74849,7 @@ bzw. überhaupt nötig?</text>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoBelow</subtype>
               <visible>0</visible>
@@ -75196,7 +74868,7 @@ bzw. überhaupt nötig?</text>
             </Chord>
           <Rest>
             <BeamMode>auto</BeamMode>
-            <durationType>eighth</durationType>
+            <durationType>16th</durationType>
             </Rest>
           </voice>
         </Measure>
@@ -75260,11 +74932,6 @@ bzw. überhaupt nötig?</text>
             <BeamMode>no</BeamMode>
             <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>41</pitch>
               <tpc>13</tpc>
               </Note>
@@ -75367,11 +75034,6 @@ bzw. überhaupt nötig?</text>
             <BeamMode>no</BeamMode>
             <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>41</pitch>
               <tpc>13</tpc>
               </Note>
@@ -82894,7 +82556,7 @@ bzw. überhaupt nötig?</text>
             <text><i></i><font face="ScoreText"/></text>
             </Dynamic>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoAbove</subtype>
               <visible>0</visible>
@@ -82918,10 +82580,6 @@ bzw. überhaupt nötig?</text>
               <head>cross</head>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Articulation>
@@ -82985,7 +82643,7 @@ bzw. überhaupt nötig?</text>
               </Note>
             </Chord>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoAbove</subtype>
               <visible>0</visible>
@@ -83002,10 +82660,6 @@ bzw. überhaupt nötig?</text>
               <head>cross</head>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Articulation>
@@ -83211,7 +82865,7 @@ bzw. überhaupt nötig?</text>
               </Note>
             </Chord>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoAbove</subtype>
               <visible>0</visible>
@@ -83228,10 +82882,6 @@ bzw. überhaupt nötig?</text>
               <head>cross</head>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
@@ -83383,7 +83033,7 @@ bzw. überhaupt nötig?</text>
               </Note>
             </Chord>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoAbove</subtype>
               <visible>0</visible>
@@ -83400,34 +83050,8 @@ bzw. überhaupt nötig?</text>
               <head>cross</head>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoAbove</subtype>
-              <visible>0</visible>
-              </Articulation>
-            <Note>
-              <visible>0</visible>
-              <Symbol>
-                <name>articAccentAbove</name>
-                <font>Bravura</font>
-                <offset x="-0.5" y="0.5"/>
-                </Symbol>
-              <pitch>27</pitch>
-              <tpc>11</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
-          <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoAbove</subtype>
               <visible>0</visible>
@@ -83462,10 +83086,24 @@ bzw. überhaupt nötig?</text>
               <head>cross</head>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
+          <Chord>
+            <durationType>eighth</durationType>
+            <Articulation>
+              <subtype>articStaccatoAbove</subtype>
+              <visible>0</visible>
+              </Articulation>
+            <Note>
+              <visible>0</visible>
+              <Symbol>
+                <name>articAccentAbove</name>
+                <font>Bravura</font>
+                <offset x="-0.5" y="0.5"/>
+                </Symbol>
+              <pitch>27</pitch>
+              <tpc>11</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
           <Chord>
             <durationType>16th</durationType>
             <Articulation>
@@ -83489,7 +83127,7 @@ bzw. überhaupt nötig?</text>
       <Measure>
         <voice>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoAbove</subtype>
               <visible>0</visible>
@@ -83514,10 +83152,6 @@ bzw. überhaupt nötig?</text>
             <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Articulation>
@@ -83591,47 +83225,7 @@ bzw. überhaupt nötig?</text>
               </Note>
             </Chord>
           <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoAbove</subtype>
-              <visible>0</visible>
-              </Articulation>
-            <Note>
-              <visible>0</visible>
-              <Symbol>
-                <name>articAccentAbove</name>
-                <font>Bravura</font>
-                <offset x="-0.5" y="0.5"/>
-                </Symbol>
-              <pitch>27</pitch>
-              <tpc>11</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
-            </Rest>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoAbove</subtype>
-              <visible>0</visible>
-              </Articulation>
-            <Note>
-              <visible>0</visible>
-              <Symbol>
-                <name>articAccentAbove</name>
-                <font>Bravura</font>
-                <offset x="-0.5" y="0.5"/>
-                </Symbol>
-              <pitch>27</pitch>
-              <tpc>11</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
             <Articulation>
               <subtype>articStaccatoAbove</subtype>
               <visible>0</visible>
@@ -83670,10 +83264,42 @@ bzw. überhaupt nötig?</text>
               <head>cross</head>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
+          <Chord>
+            <durationType>eighth</durationType>
+            <Articulation>
+              <subtype>articStaccatoAbove</subtype>
+              <visible>0</visible>
+              </Articulation>
+            <Note>
+              <visible>0</visible>
+              <Symbol>
+                <name>articAccentAbove</name>
+                <font>Bravura</font>
+                <offset x="-0.5" y="0.5"/>
+                </Symbol>
+              <pitch>27</pitch>
+              <tpc>11</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>eighth</durationType>
+            <Articulation>
+              <subtype>articStaccatoAbove</subtype>
+              <visible>0</visible>
+              </Articulation>
+            <Note>
+              <visible>0</visible>
+              <Symbol>
+                <name>articAccentAbove</name>
+                <font>Bravura</font>
+                <offset x="-0.5" y="0.5"/>
+                </Symbol>
+              <pitch>27</pitch>
+              <tpc>11</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
           </voice>
         </Measure>
       <Measure>
@@ -83727,7 +83353,7 @@ bzw. überhaupt nötig?</text>
               </Note>
             </Chord>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoAbove</subtype>
               <visible>0</visible>
@@ -83744,10 +83370,6 @@ bzw. überhaupt nötig?</text>
               <head>cross</head>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Articulation>
@@ -83829,7 +83451,7 @@ bzw. überhaupt nötig?</text>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
               <subtype>articStaccatoAbove</subtype>
               <visible>0</visible>
@@ -83848,7 +83470,7 @@ bzw. überhaupt nötig?</text>
             </Chord>
           <Rest>
             <BeamMode>auto</BeamMode>
-            <durationType>eighth</durationType>
+            <durationType>16th</durationType>
             </Rest>
           </voice>
         </Measure>
@@ -84098,32 +83720,23 @@ bzw. überhaupt nötig?</text>
               </Number>
             </Tuplet>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>41</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
           <Rest>
             <BeamMode>auto</BeamMode>
-            <durationType>eighth</durationType>
+            <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>41</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <endTuplet/>
           <Tuplet>
             <normalNotes>4</normalNotes>
@@ -84167,7 +83780,7 @@ bzw. überhaupt nötig?</text>
               </Number>
             </Tuplet>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>41</pitch>
               <tpc>13</tpc>
@@ -84175,19 +83788,15 @@ bzw. überhaupt nötig?</text>
             </Chord>
           <Rest>
             <BeamMode>auto</BeamMode>
-            <durationType>eighth</durationType>
+            <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>41</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <endTuplet/>
           <Tuplet>
             <normalNotes>4</normalNotes>
@@ -84199,16 +83808,12 @@ bzw. überhaupt nötig?</text>
               </Number>
             </Tuplet>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>41</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -84235,21 +83840,12 @@ bzw. überhaupt nötig?</text>
               </Number>
             </Tuplet>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>41</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -84311,7 +83907,7 @@ bzw. überhaupt nötig?</text>
               </Number>
             </Tuplet>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>41</pitch>
               <tpc>13</tpc>
@@ -84319,19 +83915,15 @@ bzw. überhaupt nötig?</text>
             </Chord>
           <Rest>
             <BeamMode>auto</BeamMode>
-            <durationType>eighth</durationType>
+            <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>41</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <endTuplet/>
           <Tuplet>
             <normalNotes>4</normalNotes>
@@ -84343,16 +83935,12 @@ bzw. überhaupt nötig?</text>
               </Number>
             </Tuplet>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>41</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -84386,32 +83974,23 @@ bzw. überhaupt nötig?</text>
               </Number>
             </Tuplet>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>41</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
           <Rest>
             <BeamMode>auto</BeamMode>
-            <durationType>eighth</durationType>
+            <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>41</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <endTuplet/>
           <Tuplet>
             <normalNotes>4</normalNotes>
@@ -84423,16 +84002,12 @@ bzw. überhaupt nötig?</text>
               </Number>
             </Tuplet>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>41</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -84455,16 +84030,12 @@ bzw. überhaupt nötig?</text>
               </Number>
             </Tuplet>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>41</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -84494,7 +84065,7 @@ bzw. überhaupt nötig?</text>
               </Number>
             </Tuplet>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>41</pitch>
               <tpc>13</tpc>
@@ -84502,19 +84073,15 @@ bzw. überhaupt nötig?</text>
             </Chord>
           <Rest>
             <BeamMode>auto</BeamMode>
-            <durationType>eighth</durationType>
+            <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>41</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <endTuplet/>
           </voice>
         </Measure>
@@ -91836,82 +91403,75 @@ bzw. überhaupt nötig?</text>
             <text>pizz.</text>
             </StaffText>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>half</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
-              <pitch>89</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
-            </Rest>
-          <Rest>
-            <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <pitch>89</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
-            </Rest>
-          <Rest>
-            <durationType>16th</durationType>
             </Rest>
           </voice>
         </Measure>
       <Measure>
         <voice>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>quarter</durationType>
             </Rest>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <pitch>89</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
-            <durationType>eighth</durationType>
+            <BeamMode>auto</BeamMode>
+            <durationType>16th</durationType>
             </Rest>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
-              <pitch>89</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
-            <durationType>eighth</durationType>
+            <BeamMode>auto</BeamMode>
+            <durationType>16th</durationType>
             </Rest>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>quarter</durationType>
             </Rest>
           </voice>
@@ -91919,53 +91479,51 @@ bzw. überhaupt nötig?</text>
       <Measure>
         <voice>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>89</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <pitch>89</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
-            <durationType>16th</durationType>
-            </Rest>
-          <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>quarter</durationType>
             </Rest>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
-              <pitch>89</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           </voice>
@@ -91973,61 +91531,55 @@ bzw. überhaupt nötig?</text>
       <Measure>
         <voice>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
-              <pitch>89</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
-            <durationType>16th</durationType>
-            </Rest>
-          <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <pitch>89</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
-            <durationType>16th</durationType>
-            </Rest>
-          <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>quarter</durationType>
             </Rest>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>89</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>89</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           </voice>
@@ -92035,43 +91587,36 @@ bzw. überhaupt nötig?</text>
       <Measure>
         <voice>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>quarter</durationType>
             </Rest>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>quarter</durationType>
             </Rest>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
-            <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
-              <pitch>89</pitch>
-              <tpc>13</tpc>
-              </Note>
-            </Chord>
-          <Rest>
-            <durationType>16th</durationType>
-            </Rest>
-          <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>89</pitch>
-              <tpc>13</tpc>
-              </Note>
-            </Chord>
-          <Rest>
             <durationType>eighth</durationType>
-            </Rest>
+            <Note>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>eighth</durationType>
+            <Note>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
           <Rest>
-            <durationType>16th</durationType>
+            <BeamMode>auto</BeamMode>
+            <durationType>eighth</durationType>
             </Rest>
           </voice>
         </Measure>
@@ -92129,11 +91674,6 @@ bzw. überhaupt nötig?</text>
           <Chord>
             <durationType>16th</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>89</pitch>
               <tpc>13</tpc>
               </Note>
@@ -92177,36 +91717,23 @@ bzw. überhaupt nötig?</text>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>89</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>89</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>quarter</durationType>
@@ -92250,23 +91777,14 @@ bzw. überhaupt nötig?</text>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>89</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>89</pitch>
               <tpc>13</tpc>
@@ -92275,10 +91793,6 @@ bzw. überhaupt nötig?</text>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
-            </Rest>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
             </Rest>
           </voice>
         </Measure>
@@ -92299,11 +91813,6 @@ bzw. überhaupt nötig?</text>
           <Chord>
             <durationType>16th</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>89</pitch>
               <tpc>13</tpc>
               </Note>
@@ -92340,21 +91849,12 @@ bzw. überhaupt nötig?</text>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>89</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>quarter</durationType>
@@ -99153,80 +98653,75 @@ bzw. überhaupt nötig?</text>
             <text>pizz.</text>
             </StaffText>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>half</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <subtype>accidentalFlat</subtype>
-                </Accidental>
-              <pitch>82</pitch>
-              <tpc>12</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
-            </Rest>
-          <Rest>
-            <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <pitch>82</pitch>
-              <tpc>12</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
-            </Rest>
-          <Rest>
-            <durationType>16th</durationType>
             </Rest>
           </voice>
         </Measure>
       <Measure>
         <voice>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>quarter</durationType>
             </Rest>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalFlat</subtype>
-                </Accidental>
-              <pitch>82</pitch>
-              <tpc>12</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
-            <durationType>eighth</durationType>
+            <BeamMode>auto</BeamMode>
+            <durationType>16th</durationType>
             </Rest>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <pitch>82</pitch>
-              <tpc>12</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
-            <durationType>eighth</durationType>
+            <BeamMode>auto</BeamMode>
+            <durationType>16th</durationType>
             </Rest>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>quarter</durationType>
             </Rest>
           </voice>
@@ -99234,53 +98729,51 @@ bzw. überhaupt nötig?</text>
       <Measure>
         <voice>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalFlat</subtype>
-                </Accidental>
-              <pitch>82</pitch>
-              <tpc>12</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <pitch>82</pitch>
-              <tpc>12</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
-            <durationType>16th</durationType>
-            </Rest>
-          <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>quarter</durationType>
             </Rest>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>82</pitch>
-              <tpc>12</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           </voice>
@@ -99288,64 +98781,55 @@ bzw. überhaupt nötig?</text>
       <Measure>
         <voice>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <subtype>accidentalFlat</subtype>
-                </Accidental>
-              <pitch>82</pitch>
-              <tpc>12</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
-            <durationType>16th</durationType>
-            </Rest>
-          <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <pitch>82</pitch>
-              <tpc>12</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
-            <durationType>16th</durationType>
-            </Rest>
-          <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>quarter</durationType>
             </Rest>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalFlat</subtype>
-                </Accidental>
-              <pitch>82</pitch>
-              <tpc>12</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>82</pitch>
-              <tpc>12</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           </voice>
@@ -99353,41 +98837,36 @@ bzw. überhaupt nötig?</text>
       <Measure>
         <voice>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>quarter</durationType>
             </Rest>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>quarter</durationType>
             </Rest>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
-            <Note>
-              <Accidental>
-                <subtype>accidentalFlat</subtype>
-                </Accidental>
-              <pitch>82</pitch>
-              <tpc>12</tpc>
-              </Note>
-            </Chord>
-          <Rest>
-            <durationType>16th</durationType>
-            </Rest>
-          <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>82</pitch>
-              <tpc>12</tpc>
-              </Note>
-            </Chord>
-          <Rest>
             <durationType>eighth</durationType>
-            </Rest>
+            <Note>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>eighth</durationType>
+            <Note>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
           <Rest>
-            <durationType>16th</durationType>
+            <BeamMode>auto</BeamMode>
+            <durationType>eighth</durationType>
             </Rest>
           </voice>
         </Measure>
@@ -99467,11 +98946,6 @@ bzw. überhaupt nötig?</text>
           <Chord>
             <durationType>16th</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalFlat</subtype>
-                </Accidental>
               <pitch>82</pitch>
               <tpc>12</tpc>
               </Note>
@@ -99496,7 +98970,7 @@ bzw. überhaupt nötig?</text>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <Accidental>
                 <subtype>accidentalFlat</subtype>
@@ -99507,23 +98981,15 @@ bzw. überhaupt nötig?</text>
             </Chord>
           <Rest>
             <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
-          <Rest>
-            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>82</pitch>
               <tpc>12</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>quarter</durationType>
@@ -99535,11 +99001,6 @@ bzw. überhaupt nötig?</text>
           <Chord>
             <durationType>16th</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalFlat</subtype>
-                </Accidental>
               <pitch>82</pitch>
               <tpc>12</tpc>
               </Note>
@@ -99572,7 +99033,7 @@ bzw. überhaupt nötig?</text>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <Accidental>
                 <subtype>accidentalFlat</subtype>
@@ -99581,12 +99042,8 @@ bzw. überhaupt nötig?</text>
               <tpc>12</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>82</pitch>
               <tpc>12</tpc>
@@ -99595,10 +99052,6 @@ bzw. überhaupt nötig?</text>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
-            </Rest>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
             </Rest>
           </voice>
         </Measure>
@@ -99652,11 +99105,6 @@ bzw. überhaupt nötig?</text>
           <Chord>
             <durationType>16th</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalFlat</subtype>
-                </Accidental>
               <pitch>82</pitch>
               <tpc>12</tpc>
               </Note>
@@ -99666,7 +99114,7 @@ bzw. überhaupt nötig?</text>
       <Measure>
         <voice>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <Accidental>
                 <subtype>accidentalFlat</subtype>
@@ -99675,36 +99123,24 @@ bzw. überhaupt nötig?</text>
               <tpc>12</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>82</pitch>
               <tpc>12</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>82</pitch>
               <tpc>12</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>quarter</durationType>
@@ -106678,69 +106114,59 @@ bzw. überhaupt nötig?</text>
             <text>pizz.</text>
             </StaffText>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
-              </Note>
-            </Chord>
-          <Rest>
             <durationType>eighth</durationType>
-            </Rest>
-          <Rest>
-            <durationType>16th</durationType>
-            </Rest>
-          <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
             <Note>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
-            <durationType>16th</durationType>
-            </Rest>
-          <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
-            <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
-              </Note>
-            </Chord>
-          <Rest>
-            <durationType>eighth</durationType>
-            </Rest>
-          <Rest>
-            <durationType>16th</durationType>
-            </Rest>
-          <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
-              </Note>
-            </Chord>
-          <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
+            <durationType>eighth</durationType>
+            <Note>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>eighth</durationType>
+            <Note>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Rest>
+            <BeamMode>auto</BeamMode>
+            <durationType>eighth</durationType>
+            </Rest>
+          <Chord>
+            <durationType>eighth</durationType>
+            <Note>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Rest>
+            <BeamMode>auto</BeamMode>
+            <durationType>16th</durationType>
+            </Rest>
+          <Chord>
             <durationType>16th</durationType>
             <Note>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           </voice>
@@ -106748,64 +106174,67 @@ bzw. überhaupt nötig?</text>
       <Measure>
         <voice>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           </voice>
@@ -106813,88 +106242,83 @@ bzw. überhaupt nötig?</text>
       <Measure>
         <voice>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>eighth</durationType>
+            <Note>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
-            <durationType>16th</durationType>
-            </Rest>
-          <Rest>
-            <durationType>16th</durationType>
-            </Rest>
-          <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
-            <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
-              </Note>
-            </Chord>
-          <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           </voice>
@@ -106902,72 +106326,67 @@ bzw. überhaupt nötig?</text>
       <Measure>
         <voice>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
-            <durationType>16th</durationType>
-            </Rest>
-          <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
-            <durationType>16th</durationType>
-            </Rest>
-          <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           </voice>
@@ -106975,82 +106394,61 @@ bzw. überhaupt nötig?</text>
       <Measure>
         <voice>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
-            <durationType>16th</durationType>
-            </Rest>
-          <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
-          <Rest>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
-          <Rest>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
-          <Rest>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
-          <Rest>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <pitch>53</pitch>
-              <tpc>13</tpc>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
-          <Rest>
-            <durationType>16th</durationType>
-            </Rest>
           </voice>
         </Measure>
       <Measure>
@@ -107118,11 +106516,6 @@ bzw. überhaupt nötig?</text>
           <Chord>
             <durationType>16th</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>53</pitch>
               <tpc>13</tpc>
               </Note>
@@ -107169,36 +106562,23 @@ bzw. überhaupt nötig?</text>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>53</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>53</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
@@ -107245,80 +106625,51 @@ bzw. überhaupt nötig?</text>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>53</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>53</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>53</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>53</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>53</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>53</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           </voice>
         </Measure>
       <Measure>
@@ -107334,11 +106685,6 @@ bzw. überhaupt nötig?</text>
           <Chord>
             <durationType>16th</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>53</pitch>
               <tpc>13</tpc>
               </Note>
@@ -107400,47 +106746,30 @@ bzw. überhaupt nötig?</text>
       <Measure>
         <voice>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <bracket>1</bracket>
-                <role>1</role>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
               <pitch>53</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>53</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>53</pitch>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
@@ -114456,88 +113785,79 @@ bzw. überhaupt nötig?</text>
             <text>pizz.</text>
             </StaffText>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
-            <Note>
-              <Accidental>
-                <subtype>accidentalFlat</subtype>
-                </Accidental>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
-              </Note>
-            </Chord>
-          <Rest>
-            <durationType>16th</durationType>
-            </Rest>
-          <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
-              </Note>
-            </Chord>
-          <Rest>
             <durationType>eighth</durationType>
-            </Rest>
-          <Rest>
-            <durationType>16th</durationType>
-            </Rest>
-          <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
             <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
-              </Note>
-            </Chord>
-          <Rest>
-            <durationType>16th</durationType>
-            </Rest>
-          <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
+            <durationType>eighth</durationType>
+            </Rest>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           </voice>
@@ -114545,78 +113865,83 @@ bzw. überhaupt nötig?</text>
       <Measure>
         <voice>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <Accidental>
-                <subtype>accidentalFlat</subtype>
-                </Accidental>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           </voice>
@@ -114624,91 +113949,83 @@ bzw. überhaupt nötig?</text>
       <Measure>
         <voice>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <Accidental>
-                <subtype>accidentalFlat</subtype>
-                </Accidental>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>eighth</durationType>
+            <Note>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>eighth</durationType>
+            <Note>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
-            <durationType>16th</durationType>
-            </Rest>
-          <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
-              </Note>
-            </Chord>
-          <Rest>
-            <durationType>16th</durationType>
-            </Rest>
-          <Rest>
-            <durationType>16th</durationType>
-            </Rest>
-          <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
-              </Note>
-            </Chord>
-          <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           </voice>
@@ -114716,91 +114033,95 @@ bzw. überhaupt nötig?</text>
       <Measure>
         <voice>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <Accidental>
-                <subtype>accidentalFlat</subtype>
-                </Accidental>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>16th</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
             <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           </voice>
@@ -114808,91 +114129,71 @@ bzw. überhaupt nötig?</text>
       <Measure>
         <voice>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <Accidental>
-                <subtype>accidentalFlat</subtype>
-                </Accidental>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
-          <Rest>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
-            <durationType>16th</durationType>
-            </Rest>
-          <Rest>
+            <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
-              </Note>
-            </Chord>
-          <Rest>
-            <durationType>16th</durationType>
-            </Rest>
-          <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
-              </Note>
-            </Chord>
-          <Rest>
-            <durationType>16th</durationType>
-            </Rest>
-          <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
-              </Note>
-            </Chord>
-          <Rest>
-            <durationType>16th</durationType>
-            </Rest>
-          <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
-              </Note>
-            </Chord>
-          <Rest>
-            <durationType>16th</durationType>
-            </Rest>
-          <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Chord>
-            <BeamMode>no</BeamMode>
+            <durationType>eighth</durationType>
+            <Note>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>eighth</durationType>
+            <Note>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>eighth</durationType>
+            <Note>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
             <durationType>16th</durationType>
             <Note>
-              <pitch>39</pitch>
-              <tpc>11</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           </voice>
@@ -115104,7 +114405,7 @@ bzw. überhaupt nötig?</text>
       <Measure>
         <voice>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <Accidental>
                 <subtype>accidentalFlat</subtype>
@@ -115113,69 +114414,45 @@ bzw. überhaupt nötig?</text>
               <tpc>11</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>39</pitch>
               <tpc>11</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>39</pitch>
               <tpc>11</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>39</pitch>
               <tpc>11</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>39</pitch>
               <tpc>11</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <pitch>39</pitch>
               <tpc>11</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -115279,7 +114556,7 @@ bzw. überhaupt nötig?</text>
       <Measure>
         <voice>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Note>
               <Accidental>
                 <subtype>accidentalFlat</subtype>
@@ -115288,10 +114565,6 @@ bzw. überhaupt nötig?</text>
               <tpc>11</tpc>
               </Note>
             </Chord>
-          <Rest>
-            <BeamMode>auto</BeamMode>
-            <durationType>16th</durationType>
-            </Rest>
           <Chord>
             <durationType>16th</durationType>
             <Note>
