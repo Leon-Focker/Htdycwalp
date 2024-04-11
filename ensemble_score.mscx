@@ -10890,7 +10890,7 @@
           </voice>
         </Measure>
       <Measure>
-        <vspacerDown>7.93</vspacerDown>
+        <vspacerDown>9.43</vspacerDown>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -10908,7 +10908,7 @@
             <frameType>1</frameType>
             <framePadding>5</framePadding>
             <frameBgColor r="255" g="85" b="0" a="0"/>
-            <text>.                                                                                                                                                                                                                                                                                  </text>
+            <text>.                                                                                                                                                                                        </text>
             </StaffText>
           <Spanner type="HairPin">
             <HairPin>
@@ -11007,6 +11007,10 @@
               <tpc>15</tpc>
               </Note>
             </Chord>
+          <StaffText>
+            <style>Expression</style>
+            <text>slow acc.</text>
+            </StaffText>
           <Beam>
             <distribute>1</distribute>
             </Beam>
@@ -20998,7 +21002,7 @@
           </voice>
         </Measure>
       <Measure>
-        <vspacerDown>7.93</vspacerDown>
+        <vspacerDown>9.93</vspacerDown>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -21011,11 +21015,12 @@
             <autoplace>0</autoplace>
             <z>1</z>
             <color r="0" g="0" b="0" a="0"/>
-            <offset x="-2.44" y="2.38"/>
+            <offset x="-2.44" y="0.88"/>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
             <frameBgColor r="255" g="85" b="0" a="0"/>
-            <text>.                                                                                                                                                                                                                                                                                  </text>
+            <text>.                                                                                                                                                                                        
+</text>
             </StaffText>
           <Spanner type="HairPin">
             <HairPin>
@@ -21114,6 +21119,10 @@
               <tpc>17</tpc>
               </Note>
             </Chord>
+          <StaffText>
+            <style>Expression</style>
+            <text>slow rit.</text>
+            </StaffText>
           <Beam>
             <distribute>1</distribute>
             </Beam>
@@ -32535,7 +32544,7 @@
           </voice>
         </Measure>
       <Measure>
-        <vspacerDown>8.93</vspacerDown>
+        <vspacerDown>10.93</vspacerDown>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -32548,11 +32557,12 @@
             <autoplace>0</autoplace>
             <z>1</z>
             <color r="0" g="0" b="0" a="0"/>
-            <offset x="-2.44" y="2.38"/>
+            <offset x="-2.44" y="0.38"/>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
             <frameBgColor r="255" g="85" b="0" a="0"/>
-            <text>.                                                                                                                                                                                                                                                                                  
+            <text>.                                                                                                                                                                                        
+
 </text>
             </StaffText>
           <Spanner type="HairPin">
@@ -32761,6 +32771,10 @@
         </Measure>
       <Measure>
         <voice>
+          <StaffText>
+            <style>Expression</style>
+            <text>slow acc.</text>
+            </StaffText>
           <Beam>
             <distribute>1</distribute>
             </Beam>
@@ -43364,11 +43378,12 @@
             <autoplace>0</autoplace>
             <z>1</z>
             <color r="0" g="0" b="0" a="0"/>
-            <offset x="-2.44" y="2.38"/>
+            <offset x="-2.44" y="1.38"/>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
             <frameBgColor r="255" g="85" b="0" a="0"/>
-            <text>.                                                                                                                                                                                                                                                                                  </text>
+            <text>.                                                                                                                                                                                        
+</text>
             </StaffText>
           <Spanner type="HairPin">
             <HairPin>
@@ -43563,6 +43578,10 @@
         </Measure>
       <Measure>
         <voice>
+          <StaffText>
+            <style>Expression</style>
+            <text>slow rit.</text>
+            </StaffText>
           <Beam>
             <distribute>1</distribute>
             </Beam>
@@ -59262,6 +59281,10 @@ bzw. überhaupt nötig?</text>
             <durationType>measure</durationType>
             <duration>4/4</duration>
             </Rest>
+          <Clef>
+            <concertClefType>G</concertClefType>
+            <transposingClefType>G</transposingClefType>
+            </Clef>
           </voice>
         </Measure>
       <Measure>
@@ -59873,7 +59896,7 @@ bzw. überhaupt nötig?</text>
           </voice>
         </Measure>
       <Measure>
-        <vspacerDown>7.43</vspacerDown>
+        <vspacerDown>7.93</vspacerDown>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -59892,18 +59915,10 @@ bzw. überhaupt nötig?</text>
             <frameBgColor r="255" g="85" b="0" a="0"/>
             <text>.                                                                                                                                                                                                                                                                                  </text>
             </StaffText>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
+          <StaffText>
+            <color r="255" g="0" b="0" a="255"/>
+            <text>cup mute ?</text>
+            </StaffText>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -59942,19 +59957,31 @@ bzw. überhaupt nötig?</text>
               <tpc>20</tpc>
               </Note>
             </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
+              </Note>
+            </Chord>
+          <StaffText>
+            <style>Expression</style>
+            <text>slow rit.</text>
+            </StaffText>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -59990,19 +60017,6 @@ bzw. überhaupt nötig?</text>
               <tpc>20</tpc>
               </Note>
             </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -60024,69 +60038,6 @@ bzw. überhaupt nötig?</text>
               <tpc>20</tpc>
               </Note>
             </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              </Note>
-            </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              </Note>
-            </Chord>
-          <endTuplet/>
           <BarLine>
             <visible>0</visible>
             </BarLine>
@@ -60094,18 +60045,6 @@ bzw. überhaupt nötig?</text>
         </Measure>
       <Measure>
         <voice>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -60145,19 +60084,31 @@ bzw. überhaupt nötig?</text>
               <tpc>20</tpc>
               </Note>
             </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
+              </Note>
+            </Chord>
+          <StaffText>
+            <style>Expression</style>
+            <text>slow acc.</text>
+            </StaffText>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -60193,19 +60144,6 @@ bzw. überhaupt nötig?</text>
               <tpc>20</tpc>
               </Note>
             </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -60227,69 +60165,6 @@ bzw. überhaupt nötig?</text>
               <tpc>20</tpc>
               </Note>
             </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              </Note>
-            </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              </Note>
-            </Chord>
-          <endTuplet/>
           <BarLine>
             <visible>0</visible>
             </BarLine>
@@ -60297,23 +60172,12 @@ bzw. überhaupt nötig?</text>
         </Measure>
       <Measure>
         <voice>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
               <Accidental>
                 <subtype>accidentalSharp</subtype>
+                <visible>0</visible>
                 </Accidental>
               <pitch>66</pitch>
               <tpc>20</tpc>
@@ -60347,19 +60211,6 @@ bzw. überhaupt nötig?</text>
               <tpc>20</tpc>
               </Note>
             </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -60395,19 +60246,6 @@ bzw. überhaupt nötig?</text>
               <tpc>20</tpc>
               </Note>
             </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -60443,19 +60281,6 @@ bzw. überhaupt nötig?</text>
               <tpc>20</tpc>
               </Note>
             </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -60463,35 +60288,6 @@ bzw. überhaupt nötig?</text>
               <tpc>20</tpc>
               </Note>
             </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              </Note>
-            </Chord>
-          <endTuplet/>
           <BarLine>
             <visible>0</visible>
             </BarLine>
@@ -66974,7 +66770,7 @@ bzw. überhaupt nötig?</text>
           </voice>
         </Measure>
       <Measure>
-        <vspacerDown>7.43</vspacerDown>
+        <vspacerDown>8.93</vspacerDown>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -66993,18 +66789,6 @@ bzw. überhaupt nötig?</text>
             <frameBgColor r="255" g="85" b="0" a="0"/>
             <text>.                                                                                                                                                                                                                                                                                  </text>
             </StaffText>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -67048,18 +66832,63 @@ bzw. überhaupt nötig?</text>
               <tpc2>21</tpc2>
               </Note>
             </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
+              <tpc2>21</tpc2>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
+              <tpc2>21</tpc2>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
+              <tpc2>21</tpc2>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
+              <tpc2>21</tpc2>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
+              <tpc2>21</tpc2>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
+              <tpc2>21</tpc2>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
+              <tpc2>21</tpc2>
+              </Note>
+            </Chord>
           <Beam>
-            <distribute>1</distribute>
             </Beam>
           <Chord>
             <durationType>16th</durationType>
@@ -67093,121 +66922,6 @@ bzw. überhaupt nötig?</text>
               <tpc2>21</tpc2>
               </Note>
             </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              <tpc2>21</tpc2>
-              </Note>
-            </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              <tpc2>21</tpc2>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              <tpc2>21</tpc2>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              <tpc2>21</tpc2>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              <tpc2>21</tpc2>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              <tpc2>21</tpc2>
-              </Note>
-            </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              <tpc2>21</tpc2>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              <tpc2>21</tpc2>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              <tpc2>21</tpc2>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              <tpc2>21</tpc2>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              <tpc2>21</tpc2>
-              </Note>
-            </Chord>
-          <endTuplet/>
           <BarLine>
             <visible>0</visible>
             </BarLine>
@@ -67215,18 +66929,10 @@ bzw. überhaupt nötig?</text>
         </Measure>
       <Measure>
         <voice>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
+          <StaffText>
+            <style>Expression</style>
+            <text>slow acc.</text>
+            </StaffText>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -67271,19 +66977,6 @@ bzw. überhaupt nötig?</text>
               <tpc2>21</tpc2>
               </Note>
             </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -67324,19 +67017,6 @@ bzw. überhaupt nötig?</text>
               <tpc2>21</tpc2>
               </Note>
             </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -67377,19 +67057,6 @@ bzw. überhaupt nötig?</text>
               <tpc2>21</tpc2>
               </Note>
             </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -67398,39 +67065,6 @@ bzw. überhaupt nötig?</text>
               <tpc2>21</tpc2>
               </Note>
             </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              <tpc2>21</tpc2>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              <tpc2>21</tpc2>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              <tpc2>21</tpc2>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              <tpc2>21</tpc2>
-              </Note>
-            </Chord>
-          <endTuplet/>
           <BarLine>
             <visible>0</visible>
             </BarLine>
@@ -67438,23 +67072,12 @@ bzw. überhaupt nötig?</text>
         </Measure>
       <Measure>
         <voice>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
               <Accidental>
                 <subtype>accidentalSharp</subtype>
+                <visible>0</visible>
                 </Accidental>
               <pitch>66</pitch>
               <tpc>20</tpc>
@@ -67493,19 +67116,34 @@ bzw. überhaupt nötig?</text>
               <tpc2>21</tpc2>
               </Note>
             </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
+              <tpc2>21</tpc2>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
+              <tpc2>21</tpc2>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>66</pitch>
+              <tpc>20</tpc>
+              <tpc2>21</tpc2>
+              </Note>
+            </Chord>
+          <StaffText>
+            <style>Expression</style>
+            <text>slow rit.</text>
+            </StaffText>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -67546,19 +67184,6 @@ bzw. überhaupt nötig?</text>
               <tpc2>21</tpc2>
               </Note>
             </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -67583,76 +67208,6 @@ bzw. überhaupt nötig?</text>
               <tpc2>21</tpc2>
               </Note>
             </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              <tpc2>21</tpc2>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              <tpc2>21</tpc2>
-              </Note>
-            </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              <tpc2>21</tpc2>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              <tpc2>21</tpc2>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              <tpc2>21</tpc2>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              <tpc2>21</tpc2>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              <tpc2>21</tpc2>
-              </Note>
-            </Chord>
-          <endTuplet/>
           <BarLine>
             <visible>0</visible>
             </BarLine>
@@ -75413,6 +74968,14 @@ bzw. überhaupt nötig?</text>
             <durationType>measure</durationType>
             <duration>16/4</duration>
             </Rest>
+          <location>
+            <fractions>1/1</fractions>
+            </location>
+          <Clef>
+            <concertClefType>F</concertClefType>
+            <transposingClefType>F</transposingClefType>
+            <linkedMain/>
+            </Clef>
           </voice>
         </Measure>
       <Measure>
@@ -75445,10 +75008,17 @@ bzw. überhaupt nötig?</text>
             <durationType>measure</durationType>
             <duration>4/4</duration>
             </Rest>
+          <Clef>
+            <concertClefType>F</concertClefType>
+            <transposingClefType>F</transposingClefType>
+            <linked>
+              <indexDiff>-1</indexDiff>
+              </linked>
+            </Clef>
           </voice>
         </Measure>
       <Measure>
-        <vspacerDown>7.93</vspacerDown>
+        <vspacerDown>9.43</vspacerDown>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -75461,24 +75031,13 @@ bzw. überhaupt nötig?</text>
             <autoplace>0</autoplace>
             <z>1</z>
             <color r="0" g="0" b="0" a="0"/>
-            <offset x="-2.44" y="2.38"/>
+            <offset x="-2.44" y="1.38"/>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
             <frameBgColor r="255" g="85" b="0" a="0"/>
-            <text>.                                                                                                                                                                                                                                                                                  </text>
+            <text>.                                                                                                                                                                                                                                                                                  
+</text>
             </StaffText>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -75517,19 +75076,6 @@ bzw. überhaupt nötig?</text>
               <tpc>21</tpc>
               </Note>
             </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -75565,19 +75111,6 @@ bzw. überhaupt nötig?</text>
               <tpc>21</tpc>
               </Note>
             </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -75613,19 +75146,6 @@ bzw. überhaupt nötig?</text>
               <tpc>21</tpc>
               </Note>
             </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -75633,35 +75153,6 @@ bzw. überhaupt nötig?</text>
               <tpc>21</tpc>
               </Note>
             </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <endTuplet/>
           <BarLine>
             <visible>0</visible>
             </BarLine>
@@ -75669,18 +75160,133 @@ bzw. überhaupt nötig?</text>
         </Measure>
       <Measure>
         <voice>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <Accidental>
+                <subtype>accidentalSharp</subtype>
+                <visible>0</visible>
+                </Accidental>
+              <pitch>49</pitch>
+              <tpc>21</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>49</pitch>
+              <tpc>21</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>49</pitch>
+              <tpc>21</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>49</pitch>
+              <tpc>21</tpc>
+              </Note>
+            </Chord>
+          <StaffText>
+            <style>Expression</style>
+            <text>slow rit.</text>
+            </StaffText>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>49</pitch>
+              <tpc>21</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>49</pitch>
+              <tpc>21</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>49</pitch>
+              <tpc>21</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>49</pitch>
+              <tpc>21</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>49</pitch>
+              <tpc>21</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>49</pitch>
+              <tpc>21</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>49</pitch>
+              <tpc>21</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>49</pitch>
+              <tpc>21</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>49</pitch>
+              <tpc>21</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>49</pitch>
+              <tpc>21</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>49</pitch>
+              <tpc>21</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>49</pitch>
+              <tpc>21</tpc>
+              </Note>
+            </Chord>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -75720,19 +75326,6 @@ bzw. überhaupt nötig?</text>
               <tpc>21</tpc>
               </Note>
             </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -75754,235 +75347,6 @@ bzw. überhaupt nötig?</text>
               <tpc>21</tpc>
               </Note>
             </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <endTuplet/>
-          <BarLine>
-            <visible>0</visible>
-            </BarLine>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <Accidental>
-                <subtype>accidentalSharp</subtype>
-                </Accidental>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -76021,19 +75385,6 @@ bzw. überhaupt nötig?</text>
               <tpc>22</tpc>
               </Note>
             </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -76055,21 +75406,6 @@ bzw. überhaupt nötig?</text>
               <tpc>22</tpc>
               </Note>
             </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>56</pitch>
-              <tpc>22</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>56</pitch>
-              <tpc>22</tpc>
-              </Note>
-            </Chord>
-          <endTuplet/>
           <BarLine>
             <visible>0</visible>
             </BarLine>
@@ -83603,6 +82939,14 @@ bzw. überhaupt nötig?</text>
             <durationType>measure</durationType>
             <duration>16/4</duration>
             </Rest>
+          <location>
+            <fractions>1/1</fractions>
+            </location>
+          <Clef>
+            <concertClefType>F8vb</concertClefType>
+            <transposingClefType>F8vb</transposingClefType>
+            <linkedMain/>
+            </Clef>
           </voice>
         </Measure>
       <Measure>
@@ -83635,10 +82979,17 @@ bzw. überhaupt nötig?</text>
             <durationType>measure</durationType>
             <duration>4/4</duration>
             </Rest>
+          <Clef>
+            <concertClefType>F8vb</concertClefType>
+            <transposingClefType>F8vb</transposingClefType>
+            <linked>
+              <indexDiff>-1</indexDiff>
+              </linked>
+            </Clef>
           </voice>
         </Measure>
       <Measure>
-        <vspacerDown>9.93</vspacerDown>
+        <vspacerDown>11.93</vspacerDown>
         <voice>
           <BarLine>
             <span>1</span>
@@ -83652,24 +83003,13 @@ bzw. überhaupt nötig?</text>
             <autoplace>0</autoplace>
             <z>1</z>
             <color r="0" g="0" b="0" a="0"/>
-            <offset x="-2.44" y="2.38"/>
+            <offset x="-2.44" y="1.38"/>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
             <frameBgColor r="255" g="85" b="0" a="0"/>
-            <text>.                                                                                                                                                                                                                                                                                  </text>
+            <text>.                                                                                                                                                                                                                                                                                  
+</text>
             </StaffText>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -83708,19 +83048,6 @@ bzw. überhaupt nötig?</text>
               <tpc>21</tpc>
               </Note>
             </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -83756,19 +83083,6 @@ bzw. überhaupt nötig?</text>
               <tpc>21</tpc>
               </Note>
             </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -83804,19 +83118,6 @@ bzw. überhaupt nötig?</text>
               <tpc>21</tpc>
               </Note>
             </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -83824,35 +83125,6 @@ bzw. überhaupt nötig?</text>
               <tpc>21</tpc>
               </Note>
             </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <endTuplet/>
           <BarLine>
             <visible>0</visible>
             </BarLine>
@@ -83860,18 +83132,6 @@ bzw. überhaupt nötig?</text>
         </Measure>
       <Measure>
         <voice>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -83911,19 +83171,6 @@ bzw. überhaupt nötig?</text>
               <tpc>21</tpc>
               </Note>
             </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -83959,19 +83206,6 @@ bzw. überhaupt nötig?</text>
               <tpc>21</tpc>
               </Note>
             </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -84007,19 +83241,6 @@ bzw. überhaupt nötig?</text>
               <tpc>21</tpc>
               </Note>
             </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -84027,35 +83248,6 @@ bzw. überhaupt nötig?</text>
               <tpc>21</tpc>
               </Note>
             </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <endTuplet/>
           <BarLine>
             <visible>0</visible>
             </BarLine>
@@ -84063,23 +83255,16 @@ bzw. überhaupt nötig?</text>
         </Measure>
       <Measure>
         <voice>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
+          <StaffText>
+            <style>Expression</style>
+            <text>slow rit.</text>
+            </StaffText>
           <Chord>
             <durationType>16th</durationType>
             <Note>
               <Accidental>
                 <subtype>accidentalSharp</subtype>
+                <visible>0</visible>
                 </Accidental>
               <pitch>49</pitch>
               <tpc>21</tpc>
@@ -84113,19 +83298,6 @@ bzw. überhaupt nötig?</text>
               <tpc>21</tpc>
               </Note>
             </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -84161,19 +83333,6 @@ bzw. überhaupt nötig?</text>
               <tpc>21</tpc>
               </Note>
             </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -84209,19 +83368,6 @@ bzw. überhaupt nötig?</text>
               <tpc>21</tpc>
               </Note>
             </Chord>
-          <endTuplet/>
-          <Tuplet>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>16th</baseNote>
-            <Number>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -84229,35 +83375,6 @@ bzw. überhaupt nötig?</text>
               <tpc>21</tpc>
               </Note>
             </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <endTuplet/>
           <BarLine>
             <visible>0</visible>
             </BarLine>
@@ -92065,7 +91182,7 @@ bzw. überhaupt nötig?</text>
           </voice>
         </Measure>
       <Measure>
-        <vspacerDown>7.43</vspacerDown>
+        <vspacerDown>11.93</vspacerDown>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -92078,11 +91195,12 @@ bzw. überhaupt nötig?</text>
             <autoplace>0</autoplace>
             <z>1</z>
             <color r="0" g="0" b="0" a="0"/>
-            <offset x="-2.44" y="0.88"/>
+            <offset x="-2.44" y="-1.12"/>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
             <frameBgColor r="255" g="85" b="0" a="0"/>
             <text>.                                                                                                                                                                                                                                                                                  
+
 </text>
             </StaffText>
           <Beam>
@@ -92102,10 +91220,6 @@ bzw. überhaupt nötig?</text>
               <tpc>13</tpc>
               </Note>
             </Chord>
-          <StaffText>
-            <visible>0</visible>
-            <text>schneller werden</text>
-            </StaffText>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -92151,6 +91265,10 @@ bzw. überhaupt nötig?</text>
               <tpc>13</tpc>
               </Note>
             </Chord>
+          <StaffText>
+            <style>Expression</style>
+            <text>slow acc.</text>
+            </StaffText>
           <Beam>
             <distribute>1</distribute>
             </Beam>
@@ -92313,6 +91431,10 @@ bzw. überhaupt nötig?</text>
               <tpc>13</tpc>
               </Note>
             </Chord>
+          <StaffText>
+            <style>Expression</style>
+            <text>slow rit.</text>
+            </StaffText>
           <Beam>
             <distribute>1</distribute>
             </Beam>
@@ -99210,9 +98332,10 @@ bzw. überhaupt nötig?</text>
           </voice>
         </Measure>
       <Measure>
-        <vspacerDown>6.43</vspacerDown>
+        <vspacerDown>7.93</vspacerDown>
         <voice>
           <BarLine>
+            <visible>0</visible>
             </BarLine>
           <Dynamic>
             <subtype>p</subtype>
@@ -99222,11 +98345,13 @@ bzw. überhaupt nötig?</text>
             <autoplace>0</autoplace>
             <z>1</z>
             <color r="0" g="0" b="0" a="0"/>
-            <offset x="-2.44" y="2.38"/>
+            <offset x="-2.44" y="-1.12"/>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
             <frameBgColor r="255" g="85" b="0" a="0"/>
-            <text>.                                                                                                                                                                                                                                                                                  </text>
+            <text>.                                                                                                                                                                                                                                                                                  
+
+</text>
             </StaffText>
           <Beam>
             <distribute>1</distribute>
@@ -99248,10 +98373,6 @@ bzw. überhaupt nötig?</text>
               <tpc>10</tpc>
               </Note>
             </Chord>
-          <StaffText>
-            <visible>0</visible>
-            <text>schneller werden</text>
-            </StaffText>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -99297,6 +98418,10 @@ bzw. überhaupt nötig?</text>
               <tpc>10</tpc>
               </Note>
             </Chord>
+          <StaffText>
+            <style>Expression</style>
+            <text>slow rit.</text>
+            </StaffText>
           <Beam>
             <distribute>1</distribute>
             </Beam>
@@ -99509,6 +98634,7 @@ bzw. überhaupt nötig?</text>
             <Note>
               <Accidental>
                 <subtype>accidentalFlat</subtype>
+                <visible>0</visible>
                 </Accidental>
               <pitch>80</pitch>
               <tpc>10</tpc>
@@ -99566,6 +98692,10 @@ bzw. überhaupt nötig?</text>
               <tpc>10</tpc>
               </Note>
             </Chord>
+          <StaffText>
+            <style>Expression</style>
+            <text>slow acc.</text>
+            </StaffText>
           <Beam>
             <distribute>1</distribute>
             </Beam>
@@ -106858,7 +105988,7 @@ bzw. überhaupt nötig?</text>
           </voice>
         </Measure>
       <Measure>
-        <vspacerDown>7.43</vspacerDown>
+        <vspacerDown>9.43</vspacerDown>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -106871,11 +106001,12 @@ bzw. überhaupt nötig?</text>
             <autoplace>0</autoplace>
             <z>1</z>
             <color r="0" g="0" b="0" a="0"/>
-            <offset x="-2.44" y="3.38"/>
+            <offset x="-2.44" y="2.88"/>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
             <frameBgColor r="255" g="85" b="0" a="0"/>
-            <text>.                                                                                                                                                                                                                                                                                  </text>
+            <text>.                                                                                                                                                                                                                                                                                  
+</text>
             </StaffText>
           <Beam>
             <distribute>1</distribute>
@@ -106897,10 +106028,6 @@ bzw. überhaupt nötig?</text>
               <tpc>10</tpc>
               </Note>
             </Chord>
-          <StaffText>
-            <visible>0</visible>
-            <text>langsamer werden</text>
-            </StaffText>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -107015,6 +106142,10 @@ bzw. überhaupt nötig?</text>
         </Measure>
       <Measure>
         <voice>
+          <StaffText>
+            <style>Expression</style>
+            <text>slow acc.</text>
+            </StaffText>
           <Beam>
             <distribute>1</distribute>
             </Beam>
@@ -107150,6 +106281,10 @@ bzw. überhaupt nötig?</text>
         </Measure>
       <Measure>
         <voice>
+          <StaffText>
+            <style>Expression</style>
+            <text>slow rit.</text>
+            </StaffText>
           <Beam>
             <distribute>1</distribute>
             </Beam>
@@ -107158,6 +106293,7 @@ bzw. überhaupt nötig?</text>
             <Note>
               <Accidental>
                 <subtype>accidentalFlat</subtype>
+                <visible>0</visible>
                 </Accidental>
               <pitch>56</pitch>
               <tpc>10</tpc>
@@ -114521,7 +113657,7 @@ bzw. überhaupt nötig?</text>
           </voice>
         </Measure>
       <Measure>
-        <vspacerDown>6.93</vspacerDown>
+        <vspacerDown>8.43</vspacerDown>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -114534,7 +113670,7 @@ bzw. überhaupt nötig?</text>
             <autoplace>0</autoplace>
             <z>1</z>
             <color r="0" g="0" b="0" a="0"/>
-            <offset x="-2.44" y="3.38"/>
+            <offset x="-2.44" y="2.88"/>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
             <frameBgColor r="255" g="85" b="0" a="0"/>
@@ -114560,10 +113696,6 @@ bzw. überhaupt nötig?</text>
               <tpc>20</tpc>
               </Note>
             </Chord>
-          <StaffText>
-            <visible>0</visible>
-            <text>langsamer werden</text>
-            </StaffText>
           <Chord>
             <durationType>16th</durationType>
             <Note>
@@ -114678,6 +113810,10 @@ bzw. überhaupt nötig?</text>
         </Measure>
       <Measure>
         <voice>
+          <StaffText>
+            <style>Expression</style>
+            <text>slow rit.</text>
+            </StaffText>
           <Beam>
             <distribute>1</distribute>
             </Beam>
@@ -114821,6 +113957,7 @@ bzw. überhaupt nötig?</text>
             <Note>
               <Accidental>
                 <subtype>accidentalFlat</subtype>
+                <visible>0</visible>
                 </Accidental>
               <pitch>56</pitch>
               <tpc>10</tpc>
@@ -121466,6 +120603,7 @@ bzw. überhaupt nötig?</text>
         <voice>
           <BarLine>
             <span>1</span>
+            <visible>0</visible>
             </BarLine>
           <Dynamic>
             <subtype>p</subtype>
@@ -121475,11 +120613,12 @@ bzw. überhaupt nötig?</text>
             <autoplace>0</autoplace>
             <z>1</z>
             <color r="0" g="0" b="0" a="0"/>
-            <offset x="-2.44" y="3.88"/>
+            <offset x="-2.44" y="2.38"/>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
             <frameBgColor r="255" g="85" b="0" a="0"/>
             <text>.                                                                                                                                                                                                                                                                                  
+
 </text>
             </StaffText>
           <Beam>
@@ -121675,6 +120814,10 @@ bzw. überhaupt nötig?</text>
               <tpc>19</tpc>
               </Note>
             </Chord>
+          <StaffText>
+            <style>Expression</style>
+            <text>slow acc.</text>
+            </StaffText>
           <Beam>
             <distribute>1</distribute>
             </Beam>
