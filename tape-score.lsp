@@ -292,9 +292,17 @@
     (multiple-value-bind (start-times score-indisp score-rhythm score-srt
 			  score-amp score-time-mult)
 	(interpret-tape (first (layers (ninth (access-minutes)))))
+      (declare (ignore score-time-mult))
+      (print start-times)
       (fplay 0 60
 	     (sound (nth 6 sound-list))
-	     (rhythm (funcall (funcall score-rhythm time) 'line line))
+	     ;; start second voice 4.5 beats later, etc.
+	     (time 0 (* 4.5 60/72) (* 9.7 60/72))
+	     (rhythm (section-val time
+				  (nth 0 start-times) 1
+				  (nth 1 start-times) (funcall (funcall score-rhythm time) 'line line)))
+	     ;; adjust for tempo 72
+	     (stub (setf rhythm  (* rhythm  60/72)))
 	     (indisp-fun (funcall score-indisp 'time time))
 	     (indisp-fun (lambda (x) x))
 	     (duration .01)
@@ -302,7 +310,7 @@
 	     (amp-val (* 1/13 (1+ (funcall indisp-fun (mod (* time tim-mult) 1)))))
 	     (srt (funcall (funcall score-srt time) 'amp-val amp-val 'line line))
 	     (amp (* (interpolate time score-amp) amp-val))
-	     (degree 45)))))
+	     (degree 0 90 45)))))
 
 ;; ** minute 10
 
