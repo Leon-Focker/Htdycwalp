@@ -365,8 +365,7 @@
 	 ;; modify this for different pulses
 	 ;; tempo 60: 1(q), 4 (s), 6 (ts)
 	 ;; tepmo 90: 6 (s), 9/2 (triplets), 15/2 (quintuplet)
-	 (divisor 9/2)) ;; dividing 1 second (q=60) into this many notes
-    (print i-div)
+	 (divisor 4)) ;; dividing 1 second (q=60) into this many notes
     (multiple-value-bind (st md nd) (get-st-md-nd sum dur)
       ;; set number of notes
       (unless (= 0 st) (incf nr))
@@ -376,10 +375,10 @@
       (case instrument
 	(tuba (setf spitch nil))
 	(double-bass (setf spitch 'b0 thrsld 0))
-	(violin-1 (setf thrsld 1/3)) ; i-div 6.5))
-	(violin-2 (setf thrsld 1/4)) ; i-div 6.5))
-	(viola (setf thrsld 1/6)) ; i-div 6.5))
-	(cello (setf thrsld 1/8)) ; i-div 6.5))
+	(violin-1 (setf thrsld 1/3))	; i-div 6.5))
+	(violin-2 (setf thrsld 1/4))	; i-div 6.5))
+	(viola (setf thrsld 1/6))	; i-div 6.5))
+	(cello (setf thrsld 1/8))	; i-div 6.5))
 	(percussion (setf spitch2 (note-for-ins instrument (nth 2 chord))
 			  thrsld 1/2)))
       ;; get durations and different pitch lists
