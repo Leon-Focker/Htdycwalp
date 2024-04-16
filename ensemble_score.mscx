@@ -12053,7 +12053,7 @@ until conductor signals to go on</text>
         <voice>
           <Dynamic>
             <subtype>mp</subtype>
-            <velocity>64</velocity>
+            <velocity>33</velocity>
             </Dynamic>
           <StaffText>
             <style>Expression</style>
@@ -23042,7 +23042,7 @@ until conductor signals to go on</text>
         <voice>
           <Dynamic>
             <subtype>mp</subtype>
-            <velocity>64</velocity>
+            <velocity>33</velocity>
             </Dynamic>
           <StaffText>
             <style>Expression</style>
@@ -35594,7 +35594,7 @@ until conductor signals to go on</text>
         <voice>
           <Dynamic>
             <subtype>mp</subtype>
-            <velocity>64</velocity>
+            <velocity>33</velocity>
             </Dynamic>
           <StaffText>
             <style>Expression</style>
@@ -47152,7 +47152,7 @@ until conductor signals to go on</text>
         <voice>
           <Dynamic>
             <subtype>mp</subtype>
-            <velocity>64</velocity>
+            <velocity>33</velocity>
             </Dynamic>
           <StaffText>
             <style>Expression</style>
@@ -66597,7 +66597,7 @@ signals to go on</text>
         <voice>
           <Dynamic>
             <subtype>mp</subtype>
-            <velocity>64</velocity>
+            <velocity>33</velocity>
             </Dynamic>
           <StaffText>
             <style>Expression</style>
@@ -75134,7 +75134,7 @@ signals to go on</text>
         <voice>
           <Dynamic>
             <subtype>mp</subtype>
-            <velocity>64</velocity>
+            <velocity>33</velocity>
             </Dynamic>
           <StaffText>
             <style>Expression</style>
@@ -85104,7 +85104,7 @@ signals to go on</text>
         <voice>
           <Dynamic>
             <subtype>mp</subtype>
-            <velocity>64</velocity>
+            <velocity>33</velocity>
             </Dynamic>
           <StaffText>
             <style>Expression</style>
@@ -94263,7 +94263,7 @@ signals to go on</text>
         <voice>
           <Dynamic>
             <subtype>mp</subtype>
-            <velocity>64</velocity>
+            <velocity>33</velocity>
             </Dynamic>
           <StaffText>
             <style>Expression</style>
@@ -100995,6 +100995,7 @@ until conductor signals to go on</text>
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>8.4</vspacerDown>
         <voice>
           <Tuplet>
             <normalNotes>2</normalNotes>
@@ -101009,9 +101010,19 @@ until conductor signals to go on</text>
             <BeamMode>auto</BeamMode>
             <durationType>quarter</durationType>
             </Rest>
+          <StaffText>
+            <style>Expression</style>
+            <text>c.l.b.</text>
+            </StaffText>
           <Chord>
             <durationType>eighth</durationType>
             <Note>
+              <Symbol>
+                <name>pictDamp1</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="-2" y="-2"/>
+                </Symbol>
               <pitch>72</pitch>
               <tpc>14</tpc>
               <head>cross</head>
@@ -101609,6 +101620,12 @@ until conductor signals to go on</text>
               <linkPath>../Notation/Kontaktstelle.svg</linkPath>
               <size w="5.75479" h="8.13715"/>
               </Image>
+            <Symbol>
+              <name>pictDamp1</name>
+              <font>Bravura</font>
+              <autoplace>0</autoplace>
+              <offset x="-2" y="-2.5"/>
+              </Symbol>
             </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
@@ -102578,6 +102595,12 @@ until conductor signals to go on</text>
               <linkPath>../Notation/Kontaktstelle.svg</linkPath>
               <size w="5.75479" h="8.13715"/>
               </Image>
+            <Symbol>
+              <name>pictDamp1</name>
+              <font>Bravura</font>
+              <autoplace>0</autoplace>
+              <offset x="-2" y="-2.5"/>
+              </Symbol>
             </Rest>
           <Rest>
             <BeamMode>auto</BeamMode>
@@ -103333,6 +103356,12 @@ until conductor signals to go on</text>
               <linkPath>../Notation/Kontaktstelle.svg</linkPath>
               <size w="5.75479" h="8.13715"/>
               </Image>
+            <Symbol>
+              <name>pictDamp1</name>
+              <font>Bravura</font>
+              <autoplace>0</autoplace>
+              <offset x="-2.5" y="-2.5"/>
+              </Symbol>
             </Rest>
           <Dynamic>
             <subtype>p</subtype>
@@ -103728,6 +103757,12 @@ signals to go on</text>
                 <autoplace>0</autoplace>
                 <offset x="-5.5" y="2.5"/>
                 </Symbol>
+              <Symbol>
+                <name>pictDamp1</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="-2.5" y="-2"/>
+                </Symbol>
               <pitch>72</pitch>
               <tpc>14</tpc>
               <head>cross</head>
@@ -103853,6 +103888,12 @@ signals to go on</text>
             <durationType>16th</durationType>
             <Note>
               <visible>0</visible>
+              <Symbol>
+                <name>pictDamp1</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="-2.5" y="-3.5"/>
+                </Symbol>
               <pitch>69</pitch>
               <tpc>17</tpc>
               </Note>
@@ -104078,11 +104119,6 @@ signals to go on</text>
         </Measure>
       <Measure>
         <voice>
-          <StaffText>
-            <color r="255" g="0" b="0" a="255"/>
-            <offset x="-2" y="-2.8882"/>
-            <text>braucht das einen Rahmen?</text>
-            </StaffText>
           <Chord>
             <BeamMode>mid</BeamMode>
             <durationType>32nd</durationType>
@@ -108931,6 +108967,10 @@ signals to go on</text>
             <visible>0</visible>
             <text>pizz.</text>
             </StaffText>
+          <StaffText>
+            <style>Expression</style>
+            <text>c.l.b.</text>
+            </StaffText>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>half</durationType>
@@ -108941,6 +108981,12 @@ signals to go on</text>
               <linkPath>../Notation/Kontaktstelle.svg</linkPath>
               <size w="5.75479" h="8.13715"/>
               </Image>
+            <Symbol>
+              <name>pictDamp1</name>
+              <font>Bravura</font>
+              <autoplace>0</autoplace>
+              <offset x="-2" y="-2.5"/>
+              </Symbol>
             </Rest>
           <Chord>
             <durationType>eighth</durationType>
@@ -109239,9 +109285,19 @@ signals to go on</text>
             <BeamMode>auto</BeamMode>
             <durationType>quarter</durationType>
             </Rest>
+          <StaffText>
+            <style>Expression</style>
+            <text>c.l.b.</text>
+            </StaffText>
           <Chord>
             <durationType>eighth</durationType>
             <Note>
+              <Symbol>
+                <name>pictDamp1</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="-2" y="-5.5"/>
+                </Symbol>
               <pitch>69</pitch>
               <tpc>17</tpc>
               <head>cross</head>
@@ -109850,7 +109906,6 @@ signals to go on</text>
           <Chord>
             <durationType>eighth</durationType>
             <Note>
-              <visible>0</visible>
               <Image>
                 <autoplace>0</autoplace>
                 <offset x="-7.5" y="-2.7"/>
@@ -109858,6 +109913,12 @@ signals to go on</text>
                 <linkPath>../Notation/Kontaktstelle.svg</linkPath>
                 <size w="5.75479" h="8.13715"/>
                 </Image>
+              <Symbol>
+                <name>pictDamp1</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="-2" y="-1"/>
+                </Symbol>
               <pitch>76</pitch>
               <tpc>18</tpc>
               <head>cross</head>
@@ -110825,6 +110886,12 @@ signals to go on</text>
                 <linkPath>../Notation/Kontaktstelle.svg</linkPath>
                 <size w="5.75479" h="8.13715"/>
                 </Image>
+              <Symbol>
+                <name>pictDamp1</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="-2" y="-1"/>
+                </Symbol>
               <pitch>76</pitch>
               <tpc>18</tpc>
               <head>cross</head>
@@ -111619,6 +111686,12 @@ signals to go on</text>
                 <linkPath>../Notation/Kontaktstelle.svg</linkPath>
                 <size w="5.75479" h="8.13715"/>
                 </Image>
+              <Symbol>
+                <name>pictDamp1</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="-2.5" y="-1"/>
+                </Symbol>
               <pitch>76</pitch>
               <tpc>18</tpc>
               <head>cross</head>
@@ -112032,6 +112105,12 @@ signals to go on</text>
                 <autoplace>0</autoplace>
                 <offset x="-5.5" y="2.5"/>
                 </Symbol>
+              <Symbol>
+                <name>pictDamp1</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="-2.5" y="-2"/>
+                </Symbol>
               <pitch>72</pitch>
               <tpc>14</tpc>
               <head>cross</head>
@@ -112177,6 +112256,12 @@ signals to go on</text>
             <durationType>16th</durationType>
             <Note>
               <visible>0</visible>
+              <Symbol>
+                <name>pictDamp1</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="-2.5" y="-3.5"/>
+                </Symbol>
               <pitch>69</pitch>
               <tpc>17</tpc>
               </Note>
@@ -117397,6 +117482,10 @@ signals to go on</text>
             <visible>0</visible>
             <text>pizz.</text>
             </StaffText>
+          <StaffText>
+            <style>Expression</style>
+            <text>c.l.b.</text>
+            </StaffText>
           <Rest>
             <BeamMode>auto</BeamMode>
             <durationType>eighth</durationType>
@@ -117407,6 +117496,12 @@ signals to go on</text>
               <linkPath>../Notation/Kontaktstelle.svg</linkPath>
               <size w="5.75479" h="8.13715"/>
               </Image>
+            <Symbol>
+              <name>pictDamp1</name>
+              <font>Bravura</font>
+              <autoplace>0</autoplace>
+              <offset x="-2" y="-2.5"/>
+              </Symbol>
             </Rest>
           <Chord>
             <durationType>eighth</durationType>
@@ -117906,9 +118001,19 @@ signals to go on</text>
               <size w="5.75479" h="8.13715"/>
               </Image>
             </Rest>
+          <StaffText>
+            <style>Expression</style>
+            <text>c.l.b.</text>
+            </StaffText>
           <Chord>
             <durationType>eighth</durationType>
             <Note>
+              <Symbol>
+                <name>pictDamp1</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="-2" y="-6"/>
+                </Symbol>
               <pitch>57</pitch>
               <tpc>17</tpc>
               <head>cross</head>
@@ -118539,6 +118644,12 @@ signals to go on</text>
                 <linkPath>../Notation/Kontaktstelle.svg</linkPath>
                 <size w="5.75479" h="8.13715"/>
                 </Image>
+              <Symbol>
+                <name>pictDamp1</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="-2" y="-1"/>
+                </Symbol>
               <pitch>65</pitch>
               <tpc>13</tpc>
               <head>cross</head>
@@ -119229,6 +119340,12 @@ signals to go on</text>
                 <linkPath>../Notation/Kontaktstelle.svg</linkPath>
                 <size w="5.75479" h="8.13715"/>
                 </Image>
+              <Symbol>
+                <name>pictDamp1</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="-2" y="-1"/>
+                </Symbol>
               <pitch>65</pitch>
               <tpc>13</tpc>
               <head>cross</head>
@@ -120029,6 +120146,12 @@ signals to go on</text>
                 <linkPath>../Notation/Kontaktstelle.svg</linkPath>
                 <size w="5.75479" h="8.13715"/>
                 </Image>
+              <Symbol>
+                <name>pictDamp1</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="-2.5" y="-1"/>
+                </Symbol>
               <pitch>65</pitch>
               <tpc>13</tpc>
               <head>cross</head>
@@ -120501,6 +120624,12 @@ signals to go on</text>
                 <autoplace>0</autoplace>
                 <offset x="-5.5" y="3.5"/>
                 </Symbol>
+              <Symbol>
+                <name>pictDamp1</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="-2.5" y="-2"/>
+                </Symbol>
               <pitch>65</pitch>
               <tpc>13</tpc>
               <head>cross</head>
@@ -120643,6 +120772,12 @@ signals to go on</text>
             <durationType>16th</durationType>
             <Note>
               <visible>0</visible>
+              <Symbol>
+                <name>pictDamp1</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="-2.5" y="-3.5"/>
+                </Symbol>
               <pitch>59</pitch>
               <tpc>19</tpc>
               </Note>
@@ -125772,6 +125907,10 @@ signals to go on</text>
             <visible>0</visible>
             <text>pizz.</text>
             </StaffText>
+          <StaffText>
+            <style>Expression</style>
+            <text>c.l.b.</text>
+            </StaffText>
           <Chord>
             <durationType>eighth</durationType>
             <Note>
@@ -125782,6 +125921,12 @@ signals to go on</text>
                 <linkPath>../Notation/Kontaktstelle.svg</linkPath>
                 <size w="5.75479" h="8.13715"/>
                 </Image>
+              <Symbol>
+                <name>pictDamp1</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="-2" y="-3"/>
+                </Symbol>
               <pitch>48</pitch>
               <tpc>14</tpc>
               <head>cross</head>
@@ -126930,6 +127075,12 @@ signals to go on</text>
                 <linkPath>../Notation/Kontaktstelle.svg</linkPath>
                 <size w="5.75479" h="8.13715"/>
                 </Image>
+              <Symbol>
+                <name>pictDamp1</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="-2" y="-1"/>
+                </Symbol>
               <pitch>55</pitch>
               <tpc>15</tpc>
               <head>cross</head>
@@ -127656,6 +127807,12 @@ signals to go on</text>
                 <linkPath>../Notation/Kontaktstelle.svg</linkPath>
                 <size w="5.75479" h="8.13715"/>
                 </Image>
+              <Symbol>
+                <name>pictDamp1</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="-2" y="-1"/>
+                </Symbol>
               <pitch>55</pitch>
               <tpc>15</tpc>
               <head>cross</head>
@@ -128464,6 +128621,12 @@ signals to go on</text>
                 <linkPath>../Notation/Kontaktstelle.svg</linkPath>
                 <size w="5.75479" h="8.13715"/>
                 </Image>
+              <Symbol>
+                <name>pictDamp1</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="-2.5" y="-1"/>
+                </Symbol>
               <pitch>55</pitch>
               <tpc>15</tpc>
               <head>cross</head>
@@ -128950,6 +129113,12 @@ signals to go on</text>
                 <autoplace>0</autoplace>
                 <offset x="-5.5" y="3.5"/>
                 </Symbol>
+              <Symbol>
+                <name>pictDamp1</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="-2.5" y="-2"/>
+                </Symbol>
               <pitch>55</pitch>
               <tpc>15</tpc>
               <head>cross</head>
@@ -129109,6 +129278,12 @@ until conductor signals to go on</text>
             <durationType>16th</durationType>
             <Note>
               <visible>0</visible>
+              <Symbol>
+                <name>pictDamp1</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="-2.5" y="-3.5"/>
+                </Symbol>
               <pitch>48</pitch>
               <tpc>14</tpc>
               </Note>
@@ -134150,6 +134325,11 @@ until conductor signals to go on</text>
             <visible>0</visible>
             <text>pizz.</text>
             </StaffText>
+          <StaffText>
+            <style>Expression</style>
+            <offset x="1" y="2.5"/>
+            <text>c.l.b.</text>
+            </StaffText>
           <Chord>
             <durationType>eighth</durationType>
             <Note>
@@ -134160,6 +134340,12 @@ until conductor signals to go on</text>
                 <linkPath>../Notation/Kontaktstelle.svg</linkPath>
                 <size w="5.75479" h="8.13715"/>
                 </Image>
+              <Symbol>
+                <name>pictDamp1</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="-1" y="-3.5"/>
+                </Symbol>
               <pitch>36</pitch>
               <tpc>14</tpc>
               <head>cross</head>
@@ -134734,6 +134920,12 @@ until conductor signals to go on</text>
                 <linkPath>../Notation/Kontaktstelle.svg</linkPath>
                 <size w="5.75479" h="8.13715"/>
                 </Image>
+              <Symbol>
+                <name>pictDamp1</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="-2" y="-1"/>
+                </Symbol>
               <pitch>43</pitch>
               <tpc>15</tpc>
               <head>cross</head>
@@ -135202,6 +135394,12 @@ until conductor signals to go on</text>
                 <linkPath>../Notation/Kontaktstelle.svg</linkPath>
                 <size w="5.75479" h="8.13715"/>
                 </Image>
+              <Symbol>
+                <name>pictDamp1</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="-2" y="-1"/>
+                </Symbol>
               <pitch>43</pitch>
               <tpc>15</tpc>
               <head>cross</head>
@@ -135886,6 +136084,12 @@ until conductor signals to go on</text>
                 <linkPath>../Notation/Kontaktstelle.svg</linkPath>
                 <size w="5.75479" h="8.13715"/>
                 </Image>
+              <Symbol>
+                <name>pictDamp1</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="-2.5" y="-1"/>
+                </Symbol>
               <pitch>43</pitch>
               <tpc>15</tpc>
               <head>cross</head>
@@ -136378,6 +136582,12 @@ signals to go on</text>
                 <autoplace>0</autoplace>
                 <offset x="-5.5" y="3.5"/>
                 </Symbol>
+              <Symbol>
+                <name>pictDamp1</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="-2.5" y="-2"/>
+                </Symbol>
               <pitch>43</pitch>
               <tpc>15</tpc>
               <head>cross</head>
@@ -136551,6 +136761,12 @@ until conductor signals to go on</text>
             <durationType>16th</durationType>
             <Note>
               <visible>0</visible>
+              <Symbol>
+                <name>pictDamp1</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="-2.5" y="-3.5"/>
+                </Symbol>
               <pitch>36</pitch>
               <tpc>14</tpc>
               </Note>
