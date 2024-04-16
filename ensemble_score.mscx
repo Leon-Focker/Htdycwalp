@@ -2596,6 +2596,12 @@
       <Measure>
         <stretch>0</stretch>
         <voice>
+          <StaffText>
+            <size>12</size>
+            <bold>1</bold>
+            <color r="255" g="0" b="0" a="255"/>
+            <text>Tonhöhen der Glissandi checken!</text>
+            </StaffText>
           <Rest>
             <visible>0</visible>
             <durationType>measure</durationType>
@@ -2702,7 +2708,7 @@
             <bold>1</bold>
             <color r="255" g="0" b="0" a="255"/>
             <offset x="56.8928" y="-4.72991"/>
-            <text>nur hoch oder tief?</text>
+            <text>erstmal nur gefärbte Luft</text>
             </StaffText>
           <Rest>
             <visible>0</visible>
@@ -5517,7 +5523,12 @@
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>7.9</vspacerDown>
         <voice>
+          <BarLine>
+            <span>1</span>
+            <visible>0</visible>
+            </BarLine>
           <Chord>
             <durationType>whole</durationType>
             <Note>
@@ -5588,7 +5599,12 @@
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>8.4</vspacerDown>
         <voice>
+          <BarLine>
+            <span>1</span>
+            <visible>0</visible>
+            </BarLine>
           <Chord>
             <durationType>whole</durationType>
             <Note>
@@ -12803,15 +12819,25 @@ until conductor signals to go on</text>
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>7.9</vspacerDown>
         <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
           <Dynamic>
             <subtype>ff</subtype>
             <velocity>112</velocity>
             </Dynamic>
           <StaffText>
-            <bold>1</bold>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="-2.44" y="1.38"/>
             <frameType>1</frameType>
-            <text>play independently...</text>
+            <framePadding>5</framePadding>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                                                                                                                                                                                  
+</text>
             </StaffText>
           <Chord>
             <durationType>whole</durationType>
@@ -12935,7 +12961,25 @@ until conductor signals to go on</text>
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>7.9</vspacerDown>
         <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          <StaffText>
+            <style>Expression</style>
+            <text>until conductor signals to go on</text>
+            </StaffText>
+          <StaffText>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="-1.44" y="1.88"/>
+            <frameType>1</frameType>
+            <framePadding>5</framePadding>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                              </text>
+            </StaffText>
           <Chord>
             <durationType>whole</durationType>
             <Note>
@@ -12998,11 +13042,9 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
-          <StaffText>
-            <bold>1</bold>
-            <frameType>1</frameType>
-            <text>...until conductor signals to go on</text>
-            </StaffText>
+          <Fermata>
+            <subtype>fermataAbove</subtype>
+            </Fermata>
           <Chord>
             <durationType>whole</durationType>
             <Note>
@@ -15145,6 +15187,13 @@ until conductor signals to go on</text>
               <tpc>24</tpc>
               </Note>
             </Chord>
+          <StaffText>
+            <size>13</size>
+            <bold>1</bold>
+            <color r="255" g="0" b="0" a="255"/>
+            <offset x="9.12582" y="-6.97619"/>
+            <text>nur hoch oder tief?</text>
+            </StaffText>
           <Chord>
             <durationType>16th</durationType>
             <Articulation>
@@ -23789,15 +23838,24 @@ until conductor signals to go on</text>
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>8.4</vspacerDown>
         <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
           <Dynamic>
             <subtype>ff</subtype>
             <velocity>112</velocity>
             </Dynamic>
           <StaffText>
-            <bold>1</bold>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="-2.44" y="2.88"/>
             <frameType>1</frameType>
-            <text>play independently...</text>
+            <framePadding>5</framePadding>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                                                                                                                                                                                  </text>
             </StaffText>
           <Chord>
             <durationType>whole</durationType>
@@ -23917,7 +23975,25 @@ until conductor signals to go on</text>
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>8.4</vspacerDown>
         <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          <StaffText>
+            <style>Expression</style>
+            <text>until conductor signals to go on</text>
+            </StaffText>
+          <StaffText>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="-1.44" y="1.88"/>
+            <frameType>1</frameType>
+            <framePadding>5</framePadding>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                              </text>
+            </StaffText>
           <Chord>
             <durationType>whole</durationType>
             <Note>
@@ -23980,11 +24056,9 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
-          <StaffText>
-            <bold>1</bold>
-            <frameType>1</frameType>
-            <text>...until conductor signals to go on</text>
-            </StaffText>
+          <Fermata>
+            <subtype>fermataAbove</subtype>
+            </Fermata>
           <Chord>
             <durationType>whole</durationType>
             <Note>
@@ -36414,15 +36488,24 @@ until conductor signals to go on</text>
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>7.4</vspacerDown>
         <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
           <Dynamic>
             <subtype>ff</subtype>
             <velocity>112</velocity>
             </Dynamic>
           <StaffText>
-            <bold>1</bold>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="-2.44" y="2.38"/>
             <frameType>1</frameType>
-            <text>play independently...</text>
+            <framePadding>5</framePadding>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                                                                                                                                                                                  </text>
             </StaffText>
           <Chord>
             <durationType>whole</durationType>
@@ -36546,7 +36629,25 @@ until conductor signals to go on</text>
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>9.9</vspacerDown>
         <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          <StaffText>
+            <style>Expression</style>
+            <text>until conductor signals to go on</text>
+            </StaffText>
+          <StaffText>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="-1.44" y="1.38"/>
+            <frameType>1</frameType>
+            <framePadding>5</framePadding>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                              </text>
+            </StaffText>
           <Chord>
             <durationType>whole</durationType>
             <Note>
@@ -36611,11 +36712,9 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
-          <StaffText>
-            <bold>1</bold>
-            <frameType>1</frameType>
-            <text>...until conductor signals to go on</text>
-            </StaffText>
+          <Fermata>
+            <subtype>fermataAbove</subtype>
+            </Fermata>
           <Chord>
             <durationType>whole</durationType>
             <Note>
@@ -47914,15 +48013,25 @@ until conductor signals to go on</text>
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>8.4</vspacerDown>
         <voice>
+          <BarLine>
+            <span>1</span>
+            <visible>0</visible>
+            </BarLine>
           <Dynamic>
             <subtype>ff</subtype>
             <velocity>112</velocity>
             </Dynamic>
           <StaffText>
-            <bold>1</bold>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="-2.44" y="2.88"/>
             <frameType>1</frameType>
-            <text>play independently...</text>
+            <framePadding>5</framePadding>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                                                                                                                                                                                  </text>
             </StaffText>
           <Chord>
             <durationType>whole</durationType>
@@ -48042,7 +48151,28 @@ until conductor signals to go on</text>
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>6.4</vspacerDown>
         <voice>
+          <BarLine>
+            <span>1</span>
+            <visible>0</visible>
+            </BarLine>
+          <StaffText>
+            <style>Expression</style>
+            <offset x="0" y="-2.5"/>
+            <text>until conductor signals to go on</text>
+            </StaffText>
+          <StaffText>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="-1.44" y="-0.62"/>
+            <frameType>1</frameType>
+            <framePadding>5</framePadding>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                              
+</text>
+            </StaffText>
           <Chord>
             <durationType>whole</durationType>
             <Note>
@@ -48105,11 +48235,9 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
-          <StaffText>
-            <bold>1</bold>
-            <frameType>1</frameType>
-            <text>...until conductor signals to go on</text>
-            </StaffText>
+          <Fermata>
+            <subtype>fermataAbove</subtype>
+            </Fermata>
           <Chord>
             <durationType>whole</durationType>
             <Note>
@@ -58189,11 +58317,6 @@ until conductor signals to go on</text>
             <color r="255" g="0" b="0" a="255"/>
             <offset x="6.8126" y="-0.506333"/>
             <text>???</text>
-            </StaffText>
-          <StaffText>
-            <bold>1</bold>
-            <frameType>1</frameType>
-            <text>play independently...</text>
             </StaffText>
           <Rest>
             <durationType>16th</durationType>
@@ -104406,10 +104529,6 @@ signals to go on</text>
           <Rest>
             <durationType>half</durationType>
             </Rest>
-          <StaffText>
-            <style>Expression</style>
-            <text>ord.</text>
-            </StaffText>
           <Tuplet>
             <normalNotes>2</normalNotes>
             <actualNotes>3</actualNotes>
@@ -104426,6 +104545,12 @@ signals to go on</text>
             <subtype>mf</subtype>
             <velocity>80</velocity>
             </Dynamic>
+          <StaffText>
+            <style>Expression</style>
+            <minDistance>0.5</minDistance>
+            <offset x="-0.668839" y="-3.11968"/>
+            <text>arco, almost on bridge</text>
+            </StaffText>
           <Spanner type="HairPin">
             <HairPin>
               <subtype>0</subtype>
@@ -104543,6 +104668,11 @@ signals to go on</text>
             <subtype>f</subtype>
             <velocity>96</velocity>
             </Dynamic>
+          <StaffText>
+            <style>Expression</style>
+            <offset x="-16.6095" y="-1.0769"/>
+            <text>molto sul pont.</text>
+            </StaffText>
           <Spanner type="HairPin">
             <HairPin>
               <subtype>1</subtype>
@@ -104576,16 +104706,40 @@ signals to go on</text>
                     </location>
                   </next>
                 </Spanner>
+              <Spanner type="TextLine">
+                <TextLine>
+                  <endText>&gt;</endText>
+                  <diagonal>1</diagonal>
+                  <anchor>3</anchor>
+                  <Segment>
+                    <subtype>0</subtype>
+                    <offset x="9.1408" y="-0.334419"/>
+                    <off2 x="-13.5607" y="-3.54282"/>
+                    </Segment>
+                  </TextLine>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    <fractions>-5/8</fractions>
+                    </location>
+                  </next>
+                </Spanner>
               </Note>
             </Chord>
           </voice>
         </Measure>
       <Measure>
+        <vspacerDown>10.4</vspacerDown>
         <voice>
           <Dynamic>
             <subtype>pp</subtype>
             <velocity>33</velocity>
             </Dynamic>
+          <StaffText>
+            <style>Expression</style>
+            <offset x="-1.56062" y="-2.38409"/>
+            <text>ord.</text>
+            </StaffText>
           <Spanner type="HairPin">
             <prev>
               <location>
@@ -104604,6 +104758,14 @@ signals to go on</text>
               <pitch>73</pitch>
               <tpc>9</tpc>
               <Spanner type="Glissando">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    <fractions>5/8</fractions>
+                    </location>
+                  </prev>
+                </Spanner>
+              <Spanner type="TextLine">
                 <prev>
                   <location>
                     <measures>-1</measures>
@@ -105170,6 +105332,13 @@ signals to go on</text>
         </Measure>
       <Measure>
         <voice>
+          <StaffText>
+            <size>13</size>
+            <bold>1</bold>
+            <color r="255" g="0" b="0" a="255"/>
+            <offset x="58.0075" y="-2.94634"/>
+            <text>vereinzelt quietschen</text>
+            </StaffText>
           <Rest>
             <durationType>measure</durationType>
             <duration>4/4</duration>
@@ -105284,6 +105453,10 @@ signals to go on</text>
         </Measure>
       <Measure>
         <voice>
+          <StaffText>
+            <color r="255" g="0" b="0" a="255"/>
+            <text>alle hoch schosti-gliss?</text>
+            </StaffText>
           <Chord>
             <BeamMode>no</BeamMode>
             <durationType>16th</durationType>
@@ -112774,10 +112947,6 @@ signals to go on</text>
           <Rest>
             <durationType>half</durationType>
             </Rest>
-          <StaffText>
-            <style>Expression</style>
-            <text>ord.</text>
-            </StaffText>
           <Tuplet>
             <normalNotes>2</normalNotes>
             <actualNotes>3</actualNotes>
@@ -112794,6 +112963,11 @@ signals to go on</text>
             <subtype>mf</subtype>
             <velocity>80</velocity>
             </Dynamic>
+          <StaffText>
+            <style>Expression</style>
+            <offset x="-0.668839" y="-3.11968"/>
+            <text>arco, almost on bridge</text>
+            </StaffText>
           <Spanner type="HairPin">
             <HairPin>
               <subtype>0</subtype>
@@ -112914,6 +113088,11 @@ signals to go on</text>
             <subtype>f</subtype>
             <velocity>96</velocity>
             </Dynamic>
+          <StaffText>
+            <style>Expression</style>
+            <offset x="-11.2588" y="-1.60814"/>
+            <text>molto sul pont.</text>
+            </StaffText>
           <Spanner type="HairPin">
             <HairPin>
               <subtype>1</subtype>
@@ -112947,6 +113126,24 @@ signals to go on</text>
                     </location>
                   </next>
                 </Spanner>
+              <Spanner type="TextLine">
+                <TextLine>
+                  <endText>&gt;</endText>
+                  <diagonal>1</diagonal>
+                  <anchor>3</anchor>
+                  <Segment>
+                    <subtype>0</subtype>
+                    <offset x="4.14896" y="-6.81121"/>
+                    <off2 x="-6.89309" y="4.49834"/>
+                    </Segment>
+                  </TextLine>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    <fractions>-5/8</fractions>
+                    </location>
+                  </next>
+                </Spanner>
               </Note>
             </Chord>
           </voice>
@@ -112957,6 +113154,11 @@ signals to go on</text>
             <subtype>pp</subtype>
             <velocity>33</velocity>
             </Dynamic>
+          <StaffText>
+            <style>Expression</style>
+            <offset x="-0.501899" y="-3.27896"/>
+            <text>ord.</text>
+            </StaffText>
           <Spanner type="HairPin">
             <prev>
               <location>
@@ -112975,6 +113177,14 @@ signals to go on</text>
               <pitch>84</pitch>
               <tpc>26</tpc>
               <Spanner type="Glissando">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    <fractions>5/8</fractions>
+                    </location>
+                  </prev>
+                </Spanner>
+              <Spanner type="TextLine">
                 <prev>
                   <location>
                     <measures>-1</measures>
@@ -121087,10 +121297,6 @@ signals to go on</text>
           <Rest>
             <durationType>half</durationType>
             </Rest>
-          <StaffText>
-            <style>Expression</style>
-            <text>ord.</text>
-            </StaffText>
           <Tuplet>
             <normalNotes>2</normalNotes>
             <actualNotes>3</actualNotes>
@@ -121107,6 +121313,11 @@ signals to go on</text>
             <subtype>mf</subtype>
             <velocity>80</velocity>
             </Dynamic>
+          <StaffText>
+            <style>Expression</style>
+            <offset x="-0.557366" y="-1.11316"/>
+            <text>arco, almost on bridge</text>
+            </StaffText>
           <Spanner type="HairPin">
             <HairPin>
               <subtype>0</subtype>
@@ -121224,6 +121435,11 @@ signals to go on</text>
             <subtype>f</subtype>
             <velocity>96</velocity>
             </Dynamic>
+          <StaffText>
+            <style>Expression</style>
+            <offset x="-1.12358" y="-1.0102"/>
+            <text>molto sul pont.</text>
+            </StaffText>
           <Spanner type="HairPin">
             <HairPin>
               <subtype>1</subtype>
@@ -121257,6 +121473,23 @@ signals to go on</text>
                     </location>
                   </next>
                 </Spanner>
+              <Spanner type="TextLine">
+                <TextLine>
+                  <endText>&gt;</endText>
+                  <anchor>3</anchor>
+                  <Segment>
+                    <subtype>0</subtype>
+                    <offset x="12.4998" y="-4.56454"/>
+                    <off2 x="-14.8172" y="0"/>
+                    </Segment>
+                  </TextLine>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    <fractions>-5/8</fractions>
+                    </location>
+                  </next>
+                </Spanner>
               </Note>
             </Chord>
           </voice>
@@ -121267,6 +121500,10 @@ signals to go on</text>
             <subtype>pp</subtype>
             <velocity>33</velocity>
             </Dynamic>
+          <StaffText>
+            <style>Expression</style>
+            <text>ord.</text>
+            </StaffText>
           <Spanner type="HairPin">
             <prev>
               <location>
@@ -121282,6 +121519,14 @@ signals to go on</text>
               <pitch>55</pitch>
               <tpc>15</tpc>
               <Spanner type="Glissando">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    <fractions>5/8</fractions>
+                    </location>
+                  </prev>
+                </Spanner>
+              <Spanner type="TextLine">
                 <prev>
                   <location>
                     <measures>-1</measures>
@@ -129593,10 +129838,6 @@ until conductor signals to go on</text>
           <Rest>
             <durationType>half</durationType>
             </Rest>
-          <StaffText>
-            <style>Expression</style>
-            <text>ord.</text>
-            </StaffText>
           <Tuplet>
             <normalNotes>2</normalNotes>
             <actualNotes>3</actualNotes>
@@ -129613,6 +129854,12 @@ until conductor signals to go on</text>
             <subtype>mf</subtype>
             <velocity>80</velocity>
             </Dynamic>
+          <StaffText>
+            <style>Expression</style>
+            <minDistance>0.42554</minDistance>
+            <offset x="-3.45567" y="-0.890217"/>
+            <text>arco, almost on bridge</text>
+            </StaffText>
           <Spanner type="HairPin">
             <HairPin>
               <subtype>0</subtype>
@@ -129733,6 +129980,10 @@ until conductor signals to go on</text>
             <subtype>f</subtype>
             <velocity>96</velocity>
             </Dynamic>
+          <StaffText>
+            <style>Expression</style>
+            <text>molto sul pont.</text>
+            </StaffText>
           <Spanner type="HairPin">
             <HairPin>
               <subtype>1</subtype>
@@ -129766,6 +130017,24 @@ until conductor signals to go on</text>
                     </location>
                   </next>
                 </Spanner>
+              <Spanner type="TextLine">
+                <TextLine>
+                  <endText>&gt;</endText>
+                  <diagonal>1</diagonal>
+                  <anchor>3</anchor>
+                  <Segment>
+                    <subtype>0</subtype>
+                    <offset x="14.2554" y="-2.17693"/>
+                    <off2 x="-16.8172" y="0.997518"/>
+                    </Segment>
+                  </TextLine>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    <fractions>-5/8</fractions>
+                    </location>
+                  </next>
+                </Spanner>
               </Note>
             </Chord>
           </voice>
@@ -129776,6 +130045,10 @@ until conductor signals to go on</text>
             <subtype>pp</subtype>
             <velocity>33</velocity>
             </Dynamic>
+          <StaffText>
+            <style>Expression</style>
+            <text>ord.</text>
+            </StaffText>
           <Spanner type="HairPin">
             <prev>
               <location>
@@ -129791,6 +130064,14 @@ until conductor signals to go on</text>
               <pitch>64</pitch>
               <tpc>18</tpc>
               <Spanner type="Glissando">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    <fractions>5/8</fractions>
+                    </location>
+                  </prev>
+                </Spanner>
+              <Spanner type="TextLine">
                 <prev>
                   <location>
                     <measures>-1</measures>
@@ -137072,10 +137353,6 @@ until conductor signals to go on</text>
           <Rest>
             <durationType>half</durationType>
             </Rest>
-          <StaffText>
-            <style>Expression</style>
-            <text>ord.</text>
-            </StaffText>
           <Tuplet>
             <normalNotes>2</normalNotes>
             <actualNotes>3</actualNotes>
@@ -137092,6 +137369,11 @@ until conductor signals to go on</text>
             <subtype>mf</subtype>
             <velocity>80</velocity>
             </Dynamic>
+          <StaffText>
+            <style>Expression</style>
+            <offset x="-0.780312" y="-2.33937"/>
+            <text>arco, almost on bridge</text>
+            </StaffText>
           <Spanner type="HairPin">
             <HairPin>
               <subtype>0</subtype>
@@ -137206,6 +137488,10 @@ until conductor signals to go on</text>
             <subtype>f</subtype>
             <velocity>96</velocity>
             </Dynamic>
+          <StaffText>
+            <style>Expression</style>
+            <text>molto sul pont.</text>
+            </StaffText>
           <Spanner type="HairPin">
             <HairPin>
               <subtype>1</subtype>
@@ -137236,6 +137522,24 @@ until conductor signals to go on</text>
                     </location>
                   </next>
                 </Spanner>
+              <Spanner type="TextLine">
+                <TextLine>
+                  <endText>&gt;</endText>
+                  <diagonal>1</diagonal>
+                  <anchor>3</anchor>
+                  <Segment>
+                    <subtype>0</subtype>
+                    <offset x="14.6207" y="-6.10486"/>
+                    <off2 x="-15.7488" y="-0.575096"/>
+                    </Segment>
+                  </TextLine>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    <fractions>-5/8</fractions>
+                    </location>
+                  </next>
+                </Spanner>
               </Note>
             </Chord>
           </voice>
@@ -137246,6 +137550,11 @@ until conductor signals to go on</text>
             <subtype>pp</subtype>
             <velocity>33</velocity>
             </Dynamic>
+          <StaffText>
+            <style>Expression</style>
+            <offset x="1.81376" y="-0.644758"/>
+            <text>ord.</text>
+            </StaffText>
           <Spanner type="HairPin">
             <prev>
               <location>
@@ -137261,6 +137570,14 @@ until conductor signals to go on</text>
               <pitch>26</pitch>
               <tpc>16</tpc>
               <Spanner type="Glissando">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    <fractions>5/8</fractions>
+                    </location>
+                  </prev>
+                </Spanner>
+              <Spanner type="TextLine">
                 <prev>
                   <location>
                     <measures>-1</measures>
