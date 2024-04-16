@@ -1,7 +1,7 @@
 ;; * chords.lsp
 
 ;;; not so pretty file to generate strings of notes. Similar generations can
-;;; then be layerd as chords.
+;;; then be layered as chords.
 
 (in-package :ly)
 
@@ -113,5 +113,15 @@
 				     +ens-src-dir+
 				     "bassline_permutation_chord_33.mid")))
 |#
+(gen-bassline-permutations '(75 76 79 80 75) '((40 80) (50 79) (59 85) (73 92) (40 80)) 8 5
+			   '(0 1  .3  6  .7 3 1 1)
+			   '(0 5 .4 2  1 0)
+			   nil
+			   (format nil "~a~a" +ens-src-dir+ "chords_min_4.1.mid"))
 
+(gen-bassline-permutations '(74 75 79 80 75) '((40 80) (50 79) (59 85) (73 92) (40 80)) 8 5
+			   '(0 1  .3  6  .7 3 1 1)
+			   '(0 5 .4 2  1 0)
+			   nil
+			   (format nil "~a~a" +ens-src-dir+ "chords_min_4.2.mid"))
 ;; EOF chords.lsp
