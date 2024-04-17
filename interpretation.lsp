@@ -66,7 +66,9 @@
 		    30
 		    (rqq-to-indispensability-function
 		     '(13 ((8 (1 2 1 1 5)) (5 (1 1 3 1)))) t))))
+	;; minute 6
 	;;((< start-time 360) (variadic ))
+	;; minute 7
 	((< start-time 420)
 	 (variadic (section-val
 		    time
@@ -79,6 +81,7 @@
 		    40
 		    (rqq-to-indispensability-function
 		     '(13 ((5 (1 1 1 1)) (2 (1 1 1 1)) (4 (1 1 1 1)) (2 (1)))) t))))
+	;; minute 8
 	((< start-time 480)
 	 (variadic (rqq-to-indispensability-function
 		    '(13 ((4 (1 1 1 1)) (4 (1 1 1 1)) (4 (1 1 1 1)) (1 (1)))) t)))
