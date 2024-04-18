@@ -124,4 +124,21 @@
 			   '(0 5 .4 2  1 0)
 			   nil
 			   (format nil "~a~a" +ens-src-dir+ "chords_min_4.2.mid"))
+
+;; drifting melodies for brass in minute 8, to be reversed:
+#|
+(let ((instruments '(c-trumpet french-horn bass-trombone tuba))
+      (ambitus '()))
+  (setf ambitus
+	(loop for ins in instruments
+	      for i = (my-get-standard-ins ins)
+	      collect (list (midi-note (lowest-sounding i))
+			    (midi-note (highest-sounding i)))))
+  (gen-bassline-permutations (ml 59 (length instruments)) ambitus 12 (length instruments)
+			     '(0 0   1 7)
+			     '(0 0   1 3)
+			     nil
+			     (format nil "~a~a" +ens-src-dir+ "drifting_min_8.mid")))
+|#
+
 ;; EOF chords.lsp
