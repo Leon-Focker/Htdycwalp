@@ -1,5 +1,7 @@
 ;; * Interpretation
 
+(in-package :ly)
+
 ;; ** synthesis
 
 ;; *** variadic
@@ -370,10 +372,6 @@
 	 ;; tepmo 90: 6 (s), 9/2 (triplets), 15/2 (quintuplet)
 	 (divisor 4)) ;; dividing 1 second (q=60) into this many notes
     (multiple-value-bind (st md nd) (get-st-md-nd sum dur)
-      ;; set number of notes
-      (unless (= 0 st) (incf nr))
-      (unless (= 0 nd) (incf nr))
-      (incf nr (* md divisor)) ;; war (* (/ md 4) 16)
       ;; custom stuff:
       (case instrument
 	(tuba (setf spitch nil))
@@ -382,8 +380,20 @@
 	(violin-2 (setf thrsld 1/4))	; i-div 6.5))
 	(viola (setf thrsld 1/6))	; i-div 6.5))
 	(cello (setf thrsld 1/8))	; i-div 6.5))
+	(flute (setf thrsld 1/5))    
+	(oboe (setf thrsld 1/2))	
+	(b-clarinet (setf thrsld 1/7))       
+	(bassoon (setf thrsld 1/9))
+	(c-trumpet (setf thrsld 1/8 i-div 8))    
+	(french-horn (setf thrsld 1/6 i-div 8))	
+	(bass-trombone (setf thrsld 1/5 i-div 8))       
+	(tuba (setf thrsld 1/3 i-div 8))
 	(percussion (setf spitch2 (note-for-ins instrument (nth 2 chord))
 			  thrsld 1/2)))
+      ;; set number of notes
+      (unless (= 0 st) (incf nr))
+      (unless (= 0 nd) (incf nr))
+      (incf nr (* md divisor)) ;; war (* (/ md 4) 16)
       ;; get durations and different pitch lists
       (loop for i from 0 below nr
 	    for ind1 = (/ (1+ (funcall indisp1 (mod (/ i i-div) 1))))
