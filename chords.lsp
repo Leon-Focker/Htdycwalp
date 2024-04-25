@@ -62,10 +62,12 @@
 ;; make it a function!
 (defun gen-bassline-permutations
     (first-notes ambitus-list
-     max-len voices dissonance-env variation-env permutation file)
+     max-len voices dissonance-env variation-env permutation file
+     &optional incr-channel)
   (let* ((pitches '())
 	 (durations '(1))
-	 (start-times '()))
+	 (start-times '())
+	 (channel 0))
     ;; we do this to use the perks of re-order!
     (setf permutation (re-order (loop for i from 0 below max-len collect i)
 				permutation))
@@ -87,8 +89,16 @@
 					       collect i)
 			       append ls)
 		 do (incf start (1+ n)))))
+    ;; incf channel for each voice
+    (when incr-channel
+      (setf channel
+	    (loop for n in permutation
+		  do (incf n)
+		  append (loop for i from 0 below voices
+			       append (ml (mod i 16) n)))))
     (lists-to-midi pitches durations start-times
-		   :file file)))
+		   :file file
+		   :channel channel)))
 
 ;; ** three chords:
 
@@ -113,6 +123,9 @@
 				     +ens-src-dir+
 				     "bassline_permutation_chord_33.mid")))
 |#
+
+;; chords for minute 4:
+#|
 (gen-bassline-permutations '(75 76 79 80 75) '((40 80) (50 79) (59 85) (73 92) (40 80)) 8 5
 			   '(0 1  .3  6  .7 3 1 1)
 			   '(0 5 .4 2  1 0)
@@ -124,6 +137,7 @@
 			   '(0 5 .4 2  1 0)
 			   nil
 			   (format nil "~a~a" +ens-src-dir+ "chords_min_4.2.mid"))
+|#
 
 ;; drifting melodies for brass in minute 8, to be reversed:
 #|
@@ -139,6 +153,26 @@
 			     '(0 0   1 3)
 			     nil
 			     (format nil "~a~a" +ens-src-dir+ "drifting_min_8.mid")))
+|#
+
+
+;; drifting melodies for minute 5
+;; patterns starting after one another, trying to find together, chords go out.
+;; starting with 
+#|
+(let ((instruments '(violin viola cello flute french-horn bass-trombone))
+      (ambitus '()))
+  (setf ambitus
+	(loop for ins in instruments
+	      for i = (my-get-standard-ins ins)
+	      collect (list (midi-note (lowest-sounding i))
+			    (midi-note (highest-sounding i)))))
+  (gen-bassline-permutations (ml 69 (length instruments)) ambitus 12 (length instruments)
+			     '(0 0   1 7)
+			     '(0 0   1 3)
+			     nil
+			     (format nil "~a~a" +ens-src-dir+ "drifting_min_5.mid")
+			     t))
 |#
 
 ;; EOF chords.lsp
