@@ -56925,6 +56925,9 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
+          <StaffText>
+            <text>&quot;Sidechain&quot; on signal - allow other things to happen</text>
+            </StaffText>
           <Rest>
             <durationType>measure</durationType>
             <duration>4/4</duration>
@@ -85807,10 +85810,6 @@ until conductor signals to go on</text>
           <Chord>
             <durationType>whole</durationType>
             <Note>
-              <Accidental>
-                <role>1</role>
-                <subtype>accidentalQuarterToneSharpStein</subtype>
-                </Accidental>
               <Spanner type="Tie">
                 <Tie>
                   </Tie>
@@ -85820,9 +85819,8 @@ until conductor signals to go on</text>
                     </location>
                   </next>
                 </Spanner>
-              <pitch>69</pitch>
-              <tpc>17</tpc>
-              <tuning>50</tuning>
+              <pitch>71</pitch>
+              <tpc>19</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -85855,8 +85853,8 @@ until conductor signals to go on</text>
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>69</pitch>
-              <tpc>17</tpc>
+              <pitch>71</pitch>
+              <tpc>19</tpc>
               <Spanner type="Glissando">
                 <Glissando>
                   <glissandoStyle>portamento</glissandoStyle>
@@ -85902,8 +85900,8 @@ until conductor signals to go on</text>
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>69</pitch>
-              <tpc>17</tpc>
+              <pitch>71</pitch>
+              <tpc>19</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -85937,8 +85935,8 @@ until conductor signals to go on</text>
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>69</pitch>
-              <tpc>17</tpc>
+              <pitch>71</pitch>
+              <tpc>19</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -85972,8 +85970,8 @@ until conductor signals to go on</text>
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>69</pitch>
-              <tpc>17</tpc>
+              <pitch>71</pitch>
+              <tpc>19</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -86007,8 +86005,8 @@ until conductor signals to go on</text>
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>69</pitch>
-              <tpc>17</tpc>
+              <pitch>71</pitch>
+              <tpc>19</tpc>
               </Note>
             </Chord>
           <BarLine>
@@ -86029,8 +86027,8 @@ until conductor signals to go on</text>
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>69</pitch>
-              <tpc>17</tpc>
+              <pitch>71</pitch>
+              <tpc>19</tpc>
               </Note>
             </Chord>
           <BarLine>
