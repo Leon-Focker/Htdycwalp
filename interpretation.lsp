@@ -87,10 +87,12 @@
 	((< start-time 480)
 	 (variadic (rqq-to-indispensability-function
 		    '(13 ((4 (1 1 1 1)) (4 (1 1 1 1)) (4 (1 1 1 1)) (1 (1)))) t)))
-	;;((< start-time 540) (variadic (rqq-to-indispensability-function
-	;;	      '(13 ((3 (1 1 1)) (5 (1 1 1 1 1)) (2 (1 1)) (3 (1 1 1)))) t)))
-	;((< start-time 600) (variadic ))
-	;((< start-time 660) (variadic ))
+	;; minute 9
+	((< start-time 540) (variadic (rqq-to-indispensability-function
+				       '(16 ((3 (1 1 1)) (3 (1 1 1)) (2 (1 1))
+					     (2 (1 1)) (1 (1)) (3 (1 1 1)) (2 (1 1))))
+				       t)))
+	;; minute 10/11
 	(t (variadic (rqq-to-indispensability-function
 		      '(13 (1 1 1 1 1 1 1 1 1 1 1 1 1)) t)))))
 
@@ -374,7 +376,6 @@
     (multiple-value-bind (st md nd) (get-st-md-nd sum dur)
       ;; custom stuff:
       (case instrument
-	(tuba (setf spitch nil))
 	(double-bass (setf spitch 'b0 thrsld 0))
 	(violin-1 (setf thrsld 1/3))	; i-div 6.5))
 	(violin-2 (setf thrsld 1/4))	; i-div 6.5))
@@ -387,7 +388,7 @@
 	(c-trumpet (setf thrsld 1/8 i-div 8))    
 	(french-horn (setf thrsld 1/6 i-div 8))	
 	(bass-trombone (setf thrsld 1/5 i-div 8))       
-	(tuba (setf thrsld 1/3 i-div 8))
+	(tuba (setf spitch nil thrsld 1/3 i-div 8))
 	(percussion (setf spitch2 (note-for-ins instrument (nth 2 chord))
 			  thrsld 1/2)))
       ;; set number of notes

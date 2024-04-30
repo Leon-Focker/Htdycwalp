@@ -300,7 +300,8 @@
 	     (time 0 (* 4.5 60/72) (* 9.7 60/72))
 	     (rhythm (section-val time
 				  (nth 0 start-times) 1
-				  (nth 1 start-times) (funcall (funcall score-rhythm time) 'line line)))
+				  (nth 1 start-times) (funcall (funcall score-rhythm time)
+							       'line line)))
 	     ;; adjust for tempo 72
 	     (stub (setf rhythm  (* rhythm  60/72)))
 	     (indisp-fun (funcall score-indisp 'time time))
@@ -314,7 +315,9 @@
 
 ;; ** minute 10
 
-(wsound "minute_10"
+;; no minute 10 anymore
+
+#+nil(wsound "minute_10"
   (let* ((sound-list (reverse (data (getf *soundfiles* :noise)))))
     (multiple-value-bind (start-times score-indisp score-rhythm score-srt
 			  score-amp score-time-mult)

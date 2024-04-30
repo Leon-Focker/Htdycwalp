@@ -180,7 +180,11 @@
 	      :tempo 90)
 |#
 
-;; idea: interpret layers returns a function that can then be filled with arguments
-;;  to form a sections like function.
+;; trying to get some patterns for double bass minute 9:
+#|
+(setf (states (second (layers (car (subseq (access-minutes) 8 9))))) '(3 3 3 3))
+(lists-to-xml (interpret-minutes (subseq (access-minutes) 8 9) '(double-bass))
+	      (format nil "~a~a" +ens-src-dir+ "double_bass_minute_9.xml"))
+|#
 
 ;; EOF score.lsp
