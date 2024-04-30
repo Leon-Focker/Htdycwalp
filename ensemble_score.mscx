@@ -23,7 +23,7 @@
       <staffFrameWidth>0.3</staffFrameWidth>
       <Spatium>1.55</Spatium>
       </Style>
-    <showInvisible>1</showInvisible>
+    <showInvisible>0</showInvisible>
     <showUnprintable>1</showUnprintable>
     <showFrames>1</showFrames>
     <showMargins>0</showMargins>
@@ -3415,6 +3415,7 @@
       <Measure>
         <stretch>0.7</stretch>
         <LayoutBreak>
+          <visible>0</visible>
           <subtype>line</subtype>
           </LayoutBreak>
         <voice>
@@ -3442,6 +3443,7 @@
         </Measure>
       <Measure>
         <LayoutBreak>
+          <visible>0</visible>
           <subtype>line</subtype>
           </LayoutBreak>
         <voice>
@@ -3468,6 +3470,10 @@
           </voice>
         </Measure>
       <Measure>
+        <LayoutBreak>
+          <visible>0</visible>
+          <subtype>line</subtype>
+          </LayoutBreak>
         <voice>
           <Rest>
             <durationType>measure</durationType>
@@ -3484,6 +3490,7 @@
           </voice>
         </Measure>
       <Measure>
+        <stretch>0.7</stretch>
         <voice>
           <Rest>
             <durationType>measure</durationType>
@@ -3594,10 +3601,6 @@
         </Measure>
       <Measure>
         <voice>
-          <StaffText>
-            <color r="255" g="0" b="0" a="255"/>
-            <text>Noten (streicher) alterieren - spiel dur /Moll</text>
-            </StaffText>
           <Rest>
             <durationType>measure</durationType>
             <duration>4/4</duration>
@@ -6175,7 +6178,7 @@
                   <Segment>
                     <subtype>0</subtype>
                     <offset x="-7.97039" y="-0.0351118"/>
-                    <off2 x="51.5585" y="0"/>
+                    <off2 x="49.9943" y="0"/>
                     </Segment>
                   </TextLine>
                 <next>
@@ -6263,6 +6266,13 @@
               <head>cross</head>
               </Note>
             </Chord>
+          <StaffText>
+            <size>12</size>
+            <bold>1</bold>
+            <color r="255" g="0" b="0" a="255"/>
+            <offset x="15.1603" y="-7.8068"/>
+            <text>FURY angucken</text>
+            </StaffText>
           <Chord>
             <durationType>quarter</durationType>
             <StemDirection>down</StemDirection>
@@ -6335,6 +6345,35 @@
           <Chord>
             <durationType>whole</durationType>
             <Note>
+              <visible>0</visible>
+              <pitch>77</pitch>
+              <tpc>13</tpc>
+              <Spanner type="TextLine">
+                <TextLine>
+                  <lineWidth>0.44</lineWidth>
+                  <anchor>3</anchor>
+                  <Segment>
+                    <subtype>0</subtype>
+                    <offset x="-6.6042" y="0"/>
+                    <off2 x="50.181" y="0"/>
+                    </Segment>
+                  </TextLine>
+                <next>
+                  <location>
+                    <measures>2</measures>
+                    </location>
+                  </next>
+                </Spanner>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
               <pitch>77</pitch>
               <tpc>13</tpc>
               </Note>
@@ -6344,69 +6383,78 @@
       <Measure>
         <voice>
           <Chord>
-            <durationType>half</durationType>
+            <durationType>whole</durationType>
             <Note>
+              <visible>0</visible>
               <pitch>77</pitch>
               <tpc>13</tpc>
-              </Note>
-            </Chord>
-          <Rest>
-            <durationType>half</durationType>
-            </Rest>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>quarter</durationType>
-            </Rest>
-          <Rest>
-            <durationType>eighth</durationType>
-            </Rest>
-          <StaffText>
-            <offset x="-17.2672" y="-4.20644"/>
-            <text>tape-get-drifting-rhythmic-speeds</text>
-            </StaffText>
-          <Chord>
-            <durationType>eighth</durationType>
-            <StemDirection>down</StemDirection>
-            <Note>
-              <Spanner type="Tie">
-                <Tie>
-                  </Tie>
-                <next>
-                  <location>
-                    <fractions>1/8</fractions>
-                    </location>
-                  </next>
-                </Spanner>
-              <pitch>77</pitch>
-              <tpc>13</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>half</durationType>
-            <StemDirection>down</StemDirection>
-            <Note>
-              <Spanner type="Tie">
-                <Tie>
-                  </Tie>
-                <next>
-                  <location>
-                    <measures>1</measures>
-                    <fractions>-1/2</fractions>
-                    </location>
-                  </next>
-                </Spanner>
-              <Spanner type="Tie">
+              <Spanner type="TextLine">
                 <prev>
                   <location>
-                    <fractions>-1/8</fractions>
+                    <measures>-2</measures>
                     </location>
                   </prev>
                 </Spanner>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
               <pitch>77</pitch>
               <tpc>13</tpc>
+              <Spanner type="TextLine">
+                <TextLine>
+                  <lineWidth>0.44</lineWidth>
+                  <anchor>3</anchor>
+                  <Segment>
+                    <subtype>0</subtype>
+                    <offset x="-6.67996" y="0"/>
+                    <off2 x="60.3543" y="0"/>
+                    </Segment>
+                  </TextLine>
+                <next>
+                  <location>
+                    <measures>2</measures>
+                    </location>
+                  </next>
+                </Spanner>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Chord>
+            <BeamMode>no</BeamMode>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
+              <pitch>77</pitch>
+              <tpc>13</tpc>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
+              <pitch>77</pitch>
+              <tpc>13</tpc>
+              <Spanner type="TextLine">
+                <prev>
+                  <location>
+                    <measures>-2</measures>
+                    </location>
+                  </prev>
+                </Spanner>
               </Note>
             </Chord>
           </voice>
@@ -6424,101 +6472,6 @@
                     <measures>1</measures>
                     </location>
                   </next>
-                </Spanner>
-              <Spanner type="Tie">
-                <prev>
-                  <location>
-                    <measures>-1</measures>
-                    <fractions>1/2</fractions>
-                    </location>
-                  </prev>
-                </Spanner>
-              <pitch>77</pitch>
-              <tpc>13</tpc>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>eighth</durationType>
-            <Note>
-              <Spanner type="Tie">
-                <prev>
-                  <location>
-                    <measures>-1</measures>
-                    </location>
-                  </prev>
-                </Spanner>
-              <pitch>77</pitch>
-              <tpc>13</tpc>
-              </Note>
-            </Chord>
-          <Rest>
-            <durationType>half</durationType>
-            </Rest>
-          <Rest>
-            <durationType>quarter</durationType>
-            </Rest>
-          <Rest>
-            <durationType>eighth</durationType>
-            </Rest>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>half</durationType>
-            </Rest>
-          <Rest>
-            <durationType>quarter</durationType>
-            </Rest>
-          <Rest>
-            <durationType>eighth</durationType>
-            </Rest>
-          <Chord>
-            <BeamMode>no</BeamMode>
-            <durationType>eighth</durationType>
-            <Note>
-              <Spanner type="Tie">
-                <Tie>
-                  </Tie>
-                <next>
-                  <location>
-                    <measures>1</measures>
-                    <fractions>-7/8</fractions>
-                    </location>
-                  </next>
-                </Spanner>
-              <pitch>77</pitch>
-              <tpc>13</tpc>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <Spanner type="Tie">
-                <Tie>
-                  </Tie>
-                <next>
-                  <location>
-                    <measures>1</measures>
-                    </location>
-                  </next>
-                </Spanner>
-              <Spanner type="Tie">
-                <prev>
-                  <location>
-                    <measures>-1</measures>
-                    <fractions>7/8</fractions>
-                    </location>
-                  </prev>
                 </Spanner>
               <pitch>77</pitch>
               <tpc>13</tpc>
@@ -13590,17 +13543,6 @@ until conductor signals to go on</text>
               </Note>
             </Chord>
           </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>67</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
         </Measure>
       <Measure>
         <voice>
@@ -14132,6 +14074,9 @@ until conductor signals to go on</text>
               <pitch>93</pitch>
               <tpc>17</tpc>
               </Note>
+            <Tremolo>
+              <subtype>r8</subtype>
+              </Tremolo>
             </Chord>
           <Chord>
             <durationType>16th</durationType>
@@ -14163,6 +14108,9 @@ until conductor signals to go on</text>
               <pitch>93</pitch>
               <tpc>17</tpc>
               </Note>
+            <Tremolo>
+              <subtype>r8</subtype>
+              </Tremolo>
             </Chord>
           <Chord>
             <durationType>16th</durationType>
@@ -14227,6 +14175,9 @@ until conductor signals to go on</text>
               <pitch>93</pitch>
               <tpc>17</tpc>
               </Note>
+            <Tremolo>
+              <subtype>r8</subtype>
+              </Tremolo>
             </Chord>
           <Chord>
             <durationType>16th</durationType>
@@ -14287,6 +14238,9 @@ until conductor signals to go on</text>
               <pitch>93</pitch>
               <tpc>17</tpc>
               </Note>
+            <Tremolo>
+              <subtype>r8</subtype>
+              </Tremolo>
             </Chord>
           <Chord>
             <durationType>16th</durationType>
@@ -14678,17 +14632,6 @@ until conductor signals to go on</text>
             <duration>4/4</duration>
             </Rest>
           </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>67</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
         </Measure>
       <Measure>
         <voice>
@@ -14697,17 +14640,6 @@ until conductor signals to go on</text>
             <duration>4/4</duration>
             </Rest>
           </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>67</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
         </Measure>
       <Measure>
         <voice>
@@ -14715,17 +14647,6 @@ until conductor signals to go on</text>
             <durationType>measure</durationType>
             <duration>4/4</duration>
             </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>67</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
           </voice>
         </Measure>
       <Measure>
@@ -20554,16 +20475,6 @@ until conductor signals to go on</text>
           <Chord>
             <durationType>half</durationType>
             <Note>
-              <Spanner type="Tie">
-                <Tie>
-                  </Tie>
-                <next>
-                  <location>
-                    <measures>1</measures>
-                    <fractions>-1/2</fractions>
-                    </location>
-                  </next>
-                </Spanner>
               <pitch>77</pitch>
               <tpc>13</tpc>
               </Note>
@@ -20572,21 +20483,10 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <Spanner type="Tie">
-                <prev>
-                  <location>
-                    <measures>-1</measures>
-                    <fractions>1/2</fractions>
-                    </location>
-                  </prev>
-                </Spanner>
-              <pitch>77</pitch>
-              <tpc>13</tpc>
-              </Note>
-            </Chord>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
           </voice>
         <voice>
           <Chord>
@@ -20726,6 +20626,9 @@ until conductor signals to go on</text>
               <pitch>87</pitch>
               <tpc>11</tpc>
               </Note>
+            <Tremolo>
+              <subtype>r8</subtype>
+              </Tremolo>
             </Chord>
           <Chord>
             <durationType>16th</durationType>
@@ -20757,6 +20660,9 @@ until conductor signals to go on</text>
               <pitch>87</pitch>
               <tpc>11</tpc>
               </Note>
+            <Tremolo>
+              <subtype>r8</subtype>
+              </Tremolo>
             </Chord>
           <Chord>
             <durationType>16th</durationType>
@@ -20824,6 +20730,9 @@ until conductor signals to go on</text>
               <pitch>87</pitch>
               <tpc>11</tpc>
               </Note>
+            <Tremolo>
+              <subtype>r8</subtype>
+              </Tremolo>
             </Chord>
           <Chord>
             <durationType>16th</durationType>
@@ -20884,6 +20793,9 @@ until conductor signals to go on</text>
               <pitch>87</pitch>
               <tpc>11</tpc>
               </Note>
+            <Tremolo>
+              <subtype>r8</subtype>
+              </Tremolo>
             </Chord>
           <Chord>
             <durationType>16th</durationType>
@@ -20943,8 +20855,11 @@ until conductor signals to go on</text>
       <Measure>
         <vspacerDown>8.3</vspacerDown>
         <voice>
+          <Beam>
+            <growRight>0</growRight>
+            </Beam>
           <Chord>
-            <durationType>half</durationType>
+            <durationType>16th</durationType>
             <Note>
               <Accidental>
                 <subtype>accidentalFlat</subtype>
@@ -20952,7 +20867,49 @@ until conductor signals to go on</text>
               <pitch>58</pitch>
               <tpc>12</tpc>
               </Note>
+            <Tremolo>
+              <subtype>r8</subtype>
+              </Tremolo>
             </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>58</pitch>
+              <tpc>12</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>58</pitch>
+              <tpc>12</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>58</pitch>
+              <tpc>12</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <BeamMode>mid</BeamMode>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>58</pitch>
+              <tpc>12</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>58</pitch>
+              <tpc>12</tpc>
+              </Note>
+            </Chord>
+          <Rest>
+            <durationType>eighth</durationType>
+            </Rest>
           <Chord>
             <durationType>half</durationType>
             <Note>
@@ -21132,17 +21089,6 @@ until conductor signals to go on</text>
             <duration>4/4</duration>
             </Rest>
           </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>67</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
         </Measure>
       <Measure>
         <voice>
@@ -21151,17 +21097,6 @@ until conductor signals to go on</text>
             <duration>4/4</duration>
             </Rest>
           </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>67</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
         </Measure>
       <Measure>
         <voice>
@@ -21169,17 +21104,6 @@ until conductor signals to go on</text>
             <durationType>measure</durationType>
             <duration>4/4</duration>
             </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>67</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
           </voice>
         </Measure>
       <Measure>
@@ -28476,18 +28400,6 @@ until conductor signals to go on</text>
               </Note>
             </Chord>
           </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>67</pitch>
-              <tpc>15</tpc>
-              <tpc2>17</tpc2>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
         </Measure>
       <Measure>
         <voice>
@@ -28615,6 +28527,9 @@ until conductor signals to go on</text>
               <tpc>16</tpc>
               <tpc2>18</tpc2>
               </Note>
+            <Tremolo>
+              <subtype>r8</subtype>
+              </Tremolo>
             </Chord>
           <Chord>
             <durationType>16th</durationType>
@@ -28650,6 +28565,9 @@ until conductor signals to go on</text>
               <tpc>16</tpc>
               <tpc2>18</tpc2>
               </Note>
+            <Tremolo>
+              <subtype>r8</subtype>
+              </Tremolo>
             </Chord>
           <Chord>
             <durationType>16th</durationType>
@@ -28722,6 +28640,9 @@ until conductor signals to go on</text>
               <tpc>16</tpc>
               <tpc2>18</tpc2>
               </Note>
+            <Tremolo>
+              <subtype>r8</subtype>
+              </Tremolo>
             </Chord>
           <Chord>
             <durationType>16th</durationType>
@@ -28790,6 +28711,9 @@ until conductor signals to go on</text>
               <tpc>16</tpc>
               <tpc2>18</tpc2>
               </Note>
+            <Tremolo>
+              <subtype>r8</subtype>
+              </Tremolo>
             </Chord>
           <Chord>
             <durationType>16th</durationType>
@@ -28855,8 +28779,38 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
+          <Beam>
+            <growRight>0</growRight>
+            </Beam>
           <Chord>
-            <durationType>quarter</durationType>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>58</pitch>
+              <tpc>12</tpc>
+              <tpc2>14</tpc2>
+              </Note>
+            <Tremolo>
+              <subtype>r8</subtype>
+              </Tremolo>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>58</pitch>
+              <tpc>12</tpc>
+              <tpc2>14</tpc2>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>58</pitch>
+              <tpc>12</tpc>
+              <tpc2>14</tpc2>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
             <Note>
               <pitch>58</pitch>
               <tpc>12</tpc>
@@ -29123,18 +29077,6 @@ until conductor signals to go on</text>
             <duration>4/4</duration>
             </Rest>
           </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>67</pitch>
-              <tpc>15</tpc>
-              <tpc2>17</tpc2>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
         </Measure>
       <Measure>
         <voice>
@@ -29143,18 +29085,6 @@ until conductor signals to go on</text>
             <duration>4/4</duration>
             </Rest>
           </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>67</pitch>
-              <tpc>15</tpc>
-              <tpc2>17</tpc2>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
         </Measure>
       <Measure>
         <voice>
@@ -29162,18 +29092,6 @@ until conductor signals to go on</text>
             <durationType>measure</durationType>
             <duration>4/4</duration>
             </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>67</pitch>
-              <tpc>15</tpc>
-              <tpc2>17</tpc2>
-              <play>0</play>
-              </Note>
-            </Chord>
           </voice>
         </Measure>
       <Measure>
@@ -34990,17 +34908,6 @@ until conductor signals to go on</text>
               </Note>
             </Chord>
           </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>55</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
         </Measure>
       <Measure>
         <voice>
@@ -35126,6 +35033,9 @@ until conductor signals to go on</text>
               <pitch>69</pitch>
               <tpc>17</tpc>
               </Note>
+            <Tremolo>
+              <subtype>r8</subtype>
+              </Tremolo>
             </Chord>
           <Chord>
             <durationType>16th</durationType>
@@ -35157,6 +35067,9 @@ until conductor signals to go on</text>
               <pitch>69</pitch>
               <tpc>17</tpc>
               </Note>
+            <Tremolo>
+              <subtype>r8</subtype>
+              </Tremolo>
             </Chord>
           <Chord>
             <durationType>16th</durationType>
@@ -35221,6 +35134,9 @@ until conductor signals to go on</text>
               <pitch>69</pitch>
               <tpc>17</tpc>
               </Note>
+            <Tremolo>
+              <subtype>r8</subtype>
+              </Tremolo>
             </Chord>
           <Chord>
             <durationType>16th</durationType>
@@ -35281,6 +35197,9 @@ until conductor signals to go on</text>
               <pitch>69</pitch>
               <tpc>17</tpc>
               </Note>
+            <Tremolo>
+              <subtype>r8</subtype>
+              </Tremolo>
             </Chord>
           <Chord>
             <durationType>16th</durationType>
@@ -35352,6 +35271,9 @@ until conductor signals to go on</text>
               <pitch>58</pitch>
               <tpc>12</tpc>
               </Note>
+            <Tremolo>
+              <subtype>r8</subtype>
+              </Tremolo>
             </Chord>
           <Chord>
             <durationType>16th</durationType>
@@ -35620,17 +35542,6 @@ until conductor signals to go on</text>
             <duration>4/4</duration>
             </Rest>
           </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>55</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
         </Measure>
       <Measure>
         <voice>
@@ -35639,17 +35550,6 @@ until conductor signals to go on</text>
             <duration>4/4</duration>
             </Rest>
           </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>55</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
         </Measure>
       <Measure>
         <voice>
@@ -35657,17 +35557,6 @@ until conductor signals to go on</text>
             <durationType>measure</durationType>
             <duration>4/4</duration>
             </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>55</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
           </voice>
         </Measure>
       <Measure>
@@ -45803,6 +45692,8 @@ until conductor signals to go on</text>
           </voice>
         </Measure>
       <Measure>
+        <vspacerUp>9.28</vspacerUp>
+        <vspacerDown>8.28</vspacerDown>
         <voice>
           <Tuplet>
             <normalNotes>4</normalNotes>
@@ -46580,8 +46471,19 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
+          <Rest>
+            <visible>0</visible>
+            <durationType>eighth</durationType>
+            </Rest>
+          <Rest>
+            <durationType>eighth</durationType>
+            </Rest>
+          <Rest>
+            <durationType>eighth</durationType>
+            </Rest>
           <Chord>
             <durationType>eighth</durationType>
+            <StemDirection>down</StemDirection>
             <Note>
               <pitch>44</pitch>
               <tpc>22</tpc>
@@ -46589,14 +46491,156 @@ until conductor signals to go on</text>
               </Note>
             </Chord>
           <Rest>
-            <durationType>16th</durationType>
+            <durationType>quarter</durationType>
+            </Rest>
+          <Rest>
+            <durationType>eighth</durationType>
             </Rest>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>46</pitch>
+              <tpc>12</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          </voice>
+        <voice>
+          <Chord>
+            <durationType>eighth</durationType>
+            <StemDirection>down</StemDirection>
             <Note>
               <pitch>44</pitch>
               <tpc>22</tpc>
               <head>custom</head>
+              </Note>
+            </Chord>
+          <location>
+            <fractions>1/8</fractions>
+            </location>
+          <location>
+            <fractions>5/8</fractions>
+            </location>
+          <Chord>
+            <durationType>eighth</durationType>
+            <StemDirection>down</StemDirection>
+            <Note>
+              <pitch>44</pitch>
+              <tpc>22</tpc>
+              <head>custom</head>
+              <play>0</play>
+              <headType>half</headType>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <visible>0</visible>
+            <durationType>eighth</durationType>
+            </Rest>
+          <Rest>
+            <durationType>eighth</durationType>
+            </Rest>
+          <Rest>
+            <durationType>eighth</durationType>
+            </Rest>
+          <Chord>
+            <durationType>eighth</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>46</pitch>
+              <tpc>12</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Rest>
+            <visible>0</visible>
+            <durationType>quarter</durationType>
+            </Rest>
+          <Rest>
+            <durationType>eighth</durationType>
+            </Rest>
+          <Chord>
+            <durationType>eighth</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>46</pitch>
+              <tpc>12</tpc>
+              <head>cross</head>
+              </Note>
+            <Tremolo>
+              <subtype>r16</subtype>
+              </Tremolo>
+            </Chord>
+          </voice>
+        <voice>
+          <Chord>
+            <durationType>eighth</durationType>
+            <Note>
+              <pitch>44</pitch>
+              <tpc>22</tpc>
+              <head>custom</head>
+              </Note>
+            </Chord>
+          <location>
+            <fractions>1/8</fractions>
+            </location>
+          <location>
+            <fractions>1/8</fractions>
+            </location>
+          <Chord>
+            <durationType>eighth</durationType>
+            <Note>
+              <pitch>44</pitch>
+              <tpc>22</tpc>
+              <head>custom</head>
+              <play>0</play>
+              <headType>half</headType>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <pitch>44</pitch>
+              <tpc>22</tpc>
+              <head>custom</head>
+              </Note>
+            </Chord>
+          <location>
+            <fractions>1/8</fractions>
+            </location>
+          <Chord>
+            <durationType>eighth</durationType>
+            <StemDirection>down</StemDirection>
+            <Note>
+              <pitch>44</pitch>
+              <tpc>22</tpc>
+              <head>custom</head>
+              <play>0</play>
+              <headType>half</headType>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <visible>0</visible>
+            <durationType>eighth</durationType>
+            </Rest>
+          <Rest>
+            <durationType>16th</durationType>
+            </Rest>
+          <Chord>
+            <durationType>16th</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
@@ -46604,34 +46648,51 @@ until conductor signals to go on</text>
             </Rest>
           <Chord>
             <durationType>eighth</durationType>
+            <Spanner type="Slur">
+              <Slur>
+                </Slur>
+              <next>
+                <location>
+                  <voices>1</voices>
+                  <fractions>5/16</fractions>
+                  </location>
+                </next>
+              </Spanner>
+            <StemDirection>up</StemDirection>
             <Note>
-              <pitch>44</pitch>
-              <tpc>22</tpc>
-              <head>custom</head>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
               </Note>
+            <Tremolo>
+              <subtype>r16</subtype>
+              </Tremolo>
             </Chord>
+          <Beam>
+            <StemDirection>up</StemDirection>
+            </Beam>
           <Chord>
             <durationType>eighth</durationType>
             <Note>
-              <pitch>44</pitch>
-              <tpc>22</tpc>
-              <head>custom</head>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Chord>
             <durationType>16th</durationType>
             <Note>
-              <pitch>44</pitch>
-              <tpc>22</tpc>
-              <head>custom</head>
+              <pitch>46</pitch>
+              <tpc>12</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Chord>
             <durationType>16th</durationType>
             <Note>
-              <pitch>44</pitch>
-              <tpc>22</tpc>
-              <head>custom</head>
+              <pitch>46</pitch>
+              <tpc>12</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Rest>
@@ -46639,6 +46700,192 @@ until conductor signals to go on</text>
             </Rest>
           <Chord>
             <durationType>eighth</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          </voice>
+        <voice>
+          <Chord>
+            <durationType>eighth</durationType>
+            <Note>
+              <pitch>44</pitch>
+              <tpc>22</tpc>
+              <head>custom</head>
+              </Note>
+            </Chord>
+          <location>
+            <fractions>1/8</fractions>
+            </location>
+          <location>
+            <fractions>1/4</fractions>
+            </location>
+          <location>
+            <fractions>1/8</fractions>
+            </location>
+          <location>
+            <fractions>1/16</fractions>
+            </location>
+          <Chord>
+            <durationType>16th</durationType>
+            <Spanner type="Slur">
+              <prev>
+                <location>
+                  <voices>-1</voices>
+                  <fractions>-5/16</fractions>
+                  </location>
+                </prev>
+              </Spanner>
+            <Note>
+              <pitch>44</pitch>
+              <tpc>22</tpc>
+              <head>custom</head>
+              <play>0</play>
+              <headType>half</headType>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Chord>
+            <durationType>eighth</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            <Tremolo>
+              <subtype>r32</subtype>
+              </Tremolo>
+            </Chord>
+          <Rest>
+            <durationType>16th</durationType>
+            </Rest>
+          <Rest>
+            <visible>0</visible>
+            <durationType>16th</durationType>
+            </Rest>
+          <Rest>
+            <durationType>eighth</durationType>
+            </Rest>
+          <Tuplet>
+            <normalNotes>2</normalNotes>
+            <actualNotes>3</actualNotes>
+            <baseNote>16th</baseNote>
+            <Number>
+              <style>Tuplet</style>
+              <text>3</text>
+              </Number>
+            </Tuplet>
+          <Beam>
+            <StemDirection>up</StemDirection>
+            </Beam>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            <Tremolo>
+              <subtype>r8</subtype>
+              </Tremolo>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            <Tremolo>
+              <subtype>r8</subtype>
+              </Tremolo>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            <Tremolo>
+              <subtype>r8</subtype>
+              </Tremolo>
+            </Chord>
+          <endTuplet/>
+          <Chord>
+            <durationType>eighth</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>46</pitch>
+              <tpc>12</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Rest>
+            <visible>0</visible>
+            <durationType>16th</durationType>
+            </Rest>
+          <Rest>
+            <durationType>eighth</durationType>
+            </Rest>
+          <Chord>
+            <durationType>eighth</durationType>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          </voice>
+        <voice>
+          <location>
+            <fractions>3/16</fractions>
+            </location>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>44</pitch>
+              <tpc>22</tpc>
+              <head>custom</head>
+              </Note>
+            </Chord>
+          <location>
+            <fractions>1/8</fractions>
+            </location>
+          <location>
+            <fractions>1/4</fractions>
+            </location>
+          <Chord>
+            <durationType>16th</durationType>
+            <StemDirection>down</StemDirection>
+            <Note>
+              <pitch>44</pitch>
+              <tpc>22</tpc>
+              <head>custom</head>
+              <play>0</play>
+              <headType>half</headType>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
             <Note>
               <pitch>44</pitch>
               <tpc>22</tpc>
@@ -46650,163 +46897,325 @@ until conductor signals to go on</text>
       <Measure>
         <voice>
           <Chord>
-            <durationType>eighth</durationType>
+            <durationType>quarter</durationType>
+            <StemDirection>up</StemDirection>
             <Note>
-              <pitch>44</pitch>
-              <tpc>22</tpc>
-              <head>custom</head>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
               </Note>
-            </Chord>
-          <Rest>
-            <durationType>16th</durationType>
-            </Rest>
-          <Chord>
-            <durationType>16th</durationType>
-            <Note>
-              <pitch>44</pitch>
-              <tpc>22</tpc>
-              <head>custom</head>
-              </Note>
-            </Chord>
-          <Rest>
-            <durationType>eighth</durationType>
-            </Rest>
-          <Chord>
-            <durationType>eighth</durationType>
-            <Note>
-              <pitch>44</pitch>
-              <tpc>22</tpc>
-              <head>custom</head>
-              </Note>
+            <Tremolo>
+              <subtype>r64</subtype>
+              </Tremolo>
             </Chord>
           <Chord>
-            <durationType>eighth</durationType>
+            <durationType>quarter</durationType>
+            <StemDirection>up</StemDirection>
             <Note>
-              <pitch>44</pitch>
-              <tpc>22</tpc>
-              <head>custom</head>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
               </Note>
+            <Tremolo>
+              <subtype>r64</subtype>
+              </Tremolo>
             </Chord>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>quarter</durationType>
+            <StemDirection>up</StemDirection>
             <Note>
-              <pitch>44</pitch>
-              <tpc>22</tpc>
-              <head>custom</head>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
               </Note>
+            <Tremolo>
+              <subtype>r64</subtype>
+              </Tremolo>
             </Chord>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>quarter</durationType>
+            <StemDirection>up</StemDirection>
             <Note>
-              <pitch>44</pitch>
-              <tpc>22</tpc>
-              <head>custom</head>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
               </Note>
-            </Chord>
-          <Rest>
-            <durationType>eighth</durationType>
-            </Rest>
-          <Chord>
-            <durationType>eighth</durationType>
-            <Note>
-              <pitch>44</pitch>
-              <tpc>22</tpc>
-              <head>custom</head>
-              </Note>
+            <Tremolo>
+              <subtype>r64</subtype>
+              </Tremolo>
             </Chord>
           </voice>
         </Measure>
       <Measure>
         <voice>
-          <Chord>
-            <durationType>eighth</durationType>
-            <Note>
-              <pitch>44</pitch>
-              <tpc>22</tpc>
-              <head>custom</head>
-              </Note>
-            </Chord>
-          <Rest>
-            <durationType>16th</durationType>
-            </Rest>
+          <Tuplet>
+            <normalNotes>4</normalNotes>
+            <actualNotes>6</actualNotes>
+            <baseNote>16th</baseNote>
+            <Number>
+              <style>Tuplet</style>
+              <text>6</text>
+              </Number>
+            </Tuplet>
           <Chord>
             <durationType>16th</durationType>
+            <StemDirection>up</StemDirection>
             <Note>
-              <pitch>44</pitch>
-              <tpc>22</tpc>
-              <head>custom</head>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
               </Note>
-            </Chord>
-          <Rest>
-            <durationType>eighth</durationType>
-            </Rest>
-          <Chord>
-            <durationType>eighth</durationType>
-            <Note>
-              <pitch>44</pitch>
-              <tpc>22</tpc>
-              <head>custom</head>
-              </Note>
+            <Tremolo>
+              <subtype>r8</subtype>
+              </Tremolo>
             </Chord>
           <Chord>
-            <durationType>eighth</durationType>
+            <durationType>16th</durationType>
+            <StemDirection>up</StemDirection>
             <Note>
-              <pitch>44</pitch>
-              <tpc>22</tpc>
-              <head>custom</head>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Chord>
             <durationType>16th</durationType>
+            <StemDirection>up</StemDirection>
             <Note>
-              <pitch>44</pitch>
-              <tpc>22</tpc>
-              <head>custom</head>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           <Chord>
             <durationType>16th</durationType>
+            <StemDirection>up</StemDirection>
             <Note>
-              <pitch>44</pitch>
-              <tpc>22</tpc>
-              <head>custom</head>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
-          <Rest>
-            <durationType>eighth</durationType>
-            </Rest>
           <Chord>
-            <durationType>eighth</durationType>
+            <durationType>16th</durationType>
+            <StemDirection>up</StemDirection>
             <Note>
-              <pitch>44</pitch>
-              <tpc>22</tpc>
-              <head>custom</head>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
+          <Chord>
+            <durationType>16th</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <endTuplet/>
+          <Tuplet>
+            <normalNotes>4</normalNotes>
+            <actualNotes>6</actualNotes>
+            <baseNote>16th</baseNote>
+            <Number>
+              <style>Tuplet</style>
+              <text>6</text>
+              </Number>
+            </Tuplet>
+          <Chord>
+            <durationType>16th</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            <Tremolo>
+              <subtype>r8</subtype>
+              </Tremolo>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <endTuplet/>
+          <Tuplet>
+            <normalNotes>4</normalNotes>
+            <actualNotes>6</actualNotes>
+            <baseNote>16th</baseNote>
+            <Number>
+              <style>Tuplet</style>
+              <text>6</text>
+              </Number>
+            </Tuplet>
+          <Chord>
+            <durationType>16th</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            <Tremolo>
+              <subtype>r8</subtype>
+              </Tremolo>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <endTuplet/>
+          <Tuplet>
+            <normalNotes>4</normalNotes>
+            <actualNotes>6</actualNotes>
+            <baseNote>16th</baseNote>
+            <Number>
+              <style>Tuplet</style>
+              <text>6</text>
+              </Number>
+            </Tuplet>
+          <Chord>
+            <durationType>16th</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            <Tremolo>
+              <subtype>r8</subtype>
+              </Tremolo>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <endTuplet/>
           </voice>
         </Measure>
       <Measure>
@@ -53563,47 +53972,52 @@ until conductor signals to go on</text>
           <Chord>
             <BeamMode>mid</BeamMode>
             <durationType>quarter</durationType>
-            <Note>
-              <pitch>67</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <BeamMode>mid</BeamMode>
-            <durationType>quarter</durationType>
-            <Note>
-              <pitch>67</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <BeamMode>mid</BeamMode>
-            <durationType>quarter</durationType>
-            <Note>
-              <pitch>67</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>quarter</durationType>
-            <Note>
-              <pitch>67</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
               <visible>0</visible>
+              </Articulation>
+            <Note>
               <pitch>67</pitch>
               <tpc>15</tpc>
-              <play>0</play>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <BeamMode>mid</BeamMode>
+            <durationType>quarter</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              <visible>0</visible>
+              </Articulation>
+            <Note>
+              <pitch>67</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <BeamMode>mid</BeamMode>
+            <durationType>quarter</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              <visible>0</visible>
+              </Articulation>
+            <Note>
+              <pitch>67</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              <visible>0</visible>
+              </Articulation>
+            <Note>
+              <pitch>67</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
               </Note>
             </Chord>
           </voice>
@@ -53615,7 +54029,7 @@ until conductor signals to go on</text>
             </BarLine>
           <Dynamic>
             <subtype>mf</subtype>
-            <velocity>35</velocity>
+            <velocity>5</velocity>
             </Dynamic>
           <StaffText>
             <bold>1</bold>
@@ -55911,6 +56325,10 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
+          <Clef>
+            <concertClefType>F</concertClefType>
+            <transposingClefType>F</transposingClefType>
+            </Clef>
           <Rest>
             <durationType>measure</durationType>
             <duration>4/4</duration>
@@ -57025,7 +57443,7 @@ until conductor signals to go on</text>
           <Chord>
             <durationType>16th</durationType>
             <Articulation>
-              <subtype>articAccentBelow</subtype>
+              <subtype>articAccentAbove</subtype>
               </Articulation>
             <Note>
               <Accidental>
@@ -57054,7 +57472,7 @@ until conductor signals to go on</text>
           <Chord>
             <durationType>16th</durationType>
             <Articulation>
-              <subtype>articAccentBelow</subtype>
+              <subtype>articAccentAbove</subtype>
               </Articulation>
             <Note>
               <Spanner type="Tie">
@@ -57081,7 +57499,7 @@ until conductor signals to go on</text>
           <Chord>
             <durationType>16th</durationType>
             <Articulation>
-              <subtype>articAccentBelow</subtype>
+              <subtype>articAccentAbove</subtype>
               </Articulation>
             <Note>
               <Spanner type="Tie">
@@ -57108,118 +57526,7 @@ until conductor signals to go on</text>
           <Chord>
             <durationType>16th</durationType>
             <Articulation>
-              <subtype>articAccentBelow</subtype>
-              </Articulation>
-            <Note>
-              <Spanner type="Tie">
-                <Tie>
-                  </Tie>
-                <next>
-                  <location>
-                    <fractions>1/16</fractions>
-                    </location>
-                  </next>
-                </Spanner>
-              <Spanner type="Tie">
-                <prev>
-                  <location>
-                    <fractions>-1/16</fractions>
-                    </location>
-                  </prev>
-                </Spanner>
-              <pitch>56</pitch>
-              <tpc>22</tpc>
-              <tpc2>23</tpc2>
-              </Note>
-            </Chord>
-          <Beam>
-            <distribute>1</distribute>
-            </Beam>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articAccentBelow</subtype>
-              </Articulation>
-            <Note>
-              <Spanner type="Tie">
-                <Tie>
-                  </Tie>
-                <next>
-                  <location>
-                    <fractions>1/16</fractions>
-                    </location>
-                  </next>
-                </Spanner>
-              <Spanner type="Tie">
-                <prev>
-                  <location>
-                    <fractions>-1/16</fractions>
-                    </location>
-                  </prev>
-                </Spanner>
-              <pitch>56</pitch>
-              <tpc>22</tpc>
-              <tpc2>23</tpc2>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articAccentBelow</subtype>
-              </Articulation>
-            <Note>
-              <Spanner type="Tie">
-                <Tie>
-                  </Tie>
-                <next>
-                  <location>
-                    <fractions>1/16</fractions>
-                    </location>
-                  </next>
-                </Spanner>
-              <Spanner type="Tie">
-                <prev>
-                  <location>
-                    <fractions>-1/16</fractions>
-                    </location>
-                  </prev>
-                </Spanner>
-              <pitch>56</pitch>
-              <tpc>22</tpc>
-              <tpc2>23</tpc2>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articAccentBelow</subtype>
-              </Articulation>
-            <Note>
-              <Spanner type="Tie">
-                <Tie>
-                  </Tie>
-                <next>
-                  <location>
-                    <fractions>1/16</fractions>
-                    </location>
-                  </next>
-                </Spanner>
-              <Spanner type="Tie">
-                <prev>
-                  <location>
-                    <fractions>-1/16</fractions>
-                    </location>
-                  </prev>
-                </Spanner>
-              <pitch>56</pitch>
-              <tpc>22</tpc>
-              <tpc2>23</tpc2>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articAccentBelow</subtype>
+              <subtype>articAccentAbove</subtype>
               </Articulation>
             <Note>
               <Spanner type="Tie">
@@ -57249,7 +57556,7 @@ until conductor signals to go on</text>
           <Chord>
             <durationType>16th</durationType>
             <Articulation>
-              <subtype>articAccentBelow</subtype>
+              <subtype>articAccentAbove</subtype>
               </Articulation>
             <Note>
               <Spanner type="Tie">
@@ -57276,7 +57583,118 @@ until conductor signals to go on</text>
           <Chord>
             <durationType>16th</durationType>
             <Articulation>
-              <subtype>articAccentBelow</subtype>
+              <subtype>articAccentAbove</subtype>
+              </Articulation>
+            <Note>
+              <Spanner type="Tie">
+                <Tie>
+                  </Tie>
+                <next>
+                  <location>
+                    <fractions>1/16</fractions>
+                    </location>
+                  </next>
+                </Spanner>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <fractions>-1/16</fractions>
+                    </location>
+                  </prev>
+                </Spanner>
+              <pitch>56</pitch>
+              <tpc>22</tpc>
+              <tpc2>23</tpc2>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articAccentAbove</subtype>
+              </Articulation>
+            <Note>
+              <Spanner type="Tie">
+                <Tie>
+                  </Tie>
+                <next>
+                  <location>
+                    <fractions>1/16</fractions>
+                    </location>
+                  </next>
+                </Spanner>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <fractions>-1/16</fractions>
+                    </location>
+                  </prev>
+                </Spanner>
+              <pitch>56</pitch>
+              <tpc>22</tpc>
+              <tpc2>23</tpc2>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articAccentAbove</subtype>
+              </Articulation>
+            <Note>
+              <Spanner type="Tie">
+                <Tie>
+                  </Tie>
+                <next>
+                  <location>
+                    <fractions>1/16</fractions>
+                    </location>
+                  </next>
+                </Spanner>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <fractions>-1/16</fractions>
+                    </location>
+                  </prev>
+                </Spanner>
+              <pitch>56</pitch>
+              <tpc>22</tpc>
+              <tpc2>23</tpc2>
+              </Note>
+            </Chord>
+          <Beam>
+            <distribute>1</distribute>
+            </Beam>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articAccentAbove</subtype>
+              </Articulation>
+            <Note>
+              <Spanner type="Tie">
+                <Tie>
+                  </Tie>
+                <next>
+                  <location>
+                    <fractions>1/16</fractions>
+                    </location>
+                  </next>
+                </Spanner>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <fractions>-1/16</fractions>
+                    </location>
+                  </prev>
+                </Spanner>
+              <pitch>56</pitch>
+              <tpc>22</tpc>
+              <tpc2>23</tpc2>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articAccentAbove</subtype>
               </Articulation>
             <Note>
               <Spanner type="Tie">
@@ -57311,7 +57729,7 @@ signals to go on</text>
           <Chord>
             <durationType>16th</durationType>
             <Articulation>
-              <subtype>articAccentBelow</subtype>
+              <subtype>articAccentAbove</subtype>
               </Articulation>
             <Note>
               <Spanner type="Tie">
@@ -58445,18 +58863,6 @@ signals to go on</text>
               <pitch>64</pitch>
               <tpc>18</tpc>
               <tpc2>19</tpc2>
-              </Note>
-            </Chord>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>67</pitch>
-              <tpc>15</tpc>
-              <tpc2>16</tpc2>
-              <play>0</play>
               </Note>
             </Chord>
           </voice>
@@ -60044,18 +60450,6 @@ signals to go on</text>
             <duration>4/4</duration>
             </Rest>
           </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>67</pitch>
-              <tpc>15</tpc>
-              <tpc2>16</tpc2>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
         </Measure>
       <Measure>
         <voice>
@@ -60354,7 +60748,7 @@ signals to go on</text>
         <voice>
           <Dynamic>
             <subtype>mf</subtype>
-            <velocity>35</velocity>
+            <velocity>5</velocity>
             </Dynamic>
           <StaffText>
             <bold>1</bold>
@@ -65282,20 +65676,6 @@ until conductor signals to go on</text>
               </Note>
             </Chord>
           </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <Accidental>
-                <subtype>accidentalNatural</subtype>
-                </Accidental>
-              <pitch>55</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
         </Measure>
       <Measure>
         <voice>
@@ -67261,7 +67641,7 @@ until conductor signals to go on</text>
         <voice>
           <Dynamic>
             <subtype>mf</subtype>
-            <velocity>35</velocity>
+            <velocity>5</velocity>
             </Dynamic>
           <StaffText>
             <bold>1</bold>
@@ -73969,7 +74349,7 @@ until conductor signals to go on</text>
         <voice>
           <Dynamic>
             <subtype>mf</subtype>
-            <velocity>35</velocity>
+            <velocity>5</velocity>
             </Dynamic>
           <StaffText>
             <bold>1</bold>
@@ -82770,6 +83150,17 @@ signals to go on</text>
         </Measure>
       <Measure>
         <voice>
+          <Spanner type="HairPin">
+            <HairPin>
+              <subtype>1</subtype>
+              <hairpinCircledTip>1</hairpinCircledTip>
+              </HairPin>
+            <next>
+              <location>
+                <measures>1</measures>
+                </location>
+              </next>
+            </Spanner>
           <Chord>
             <durationType>whole</durationType>
             <Note>
@@ -82799,6 +83190,13 @@ signals to go on</text>
         </Measure>
       <Measure>
         <voice>
+          <Spanner type="HairPin">
+            <prev>
+              <location>
+                <measures>-1</measures>
+                </location>
+              </prev>
+            </Spanner>
           <Rest>
             <durationType>measure</durationType>
             <duration>4/4</duration>
@@ -83507,81 +83905,28 @@ signals to go on</text>
             <duration>4/4</duration>
             </Rest>
           </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>67</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
         </Measure>
       <Measure>
         <voice>
           <Rest>
-            <durationType>eighth</durationType>
-            </Rest>
-          <Chord>
-            <durationType>eighth</durationType>
-            <Note>
-              <Accidental>
-                <subtype>accidentalFlat</subtype>
-                </Accidental>
-              <pitch>73</pitch>
-              <tpc>9</tpc>
-              </Note>
-            </Chord>
-          <Rest>
-            <durationType>quarter</durationType>
-            </Rest>
-          <Rest>
-            <durationType>eighth</durationType>
-            </Rest>
-          <Chord>
-            <durationType>eighth</durationType>
-            <Note>
-              <pitch>73</pitch>
-              <tpc>9</tpc>
-              </Note>
-            </Chord>
-          <Rest>
-            <durationType>quarter</durationType>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
             </Rest>
           </voice>
         </Measure>
       <Measure>
         <voice>
           <Rest>
-            <durationType>eighth</durationType>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
             </Rest>
-          <Chord>
-            <durationType>eighth</durationType>
-            <Note>
-              <Accidental>
-                <subtype>accidentalFlat</subtype>
-                </Accidental>
-              <pitch>73</pitch>
-              <tpc>9</tpc>
-              </Note>
-            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
           <Rest>
-            <durationType>quarter</durationType>
-            </Rest>
-          <Rest>
-            <durationType>eighth</durationType>
-            </Rest>
-          <Chord>
-            <durationType>eighth</durationType>
-            <Note>
-              <pitch>73</pitch>
-              <tpc>9</tpc>
-              </Note>
-            </Chord>
-          <Rest>
-            <durationType>quarter</durationType>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
             </Rest>
           </voice>
         <voice>
@@ -83599,8 +83944,17 @@ signals to go on</text>
       <Measure>
         <voice>
           <Rest>
-            <durationType>eighth</durationType>
+            <durationType>half</durationType>
             </Rest>
+          <Rest>
+            <durationType>quarter</durationType>
+            </Rest>
+          <Dynamic>
+            <subtype>p</subtype>
+            <velocity>49</velocity>
+            </Dynamic>
+          <Beam>
+            </Beam>
           <Chord>
             <durationType>eighth</durationType>
             <Note>
@@ -83609,56 +83963,43 @@ signals to go on</text>
                 </Accidental>
               <pitch>73</pitch>
               <tpc>9</tpc>
+              <Spanner type="Glissando">
+                <Glissando>
+                  <text>gliss.</text>
+                  <glissandoStyle>portamento</glissandoStyle>
+                  <diagonal>1</diagonal>
+                  <anchor>3</anchor>
+                  </Glissando>
+                <next>
+                  <location>
+                    <fractions>1/8</fractions>
+                    </location>
+                  </next>
+                </Spanner>
               </Note>
             </Chord>
-          <Rest>
-            <durationType>quarter</durationType>
-            </Rest>
-          <Rest>
-            <durationType>eighth</durationType>
-            </Rest>
           <Chord>
-            <durationType>eighth</durationType>
-            <Note>
-              <pitch>73</pitch>
-              <tpc>9</tpc>
-              </Note>
-            </Chord>
-          <Rest>
-            <durationType>quarter</durationType>
-            </Rest>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>eighth</durationType>
-            </Rest>
-          <Chord>
-            <durationType>eighth</durationType>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoAbove</subtype>
+              </Articulation>
             <Note>
               <Accidental>
                 <subtype>accidentalFlat</subtype>
                 </Accidental>
-              <pitch>73</pitch>
+              <pitch>85</pitch>
               <tpc>9</tpc>
+              <Spanner type="Glissando">
+                <prev>
+                  <location>
+                    <fractions>-1/8</fractions>
+                    </location>
+                  </prev>
+                </Spanner>
               </Note>
             </Chord>
           <Rest>
-            <durationType>quarter</durationType>
-            </Rest>
-          <Rest>
-            <durationType>eighth</durationType>
-            </Rest>
-          <Chord>
-            <durationType>eighth</durationType>
-            <Note>
-              <pitch>73</pitch>
-              <tpc>9</tpc>
-              </Note>
-            </Chord>
-          <Rest>
-            <durationType>quarter</durationType>
+            <durationType>16th</durationType>
             </Rest>
           </voice>
         </Measure>
@@ -83939,10 +84280,6 @@ signals to go on</text>
             <offset x="-6" y="-1.5"/>
             <text>≈90</text>
             </StaffText>
-          <Dynamic>
-            <subtype>p</subtype>
-            <velocity>49</velocity>
-            </Dynamic>
           <StaffText>
             <autoplace>0</autoplace>
             <z>1</z>
@@ -83955,6 +84292,10 @@ signals to go on</text>
 
 </text>
             </StaffText>
+          <Dynamic>
+            <subtype>ppp</subtype>
+            <velocity>16</velocity>
+            </Dynamic>
           <Spanner type="HairPin">
             <HairPin>
               <subtype>0</subtype>
@@ -92643,6 +92984,17 @@ signals to go on</text>
         </Measure>
       <Measure>
         <voice>
+          <Spanner type="HairPin">
+            <HairPin>
+              <subtype>1</subtype>
+              <hairpinCircledTip>1</hairpinCircledTip>
+              </HairPin>
+            <next>
+              <location>
+                <measures>1</measures>
+                </location>
+              </next>
+            </Spanner>
           <Chord>
             <durationType>whole</durationType>
             <Note>
@@ -92672,6 +93024,13 @@ signals to go on</text>
         </Measure>
       <Measure>
         <voice>
+          <Spanner type="HairPin">
+            <prev>
+              <location>
+                <measures>-1</measures>
+                </location>
+              </prev>
+            </Spanner>
           <Rest>
             <durationType>measure</durationType>
             <duration>4/4</duration>
@@ -93352,16 +93711,21 @@ signals to go on</text>
             <duration>4/4</duration>
             </Rest>
           </voice>
+        </Measure>
+      <Measure>
         <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>67</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
           </voice>
         </Measure>
       <Measure>
@@ -93386,110 +93750,60 @@ signals to go on</text>
       <Measure>
         <voice>
           <Rest>
-            <durationType>eighth</durationType>
+            <durationType>half</durationType>
             </Rest>
+          <Rest>
+            <durationType>quarter</durationType>
+            </Rest>
+          <Dynamic>
+            <subtype>p</subtype>
+            <velocity>49</velocity>
+            </Dynamic>
           <Chord>
             <durationType>eighth</durationType>
             <Note>
               <Accidental>
                 <subtype>accidentalSharp</subtype>
                 </Accidental>
-              <pitch>90</pitch>
+              <pitch>78</pitch>
               <tpc>20</tpc>
+              <Spanner type="Glissando">
+                <Glissando>
+                  <text>gliss.</text>
+                  <glissandoStyle>portamento</glissandoStyle>
+                  <diagonal>1</diagonal>
+                  <anchor>3</anchor>
+                  </Glissando>
+                <next>
+                  <location>
+                    <fractions>1/8</fractions>
+                    </location>
+                  </next>
+                </Spanner>
               </Note>
             </Chord>
-          <Rest>
-            <durationType>quarter</durationType>
-            </Rest>
-          <Rest>
-            <durationType>eighth</durationType>
-            </Rest>
           <Chord>
-            <durationType>eighth</durationType>
-            <Note>
-              <pitch>90</pitch>
-              <tpc>20</tpc>
-              </Note>
-            </Chord>
-          <Rest>
-            <durationType>quarter</durationType>
-            </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>67</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>eighth</durationType>
-            </Rest>
-          <Chord>
-            <durationType>eighth</durationType>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoAbove</subtype>
+              </Articulation>
             <Note>
               <Accidental>
                 <subtype>accidentalSharp</subtype>
                 </Accidental>
               <pitch>90</pitch>
               <tpc>20</tpc>
+              <Spanner type="Glissando">
+                <prev>
+                  <location>
+                    <fractions>-1/8</fractions>
+                    </location>
+                  </prev>
+                </Spanner>
               </Note>
             </Chord>
           <Rest>
-            <durationType>quarter</durationType>
-            </Rest>
-          <Rest>
-            <durationType>eighth</durationType>
-            </Rest>
-          <Chord>
-            <durationType>eighth</durationType>
-            <Note>
-              <pitch>90</pitch>
-              <tpc>20</tpc>
-              </Note>
-            </Chord>
-          <Rest>
-            <durationType>quarter</durationType>
-            </Rest>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>eighth</durationType>
-            </Rest>
-          <Chord>
-            <durationType>eighth</durationType>
-            <Note>
-              <Accidental>
-                <subtype>accidentalSharp</subtype>
-                </Accidental>
-              <pitch>90</pitch>
-              <tpc>20</tpc>
-              </Note>
-            </Chord>
-          <Rest>
-            <durationType>quarter</durationType>
-            </Rest>
-          <Rest>
-            <durationType>eighth</durationType>
-            </Rest>
-          <Chord>
-            <durationType>eighth</durationType>
-            <Note>
-              <pitch>90</pitch>
-              <tpc>20</tpc>
-              </Note>
-            </Chord>
-          <Rest>
-            <durationType>quarter</durationType>
+            <durationType>16th</durationType>
             </Rest>
           </voice>
         </Measure>
@@ -93770,10 +94084,6 @@ signals to go on</text>
             <offset x="-6.5" y="-1.5"/>
             <text>≈90</text>
             </StaffText>
-          <Dynamic>
-            <subtype>p</subtype>
-            <velocity>49</velocity>
-            </Dynamic>
           <StaffText>
             <autoplace>0</autoplace>
             <z>1</z>
@@ -93786,6 +94096,10 @@ signals to go on</text>
 
 </text>
             </StaffText>
+          <Dynamic>
+            <subtype>ppp</subtype>
+            <velocity>16</velocity>
+            </Dynamic>
           <Spanner type="HairPin">
             <HairPin>
               <subtype>0</subtype>
@@ -93866,10 +94180,11 @@ signals to go on</text>
             <durationType>half</durationType>
             <Note>
               <Accidental>
-                <subtype>accidentalFlat</subtype>
+                <role>1</role>
+                <subtype>accidentalNatural</subtype>
                 </Accidental>
-              <pitch>87</pitch>
-              <tpc>11</tpc>
+              <pitch>88</pitch>
+              <tpc>18</tpc>
               </Note>
             </Chord>
           <endTuplet/>
@@ -102391,6 +102706,17 @@ signals to go on</text>
         </Measure>
       <Measure>
         <voice>
+          <Spanner type="HairPin">
+            <HairPin>
+              <subtype>1</subtype>
+              <hairpinCircledTip>1</hairpinCircledTip>
+              </HairPin>
+            <next>
+              <location>
+                <measures>1</measures>
+                </location>
+              </next>
+            </Spanner>
           <Chord>
             <durationType>whole</durationType>
             <Note>
@@ -102420,6 +102746,13 @@ signals to go on</text>
         </Measure>
       <Measure>
         <voice>
+          <Spanner type="HairPin">
+            <prev>
+              <location>
+                <measures>-1</measures>
+                </location>
+              </prev>
+            </Spanner>
           <Rest>
             <durationType>measure</durationType>
             <duration>4/4</duration>
@@ -103150,16 +103483,21 @@ signals to go on</text>
             <duration>4/4</duration>
             </Rest>
           </voice>
+        </Measure>
+      <Measure>
         <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>67</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
           </voice>
         </Measure>
       <Measure>
@@ -103184,27 +103522,15 @@ signals to go on</text>
       <Measure>
         <voice>
           <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
+            <durationType>half</durationType>
             </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>67</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
           <Rest>
-            <durationType>eighth</durationType>
+            <durationType>quarter</durationType>
             </Rest>
+          <Dynamic>
+            <subtype>p</subtype>
+            <velocity>49</velocity>
+            </Dynamic>
           <Chord>
             <durationType>eighth</durationType>
             <Note>
@@ -103213,56 +103539,43 @@ signals to go on</text>
                 </Accidental>
               <pitch>66</pitch>
               <tpc>20</tpc>
+              <Spanner type="Glissando">
+                <Glissando>
+                  <text>gliss.</text>
+                  <glissandoStyle>portamento</glissandoStyle>
+                  <diagonal>1</diagonal>
+                  <anchor>3</anchor>
+                  </Glissando>
+                <next>
+                  <location>
+                    <fractions>1/8</fractions>
+                    </location>
+                  </next>
+                </Spanner>
               </Note>
             </Chord>
-          <Rest>
-            <durationType>quarter</durationType>
-            </Rest>
-          <Rest>
-            <durationType>eighth</durationType>
-            </Rest>
           <Chord>
-            <durationType>eighth</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              </Note>
-            </Chord>
-          <Rest>
-            <durationType>quarter</durationType>
-            </Rest>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>eighth</durationType>
-            </Rest>
-          <Chord>
-            <durationType>eighth</durationType>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoAbove</subtype>
+              </Articulation>
             <Note>
               <Accidental>
                 <subtype>accidentalSharp</subtype>
                 </Accidental>
-              <pitch>66</pitch>
+              <pitch>78</pitch>
               <tpc>20</tpc>
+              <Spanner type="Glissando">
+                <prev>
+                  <location>
+                    <fractions>-1/8</fractions>
+                    </location>
+                  </prev>
+                </Spanner>
               </Note>
             </Chord>
           <Rest>
-            <durationType>quarter</durationType>
-            </Rest>
-          <Rest>
-            <durationType>eighth</durationType>
-            </Rest>
-          <Chord>
-            <durationType>eighth</durationType>
-            <Note>
-              <pitch>66</pitch>
-              <tpc>20</tpc>
-              </Note>
-            </Chord>
-          <Rest>
-            <durationType>quarter</durationType>
+            <durationType>16th</durationType>
             </Rest>
           </voice>
         </Measure>
@@ -103547,10 +103860,6 @@ signals to go on</text>
             <offset x="-6.5" y="-1.5"/>
             <text>≈60</text>
             </StaffText>
-          <Dynamic>
-            <subtype>p</subtype>
-            <velocity>49</velocity>
-            </Dynamic>
           <StaffText>
             <autoplace>0</autoplace>
             <z>1</z>
@@ -103563,6 +103872,10 @@ signals to go on</text>
 
 </text>
             </StaffText>
+          <Dynamic>
+            <subtype>ppp</subtype>
+            <velocity>16</velocity>
+            </Dynamic>
           <Spanner type="HairPin">
             <HairPin>
               <subtype>0</subtype>
@@ -103602,6 +103915,10 @@ signals to go on</text>
           <Chord>
             <durationType>quarter</durationType>
             <Note>
+              <Accidental>
+                <role>1</role>
+                <subtype>accidentalFlat</subtype>
+                </Accidental>
               <pitch>68</pitch>
               <tpc>10</tpc>
               </Note>
@@ -103636,6 +103953,10 @@ signals to go on</text>
           <Chord>
             <durationType>half</durationType>
             <Note>
+              <Accidental>
+                <role>1</role>
+                <subtype>accidentalFlat</subtype>
+                </Accidental>
               <pitch>68</pitch>
               <tpc>10</tpc>
               </Note>
@@ -103651,10 +103972,11 @@ signals to go on</text>
             <durationType>quarter</durationType>
             <Note>
               <Accidental>
-                <subtype>accidentalFlat</subtype>
+                <role>1</role>
+                <subtype>accidentalNatural</subtype>
                 </Accidental>
-              <pitch>80</pitch>
-              <tpc>10</tpc>
+              <pitch>81</pitch>
+              <tpc>17</tpc>
               </Note>
             </Chord>
           <Chord>
@@ -103670,6 +103992,9 @@ signals to go on</text>
           <Chord>
             <durationType>quarter</durationType>
             <Note>
+              <Accidental>
+                <subtype>accidentalFlat</subtype>
+                </Accidental>
               <pitch>80</pitch>
               <tpc>10</tpc>
               </Note>
@@ -110814,6 +111139,17 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
+          <Spanner type="HairPin">
+            <HairPin>
+              <subtype>1</subtype>
+              <hairpinCircledTip>1</hairpinCircledTip>
+              </HairPin>
+            <next>
+              <location>
+                <measures>1</measures>
+                </location>
+              </next>
+            </Spanner>
           <Chord>
             <durationType>whole</durationType>
             <Note>
@@ -110843,6 +111179,13 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
+          <Spanner type="HairPin">
+            <prev>
+              <location>
+                <measures>-1</measures>
+                </location>
+              </prev>
+            </Spanner>
           <Rest>
             <durationType>measure</durationType>
             <duration>4/4</duration>
@@ -111479,16 +111822,21 @@ until conductor signals to go on</text>
             <duration>4/4</duration>
             </Rest>
           </voice>
+        </Measure>
+      <Measure>
         <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>55</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
           </voice>
         </Measure>
       <Measure>
@@ -111513,68 +111861,54 @@ until conductor signals to go on</text>
       <Measure>
         <voice>
           <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
+            <durationType>half</durationType>
             </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>55</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
           <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
+            <durationType>quarter</durationType>
             </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>55</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>eighth</durationType>
-            </Rest>
+          <Dynamic>
+            <subtype>p</subtype>
+            <velocity>49</velocity>
+            </Dynamic>
           <Chord>
             <durationType>eighth</durationType>
             <Note>
               <pitch>59</pitch>
               <tpc>19</tpc>
+              <Spanner type="Glissando">
+                <Glissando>
+                  <text>gliss.</text>
+                  <glissandoStyle>portamento</glissandoStyle>
+                  <diagonal>1</diagonal>
+                  <anchor>3</anchor>
+                  </Glissando>
+                <next>
+                  <location>
+                    <fractions>1/8</fractions>
+                    </location>
+                  </next>
+                </Spanner>
               </Note>
             </Chord>
-          <Rest>
-            <durationType>quarter</durationType>
-            </Rest>
-          <Rest>
-            <durationType>eighth</durationType>
-            </Rest>
           <Chord>
-            <durationType>eighth</durationType>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoAbove</subtype>
+              </Articulation>
             <Note>
-              <pitch>59</pitch>
+              <pitch>71</pitch>
               <tpc>19</tpc>
+              <Spanner type="Glissando">
+                <prev>
+                  <location>
+                    <fractions>-1/8</fractions>
+                    </location>
+                  </prev>
+                </Spanner>
               </Note>
             </Chord>
           <Rest>
-            <durationType>quarter</durationType>
+            <durationType>16th</durationType>
             </Rest>
           </voice>
         </Measure>
@@ -111859,10 +112193,6 @@ until conductor signals to go on</text>
             <offset x="-7" y="-1.5"/>
             <text>≈75</text>
             </StaffText>
-          <Dynamic>
-            <subtype>p</subtype>
-            <velocity>49</velocity>
-            </Dynamic>
           <StaffText>
             <autoplace>0</autoplace>
             <z>1</z>
@@ -111876,6 +112206,10 @@ until conductor signals to go on</text>
 
 </text>
             </StaffText>
+          <Dynamic>
+            <subtype>ppp</subtype>
+            <velocity>16</velocity>
+            </Dynamic>
           <Spanner type="HairPin">
             <HairPin>
               <subtype>0</subtype>
@@ -111926,8 +112260,65 @@ until conductor signals to go on</text>
           <Chord>
             <durationType>half</durationType>
             <Note>
+              <Accidental>
+                <role>1</role>
+                <subtype>accidentalSharp</subtype>
+                </Accidental>
               <pitch>37</pitch>
               <tpc>21</tpc>
+              </Note>
+            </Chord>
+          <endTuplet/>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Tuplet>
+            <visible>0</visible>
+            <normalNotes>4</normalNotes>
+            <actualNotes>5</actualNotes>
+            <baseNote>quarter</baseNote>
+            <Number>
+              <visible>0</visible>
+              <style>Tuplet</style>
+              <text>5</text>
+              </Number>
+            </Tuplet>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <pitch>50</pitch>
+              <tpc>16</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>half</durationType>
+            <Note>
+              <Accidental>
+                <subtype>accidentalSharp</subtype>
+                </Accidental>
+              <pitch>37</pitch>
+              <tpc>21</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <Accidental>
+                <subtype>accidentalSharp</subtype>
+                </Accidental>
+              <pitch>49</pitch>
+              <tpc>21</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <pitch>38</pitch>
+              <tpc>16</tpc>
               </Note>
             </Chord>
           <endTuplet/>
@@ -111955,59 +112346,6 @@ until conductor signals to go on</text>
               <Accidental>
                 <subtype>accidentalSharp</subtype>
                 </Accidental>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>half</durationType>
-            <Note>
-              <Accidental>
-                <subtype>accidentalSharp</subtype>
-                </Accidental>
-              <pitch>37</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>quarter</durationType>
-            <Note>
-              <pitch>49</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>quarter</durationType>
-            <Note>
-              <pitch>37</pitch>
-              <tpc>21</tpc>
-              </Note>
-            </Chord>
-          <endTuplet/>
-          <BarLine>
-            <visible>0</visible>
-            </BarLine>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Tuplet>
-            <visible>0</visible>
-            <normalNotes>4</normalNotes>
-            <actualNotes>5</actualNotes>
-            <baseNote>quarter</baseNote>
-            <Number>
-              <visible>0</visible>
-              <style>Tuplet</style>
-              <text>5</text>
-              </Number>
-            </Tuplet>
-          <Chord>
-            <durationType>quarter</durationType>
-            <Note>
-              <Accidental>
-                <subtype>accidentalSharp</subtype>
-                </Accidental>
               <pitch>37</pitch>
               <tpc>21</tpc>
               </Note>
@@ -112025,13 +112363,20 @@ until conductor signals to go on</text>
           <Chord>
             <durationType>half</durationType>
             <Note>
-              <pitch>37</pitch>
-              <tpc>21</tpc>
+              <Accidental>
+                <subtype>accidentalNatural</subtype>
+                </Accidental>
+              <pitch>36</pitch>
+              <tpc>14</tpc>
               </Note>
             </Chord>
           <Chord>
             <durationType>quarter</durationType>
             <Note>
+              <Accidental>
+                <role>1</role>
+                <subtype>accidentalSharp</subtype>
+                </Accidental>
               <pitch>49</pitch>
               <tpc>21</tpc>
               </Note>
@@ -118856,6 +119201,17 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
+          <Spanner type="HairPin">
+            <HairPin>
+              <subtype>1</subtype>
+              <hairpinCircledTip>1</hairpinCircledTip>
+              </HairPin>
+            <next>
+              <location>
+                <measures>1</measures>
+                </location>
+              </next>
+            </Spanner>
           <Chord>
             <durationType>whole</durationType>
             <Note>
@@ -118885,6 +119241,13 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
+          <Spanner type="HairPin">
+            <prev>
+              <location>
+                <measures>-1</measures>
+                </location>
+              </prev>
+            </Spanner>
           <Rest>
             <durationType>measure</durationType>
             <duration>4/4</duration>
@@ -120253,72 +120616,388 @@ until conductor signals to go on</text>
               </Note>
             </Chord>
           <Rest>
+            <durationType>half</durationType>
+            </Rest>
+          </voice>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <play>0</play>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <StaffText>
+            <color r="255" g="0" b="0" a="255"/>
+            <text>con crini gettato?</text>
+            </StaffText>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          </voice>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <play>0</play>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Dynamic>
+            <subtype>ff</subtype>
+            <velocity>112</velocity>
+            </Dynamic>
+          <Chord>
             <durationType>eighth</durationType>
-            </Rest>
-          <Chord>
-            <durationType>16th</durationType>
             <Articulation>
-              <subtype>articStaccatoBelow</subtype>
+              <subtype>stringsUpBow</subtype>
+              <minDistance>-999</minDistance>
               </Articulation>
             <Note>
+              <Symbol>
+                <name>stemHarpStringNoise</name>
+                <font>Bravura</font>
+                <offset x="3" y="0"/>
+                </Symbol>
               <pitch>19</pitch>
               <tpc>15</tpc>
-              <head>cross</head>
               </Note>
             </Chord>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
-              <subtype>articStaccatoBelow</subtype>
+              <subtype>stringsDownBow</subtype>
               </Articulation>
             <Note>
+              <Symbol>
+                <name>stemHarpStringNoise</name>
+                <font>Bravura</font>
+                <offset x="3" y="0"/>
+                </Symbol>
               <pitch>19</pitch>
               <tpc>15</tpc>
-              <head>cross</head>
               </Note>
             </Chord>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
-              <subtype>articStaccatoBelow</subtype>
+              <subtype>stringsUpBow</subtype>
+              <minDistance>-999</minDistance>
               </Articulation>
             <Note>
+              <Symbol>
+                <name>stemHarpStringNoise</name>
+                <font>Bravura</font>
+                <offset x="3" y="0"/>
+                </Symbol>
               <pitch>19</pitch>
               <tpc>15</tpc>
-              <head>cross</head>
               </Note>
             </Chord>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
-              <subtype>articStaccatoBelow</subtype>
+              <subtype>stringsDownBow</subtype>
               </Articulation>
             <Note>
+              <Symbol>
+                <name>stemHarpStringNoise</name>
+                <font>Bravura</font>
+                <offset x="3" y="0"/>
+                </Symbol>
               <pitch>19</pitch>
               <tpc>15</tpc>
-              <head>cross</head>
               </Note>
             </Chord>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
-              <subtype>articStaccatoBelow</subtype>
+              <subtype>stringsUpBow</subtype>
+              <minDistance>-999</minDistance>
               </Articulation>
             <Note>
+              <Symbol>
+                <name>stemHarpStringNoise</name>
+                <font>Bravura</font>
+                <offset x="3" y="0"/>
+                </Symbol>
               <pitch>19</pitch>
               <tpc>15</tpc>
-              <head>cross</head>
               </Note>
             </Chord>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>eighth</durationType>
             <Articulation>
-              <subtype>articStaccatoBelow</subtype>
+              <subtype>stringsDownBow</subtype>
               </Articulation>
             <Note>
+              <Symbol>
+                <name>stemHarpStringNoise</name>
+                <font>Bravura</font>
+                <offset x="3" y="0"/>
+                </Symbol>
               <pitch>19</pitch>
               <tpc>15</tpc>
-              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>eighth</durationType>
+            <Articulation>
+              <subtype>stringsUpBow</subtype>
+              <minDistance>-999</minDistance>
+              </Articulation>
+            <Note>
+              <Symbol>
+                <name>stemHarpStringNoise</name>
+                <font>Bravura</font>
+                <offset x="3" y="0"/>
+                </Symbol>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>eighth</durationType>
+            <Articulation>
+              <subtype>stringsDownBow</subtype>
+              </Articulation>
+            <Note>
+              <Symbol>
+                <name>stemHarpStringNoise</name>
+                <font>Bravura</font>
+                <offset x="3" y="0"/>
+                </Symbol>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Dynamic>
+            <subtype>ff</subtype>
+            <velocity>112</velocity>
+            <visible>0</visible>
+            </Dynamic>
+          <StaffText>
+            <color r="255" g="0" b="0" a="255"/>
+            <text>glissando auf Saite</text>
+            </StaffText>
+          <Chord>
+            <durationType>half</durationType>
+            <Articulation>
+              <subtype>stringsUpBow</subtype>
+              <minDistance>-999</minDistance>
+              </Articulation>
+            <Note>
+              <Symbol>
+                <name>stemHarpStringNoise</name>
+                <font>Bravura</font>
+                <offset x="3" y="0"/>
+                </Symbol>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>half</durationType>
+            <Articulation>
+              <subtype>stringsDownBow</subtype>
+              </Articulation>
+            <Note>
+              <Symbol>
+                <name>stemHarpStringNoise</name>
+                <font>Bravura</font>
+                <offset x="3" y="0"/>
+                </Symbol>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
               </Note>
             </Chord>
           </voice>
@@ -120337,190 +121016,34 @@ until conductor signals to go on</text>
       <Measure>
         <voice>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>half</durationType>
             <Articulation>
-              <subtype>articStaccatoBelow</subtype>
+              <subtype>stringsUpBow</subtype>
+              <minDistance>-999</minDistance>
               </Articulation>
             <Note>
+              <Symbol>
+                <name>stemHarpStringNoise</name>
+                <font>Bravura</font>
+                <offset x="3" y="0"/>
+                </Symbol>
               <pitch>19</pitch>
               <tpc>15</tpc>
-              <head>cross</head>
               </Note>
             </Chord>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>half</durationType>
             <Articulation>
-              <subtype>articStaccatoBelow</subtype>
+              <subtype>stringsDownBow</subtype>
               </Articulation>
             <Note>
+              <Symbol>
+                <name>stemHarpStringNoise</name>
+                <font>Bravura</font>
+                <offset x="3" y="0"/>
+                </Symbol>
               <pitch>19</pitch>
               <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              </Articulation>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              </Articulation>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              </Articulation>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              </Articulation>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              </Articulation>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              </Articulation>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              </Articulation>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              </Articulation>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              </Articulation>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              </Articulation>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              </Articulation>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              </Articulation>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              </Articulation>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              </Articulation>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
               </Note>
             </Chord>
           </voice>
@@ -120528,190 +121051,139 @@ until conductor signals to go on</text>
       <Measure>
         <voice>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>half</durationType>
             <Articulation>
-              <subtype>articStaccatoBelow</subtype>
+              <subtype>stringsUpBow</subtype>
+              <minDistance>-999</minDistance>
               </Articulation>
             <Note>
+              <Symbol>
+                <name>stemHarpStringNoise</name>
+                <font>Bravura</font>
+                <offset x="3" y="0"/>
+                </Symbol>
               <pitch>19</pitch>
               <tpc>15</tpc>
-              <head>cross</head>
               </Note>
             </Chord>
           <Chord>
-            <durationType>16th</durationType>
+            <durationType>half</durationType>
             <Articulation>
-              <subtype>articStaccatoBelow</subtype>
+              <subtype>stringsDownBow</subtype>
               </Articulation>
             <Note>
+              <Symbol>
+                <name>stemHarpStringNoise</name>
+                <font>Bravura</font>
+                <offset x="3" y="0"/>
+                </Symbol>
               <pitch>19</pitch>
               <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              </Articulation>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              </Articulation>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              </Articulation>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              </Articulation>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              </Articulation>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              </Articulation>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              </Articulation>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              </Articulation>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              </Articulation>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              </Articulation>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              </Articulation>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              </Articulation>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              </Articulation>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>16th</durationType>
-            <Articulation>
-              <subtype>articStaccatoBelow</subtype>
-              </Articulation>
-            <Note>
-              <pitch>19</pitch>
-              <tpc>15</tpc>
-              <head>cross</head>
               </Note>
             </Chord>
           </voice>
+        </Measure>
+      <Measure>
         <voice>
           <Chord>
-            <durationType>whole</durationType>
+            <durationType>half</durationType>
+            <Articulation>
+              <subtype>stringsUpBow</subtype>
+              <minDistance>-999</minDistance>
+              </Articulation>
             <Note>
-              <visible>0</visible>
-              <pitch>43</pitch>
+              <Symbol>
+                <name>stemHarpStringNoise</name>
+                <font>Bravura</font>
+                <offset x="3" y="0"/>
+                </Symbol>
+              <pitch>19</pitch>
               <tpc>15</tpc>
-              <play>0</play>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>half</durationType>
+            <Articulation>
+              <subtype>stringsDownBow</subtype>
+              </Articulation>
+            <Note>
+              <Symbol>
+                <name>stemHarpStringNoise</name>
+                <font>Bravura</font>
+                <offset x="3" y="0"/>
+                </Symbol>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Chord>
+            <durationType>half</durationType>
+            <Articulation>
+              <subtype>stringsUpBow</subtype>
+              <minDistance>-999</minDistance>
+              </Articulation>
+            <Note>
+              <Symbol>
+                <name>stemHarpStringNoise</name>
+                <font>Bravura</font>
+                <offset x="3" y="0"/>
+                </Symbol>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>half</durationType>
+            <Articulation>
+              <subtype>stringsDownBow</subtype>
+              </Articulation>
+            <Note>
+              <Symbol>
+                <name>stemHarpStringNoise</name>
+                <font>Bravura</font>
+                <offset x="3" y="0"/>
+                </Symbol>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Chord>
+            <durationType>half</durationType>
+            <Articulation>
+              <subtype>stringsUpBow</subtype>
+              <minDistance>-999</minDistance>
+              </Articulation>
+            <Note>
+              <Symbol>
+                <name>stemHarpStringNoise</name>
+                <font>Bravura</font>
+                <offset x="3" y="0"/>
+                </Symbol>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>half</durationType>
+            <Articulation>
+              <subtype>stringsDownBow</subtype>
+              </Articulation>
+            <Note>
+              <Symbol>
+                <name>stemHarpStringNoise</name>
+                <font>Bravura</font>
+                <offset x="3" y="0"/>
+                </Symbol>
+              <pitch>19</pitch>
+              <tpc>15</tpc>
               </Note>
             </Chord>
           </voice>
@@ -120728,121 +121200,7 @@ until conductor signals to go on</text>
             <durationType>whole</durationType>
             <Note>
               <visible>0</visible>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>43</pitch>
+              <pitch>31</pitch>
               <tpc>15</tpc>
               <play>0</play>
               </Note>
@@ -120865,7 +121223,7 @@ until conductor signals to go on</text>
             <durationType>whole</durationType>
             <Note>
               <visible>0</visible>
-              <pitch>43</pitch>
+              <pitch>31</pitch>
               <tpc>15</tpc>
               <play>0</play>
               </Note>
@@ -120884,10 +121242,6 @@ until conductor signals to go on</text>
             <offset x="-7" y="-1"/>
             <text>≈60</text>
             </StaffText>
-          <Dynamic>
-            <subtype>p</subtype>
-            <velocity>49</velocity>
-            </Dynamic>
           <StaffText>
             <autoplace>0</autoplace>
             <z>1</z>
@@ -120900,6 +121254,10 @@ until conductor signals to go on</text>
 
 </text>
             </StaffText>
+          <Dynamic>
+            <subtype>ppp</subtype>
+            <velocity>16</velocity>
+            </Dynamic>
           <Spanner type="HairPin">
             <HairPin>
               <subtype>0</subtype>
