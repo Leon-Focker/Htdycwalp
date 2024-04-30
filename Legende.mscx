@@ -682,7 +682,9 @@ Lowest note is most important.
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
           <offset x="10" y="0"/>
-          <text>(Pitched) air sound, notated in pitch.</text>
+          <text>(Pitched) air sound, fingered notation.
+Clarinet and Bassoon might be instructed to blow at the mouthpiece. This should result in an air sound 
+with some pitch and a whistling sound. https://heatherroche.net/2014/02/13/on-writing-air-sounds-for-clarinets/</text>
           </Text>
         </HBox>
       <Measure len="1/4">
@@ -1706,6 +1708,44 @@ will jump to another one mid glissando.
 </text>
           </Text>
         </HBox>
+      <VBox>
+        <height>4</height>
+        <topGap>4.5</topGap>
+        <bottomGap>4</bottomGap>
+        <boxAutoSize>0</boxAutoSize>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>15</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <underline>1</underline>
+          <text>Double Bass</text>
+          </Text>
+        </VBox>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-3"/>
+          <text>Scordatura, minute 9 slaps
+</text>
+          </Text>
+        </HBox>
       <TBox>
         <height>1</height>
         <visible>0</visible>
@@ -1827,7 +1867,7 @@ will jump to another one mid glissando.
               <Image>
                 <autoplace>0</autoplace>
                 <offset x="-8.82254" y="-6.87005"/>
-                <path>f5dcadadd7e4752922c2e848f74e4bae.svg</path>
+                <path>bassoon_mult_1_2446.svg</path>
                 <linkPath>bassoon_mult_1_2446.svg</linkPath>
                 <size w="11.0562" h="8.29215"/>
                 </Image>
@@ -2163,6 +2203,14 @@ will jump to another one mid glissando.
           <Rest>
             <visible>0</visible>
             <durationType>quarter</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
             </Rest>
           </voice>
         </Measure>

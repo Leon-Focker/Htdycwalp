@@ -376,7 +376,7 @@
     (multiple-value-bind (st md nd) (get-st-md-nd sum dur)
       ;; custom stuff:
       (case instrument
-	(double-bass (setf spitch 'b0 thrsld 0))
+	(double-bass (setf spitch 'b0 thrsld 1/8))
 	(violin-1 (setf thrsld 1/3))	; i-div 6.5))
 	(violin-2 (setf thrsld 1/4))	; i-div 6.5))
 	(viola (setf thrsld 1/6))	; i-div 6.5))
