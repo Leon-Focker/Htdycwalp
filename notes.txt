@@ -1,26 +1,37 @@
-- kürzere Glissandi als Textur
-- durcheinander trotzdem rhythmen
-- Gongs und schnelles, hektisches Schwellen
-
 ---------------------------------
 Minute 8
-Sollten die Lufttöne länger dauern? Einschub??
+Sollten die Lufttöne länger dauern?
 
 ---------------------------------
 Minute 9 komponieren
-indisp für 9 -11 festlegen
-Schlagzeug und Bass Soli mit Elektronik Fuge. Harmonik generieren
+Schlagzeug und Bass Soli mit Elektronik Fuge.
+Ende Streicher gliss und Tuba static
+
+---------------------------------
+Minute 11
+Indisp festlegen und Rhythmen in Stil min. 4 komponieren, mit gettato ausfaden
 
 ---------------------------------
 Schlagzeug ausnotieren und Instrumente aussuchen
 
 ---------------------------------
 Minute 7 Elektronik auf 1 + 3 zu WW
+Was macht Blech am Anfang?
 
 ---------------------------------
 - Elektronik Ende Minute 6 klarer. Soll Instrumente durcheinander bringen
 
 ---------------------------------
+IDEEN
+
+- kürzere Glissandi als Textur
+- durcheinander trotzdem rhythmen
+- Gongs und schnelles, hektisches Schwellen
+- mit Akzenten arbeiten
+- mehr Klarinettenflatterzunge
+- mehr Überdruck
+- "sidechaining"
+
 
 SPIELTECHNIKEN
 
@@ -36,16 +47,7 @@ https://soundcloud.com/user-844528328/solo-no-3-by-laszlo-dubrovay
 was is 4:05?
 5:35??
 
-
-mit Akzenten arbeiten
-mehr Klarinettenflatterzunge
-mehr Überdruck
-"sidechaining"
-
-start crescendi in min 1 and 2 from niente?
-
-Länge der freien Zeiten in Solo Parts??
-
+---------------------------------
 
 minute 4 strings solo. some chords, then battuto rhythms, sometimes accompanied by computer (playing fast pulse but same accents)
 electronic static in 2+3?
