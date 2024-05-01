@@ -7728,7 +7728,7 @@
             <frameType>1</frameType>
             <framePadding>5</framePadding>
             <frameBgColor r="255" g="85" b="0" a="0"/>
-            <text>.                                                                                                                                                             
+            <text>.                                                                                                                                                            
 </text>
             </StaffText>
           <Spanner type="HairPin">
@@ -8067,13 +8067,13 @@
         </Measure>
       <Measure>
         <voice>
-          <Dynamic>
-            <subtype>ff</subtype>
-            <velocity>112</velocity>
-            </Dynamic>
           <Fermata>
             <subtype>fermataAbove</subtype>
             </Fermata>
+          <Dynamic>
+            <subtype>f</subtype>
+            <velocity>96</velocity>
+            </Dynamic>
           <Spanner type="HairPin">
             <prev>
               <location>
@@ -8162,6 +8162,7 @@
           <Dynamic>
             <subtype>p</subtype>
             <velocity>49</velocity>
+            <offset x="13" y="2.5"/>
             </Dynamic>
           <Spanner type="HairPin">
             <prev>
@@ -8171,6 +8172,7 @@
               </prev>
             </Spanner>
           <Chord>
+            <dots>1</dots>
             <durationType>quarter</durationType>
             <Note>
               <Spanner type="Tie">
@@ -8185,7 +8187,7 @@
               </Note>
             </Chord>
           <Rest>
-            <durationType>quarter</durationType>
+            <durationType>eighth</durationType>
             </Rest>
           </voice>
         </Measure>
@@ -8254,6 +8256,7 @@
           <Dynamic>
             <subtype>mp</subtype>
             <velocity>64</velocity>
+            <offset x="-4.5" y="2.5"/>
             </Dynamic>
           <Spanner type="HairPin">
             <prev>
@@ -16393,7 +16396,7 @@ until conductor signals to go on</text>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
             <frameBgColor r="255" g="85" b="0" a="0"/>
-            <text>.                                                                                                                                                             
+            <text>.                                                                                                                                                            
 </text>
             </StaffText>
           <Spanner type="HairPin">
@@ -16727,13 +16730,13 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
-          <Dynamic>
-            <subtype>ff</subtype>
-            <velocity>112</velocity>
-            </Dynamic>
           <Fermata>
             <subtype>fermataAbove</subtype>
             </Fermata>
+          <Dynamic>
+            <subtype>f</subtype>
+            <velocity>96</velocity>
+            </Dynamic>
           <Spanner type="HairPin">
             <prev>
               <location>
@@ -22819,7 +22822,7 @@ until conductor signals to go on</text>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
             <frameBgColor r="255" g="85" b="0" a="0"/>
-            <text>.                                                                                                                                                             
+            <text>.                                                                                                                                                            
 
 </text>
             </StaffText>
@@ -23166,13 +23169,13 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
-          <Dynamic>
-            <subtype>ff</subtype>
-            <velocity>112</velocity>
-            </Dynamic>
           <Fermata>
             <subtype>fermataAbove</subtype>
             </Fermata>
+          <Dynamic>
+            <subtype>f</subtype>
+            <velocity>96</velocity>
+            </Dynamic>
           <Spanner type="HairPin">
             <prev>
               <location>
@@ -23267,7 +23270,7 @@ until conductor signals to go on</text>
               </HairPin>
             <next>
               <location>
-                <fractions>5/12</fractions>
+                <fractions>1/6</fractions>
                 </location>
               </next>
             </Spanner>
@@ -23297,21 +23300,24 @@ until conductor signals to go on</text>
               </Note>
             </Chord>
           <endTuplet/>
+          <Dynamic>
+            <subtype>mp</subtype>
+            <velocity>64</velocity>
+            <offset x="21.5" y="2.5"/>
+            </Dynamic>
+          <Spanner type="HairPin">
+            <prev>
+              <location>
+                <fractions>-1/6</fractions>
+                </location>
+              </prev>
+            </Spanner>
           <Chord>
-            <durationType>quarter</durationType>
+            <durationType>half</durationType>
             <Note>
               <Accidental>
                 <subtype>accidentalFlat</subtype>
                 </Accidental>
-              <Spanner type="Tie">
-                <Tie>
-                  </Tie>
-                <next>
-                  <location>
-                    <fractions>1/4</fractions>
-                    </location>
-                  </next>
-                </Spanner>
               <pitch>78</pitch>
               <tpc>8</tpc>
               <tpc2>10</tpc2>
@@ -23322,32 +23328,6 @@ until conductor signals to go on</text>
                     </location>
                   </prev>
                 </Spanner>
-              </Note>
-            </Chord>
-          <Dynamic>
-            <subtype>mp</subtype>
-            <velocity>64</velocity>
-            </Dynamic>
-          <Spanner type="HairPin">
-            <prev>
-              <location>
-                <fractions>-5/12</fractions>
-                </location>
-              </prev>
-            </Spanner>
-          <Chord>
-            <durationType>quarter</durationType>
-            <Note>
-              <Spanner type="Tie">
-                <prev>
-                  <location>
-                    <fractions>-1/4</fractions>
-                    </location>
-                  </prev>
-                </Spanner>
-              <pitch>78</pitch>
-              <tpc>8</tpc>
-              <tpc2>10</tpc2>
               </Note>
             </Chord>
           </voice>
@@ -30961,7 +30941,7 @@ until conductor signals to go on</text>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
             <frameBgColor r="255" g="85" b="0" a="0"/>
-            <text>.                                                                                                                                                             
+            <text>.                                                                                                                                                            
 
 </text>
             </StaffText>
@@ -31296,13 +31276,13 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
-          <Dynamic>
-            <subtype>ff</subtype>
-            <velocity>112</velocity>
-            </Dynamic>
           <Fermata>
             <subtype>fermataAbove</subtype>
             </Fermata>
+          <Dynamic>
+            <subtype>f</subtype>
+            <velocity>96</velocity>
+            </Dynamic>
           <Spanner type="HairPin">
             <prev>
               <location>
@@ -46517,10 +46497,7 @@ until conductor signals to go on</text>
               </Note>
             </Chord>
           <location>
-            <fractions>1/8</fractions>
-            </location>
-          <location>
-            <fractions>5/8</fractions>
+            <fractions>3/4</fractions>
             </location>
           <Chord>
             <durationType>eighth</durationType>
@@ -46586,10 +46563,7 @@ until conductor signals to go on</text>
               </Note>
             </Chord>
           <location>
-            <fractions>1/8</fractions>
-            </location>
-          <location>
-            <fractions>1/8</fractions>
+            <fractions>1/4</fractions>
             </location>
           <Chord>
             <durationType>eighth</durationType>
@@ -46718,16 +46692,7 @@ until conductor signals to go on</text>
               </Note>
             </Chord>
           <location>
-            <fractions>1/8</fractions>
-            </location>
-          <location>
-            <fractions>1/4</fractions>
-            </location>
-          <location>
-            <fractions>1/8</fractions>
-            </location>
-          <location>
-            <fractions>1/16</fractions>
+            <fractions>9/16</fractions>
             </location>
           <Chord>
             <durationType>16th</durationType>
@@ -46868,10 +46833,7 @@ until conductor signals to go on</text>
               </Note>
             </Chord>
           <location>
-            <fractions>1/8</fractions>
-            </location>
-          <location>
-            <fractions>1/4</fractions>
+            <fractions>3/8</fractions>
             </location>
           <Chord>
             <durationType>16th</durationType>
@@ -47460,19 +47422,21 @@ until conductor signals to go on</text>
             <sigN>4</sigN>
             <sigD>4</sigD>
             </TimeSig>
-          <StaffText>
-            <channelSwitch voice="0" name="mute"/>
-            <channelSwitch voice="1" name="mute"/>
-            <channelSwitch voice="2" name="mute"/>
-            <channelSwitch voice="3" name="mute"/>
-            <style>Expression</style>
-            <offset x="-1.5" y="-0.60052"/>
-            <text>con sord.</text>
-            </StaffText>
           <Rest>
             <durationType>measure</durationType>
             <duration>4/4</duration>
             </Rest>
+          </voice>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
+              <pitch>67</pitch>
+              <tpc>15</tpc>
+              <play>0</play>
+              </Note>
+            </Chord>
           </voice>
         </Measure>
       <Measure>
@@ -48196,6 +48160,7 @@ until conductor signals to go on</text>
           <Dynamic>
             <subtype>p</subtype>
             <velocity>49</velocity>
+            <offset x="5" y="2.5"/>
             </Dynamic>
           <Spanner type="HairPin">
             <prev>
@@ -48305,6 +48270,7 @@ until conductor signals to go on</text>
           <Dynamic>
             <subtype>p</subtype>
             <velocity>49</velocity>
+            <offset x="8.5" y="2.5"/>
             </Dynamic>
           <Spanner type="HairPin">
             <prev>
@@ -54595,19 +54561,22 @@ until conductor signals to go on</text>
             <sigN>4</sigN>
             <sigD>4</sigD>
             </TimeSig>
-          <StaffText>
-            <channelSwitch voice="0" name="mute"/>
-            <channelSwitch voice="1" name="mute"/>
-            <channelSwitch voice="2" name="mute"/>
-            <channelSwitch voice="3" name="mute"/>
-            <style>Expression</style>
-            <offset x="-1.5" y="-0.60052"/>
-            <text>con sord.</text>
-            </StaffText>
           <Rest>
             <durationType>measure</durationType>
             <duration>4/4</duration>
             </Rest>
+          </voice>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
+              <pitch>67</pitch>
+              <tpc>15</tpc>
+              <tpc2>16</tpc2>
+              <play>0</play>
+              </Note>
+            </Chord>
           </voice>
         </Measure>
       <Measure>
@@ -55019,6 +54988,9 @@ until conductor signals to go on</text>
             <durationType>measure</durationType>
             <duration>4/4</duration>
             </Rest>
+          <BarLine>
+            <span>0</span>
+            </BarLine>
           </voice>
         <voice>
           <Chord>
@@ -55302,6 +55274,7 @@ until conductor signals to go on</text>
           <Dynamic>
             <subtype>p</subtype>
             <velocity>49</velocity>
+            <offset x="-4.5" y="2.5"/>
             </Dynamic>
           <Spanner type="HairPin">
             <prev>
@@ -61391,13 +61364,115 @@ until conductor signals to go on</text>
       <Measure>
         <voice>
           <Clef>
-            <concertClefType>F</concertClefType>
-            <transposingClefType>F</transposingClefType>
+            <concertClefType>F8vb</concertClefType>
+            <transposingClefType>F8vb</transposingClefType>
             </Clef>
           <TimeSig>
             <sigN>4</sigN>
             <sigD>4</sigD>
             </TimeSig>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <play>0</play>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <play>0</play>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <play>0</play>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <play>0</play>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Dynamic>
+            <subtype>ppp</subtype>
+            <velocity>16</velocity>
+            <visible>0</visible>
+            </Dynamic>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          <BarLine>
+            </BarLine>
+          </voice>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <play>0</play>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
           <StaffText>
             <channelSwitch voice="0" name="mute"/>
             <channelSwitch voice="1" name="mute"/>
@@ -61407,75 +61482,36 @@ until conductor signals to go on</text>
             <offset x="-1.5" y="-0.60052"/>
             <text>con sord.</text>
             </StaffText>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          </voice>
-        <voice>
+          <Spanner type="HairPin">
+            <HairPin>
+              <subtype>0</subtype>
+              <hairpinCircledTip>1</hairpinCircledTip>
+              </HairPin>
+            <next>
+              <location>
+                <measures>1</measures>
+                </location>
+              </next>
+            </Spanner>
           <Chord>
             <durationType>whole</durationType>
             <Note>
-              <visible>0</visible>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
+              <Accidental>
+                <subtype>accidentalFlat</subtype>
+                </Accidental>
+              <Spanner type="Tie">
+                <Tie>
+                  </Tie>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    </location>
+                  </next>
+                </Spanner>
+              <pitch>34</pitch>
+              <tpc>12</tpc>
               </Note>
             </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
           <BarLine>
             </BarLine>
           </voice>
@@ -61493,13 +61529,31 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
-          <StaffText>
-            <text>Posaune mit Dämpfer</text>
-            </StaffText>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
+          <Dynamic>
+            <subtype>mp</subtype>
+            <velocity>64</velocity>
+            </Dynamic>
+          <Spanner type="HairPin">
+            <prev>
+              <location>
+                <measures>-1</measures>
+                </location>
+              </prev>
+            </Spanner>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    </location>
+                  </prev>
+                </Spanner>
+              <pitch>34</pitch>
+              <tpc>12</tpc>
+              </Note>
+            </Chord>
           <BarLine>
             </BarLine>
           </voice>
@@ -61517,10 +61571,25 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <Accidental>
+                <subtype>accidentalFlat</subtype>
+                </Accidental>
+              <Spanner type="Tie">
+                <Tie>
+                  </Tie>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    </location>
+                  </next>
+                </Spanner>
+              <pitch>34</pitch>
+              <tpc>12</tpc>
+              </Note>
+            </Chord>
           <BarLine>
             </BarLine>
           </voice>
@@ -61538,10 +61607,20 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    </location>
+                  </prev>
+                </Spanner>
+              <pitch>34</pitch>
+              <tpc>12</tpc>
+              </Note>
+            </Chord>
           <BarLine>
             </BarLine>
           </voice>
@@ -61559,10 +61638,25 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <Accidental>
+                <subtype>accidentalFlat</subtype>
+                </Accidental>
+              <Spanner type="Tie">
+                <Tie>
+                  </Tie>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    </location>
+                  </next>
+                </Spanner>
+              <pitch>34</pitch>
+              <tpc>12</tpc>
+              </Note>
+            </Chord>
           <BarLine>
             </BarLine>
           </voice>
@@ -61580,10 +61674,20 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    </location>
+                  </prev>
+                </Spanner>
+              <pitch>34</pitch>
+              <tpc>12</tpc>
+              </Note>
+            </Chord>
           <BarLine>
             </BarLine>
           </voice>
@@ -61601,10 +61705,25 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <Accidental>
+                <subtype>accidentalFlat</subtype>
+                </Accidental>
+              <Spanner type="Tie">
+                <Tie>
+                  </Tie>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    </location>
+                  </next>
+                </Spanner>
+              <pitch>34</pitch>
+              <tpc>12</tpc>
+              </Note>
+            </Chord>
           <BarLine>
             </BarLine>
           </voice>
@@ -61622,10 +61741,20 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    </location>
+                  </prev>
+                </Spanner>
+              <pitch>34</pitch>
+              <tpc>12</tpc>
+              </Note>
+            </Chord>
           <BarLine>
             </BarLine>
           </voice>
@@ -61643,10 +61772,25 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <Accidental>
+                <subtype>accidentalFlat</subtype>
+                </Accidental>
+              <Spanner type="Tie">
+                <Tie>
+                  </Tie>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    </location>
+                  </next>
+                </Spanner>
+              <pitch>34</pitch>
+              <tpc>12</tpc>
+              </Note>
+            </Chord>
           <BarLine>
             </BarLine>
           </voice>
@@ -61664,341 +61808,20 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          <BarLine>
-            </BarLine>
-          </voice>
-        <voice>
           <Chord>
             <durationType>whole</durationType>
             <Note>
-              <visible>0</visible>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    </location>
+                  </prev>
+                </Spanner>
+              <pitch>34</pitch>
+              <tpc>12</tpc>
               </Note>
             </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          <BarLine>
-            <subtype>heavy</subtype>
-            </BarLine>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <StaffText>
-            <text>mit Posaune anfangen und dann glissandieren?</text>
-            </StaffText>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
-          </voice>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>43</pitch>
-              <tpc>15</tpc>
-              <play>0</play>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
           <BarLine>
             <subtype>heavy</subtype>
             </BarLine>
@@ -62021,6 +61844,493 @@ until conductor signals to go on</text>
             <durationType>measure</durationType>
             <duration>4/4</duration>
             </Rest>
+          </voice>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <play>0</play>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <play>0</play>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <play>0</play>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <play>0</play>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <play>0</play>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          </voice>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <play>0</play>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <vspacerUp>5.78</vspacerUp>
+        <vspacerDown>6.28</vspacerDown>
+        <voice>
+          <StaffText>
+            <channelSwitch voice="0" name="mute"/>
+            <channelSwitch voice="1" name="mute"/>
+            <channelSwitch voice="2" name="mute"/>
+            <channelSwitch voice="3" name="mute"/>
+            <style>Expression</style>
+            <offset x="-1.5" y="-0.60052"/>
+            <text>con sord.</text>
+            </StaffText>
+          <Dynamic>
+            <subtype>mp</subtype>
+            <velocity>64</velocity>
+            </Dynamic>
+          <StaffText>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="2.8" y="1.88"/>
+            <frameType>1</frameType>
+            <framePadding>5</framePadding>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>.                                                                                                                                                            
+</text>
+            </StaffText>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <Accidental>
+                <subtype>accidentalFlat</subtype>
+                </Accidental>
+              <Spanner type="Tie">
+                <Tie>
+                  </Tie>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    </location>
+                  </next>
+                </Spanner>
+              <pitch>34</pitch>
+              <tpc>12</tpc>
+              </Note>
+            </Chord>
+          </voice>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <play>0</play>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <Spanner type="Tie">
+                <Tie>
+                  <visible>0</visible>
+                  <TieSegment no="0">
+                    <visible>0</visible>
+                    </TieSegment>
+                  </Tie>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    </location>
+                  </next>
+                </Spanner>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    </location>
+                  </prev>
+                </Spanner>
+              <pitch>34</pitch>
+              <tpc>12</tpc>
+              <Spanner type="Glissando">
+                <Glissando>
+                  <glissandoStyle>portamento</glissandoStyle>
+                  <diagonal>1</diagonal>
+                  <anchor>3</anchor>
+                  </Glissando>
+                <next>
+                  <location>
+                    <measures>7</measures>
+                    </location>
+                  </next>
+                </Spanner>
+              </Note>
+            </Chord>
+          </voice>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <play>0</play>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
+              <Spanner type="Tie">
+                <Tie>
+                  <visible>0</visible>
+                  <TieSegment no="0">
+                    <visible>0</visible>
+                    </TieSegment>
+                  </Tie>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    </location>
+                  </next>
+                </Spanner>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    </location>
+                  </prev>
+                </Spanner>
+              <pitch>34</pitch>
+              <tpc>12</tpc>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
+              <Spanner type="Tie">
+                <Tie>
+                  <visible>0</visible>
+                  <TieSegment no="0">
+                    <visible>0</visible>
+                    </TieSegment>
+                  </Tie>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    </location>
+                  </next>
+                </Spanner>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    </location>
+                  </prev>
+                </Spanner>
+              <pitch>34</pitch>
+              <tpc>12</tpc>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
+              <Spanner type="Tie">
+                <Tie>
+                  <visible>0</visible>
+                  <TieSegment no="0">
+                    <visible>0</visible>
+                    </TieSegment>
+                  </Tie>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    </location>
+                  </next>
+                </Spanner>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    </location>
+                  </prev>
+                </Spanner>
+              <pitch>34</pitch>
+              <tpc>12</tpc>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
+              <Spanner type="Tie">
+                <Tie>
+                  <visible>0</visible>
+                  <TieSegment no="0">
+                    <visible>0</visible>
+                    </TieSegment>
+                  </Tie>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    </location>
+                  </next>
+                </Spanner>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    </location>
+                  </prev>
+                </Spanner>
+              <pitch>34</pitch>
+              <tpc>12</tpc>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
+              <Spanner type="Tie">
+                <Tie>
+                  <visible>0</visible>
+                  <TieSegment no="0">
+                    <visible>0</visible>
+                    </TieSegment>
+                  </Tie>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    </location>
+                  </next>
+                </Spanner>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    </location>
+                  </prev>
+                </Spanner>
+              <pitch>34</pitch>
+              <tpc>12</tpc>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    </location>
+                  </prev>
+                </Spanner>
+              <pitch>34</pitch>
+              <tpc>12</tpc>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <Spanner type="Tie">
+                <Tie>
+                  </Tie>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    </location>
+                  </next>
+                </Spanner>
+              <pitch>28</pitch>
+              <tpc>18</tpc>
+              <Spanner type="Glissando">
+                <prev>
+                  <location>
+                    <measures>-7</measures>
+                    </location>
+                  </prev>
+                </Spanner>
+              </Note>
+            </Chord>
+          </voice>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <play>0</play>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Fermata>
+            <subtype>fermataAbove</subtype>
+            </Fermata>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    </location>
+                  </prev>
+                </Spanner>
+              <pitch>28</pitch>
+              <tpc>18</tpc>
+              </Note>
+            </Chord>
+          <BarLine>
+            <subtype>heavy</subtype>
+            </BarLine>
+          </voice>
+        <voice>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <visible>0</visible>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <play>0</play>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          <Clef>
+            <concertClefType>F</concertClefType>
+            <transposingClefType>F</transposingClefType>
+            </Clef>
           </voice>
         <voice>
           <Chord>
@@ -62082,6 +62392,7 @@ until conductor signals to go on</text>
           <Dynamic>
             <subtype>p</subtype>
             <velocity>49</velocity>
+            <offset x="-4.5" y="2.5"/>
             </Dynamic>
           <Spanner type="HairPin">
             <prev>
@@ -68217,18 +68528,10 @@ until conductor signals to go on</text>
             <sigD>4</sigD>
             </TimeSig>
           <Dynamic>
-            <subtype>f</subtype>
+            <subtype>other-dynamics</subtype>
             <velocity>96</velocity>
+            <text><i>(</i><font face="ScoreText"/><i><font face="Edwin"/>)</i></text>
             </Dynamic>
-          <StaffText>
-            <channelSwitch voice="0" name="mute"/>
-            <channelSwitch voice="1" name="mute"/>
-            <channelSwitch voice="2" name="mute"/>
-            <channelSwitch voice="3" name="mute"/>
-            <style>Expression</style>
-            <offset x="-1.5" y="-0.60052"/>
-            <text>con sord.</text>
-            </StaffText>
           <Chord>
             <durationType>whole</durationType>
             <Note>
@@ -68243,33 +68546,6 @@ until conductor signals to go on</text>
                     <measures>1</measures>
                     </location>
                   </next>
-                </Spanner>
-              <pitch>22</pitch>
-              <tpc>12</tpc>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <Spanner type="Tie">
-                <Tie>
-                  </Tie>
-                <next>
-                  <location>
-                    <measures>1</measures>
-                    </location>
-                  </next>
-                </Spanner>
-              <Spanner type="Tie">
-                <prev>
-                  <location>
-                    <measures>-1</measures>
-                    </location>
-                  </prev>
                 </Spanner>
               <pitch>22</pitch>
               <tpc>12</tpc>
@@ -68320,9 +68596,6 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
-          <StaffText>
-            <text>Diminuendo?? Bruch überdecken</text>
-            </StaffText>
           <Chord>
             <durationType>whole</durationType>
             <Note>
@@ -68341,10 +68614,54 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <Accidental>
+                <subtype>accidentalFlat</subtype>
+                </Accidental>
+              <Spanner type="Tie">
+                <Tie>
+                  </Tie>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    </location>
+                  </next>
+                </Spanner>
+              <pitch>22</pitch>
+              <tpc>12</tpc>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Spanner type="HairPin">
+            <HairPin>
+              <subtype>1</subtype>
+              <hairpinCircledTip>1</hairpinCircledTip>
+              </HairPin>
+            <next>
+              <location>
+                <measures>1</measures>
+                </location>
+              </next>
+            </Spanner>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    </location>
+                  </prev>
+                </Spanner>
+              <pitch>22</pitch>
+              <tpc>12</tpc>
+              </Note>
+            </Chord>
           <BarLine>
             </BarLine>
           </voice>
@@ -68362,6 +68679,18 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
+          <Dynamic>
+            <subtype>ppp</subtype>
+            <velocity>16</velocity>
+            <visible>0</visible>
+            </Dynamic>
+          <Spanner type="HairPin">
+            <prev>
+              <location>
+                <measures>-1</measures>
+                </location>
+              </prev>
+            </Spanner>
           <Rest>
             <durationType>measure</durationType>
             <duration>4/4</duration>
@@ -68572,10 +68901,30 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
+          <Dynamic>
+            <subtype>other-dynamics</subtype>
+            <velocity>96</velocity>
+            <text><i>(</i><font face="ScoreText"></font><i><font face="Edwin"></font>)</i></text>
+            </Dynamic>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <Accidental>
+                <subtype>accidentalFlat</subtype>
+                </Accidental>
+              <Spanner type="Tie">
+                <Tie>
+                  </Tie>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    </location>
+                  </next>
+                </Spanner>
+              <pitch>22</pitch>
+              <tpc>12</tpc>
+              </Note>
+            </Chord>
           </voice>
         <voice>
           <Chord>
@@ -68591,10 +68940,20 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    </location>
+                  </prev>
+                </Spanner>
+              <pitch>22</pitch>
+              <tpc>12</tpc>
+              </Note>
+            </Chord>
           </voice>
         <voice>
           <Chord>
@@ -68610,10 +68969,25 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <Accidental>
+                <subtype>accidentalFlat</subtype>
+                </Accidental>
+              <Spanner type="Tie">
+                <Tie>
+                  </Tie>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    </location>
+                  </next>
+                </Spanner>
+              <pitch>22</pitch>
+              <tpc>12</tpc>
+              </Note>
+            </Chord>
           </voice>
         <voice>
           <Chord>
@@ -68629,10 +69003,20 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    </location>
+                  </prev>
+                </Spanner>
+              <pitch>22</pitch>
+              <tpc>12</tpc>
+              </Note>
+            </Chord>
           </voice>
         <voice>
           <Chord>
@@ -68648,10 +69032,25 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <Accidental>
+                <subtype>accidentalFlat</subtype>
+                </Accidental>
+              <Spanner type="Tie">
+                <Tie>
+                  </Tie>
+                <next>
+                  <location>
+                    <measures>1</measures>
+                    </location>
+                  </next>
+                </Spanner>
+              <pitch>22</pitch>
+              <tpc>12</tpc>
+              </Note>
+            </Chord>
           </voice>
         <voice>
           <Chord>
@@ -68667,10 +69066,31 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>4/4</duration>
-            </Rest>
+          <Spanner type="HairPin">
+            <HairPin>
+              <subtype>1</subtype>
+              <hairpinCircledTip>1</hairpinCircledTip>
+              </HairPin>
+            <next>
+              <location>
+                <measures>1</measures>
+                </location>
+              </next>
+            </Spanner>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <Spanner type="Tie">
+                <prev>
+                  <location>
+                    <measures>-1</measures>
+                    </location>
+                  </prev>
+                </Spanner>
+              <pitch>22</pitch>
+              <tpc>12</tpc>
+              </Note>
+            </Chord>
           </voice>
         <voice>
           <Chord>
@@ -68686,6 +69106,13 @@ until conductor signals to go on</text>
         </Measure>
       <Measure>
         <voice>
+          <Spanner type="HairPin">
+            <prev>
+              <location>
+                <measures>-1</measures>
+                </location>
+              </prev>
+            </Spanner>
           <Rest>
             <durationType>measure</durationType>
             <duration>4/4</duration>
@@ -74773,6 +75200,7 @@ until conductor signals to go on</text>
           </voice>
         </Measure>
       <Measure>
+        <vspacerUp>10.78</vspacerUp>
         <voice>
           <Rest>
             <durationType>measure</durationType>
@@ -75199,8 +75627,8 @@ until conductor signals to go on</text>
       <Measure>
         <voice>
           <Dynamic>
-            <subtype>pp</subtype>
-            <velocity>33</velocity>
+            <subtype>ppp</subtype>
+            <velocity>16</velocity>
             </Dynamic>
           <Chord>
             <durationType>whole</durationType>
@@ -75326,6 +75754,7 @@ until conductor signals to go on</text>
           </voice>
         </Measure>
       <Measure>
+        <vspacerUp>10.28</vspacerUp>
         <vspacerDown>10.93</vspacerDown>
         <voice>
           <StaffText>
@@ -75336,7 +75765,7 @@ until conductor signals to go on</text>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
             <frameBgColor r="255" g="85" b="0" a="0"/>
-            <text>.                                                                                                                                                             
+            <text>.                                                                                                                                                            
 
 </text>
             </StaffText>
@@ -85487,8 +85916,8 @@ signals to go on</text>
       <Measure>
         <voice>
           <Dynamic>
-            <subtype>pp</subtype>
-            <velocity>33</velocity>
+            <subtype>ppp</subtype>
+            <velocity>16</velocity>
             </Dynamic>
           <Chord>
             <durationType>whole</durationType>
@@ -85627,7 +86056,7 @@ signals to go on</text>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
             <frameBgColor r="255" g="85" b="0" a="0"/>
-            <text>.                                                                                                                                                             
+            <text>.                                                                                                                                                            
 
 </text>
             </StaffText>
@@ -95267,8 +95696,8 @@ signals to go on</text>
       <Measure>
         <voice>
           <Dynamic>
-            <subtype>pp</subtype>
-            <velocity>33</velocity>
+            <subtype>ppp</subtype>
+            <velocity>16</velocity>
             </Dynamic>
           <Chord>
             <durationType>whole</durationType>
@@ -95413,7 +95842,7 @@ signals to go on</text>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
             <frameBgColor r="255" g="85" b="0" a="0"/>
-            <text>.                                                                                                                                                             
+            <text>.                                                                                                                                                            
 </text>
             </StaffText>
           <Spanner type="HairPin">
@@ -105007,8 +105436,8 @@ signals to go on</text>
       <Measure>
         <voice>
           <Dynamic>
-            <subtype>pp</subtype>
-            <velocity>33</velocity>
+            <subtype>ppp</subtype>
+            <velocity>16</velocity>
             </Dynamic>
           <Chord>
             <durationType>whole</durationType>
@@ -105121,7 +105550,7 @@ signals to go on</text>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
             <frameBgColor r="255" g="85" b="0" a="0"/>
-            <text>.                                                                                                                                                             
+            <text>.                                                                                                                                                            
 </text>
             </StaffText>
           <Spanner type="HairPin">
@@ -105528,7 +105957,7 @@ signals to go on</text>
               </next>
             </Spanner>
           <Chord>
-            <durationType>quarter</durationType>
+            <durationType>half</durationType>
             <Note>
               <Accidental>
                 <subtype>accidentalFlat</subtype>
@@ -105538,32 +105967,9 @@ signals to go on</text>
                   </Tie>
                 <next>
                   <location>
-                    <fractions>1/4</fractions>
+                    <fractions>1/2</fractions>
                     </location>
                   </next>
-                </Spanner>
-              <pitch>44</pitch>
-              <tpc>10</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>quarter</durationType>
-            <Note>
-              <Spanner type="Tie">
-                <Tie>
-                  </Tie>
-                <next>
-                  <location>
-                    <fractions>1/4</fractions>
-                    </location>
-                  </next>
-                </Spanner>
-              <Spanner type="Tie">
-                <prev>
-                  <location>
-                    <fractions>-1/4</fractions>
-                    </location>
-                  </prev>
                 </Spanner>
               <pitch>44</pitch>
               <tpc>10</tpc>
@@ -105573,13 +105979,13 @@ signals to go on</text>
                   <anchor>3</anchor>
                   <Segment>
                     <subtype>0</subtype>
-                    <offset x="0.353905" y="-5.30858"/>
-                    <off2 x="-0.354705" y="0"/>
+                    <offset x="10.0304" y="-4.46901"/>
+                    <off2 x="-8.93801" y="0"/>
                     </Segment>
                   </TextLine>
                 <next>
                   <location>
-                    <fractions>1/4</fractions>
+                    <fractions>1/2</fractions>
                     </location>
                   </next>
                 </Spanner>
@@ -105597,12 +106003,12 @@ signals to go on</text>
               </prev>
             </Spanner>
           <Chord>
-            <durationType>quarter</durationType>
+            <durationType>half</durationType>
             <Note>
               <Spanner type="Tie">
                 <prev>
                   <location>
-                    <fractions>-1/4</fractions>
+                    <fractions>-1/2</fractions>
                     </location>
                   </prev>
                 </Spanner>
@@ -105611,7 +106017,7 @@ signals to go on</text>
               <Spanner type="TextLine">
                 <prev>
                   <location>
-                    <fractions>-1/4</fractions>
+                    <fractions>-1/2</fractions>
                     </location>
                   </prev>
                 </Spanner>
@@ -105620,9 +106026,6 @@ signals to go on</text>
               <subtype>r16</subtype>
               </Tremolo>
             </Chord>
-          <Rest>
-            <durationType>quarter</durationType>
-            </Rest>
           </voice>
         </Measure>
       <Measure>
@@ -113030,7 +113433,7 @@ until conductor signals to go on</text>
             </TimeSig>
           <Dynamic>
             <subtype>ff</subtype>
-            <velocity>112</velocity>
+            <velocity>60</velocity>
             </Dynamic>
           <StaffText>
             <autoplace>0</autoplace>
@@ -113617,7 +114020,7 @@ until conductor signals to go on</text>
         <voice>
           <Dynamic>
             <subtype>ff</subtype>
-            <velocity>112</velocity>
+            <velocity>60</velocity>
             </Dynamic>
           <Chord>
             <durationType>whole</durationType>
@@ -113885,7 +114288,7 @@ until conductor signals to go on</text>
             <frameType>1</frameType>
             <framePadding>5</framePadding>
             <frameBgColor r="255" g="85" b="0" a="0"/>
-            <text>.                                                                                                                                                             
+            <text>.                                                                                                                                                            
 
 </text>
             </StaffText>

@@ -1,5 +1,6 @@
 *.lsp~
 *.wav
+*.mp3
 *.reapeaks
 *.png
 *.mid
@@ -7,3 +8,6 @@
 *.m4a
 sketch/
 test*.xml
+*.xml
+*.rpp-bak
+.mscbackup/
