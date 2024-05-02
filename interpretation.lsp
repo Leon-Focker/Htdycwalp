@@ -93,8 +93,17 @@
 					     (2 (1 1)) (1 (1)) (3 (1 1 1)) (2 (1 1))))
 				       t)))
 	;; minute 10/11
-	(t (variadic (rqq-to-indispensability-function
-		      '(13 (1 1 1 1 1 1 1 1 1 1 1 1 1)) t)))))
+	(t (variadic (section-val
+		      time
+		      0
+		      (rqq-to-indispensability-function
+		       '(16 ((3 (1 1 1)) (3 (1 1 1)) (2 (1 1))
+			     (2 (1 1)) (1 (1)) (3 (1 1 1)) (2 (1 1))))
+		       t)
+		      30
+		      (rqq-to-indispensability-function
+		       '(13 ((3 (1 1 1)) (3 (1 1 1)) (2 (1 1)) (2 (1 1)) (1 (1)) (2 (1 1))))
+		       t))))))
 
 ;; *** tape-get-rhythm
 ;;; determine rhythm(-fun) by state (1-8)
