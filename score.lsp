@@ -187,7 +187,7 @@
 ;; interpret everything as state 3 (morphing rhythms)
 ;; moving threshold...
 
-(set-lsim (access-minutes) 10 1 'divisor 4)
+(set-lsim (access-minutes) 10 1 'divisor 8)
 (set-lsim (access-minutes) 10 1 'i-div 20)
 (set-lsim (access-minutes) 10 1 'states
 	  (ml 3 (length (get-lsim (access-minutes) 10 1 'states))))
