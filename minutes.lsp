@@ -35,7 +35,10 @@
    ;; depending on the type of layer this number can be something like forte,
    ;; crescendo or even rest.
    (dynamics :accessor dynamics :initarg :dynamics :type list :initform '(1))
-   (chords :accessor chords :initarg :chords :type list :initform '(() ()))))
+   (chords :accessor chords :initarg :chords :type list :initform '(() ()))
+   (divisor :accessor divisor :initarg :divisor :type number :initform nil)
+   ;; kind of like a sample-rate for sampling the indisp-functions:
+   (i-div :accessor i-div :initarg :i-div :type number :initform nil)))
 
 (defclass tape-layer (minute-layer)
   ((instruments :accessor instruments :type list :initarg :instruments
@@ -89,7 +92,7 @@
 
 (defun make-instrument-layer (id-uniquifier number start-time
 			      &optional (div-ratios '(1)) (states '(0))
-				(dynamics '(1)))
+				(dynamics '(1)) divisor i-div)
   (unless (integerp number) (error "number must be an integer, not ~a" number))
   (make-instance 'instrument-layer
 		 :id (intern (format nil "instr-layer-~a" id-uniquifier) :ly)
@@ -97,7 +100,9 @@
 		 :start-time start-time
 		 :div-ratios div-ratios
 		 :states states
-		 :dynamics dynamics))
+		 :dynamics dynamics
+		 :divisor divisor
+		 :i-div i-div))
 
 ;; ** operations on lists of minutes
 

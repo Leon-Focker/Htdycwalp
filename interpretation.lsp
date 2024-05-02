@@ -353,14 +353,23 @@
 
 ;; **** ins-get-morphing-rhythms
 ;;; like ins-get-static-rhythm but morph rhythm (indisp-fun).
-(defun ins-get-morphing-rhythms (instrument dur index sum chord start-time)
+(defun ins-get-morphing-rhythms (instrument dur index sum chord start-time
+					    &optional
+					    (divisor 4)
+					    (i-div 13)
+					    threshold)
+  "modify divisor for different pulses:
+ tempo 60: 1(q), 4 (s), 6 (ts)
+ tepmo 90: 6 (s), 9/2 (triplets), 15/2 (quintuplet)
+  => dividing 1 second (q=60) into this many notes
+
+ modify i-div for different speeds for sampling the pattern."
   (declare (ignore index))
   (let* ((new-durs '())
 	 (pitches '())
 	 (nr 0)
 	 (spitch (note-for-ins instrument (nth 1 chord)))
 	 (spitch2 nil)
-	 (thrsld 1/7)
 	 (indisp1 (funcall (get-indisp start-time) 'time sum))
 	 (indisp2 (funcall (get-indisp start-time) 'time (+ sum dur 1)))
 	 (pitches1 '())
@@ -368,11 +377,9 @@
 	 (ptrn1 '())
 	 (ptrn2 '())
 	 (morph '())
-	 (i-div 13)
-	 ;; modify this for different pulses
-	 ;; tempo 60: 1(q), 4 (s), 6 (ts)
-	 ;; tepmo 90: 6 (s), 9/2 (triplets), 15/2 (quintuplet)
-	 (divisor 4)) ;; dividing 1 second (q=60) into this many notes
+	 (thrsld 1/7)
+	 (div 13)
+	 (divs 4))
     (multiple-value-bind (st md nd) (get-st-md-nd sum dur)
       ;; custom stuff:
       (case instrument
@@ -385,23 +392,26 @@
 	(oboe (setf thrsld 1/2))	
 	(b-clarinet (setf thrsld 1/7))       
 	(bassoon (setf thrsld 1/9))
-	(c-trumpet (setf thrsld 1/8 i-div 8))    
-	(french-horn (setf thrsld 1/6 i-div 8))	
-	(bass-trombone (setf thrsld 1/5 i-div 8))       
-	(tuba (setf spitch nil thrsld 1/3 i-div 8))
+	(c-trumpet (setf thrsld 1/8 div 8))    
+	(french-horn (setf thrsld 1/6 div 8))	
+	(bass-trombone (setf thrsld 1/5 div 8))       
+	(tuba (setf spitch nil thrsld 1/3 div 8))
 	(percussion (setf spitch2 (note-for-ins instrument (nth 2 chord))
 			  thrsld 1/2)))
+      (when threshold (setf thrsld threshold))
+      (when i-div (setf div i-div))
+      (when divisor (setf divs divisor))
       ;; set number of notes
       (unless (= 0 st) (incf nr))
       (unless (= 0 nd) (incf nr))
-      (incf nr (* md divisor)) ;; war (* (/ md 4) 16)
+      (incf nr (* md divs)) ;; war (* (/ md 4) 16)
       ;; get durations and different pitch lists
       (loop for i from 0 below nr
-	    for ind1 = (/ (1+ (funcall indisp1 (mod (/ i i-div) 1))))
-	    for ind2 = (/ (1+ (funcall indisp2 (mod (/ i i-div) 1))))
+	    for ind1 = (/ (1+ (funcall indisp1 (mod (/ i div) 1))))
+	    for ind2 = (/ (1+ (funcall indisp2 (mod (/ i div) 1))))
 	    do (push (cond ((and (= i 0) (not (= 0 st))) st)
 			   ((and (= i (1- nr)) (not (= 0 nd))) nd)
-			   (t (/ 1 divisor))) ;; .25
+			   (t (/ 1 divs))) ;; .25
 		     new-durs)
 	       (push (if (>= ind1 thrsld) spitch spitch2) pitches1)
 	       (push (if (>= ind2 thrsld) spitch spitch2) pitches2))
@@ -658,6 +668,8 @@
 	 (dynamics (dynamics il))
 	 (chords (chords il))
 	 (start-time (start-time il))
+	 (divisor (divisor il))
+	 (i-div (i-div il))
 	 (indices '(0))
 	 (new-durs '())
 	 (pitches '())
@@ -672,7 +684,8 @@
 		     ;; interpret states
 		     (case state
 		       (2 (ins-get-static-rhythm instrument dur index sum chord start-time))
-		       (3 (ins-get-morphing-rhythms instrument dur index sum chord start-time))
+		       (3 (ins-get-morphing-rhythms instrument dur index sum
+						    chord start-time divisor i-div))
 		       (4 (ins-get-changing-timbres instrument dur chord))
 		       (5 (ins-get-isorhythmic-rhythms instrument dur index sum chord))
 		       (6 (ins-get-converging-pitches instrument dur index sum chord))
