@@ -2,9 +2,11 @@
 
 (in-package :ly)
 
+;; (re-)load minutes
+(load (compile-file (probe-file (format nil "~aminutes.lsp" +ens-src-dir+))))
+
 ;; ** todo
 
-;;; actually compose divisions and states
 ;;; interpretation functions for each instrument, that are then placed within
 ;;;  interpret-layer-by-instrument.
 ;;; maybe we don't need to discern between tape and instrument layers? as tape
@@ -15,9 +17,6 @@
 ;;; respect lowest and highest notes for each instrument.
 ;;; should interpret-layer-by-instrument be able to see other layers in minute?
 ;;;  this way it knows wheter it is solo etc.
-;;; each layer/minute should have 1 consonant chord and 1 dissonant.
-;;;  chose chords from all-chords and modify (transpose)
-;;; HOW does the piece end??
 
 ;; ** divide (generate divisions and states)
 
@@ -158,33 +157,53 @@
 
 ;; ** ...and conquer (interpret the minute objects)
 
-;; write entire score
+;; *** write entire score
 (lists-to-xml (interpret-minutes (access-minutes))
-	      (format nil "~a~a" +ens-src-dir+ "test.xml"))
+	      (format nil "~a~a" +ens-src-dir+ "Score_from_Lisp.xml")
+	      :tempo 60
+	      :time-sig '(4 4)
+	      :print-rehearsal-letters t
+	      :set-new-dynamics t)
 
-(lists-to-xml (interpret-minutes (access-minutes)
-				 '(double-bass violin-1 tuba bass-trombone flute bassoon percussion computer))
-	      (format nil "~a~a" +ens-src-dir+ "test2.xml"))
+;; *** generate patterns and alternative versions
 
-(loop for iter in '(13 26 7 10 5 20)
-      do (setf *test* iter)
-	 (lists-to-xml (interpret-minutes (subseq (access-minutes) 3 4)
-					  '(violin-1 violin-2 viola cello double-bass))
-		       (format nil "~a~a" +ens-src-dir+ (format nil "test5_~a.xml" iter))))
+;; **** get rhythmic material for minute 4
 
-;; modified i-div and divisor in #'ins-get-morphing-rhythms to generate patterns:
 #|
+;; different combinations of i-div and divisor to generate patterns:
+(set-lsim (access-minutes) 3 1 'divisor 3)
+(set-lsim (access-minutes) 3 1 'i-div 6)
 (lists-to-xml (interpret-minutes (subseq (access-minutes) 3 4)
 				 '(violin-1 violin-2 viola cello double-bass))
 	      (format nil "~a~a" +ens-src-dir+ "minute_4_3_6.xml")
 	      :tempo 90)
 |#
 
-;; trying to get some patterns for double bass minute 9:
-#|
-(setf (states (second (layers (car (subseq (access-minutes) 8 9))))) '(3 3 3 3))
-(lists-to-xml (interpret-minutes (subseq (access-minutes) 8 9) '(double-bass))
-	      (format nil "~a~a" +ens-src-dir+ "double_bass_minute_9.xml"))
-|#
+;; **** patterns minute 9 ...
+;; ... were notated by hand
+
+;; **** get rhythmic material for last minute
+
+;; interpret everything as state 3 (morphing rhythms)
+;; moving threshold...
+
+(set-lsim (access-minutes) 10 1 'divisor 4)
+(set-lsim (access-minutes) 10 1 'i-div 20)
+(set-lsim (access-minutes) 10 1 'states
+	  (ml 3 (length (get-lsim (access-minutes) 10 1 'states))))
+(set-lsim (access-minutes) 10 2 'divisor 6)
+(set-lsim (access-minutes) 10 2 'i-div 13)
+(set-lsim (access-minutes) 10 2 'states
+	  (ml 3 (length (get-lsim (access-minutes) 10 2 'states))))
+(set-lsim (access-minutes) 10 3 'divisor 6)
+(set-lsim (access-minutes) 10 3 'i-div 7)
+(set-lsim (access-minutes) 10 3 'states
+	  (ml 3 (length (get-lsim (access-minutes) 10 3 'states))))
+
+(lists-to-xml (append (interpret-layer (third (layers (nth 10 (access-minutes)))))
+		      (interpret-layer (fourth (layers (nth 10 (access-minutes)))))
+		      (interpret-layer (second (layers (nth 10 (access-minutes))))))
+	      (format nil "~a~a" +ens-src-dir+ "patters_last_minute.xml")
+	      :tempo 60)
 
 ;; EOF score.lsp

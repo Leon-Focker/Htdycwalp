@@ -549,7 +549,8 @@
 |#
 (let ((default-dir (path-from-same-dir)))
   (defun lists-to-xml (lists file &key (time-sig '(4 4)) (tempo 60)
-				    title composer)
+				    title composer print-rehearsal-letters
+				    set-new-dynamics)
     ;; maybe set file and title
     (unless title
       (setf title (if file (pathname-name file) "untitled")))
@@ -584,8 +585,9 @@
 			 do (add-mark (nth (nth (car m) attacks-indices) events)
 			        (sc-intern (cadr m))))
 		 ;; arbitrarily set dynamics before and after crescendo
-		 (setf events (add-crescendo-dynamics events))
-		 (setf events (add-crescendo-dynamics events nil))
+		 (when set-new-dynamics
+		   (setf events (add-crescendo-dynamics events))
+		   (setf events (add-crescendo-dynamics events nil)))
 		 ;; generate bars
 		 (push (loop while events
 			     for bar = (make-rthm-seq-bar `(,time-sig))
@@ -614,9 +616,11 @@
       ;; set composer and title
       (setf (composer sc) composer (title sc) title)
       (check-ties sc t)
+      ;; adding rehearsal-letters
       ;; !! this (every 15 bars) shouldn't be hardcoded like this:
-      (loop for i from 1 and bar from 1 to (num-bars sc) by 16
-	    do (set-rehearsal-letter sc (if (= bar 1) 2 bar) i))
+      (when print-rehearsal-letters
+	(loop for i from 1 and bar from 1 to (num-bars sc) by 16
+	      do (set-rehearsal-letter sc (if (= bar 1) 2 bar) i)))
       ;; call write-xml on sc-object
       (write-xml sc :file file
 		    :page-height page-height
