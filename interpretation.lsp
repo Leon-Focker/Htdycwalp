@@ -287,7 +287,7 @@
 	     (setf active-ls '(1 1 1 0 0 1 1 0 1) divisor 6))
 	    ((bassoon french-horn bass-trombone)
 	     (setf active-ls '(0 0 1 1 0 0 0 1 1 0 0 0 1 1 0 0)))
-	    (double-bass (setf spitch 'b0)
+	    (double-bass (setf spitch 'g0)
 	     (setf active-ls '(0 0 0 1 1 1 0 0 0 0 1 1 1 1 0 0)))
 	    ((violin-1 violin-2 viola)
 	     (setf active-ls '(0 0 0 1 1 1 0 0 0 0 0 1 1 1 1 0 0))))
@@ -392,7 +392,7 @@
     (multiple-value-bind (st md nd) (get-st-md-nd sum dur)
       ;; custom stuff:
       (case instrument
-	(double-bass (setf spitch 'b0 thrsld 1/8))
+	(double-bass (setf spitch 'g0 thrsld 1/8))
 	(violin-1 (setf thrsld 1/3))	; i-div 6.5))
 	(violin-2 (setf thrsld 1/4))	; i-div 6.5))
 	(viola (setf thrsld 1/6))	; i-div 6.5))
@@ -463,7 +463,7 @@
 	 (setf spitch (note-for-ins instrument (nth 0 chord))) (push `(,index clb) marks)
 	 (push `(,(+ index (min (1- nr) 2)) "langsamer werden") marks))
 	((double-bass)
-	 (setf spitch 'b0) (push `(,index clb) marks))
+	 (setf spitch 'g0) (push `(,index clb) marks))
 	(t (setf spitch (note-for-ins instrument (nth 0 chord)))
 	 (decf nr (* (/ md 4) 16)) (incf nr (* (/ md 4) 20))))
       (loop for i from 0 below nr
@@ -497,7 +497,7 @@
       ;; custom stuff:
       (case instrument
 	(tuba (setf nr 1 st dur md 0 nd 0 spitch (note-to-midi 'bf0)))
-	(double-bass (setf spitch (note-to-midi 'b0) tpitch (note-to-midi 'e1))))
+	(double-bass (setf spitch (note-to-midi 'g0) tpitch (note-to-midi 'e1))))
       ;; get notes and gliss marks
       (loop for i from 0 below nr
 	    do (cond ((and (= i 0) (not (= 0 st)))
@@ -534,7 +534,7 @@
       ;; custom stuff:
       (case instrument
 	(tuba (setf nr 1 st dur md 0 nd 0 spitch (note-to-midi 'bf0)))
-	(double-bass (setf spitch (note-to-midi 'e1) tpitch (note-to-midi 'b0))))
+	(double-bass (setf spitch (note-to-midi 'e1) tpitch (note-to-midi 'g0))))
       ;; get notes and gliss marks
       (loop for i from 0 below nr
 	    do (cond ((and (= i 0) (not (= 0 st)))
