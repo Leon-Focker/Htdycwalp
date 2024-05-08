@@ -1,15 +1,8 @@
----------------------------------
-Minute 8
-Sollten die Lufttöne länger dauern?
+Akzent auf hinkender Note (zwei Steine?)
+Balken evtl. durchziehen
+gefühlt 6/32?
 
----------------------------------
-Minute 9 komponieren
-Schlagzeug und Bass Soli mit Elektronik Fuge.
-Ende Streicher gliss und Tuba static
-
----------------------------------
-Minute 11
-Indisp festlegen und Rhythmen in Stil min. 4 komponieren, mit gettato ausfaden
+Oktavschlüssel im Bass weglassen?
 
 ---------------------------------
 Schlagzeug ausnotieren und Instrumente aussuchen
@@ -29,10 +22,13 @@ LEGENDE
 - blow at mouthpiece (pursed lips)
 - gettato ist nicht synchron, nicht genau zu spielen
 - DB Spiccato (kreuz, stacc). Gedämpft oder nicht gedämpft
+- offen, geschlossen. halb (hihat)
+- nur hihat schließen
 
 ---------------------------------
 IDEEN
 
+- Hi-Hat Wirbel direkt stoppen (Pedal)
 - Schwebungen zwischen Tuba und Posaune!
 - kürzere Glissandi als Textur
 - durcheinander trotzdem rhythmen
