@@ -1,9 +1,5 @@
-Akzent auf hinkender Note (zwei Steine?)
-Balken evtl. durchziehen
-gefühlt 6/32?
-
-Oktavschlüssel im Bass weglassen?
-
+Dynamics policy! Aktion oder Resultat?
+-> Resultat und Aktion in Klammern?
 ---------------------------------
 Schlagzeug ausnotieren und Instrumente aussuchen
 
@@ -24,6 +20,7 @@ LEGENDE
 - DB Spiccato (kreuz, stacc). Gedämpft oder nicht gedämpft
 - offen, geschlossen. halb (hihat)
 - nur hihat schließen
+- Glissandi: Im notfall chromatische leiter benden
 
 ---------------------------------
 IDEEN
