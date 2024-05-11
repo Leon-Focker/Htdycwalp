@@ -1,9 +1,4 @@
-Minute 10 Ende? weglassen?? Oder viel schneller auströpfeln...
-Streicher gettato gestimmt oder nicht? Schlüssel!
-flick bell (bright sound)
-
-Dynamics policy! Aktion oder Resultat?
--> Resultat und Aktion in Klammern?
+Dynamics policy durchsetzen!
 
 Trompete ausarbeiten (mutes aufapssen)
 Horn ausarbeiten (mutes aufpassen)
@@ -23,6 +18,7 @@ Was macht Blech am Anfang?
 
 ---------------------------------
 LEGENDE
+- dicke Taktstriche erklären
 - Horn immer Quinte tiefer
 - blow at mouthpiece (pursed lips)
 - gettato ist nicht synchron, nicht genau zu spielen
