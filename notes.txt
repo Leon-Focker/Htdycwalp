@@ -1,10 +1,9 @@
 Minute 10 Ende? weglassen?? Oder viel schneller auströpfeln...
 Streicher gettato gestimmt oder nicht? Schlüssel!
+flick bell (bright sound)
 
 Dynamics policy! Aktion oder Resultat?
 -> Resultat und Aktion in Klammern?
-
-- col legno und gettato notation einheitlich!
 
 Trompete ausarbeiten (mutes aufapssen)
 Horn ausarbeiten (mutes aufpassen)
@@ -30,7 +29,6 @@ LEGENDE
 - DB Spiccato (kreuz, stacc). Gedämpft oder nicht gedämpft
 - offen, geschlossen. halb (hihat)
 - nur hihat schließen
-- Glissandi: Im notfall chromatische leiter benden
 
 ---------------------------------
 IDEEN

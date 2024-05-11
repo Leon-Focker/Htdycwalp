@@ -1271,46 +1271,15 @@ instrument might help to prevent the mouthpiece from getting stuck.</text>
             </BarLine>
           <StaffText>
             <style>Lyrics Even Lines</style>
-            <offset x="0.5" y="3"/>
+            <offset x="0.5" y="-1.5"/>
             <text>o</text>
             </StaffText>
           <Chord>
-            <durationType>quarter</durationType>
+            <durationType>half</durationType>
             <Note>
               <pitch>69</pitch>
               <tpc>17</tpc>
               <head>la</head>
-              <Spanner type="TextLine">
-                <TextLine>
-                  <lineWidth>0.3</lineWidth>
-                  <anchor>3</anchor>
-                  <Segment>
-                    <subtype>0</subtype>
-                    <offset x="0" y="0"/>
-                    <off2 x="5.01534" y="0"/>
-                    </Segment>
-                  </TextLine>
-                <next>
-                  <location>
-                    <fractions>1/4</fractions>
-                    </location>
-                  </next>
-                </Spanner>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>quarter</durationType>
-            <Note>
-              <visible>0</visible>
-              <pitch>69</pitch>
-              <tpc>17</tpc>
-              <Spanner type="TextLine">
-                <prev>
-                  <location>
-                    <fractions>-1/4</fractions>
-                    </location>
-                  </prev>
-                </Spanner>
               </Note>
             </Chord>
           <StaffText>
@@ -1318,45 +1287,12 @@ instrument might help to prevent the mouthpiece from getting stuck.</text>
             <offset x="0.5" y="3"/>
             <text>sch</text>
             </StaffText>
-          <Beam>
-            <visible>0</visible>
-            </Beam>
           <Chord>
-            <durationType>eighth</durationType>
+            <durationType>quarter</durationType>
             <Note>
               <pitch>69</pitch>
               <tpc>17</tpc>
               <head>la</head>
-              <Spanner type="TextLine">
-                <TextLine>
-                  <lineWidth>0.3</lineWidth>
-                  <anchor>3</anchor>
-                  </TextLine>
-                <next>
-                  <location>
-                    <fractions>1/8</fractions>
-                    </location>
-                  </next>
-                </Spanner>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>eighth</durationType>
-            <Stem>
-              <visible>0</visible>
-              </Stem>
-            <Note>
-              <visible>0</visible>
-              <pitch>69</pitch>
-              <tpc>17</tpc>
-              <head>la</head>
-              <Spanner type="TextLine">
-                <prev>
-                  <location>
-                    <fractions>-1/8</fractions>
-                    </location>
-                  </prev>
-                </Spanner>
               </Note>
             </Chord>
           </voice>
