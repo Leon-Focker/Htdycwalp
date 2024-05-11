@@ -252,7 +252,7 @@
       <VBox>
         <height>13</height>
         <topGap>1</topGap>
-        <bottomGap>1</bottomGap>
+        <bottomGap>5</bottomGap>
         <boxAutoSize>0</boxAutoSize>
         <visible>0</visible>
         <Text>
@@ -462,7 +462,7 @@
           <text>Arrows show a gradual change between the specified states.</text>
           </Text>
         </HBox>
-      <Measure len="1/4">
+      <Measure len="4/4">
         <measureNumberMode>2</measureNumberMode>
         <voice>
           <BarLine>
@@ -471,14 +471,35 @@
           <Chord>
             <durationType>quarter</durationType>
             <Note>
-              <visible>0</visible>
-              <Symbol>
-                <name>noteheadTriangleUpBlack</name>
-                <font>Bravura</font>
-                <offset x="-0.5" y="0"/>
-                </Symbol>
-              <pitch>83</pitch>
-              <tpc>19</tpc>
+              <pitch>72</pitch>
+              <tpc>14</tpc>
+              <head>triangle-up</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <pitch>72</pitch>
+              <tpc>14</tpc>
+              <head>triangle-up</head>
+              <headType>half</headType>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <pitch>69</pitch>
+              <tpc>17</tpc>
+              <head>triangle-down</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <pitch>69</pitch>
+              <tpc>17</tpc>
+              <head>triangle-down</head>
+              <headType>half</headType>
               </Note>
             </Chord>
           </voice>
@@ -495,10 +516,162 @@
           <size>12</size>
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
-          <offset x="10" y="-3"/>
-          <text>Play as high as possible.</text>
+          <offset x="10" y="0"/>
+          <text>triangle noteheads stand for as high / as low as possible.</text>
           </Text>
         </HBox>
+      <VBox>
+        <height>10</height>
+        <visible>0</visible>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <text>Box notation
+
+A box around staffs means, that this passage is to be played indipendently. This means the conductor does either not conduct, or that he 
+conducts in a different tempo than the one the contents of the box are supposed to be playing in. Sometimes multiple instruments will start
+with the same rhythmic patterns but then drift away from each other, indicated by accelerando and ritardanto marks.
+</text>
+          </Text>
+        </VBox>
+      <Measure>
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="0"/>
+          <text>If there is no other indication within the box, play its contents once and then move on.</text>
+          </Text>
+        </HBox>
+      <Measure>
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-2.5"/>
+          <text>When there is a fermata at the end of the box, this usually means to hold this note until the conductor
+gives the signal to move on to what comes after.</text>
+          </Text>
+        </HBox>
+      <Measure>
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-2.5"/>
+          <text>When the contents of the box are surrounded by repeat marks, repeat the indicated parts until the 
+conductor gives the signal to move on to what comes after.</text>
+          </Text>
+        </HBox>
+      <Measure>
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Tempo>
+            <tempo>1.3333299999999999</tempo>
+            <followText>1</followText>
+            <offset x="0" y="-1"/>
+            <text><b></b><font face="ScoreText"/><b><font face="Edwin"/> ≈ 80</b></text>
+            </Tempo>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-2.5"/>
+          <text>A tempo mark inside of a box applies to this box only. Other players probably have other tempo marks. </text>
+          </Text>
+        </HBox>
+      <VBox>
+        <height>10</height>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <text>Dynamics
+
+Dynamics are notated to indicate the result of an action, not the effort to be put in.
+Dynamics in brackets indicate the intensity of the action, not the result. 
+</text>
+          </Text>
+        </VBox>
+      <VBox>
+        <height>10</height>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <text>Accidentals
+
+Accidentals apply until the end of the bar. As there a no barlines within boxes, accidentals within boxes only apply to the current note. 
+
+</text>
+          </Text>
+        </VBox>
       <TBox>
         <height>1</height>
         <visible>0</visible>
@@ -539,6 +712,20 @@
           <text></text>
           </Text>
         </TBox>
+      <VBox>
+        <height>10</height>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <text>Glissandi
+
+Try to play glissandi as smoothly as possible. If it is too difficult to perform a &quot;real&quot; glissando over a large interval, playing a 
+chromatic scale and bending each note to the next using the embouchure can also work.
+</text>
+          </Text>
+        </VBox>
       <Measure>
         <measureNumberMode>2</measureNumberMode>
         <voice>
@@ -859,6 +1046,18 @@ with some pitch and a whistling sound. https://heatherroche.net/2014/02/13/on-wr
           <text>Brass</text>
           </Text>
         </VBox>
+      <VBox>
+        <height>10</height>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <color r="255" g="0" b="0" a="255"/>
+          <text>The horn is always notated a 5th... 
+</text>
+          </Text>
+        </VBox>
       <Measure>
         <measureNumberMode>2</measureNumberMode>
         <voice>
@@ -1165,9 +1364,6 @@ instrument might help to prevent the mouthpiece from getting stuck.</text>
       <HBox>
         <width>125</width>
         <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
         <Text>
           <style>Frame</style>
           <family>Leland</family>
@@ -1177,6 +1373,9 @@ instrument might help to prevent the mouthpiece from getting stuck.</text>
           <offset x="10" y="0"/>
           <text>(Pitched) air sound, notated in pitch. Optionally a consonant or vowel sound might be notated above.</text>
           </Text>
+        <LayoutBreak>
+          <subtype>page</subtype>
+          </LayoutBreak>
         </HBox>
       <VBox>
         <height>4</height>
@@ -1283,60 +1482,10 @@ second one on the not wrapped part near the bridge. The third one indicates bowi
           <BarLine>
             <visible>0</visible>
             </BarLine>
-          <Chord>
-            <durationType>quarter</durationType>
-            <Stem>
-              <visible>0</visible>
-              </Stem>
-            <Note>
-              <visible>0</visible>
-              <Symbol>
-                <name>keyboardPedalHeel2</name>
-                <font>Bravura</font>
-                <offset x="-2.5" y="1"/>
-                </Symbol>
-              <Symbol>
-                <name>mensuralNoteheadLongaVoid</name>
-                <font>Bravura</font>
-                </Symbol>
-              <pitch>71</pitch>
-              <tpc>19</tpc>
-              <Spanner type="TextLine">
-                <TextLine>
-                  <lineWidth>0.5</lineWidth>
-                  <anchor>3</anchor>
-                  <Segment>
-                    <subtype>0</subtype>
-                    <offset x="0.81455" y="0"/>
-                    <off2 x="-0.81455" y="0"/>
-                    </Segment>
-                  </TextLine>
-                <next>
-                  <location>
-                    <fractions>1/4</fractions>
-                    </location>
-                  </next>
-                </Spanner>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>quarter</durationType>
-            <Stem>
-              <visible>0</visible>
-              </Stem>
-            <Note>
-              <visible>0</visible>
-              <pitch>71</pitch>
-              <tpc>19</tpc>
-              <Spanner type="TextLine">
-                <prev>
-                  <location>
-                    <fractions>-1/4</fractions>
-                    </location>
-                  </prev>
-                </Spanner>
-              </Note>
-            </Chord>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
           </voice>
         </Measure>
       <HBox>
@@ -1351,77 +1500,20 @@ second one on the not wrapped part near the bridge. The third one indicates bowi
           <size>12</size>
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
-          <offset x="10" y="0"/>
-          <text>Double Bass: bow at the edge of the bridge, no discernable pitch.</text>
+          <offset x="10" y="-3"/>
+          <text>col legno gettato (nach clb hinzufügen)</text>
           </Text>
         </HBox>
-      <Measure>
+      <Measure len="2/4">
         <measureNumberMode>2</measureNumberMode>
         <voice>
           <BarLine>
             <visible>0</visible>
             </BarLine>
-          <Chord>
-            <durationType>half</durationType>
-            <Stem>
-              <visible>0</visible>
-              </Stem>
-            <Note>
-              <Symbol>
-                <name>stringsBowOnBridge</name>
-                <font>Bravura</font>
-                <offset x="0.6" y="1"/>
-                </Symbol>
-              <pitch>83</pitch>
-              <tpc>19</tpc>
-              <head>triangle-up</head>
-              <Spanner type="TextLine">
-                <TextLine>
-                  <lineWidth>0.3</lineWidth>
-                  <anchor>3</anchor>
-                  <Segment>
-                    <subtype>0</subtype>
-                    <offset x="0.376024" y="0"/>
-                    <off2 x="-3.6472" y="0"/>
-                    </Segment>
-                  </TextLine>
-                <next>
-                  <location>
-                    <voices>1</voices>
-                    <fractions>1/2</fractions>
-                    </location>
-                  </next>
-                </Spanner>
-              </Note>
-            </Chord>
           <Rest>
-            <visible>0</visible>
-            <durationType>quarter</durationType>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
             </Rest>
-          </voice>
-        <voice>
-          <location>
-            <fractions>1/2</fractions>
-            </location>
-          <Chord>
-            <durationType>quarter</durationType>
-            <Stem>
-              <visible>0</visible>
-              </Stem>
-            <Note>
-              <visible>0</visible>
-              <pitch>83</pitch>
-              <tpc>19</tpc>
-              <Spanner type="TextLine">
-                <prev>
-                  <location>
-                    <voices>-1</voices>
-                    <fractions>-1/2</fractions>
-                    </location>
-                  </prev>
-                </Spanner>
-              </Note>
-            </Chord>
           </voice>
         </Measure>
       <HBox>
@@ -1835,11 +1927,184 @@ will jump to another one mid glissando.
             </Rest>
           </voice>
         </Measure>
-      <Measure len="1/4">
+      <Measure len="4/4">
         <voice>
           <Rest>
-            <durationType>quarter</durationType>
+            <durationType>whole</durationType>
             </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          <StaffText>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="2.3" y="1.38"/>
+            <frameType>1</frameType>
+            <framePadding>5</framePadding>
+            <frameWidth>0.3</frameWidth>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>                             
+</text>
+            </StaffText>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <pitch>72</pitch>
+              <tpc>14</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <pitch>69</pitch>
+              <tpc>17</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          <StaffText>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="2.3" y="1.38"/>
+            <frameType>1</frameType>
+            <framePadding>5</framePadding>
+            <frameWidth>0.3</frameWidth>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>                             
+</text>
+            </StaffText>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <pitch>72</pitch>
+              <tpc>14</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <pitch>69</pitch>
+              <tpc>17</tpc>
+              </Note>
+            </Chord>
+          <Fermata>
+            <subtype>fermataAbove</subtype>
+            </Fermata>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          <StaffText>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="-1.7" y="1.38"/>
+            <frameType>1</frameType>
+            <framePadding>5</framePadding>
+            <frameWidth>0.3</frameWidth>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>                             
+</text>
+            </StaffText>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <Symbol>
+                <name>repeatLeft</name>
+                <font>Bravura</font>
+                <offset x="-4" y="2.5"/>
+                </Symbol>
+              <pitch>72</pitch>
+              <tpc>14</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <pitch>69</pitch>
+              <tpc>17</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <Symbol>
+                <name>repeatRight</name>
+                <font>Bravura</font>
+                <offset x="4.5" y="3.5"/>
+                </Symbol>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          <StaffText>
+            <autoplace>0</autoplace>
+            <z>1</z>
+            <color r="0" g="0" b="0" a="0"/>
+            <offset x="2.3" y="0.38"/>
+            <frameType>1</frameType>
+            <framePadding>5</framePadding>
+            <frameWidth>0.3</frameWidth>
+            <frameBgColor r="255" g="85" b="0" a="0"/>
+            <text>                             
+</text>
+            </StaffText>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <pitch>72</pitch>
+              <tpc>14</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <pitch>69</pitch>
+              <tpc>17</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <pitch>76</pitch>
+              <tpc>18</tpc>
+              </Note>
+            </Chord>
           </voice>
         </Measure>
       <Measure>
@@ -2083,12 +2348,24 @@ will jump to another one mid glissando.
             </Rest>
           </voice>
         </Measure>
-      <Measure>
+      <Measure len="2/4">
         <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>3/4</duration>
-            </Rest>
+          <Chord>
+            <durationType>half</durationType>
+            <Stem>
+              <visible>0</visible>
+              </Stem>
+            <Note>
+              <Symbol>
+                <name>stringsBowOnBridge</name>
+                <font>Bravura</font>
+                <offset x="0.6" y="1"/>
+                </Symbol>
+              <pitch>83</pitch>
+              <tpc>19</tpc>
+              <head>triangle-up</head>
+              </Note>
+            </Chord>
           </voice>
         </Measure>
       <Measure len="1/4">

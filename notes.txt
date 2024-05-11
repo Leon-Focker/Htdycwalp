@@ -1,4 +1,5 @@
 Minute 10 Ende? weglassen?? Oder viel schneller auströpfeln...
+Streicher gettato gestimmt oder nicht? Schlüssel!
 
 Dynamics policy! Aktion oder Resultat?
 -> Resultat und Aktion in Klammern?
@@ -24,8 +25,6 @@ Was macht Blech am Anfang?
 ---------------------------------
 LEGENDE
 - Horn immer Quinte tiefer
-- accidental policy
-- Notenkopftypen (zB. so hoch wie möglich, Auf Steg)
 - blow at mouthpiece (pursed lips)
 - gettato ist nicht synchron, nicht genau zu spielen
 - DB Spiccato (kreuz, stacc). Gedämpft oder nicht gedämpft
