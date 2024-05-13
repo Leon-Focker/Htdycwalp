@@ -1,4 +1,4 @@
-Elektronik eintragen
+do we need the time staff?
 
 Dynamics policy durchsetzen!
 
@@ -21,6 +21,7 @@ LEGENDE
 - DB Spiccato (kreuz, stacc). Gedämpft oder nicht gedämpft
 - offen, geschlossen. halb (hihat)
 - nur hihat schließen
+- Wirbel und trem
 
 ---------------------------------
 IDEEN
