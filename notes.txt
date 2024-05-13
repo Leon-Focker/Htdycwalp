@@ -1,7 +1,3 @@
-do we need the time staff?
-
-Dynamics policy durchsetzen!
-
 Trompete ausarbeiten (mutes aufapssen)
 Horn ausarbeiten (mutes aufpassen)
 Tuba ausarbeiten (mutes aufpassen)
@@ -13,6 +9,7 @@ Schlagzeug ausnotieren und Instrumente aussuchen
 
 ---------------------------------
 LEGENDE
+- lange fermate
 - Flatterzunge
 - dicke Taktstriche erklären
 - Horn immer Quinte tiefer
