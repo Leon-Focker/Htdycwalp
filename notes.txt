@@ -9,6 +9,7 @@ Schlagzeug ausnotieren und Instrumente aussuchen
 
 ---------------------------------
 LEGENDE
+- let ring
 - lange fermate
 - Flatterzunge
 - dicke Taktstriche erklären
