@@ -1,3 +1,5 @@
+Barlines checken
+
 Trompete ausarbeiten (mutes aufapssen)
 Horn ausarbeiten (mutes aufpassen)
 Tuba ausarbeiten (mutes aufpassen)
@@ -22,6 +24,7 @@ LEGENDE
 - Wirbel und trem
 - squeeze tone high lip tension, lots of pressure, do not let the lips vibrate
 - harmonic gliss (wiggle)
+- Saitennummer (I - IV)
 
 ---------------------------------
 IDEEN
