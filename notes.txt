@@ -15,16 +15,18 @@ Schlagzeug ausnotieren und Instrumente aussuchen
 ---------------------------------
 LEGENDE
 
+- shake
 - box mit 5x wiederholungen
 - blow at mouthpiece (pursed lips)
-- gettato ist nicht synchron, nicht genau zu spielen
 - DB Spiccato (kreuz, stacc). Gedämpft oder nicht gedämpft
 - offen, geschlossen. halb (hihat)
 - nur hihat schließen
+- Hihat: offen oben: clean sound. offen mitte: hihatbuzz. halbgeschlossen: vor allem buzz, weniger resonanz. geschlossen oben: viel attack, mitte: weniger attak.
 - Wirbel und trem
 - squeeze tone high lip tension, lots of pressure, do not let the lips vibrate
-- harmonic gliss (wiggle)
 - Saitennummer (I - IV)
+- xylo is 1 oktave höher
+- Steine reiben
 
 ---------------------------------
 IDEEN
