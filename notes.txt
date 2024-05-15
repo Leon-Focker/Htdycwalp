@@ -1,4 +1,7 @@
 Barlines checken
+seite 12 + 17 tape
+sind con crini battuto und col legno battuto richtig notiert? (notenköpfe)
+Bass Seite 28 Con crini battuto normale notenköpfe
 
 Trompete ausarbeiten (mutes aufapssen)
 Horn ausarbeiten (mutes aufpassen)
@@ -11,11 +14,7 @@ Schlagzeug ausnotieren und Instrumente aussuchen
 
 ---------------------------------
 LEGENDE
-- let ring
-- lange fermate
-- Flatterzunge
-- dicke Taktstriche erklären
-- Horn immer Quinte tiefer
+
 - blow at mouthpiece (pursed lips)
 - gettato ist nicht synchron, nicht genau zu spielen
 - DB Spiccato (kreuz, stacc). Gedämpft oder nicht gedämpft
