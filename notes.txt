@@ -15,6 +15,7 @@ Schlagzeug ausnotieren und Instrumente aussuchen
 ---------------------------------
 LEGENDE
 
+- box mit 5x wiederholungen
 - blow at mouthpiece (pursed lips)
 - gettato ist nicht synchron, nicht genau zu spielen
 - DB Spiccato (kreuz, stacc). Gedämpft oder nicht gedämpft
