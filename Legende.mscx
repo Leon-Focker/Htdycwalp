@@ -25,7 +25,7 @@
       <showFooter>0</showFooter>
       <Spatium>1.75</Spatium>
       </Style>
-    <showInvisible>1</showInvisible>
+    <showInvisible>0</showInvisible>
     <showUnprintable>1</showUnprintable>
     <showFrames>1</showFrames>
     <showMargins>0</showMargins>
@@ -543,6 +543,7 @@ Grace notes always come before the beat.
         <width>125</width>
         <visible>0</visible>
         <LayoutBreak>
+          <visible>0</visible>
           <subtype>line</subtype>
           </LayoutBreak>
         <Text>
@@ -576,6 +577,7 @@ Grace notes always come before the beat.
         <width>125</width>
         <visible>0</visible>
         <LayoutBreak>
+          <visible>0</visible>
           <subtype>line</subtype>
           </LayoutBreak>
         <Text>
@@ -601,6 +603,7 @@ Grace notes always come before the beat.
         <width>125</width>
         <visible>0</visible>
         <LayoutBreak>
+          <visible>0</visible>
           <subtype>line</subtype>
           </LayoutBreak>
         <Text>
@@ -626,6 +629,7 @@ Grace notes always come before the beat.
         <width>125</width>
         <visible>0</visible>
         <LayoutBreak>
+          <visible>0</visible>
           <subtype>line</subtype>
           </LayoutBreak>
         <Text>
@@ -668,6 +672,7 @@ fixed, i.e. synchronized points in the score, which usually come after free pass
         <width>125</width>
         <visible>0</visible>
         <LayoutBreak>
+          <visible>0</visible>
           <subtype>line</subtype>
           </LayoutBreak>
         <Text>
@@ -693,6 +698,7 @@ fixed, i.e. synchronized points in the score, which usually come after free pass
         <width>125</width>
         <visible>0</visible>
         <LayoutBreak>
+          <visible>0</visible>
           <subtype>line</subtype>
           </LayoutBreak>
         <Text>
@@ -719,6 +725,7 @@ gives the signal to move on to what comes after.</text>
         <width>125</width>
         <visible>0</visible>
         <LayoutBreak>
+          <visible>0</visible>
           <subtype>line</subtype>
           </LayoutBreak>
         <Text>
@@ -765,6 +772,7 @@ Outside of and after the box is to be played a tempo, if not indicated otherwise
         </HBox>
       <VBox>
         <height>10</height>
+        <visible>0</visible>
         <Text>
           <style>Frame</style>
           <family>Leland</family>
@@ -782,6 +790,7 @@ Dynamics in brackets indicate the intensity of the action, not the result.
         </VBox>
       <VBox>
         <height>10</height>
+        <visible>0</visible>
         <Text>
           <style>Frame</style>
           <family>Leland</family>
@@ -811,6 +820,7 @@ Accidentals apply until the end of the bar. As there a no barlines within boxes,
         </VBox>
       <VBox>
         <height>10</height>
+        <visible>0</visible>
         <Text>
           <style>Frame</style>
           <family>Leland</family>
@@ -836,6 +846,7 @@ chromatic scale and bending each note to the next using the embouchure can also 
         <width>125</width>
         <visible>0</visible>
         <LayoutBreak>
+          <visible>0</visible>
           <subtype>line</subtype>
           </LayoutBreak>
         <Text>
@@ -861,6 +872,7 @@ chromatic scale and bending each note to the next using the embouchure can also 
         <width>125</width>
         <visible>0</visible>
         <LayoutBreak>
+          <visible>0</visible>
           <subtype>line</subtype>
           </LayoutBreak>
         <Text>
@@ -886,6 +898,7 @@ chromatic scale and bending each note to the next using the embouchure can also 
         <width>125</width>
         <visible>0</visible>
         <LayoutBreak>
+          <visible>0</visible>
           <subtype>line</subtype>
           </LayoutBreak>
         <Text>
@@ -911,6 +924,7 @@ chromatic scale and bending each note to the next using the embouchure can also 
         <width>125</width>
         <visible>0</visible>
         <LayoutBreak>
+          <visible>0</visible>
           <subtype>line</subtype>
           </LayoutBreak>
         <Text>
@@ -938,6 +952,7 @@ This should result in a pitched air sound, possibly with more overtones / a slig
         <width>125</width>
         <visible>0</visible>
         <LayoutBreak>
+          <visible>0</visible>
           <subtype>line</subtype>
           </LayoutBreak>
         <Text>
@@ -962,7 +977,9 @@ This should result in a pitched air sound, possibly with more overtones / a slig
         </Measure>
       <HBox>
         <width>125</width>
+        <visible>0</visible>
         <LayoutBreak>
+          <visible>0</visible>
           <subtype>line</subtype>
           </LayoutBreak>
         <Text>
@@ -981,6 +998,7 @@ This should result in a pitched air sound, possibly with more overtones / a slig
         <topGap>10</topGap>
         <bottomGap>2</bottomGap>
         <boxAutoSize>0</boxAutoSize>
+        <visible>0</visible>
         <Text>
           <style>Frame</style>
           <family>Leland</family>
@@ -992,6 +1010,7 @@ This should result in a pitched air sound, possibly with more overtones / a slig
         </VBox>
       <VBox>
         <height>10</height>
+        <visible>0</visible>
         <Text>
           <style>Frame</style>
           <family>Leland</family>
@@ -1002,22 +1021,6 @@ This should result in a pitched air sound, possibly with more overtones / a slig
 </text>
           </Text>
         </VBox>
-      <Measure>
-        <measureNumberMode>2</measureNumberMode>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>3/4</duration>
-            </Rest>
-          </voice>
-        </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        </HBox>
       <Measure len="2/4">
         <measureNumberMode>2</measureNumberMode>
         <voice>
@@ -1031,6 +1034,7 @@ This should result in a pitched air sound, possibly with more overtones / a slig
         <width>125</width>
         <visible>0</visible>
         <LayoutBreak>
+          <visible>0</visible>
           <subtype>line</subtype>
           </LayoutBreak>
         <Text>
@@ -1056,6 +1060,7 @@ This should result in a pitched air sound, possibly with more overtones / a slig
         <width>125</width>
         <visible>0</visible>
         <LayoutBreak>
+          <visible>0</visible>
           <subtype>line</subtype>
           </LayoutBreak>
         <Text>
@@ -1083,6 +1088,7 @@ to put only the upper lip into the mouthpiece.</text>
         <width>125</width>
         <visible>0</visible>
         <LayoutBreak>
+          <visible>0</visible>
           <subtype>line</subtype>
           </LayoutBreak>
         <Text>
@@ -1108,6 +1114,7 @@ to put only the upper lip into the mouthpiece.</text>
         <width>125</width>
         <visible>0</visible>
         <LayoutBreak>
+          <visible>0</visible>
           <subtype>line</subtype>
           </LayoutBreak>
         <Text>
@@ -1134,6 +1141,7 @@ instrument might help to prevent the mouthpiece from getting stuck.</text>
         <width>125</width>
         <visible>0</visible>
         <LayoutBreak>
+          <visible>0</visible>
           <subtype>line</subtype>
           </LayoutBreak>
         <Text>
@@ -1159,6 +1167,7 @@ instrument might help to prevent the mouthpiece from getting stuck.</text>
         <width>125</width>
         <visible>0</visible>
         <LayoutBreak>
+          <visible>0</visible>
           <subtype>line</subtype>
           </LayoutBreak>
         <Text>
@@ -2411,14 +2420,6 @@ The Xylophon is always notated an octave higher than sounding.</text>
             </Rest>
           </voice>
         </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>3/4</duration>
-            </Rest>
-          </voice>
-        </Measure>
       <Measure len="2/4">
         <voice>
           <Rest>
@@ -2902,14 +2903,6 @@ The Xylophon is always notated an octave higher than sounding.</text>
           <Rest>
             <durationType>measure</durationType>
             <duration>4/4</duration>
-            </Rest>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>3/4</duration>
             </Rest>
           </voice>
         </Measure>
@@ -3583,17 +3576,6 @@ The Xylophon is always notated an octave higher than sounding.</text>
               <offset x="0" y="-0.5"/>
               </ChordLine>
             </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <BarLine>
-            <visible>0</visible>
-            </BarLine>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>3/4</duration>
-            </Rest>
           </voice>
         </Measure>
       <Measure len="2/4">
@@ -4575,14 +4557,6 @@ The Xylophon is always notated an octave higher than sounding.</text>
         <voice>
           <Rest>
             <durationType>whole</durationType>
-            </Rest>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>3/4</duration>
             </Rest>
           </voice>
         </Measure>
