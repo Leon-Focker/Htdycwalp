@@ -10,18 +10,22 @@
       <pageWidth>11.6902</pageWidth>
       <pageHeight>16.5402</pageHeight>
       <pagePrintableWidth>10.5091</pagePrintableWidth>
-      <enableVerticalSpread>1</enableVerticalSpread>
       <spreadSystem>2</spreadSystem>
       <spreadSquareBracket>1</spreadSquareBracket>
       <minSystemSpread>6</minSystemSpread>
       <minSpreadSpread>1</minSpreadSpread>
+      <genClef>0</genClef>
+      <genKeysig>0</genKeysig>
+      <genCourtesyTimesig>0</genCourtesyTimesig>
+      <genCourtesyKeysig>0</genCourtesyKeysig>
+      <genCourtesyClef>0</genCourtesyClef>
       <useStandardNoteNames>0</useStandardNoteNames>
       <enableIndentationOnFirstSystem>0</enableIndentationOnFirstSystem>
       <showHeader>0</showHeader>
       <showFooter>0</showFooter>
       <Spatium>1.75</Spatium>
       </Style>
-    <showInvisible>0</showInvisible>
+    <showInvisible>1</showInvisible>
     <showUnprintable>1</showUnprintable>
     <showFrames>1</showFrames>
     <showMargins>0</showMargins>
@@ -40,8 +44,14 @@
     <metaTag name="workTitle">Legende</metaTag>
     <Order id="orchestral" customized="1">
       <name>Orchestral</name>
+      <instrument id="hi-hat">
+        <family id="unpitched-metal-percussion">Ungestimmtes Metallschlagwerk</family>
+        </instrument>
       <instrument id="piano">
         <family id="keyboards">Tasteninstrumente</family>
+        </instrument>
+      <instrument id="xylophone">
+        <family id="keyboard-percussion">Keyboard Perkussion</family>
         </instrument>
       <section id="woodwind" brackets="true" showSystemMarkings="true" barLineSpan="true" thinBrackets="true">
         <family>flutes</family>
@@ -87,6 +97,249 @@
       </Order>
     <Part>
       <Staff id="1">
+        <StaffType group="percussion">
+          <name>perc1Line</name>
+          <lines>2</lines>
+          <lineDistance>1.5</lineDistance>
+          <clef>0</clef>
+          <timesig>0</timesig>
+          <keysig>0</keysig>
+          </StaffType>
+        <defaultClef>PERC</defaultClef>
+        <hideWhenEmpty>1</hideWhenEmpty>
+        <bracket type="0" span="3" col="0"/>
+        <barLineSpan>1</barLineSpan>
+        </Staff>
+      <trackName>Hi-Hat</trackName>
+      <Instrument id="hi-hat">
+        <longName>Hi-Hat</longName>
+        <trackName>Hi-Hat</trackName>
+        <instrumentId>metal.hi-hat</instrumentId>
+        <useDrumset>1</useDrumset>
+        <Drum pitch="42">
+          <head>cross</head>
+          <line>0</line>
+          <voice>0</voice>
+          <name>Closed Hi-hat</name>
+          <stem>1</stem>
+          <shortcut>B</shortcut>
+          </Drum>
+        <Drum pitch="44">
+          <head>cross</head>
+          <line>2</line>
+          <voice>1</voice>
+          <name>Pedal Hi-Hat</name>
+          <stem>2</stem>
+          <shortcut>F</shortcut>
+          </Drum>
+        <Drum pitch="46">
+          <head>cross</head>
+          <line>1</line>
+          <voice>0</voice>
+          <name>Offene Hi-Hat</name>
+          <stem>1</stem>
+          <shortcut>A</shortcut>
+          </Drum>
+        <clef>PERC</clef>
+        <Articulation>
+          <velocity>100</velocity>
+          <gateTime>100</gateTime>
+          </Articulation>
+        <Articulation name="staccatissimo">
+          <velocity>100</velocity>
+          <gateTime>33</gateTime>
+          </Articulation>
+        <Articulation name="staccato">
+          <velocity>100</velocity>
+          <gateTime>50</gateTime>
+          </Articulation>
+        <Articulation name="portato">
+          <velocity>100</velocity>
+          <gateTime>67</gateTime>
+          </Articulation>
+        <Articulation name="tenuto">
+          <velocity>100</velocity>
+          <gateTime>100</gateTime>
+          </Articulation>
+        <Articulation name="marcato">
+          <velocity>120</velocity>
+          <gateTime>67</gateTime>
+          </Articulation>
+        <Articulation name="sforzato">
+          <velocity>150</velocity>
+          <gateTime>100</gateTime>
+          </Articulation>
+        <Articulation name="sforzatoStaccato">
+          <velocity>150</velocity>
+          <gateTime>50</gateTime>
+          </Articulation>
+        <Articulation name="marcatoStaccato">
+          <velocity>120</velocity>
+          <gateTime>50</gateTime>
+          </Articulation>
+        <Articulation name="marcatoTenuto">
+          <velocity>120</velocity>
+          <gateTime>100</gateTime>
+          </Articulation>
+        <Channel>
+          <controller ctrl="0" value="1"/>
+          <controller ctrl="32" value="0"/>
+          <program value="0"/>
+          <synti>Fluid</synti>
+          <midiPort>0</midiPort>
+          <midiChannel>9</midiChannel>
+          </Channel>
+        </Instrument>
+      </Part>
+    <Part>
+      <Staff id="2">
+        <StaffType group="pitched">
+          <name>stdNormal</name>
+          <lines>2</lines>
+          <lineDistance>1.5</lineDistance>
+          </StaffType>
+        <defaultConcertClef>G8va</defaultConcertClef>
+        <defaultTransposingClef>G</defaultTransposingClef>
+        <hideWhenEmpty>1</hideWhenEmpty>
+        <bracket type="2" span="2" col="1"/>
+        <barLineSpan>1</barLineSpan>
+        </Staff>
+      <trackName>Xylophon</trackName>
+      <Instrument id="xylophone">
+        <longName>Stones</longName>
+        <trackName>Xylophon</trackName>
+        <minPitchP>60</minPitchP>
+        <maxPitchP>108</maxPitchP>
+        <minPitchA>65</minPitchA>
+        <maxPitchA>96</maxPitchA>
+        <transposeDiatonic>7</transposeDiatonic>
+        <transposeChromatic>12</transposeChromatic>
+        <instrumentId>pitched-percussion.xylophone</instrumentId>
+        <concertClef>G8va</concertClef>
+        <transposingClef>G</transposingClef>
+        <singleNoteDynamics>0</singleNoteDynamics>
+        <Articulation>
+          <velocity>100</velocity>
+          <gateTime>100</gateTime>
+          </Articulation>
+        <Articulation name="staccatissimo">
+          <velocity>100</velocity>
+          <gateTime>33</gateTime>
+          </Articulation>
+        <Articulation name="staccato">
+          <velocity>100</velocity>
+          <gateTime>50</gateTime>
+          </Articulation>
+        <Articulation name="portato">
+          <velocity>100</velocity>
+          <gateTime>67</gateTime>
+          </Articulation>
+        <Articulation name="tenuto">
+          <velocity>100</velocity>
+          <gateTime>100</gateTime>
+          </Articulation>
+        <Articulation name="marcato">
+          <velocity>120</velocity>
+          <gateTime>67</gateTime>
+          </Articulation>
+        <Articulation name="sforzato">
+          <velocity>150</velocity>
+          <gateTime>100</gateTime>
+          </Articulation>
+        <Articulation name="sforzatoStaccato">
+          <velocity>150</velocity>
+          <gateTime>50</gateTime>
+          </Articulation>
+        <Articulation name="marcatoStaccato">
+          <velocity>120</velocity>
+          <gateTime>50</gateTime>
+          </Articulation>
+        <Articulation name="marcatoTenuto">
+          <velocity>120</velocity>
+          <gateTime>100</gateTime>
+          </Articulation>
+        <Channel>
+          <program value="13"/>
+          <synti>Fluid</synti>
+          <midiPort>0</midiPort>
+          <midiChannel>2</midiChannel>
+          </Channel>
+        </Instrument>
+      </Part>
+    <Part>
+      <Staff id="3">
+        <StaffType group="pitched">
+          <name>stdNormal</name>
+          </StaffType>
+        <defaultConcertClef>G8va</defaultConcertClef>
+        <defaultTransposingClef>G</defaultTransposingClef>
+        <hideWhenEmpty>1</hideWhenEmpty>
+        </Staff>
+      <trackName>Xylophon</trackName>
+      <Instrument id="xylophone">
+        <longName>Xylophon</longName>
+        <shortName>Xyl.</shortName>
+        <trackName>Xylophon</trackName>
+        <minPitchP>60</minPitchP>
+        <maxPitchP>108</maxPitchP>
+        <minPitchA>65</minPitchA>
+        <maxPitchA>96</maxPitchA>
+        <transposeDiatonic>7</transposeDiatonic>
+        <transposeChromatic>12</transposeChromatic>
+        <instrumentId>pitched-percussion.xylophone</instrumentId>
+        <concertClef>G8va</concertClef>
+        <transposingClef>G</transposingClef>
+        <singleNoteDynamics>0</singleNoteDynamics>
+        <Articulation>
+          <velocity>100</velocity>
+          <gateTime>100</gateTime>
+          </Articulation>
+        <Articulation name="staccatissimo">
+          <velocity>100</velocity>
+          <gateTime>33</gateTime>
+          </Articulation>
+        <Articulation name="staccato">
+          <velocity>100</velocity>
+          <gateTime>50</gateTime>
+          </Articulation>
+        <Articulation name="portato">
+          <velocity>100</velocity>
+          <gateTime>67</gateTime>
+          </Articulation>
+        <Articulation name="tenuto">
+          <velocity>100</velocity>
+          <gateTime>100</gateTime>
+          </Articulation>
+        <Articulation name="marcato">
+          <velocity>120</velocity>
+          <gateTime>67</gateTime>
+          </Articulation>
+        <Articulation name="sforzato">
+          <velocity>150</velocity>
+          <gateTime>100</gateTime>
+          </Articulation>
+        <Articulation name="sforzatoStaccato">
+          <velocity>150</velocity>
+          <gateTime>50</gateTime>
+          </Articulation>
+        <Articulation name="marcatoStaccato">
+          <velocity>120</velocity>
+          <gateTime>50</gateTime>
+          </Articulation>
+        <Articulation name="marcatoTenuto">
+          <velocity>120</velocity>
+          <gateTime>100</gateTime>
+          </Articulation>
+        <Channel>
+          <program value="13"/>
+          <synti>Fluid</synti>
+          <midiPort>0</midiPort>
+          <midiChannel>3</midiChannel>
+          </Channel>
+        </Instrument>
+      </Part>
+    <Part>
+      <Staff id="4">
         <StaffType group="pitched">
           <name>stdNormal</name>
           <clef>0</clef>
@@ -150,11 +403,13 @@
         <Channel>
           <program value="0"/>
           <synti>Fluid</synti>
+          <midiPort>0</midiPort>
+          <midiChannel>0</midiChannel>
           </Channel>
         </Instrument>
       </Part>
     <Part>
-      <Staff id="2">
+      <Staff id="5">
         <StaffType group="pitched">
           <name>stdNormal</name>
           <clef>0</clef>
@@ -219,6 +474,8 @@
         <Channel>
           <program value="0"/>
           <synti>Fluid</synti>
+          <midiPort>0</midiPort>
+          <midiChannel>1</midiChannel>
           </Channel>
         </Instrument>
       </Part>
@@ -271,6 +528,2676 @@ Grace notes always come before the beat.
       <Measure len="3/4">
         <measureNumberMode>2</measureNumberMode>
         <voice>
+          <TimeSig>
+            <visible>0</visible>
+            <sigN>2</sigN>
+            <sigD>4</sigD>
+            </TimeSig>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="0"/>
+          <text>Slow, mid-tempo and fast tremolo.</text>
+          </Text>
+        </HBox>
+      <Measure len="4/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <TimeSig>
+            <visible>0</visible>
+            <sigN>3</sigN>
+            <sigD>4</sigD>
+            </TimeSig>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          <Segment>
+            <leadingSpace>3.5</leadingSpace>
+            </Segment>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="0"/>
+          <text>Arrows show a gradual change between the specified states.</text>
+          </Text>
+        </HBox>
+      <Measure>
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="0"/>
+          <text>Triangular noteheads stand for as high / as low as possible.</text>
+          </Text>
+        </HBox>
+      <Measure len="1/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="0"/>
+          <text>Let ring.</text>
+          </Text>
+        </HBox>
+      <VBox>
+        <height>10</height>
+        <visible>0</visible>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <text>Box notation
+
+A box around staffs means, that this passage is to be played indipendently. This means the conductor does either not conduct, or that he 
+conducts in a different tempo than the one the contents of the box are supposed to be playing in. Sometimes multiple instruments will start
+with the same rhythmic patterns but then drift away from each other, indicated by accelerando and ritardanto marks. A thick barline represents 
+fixed, i.e. synchronized points in the score, which usually come after free passages.
+</text>
+          </Text>
+        </VBox>
+      <Measure>
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="0"/>
+          <text>If there is no other indication within the box, play its contents once and then move on.</text>
+          </Text>
+        </HBox>
+      <Measure>
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-2.5"/>
+          <text>When there is a fermata at the end of the box, this usually means to hold this note until the conductor
+gives the signal to move on to what comes after.</text>
+          </Text>
+        </HBox>
+      <Measure>
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-7.5"/>
+          <text>When the contents of the box are surrounded by repeat marks, repeat the indicated parts until the 
+conductor gives the signal to move on to what comes after. Alternatively the number of repetitions that
+are to be played might be indicated (4 times in this example). Move on after the correct amount of 
+repetitions. However for most boxes this is not specified.</text>
+          </Text>
+        </HBox>
+      <Measure>
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Tempo>
+            <tempo>1.3333299999999999</tempo>
+            <followText>1</followText>
+            <offset x="0" y="-1"/>
+            <text><b></b><font face="ScoreText"></font><b><font face="Edwin"></font> ≈ 80</b></text>
+            </Tempo>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-2.5"/>
+          <text>A tempo mark inside of a box applies to this box only. Other players probably have other tempo marks. 
+Outside of and after the box is to be played a tempo, if not indicated otherwise. </text>
+          </Text>
+        </HBox>
+      <VBox>
+        <height>10</height>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <text>Dynamics
+
+Dynamics are notated to indicate the result of an action, not the effort to be put in.
+Dynamics in brackets indicate the intensity of the action, not the result. 
+</text>
+          </Text>
+        <LayoutBreak>
+          <subtype>page</subtype>
+          </LayoutBreak>
+        </VBox>
+      <VBox>
+        <height>10</height>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <text>Accidentals
+
+Accidentals apply until the end of the bar. As there a no barlines within boxes, accidentals within boxes only apply to the current note. 
+
+</text>
+          </Text>
+        </VBox>
+      <VBox>
+        <height>8</height>
+        <topGap>0</topGap>
+        <bottomGap>2</bottomGap>
+        <boxAutoSize>0</boxAutoSize>
+        <visible>0</visible>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>15</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <bold>1</bold>
+          <text>Woodwinds</text>
+          </Text>
+        </VBox>
+      <VBox>
+        <height>10</height>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <text>Glissandi
+
+Try to play glissandi as smoothly as possible. If it is too difficult to perform a &quot;real&quot; glissando over a large interval, playing a 
+chromatic scale and bending each note to the next using the embouchure can also work.
+</text>
+          </Text>
+        </VBox>
+      <Measure len="1/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="0"/>
+          <text>Slap Tongue (Flute, Clarinet, Bassoon without mouthpiece), fingered notation.</text>
+          </Text>
+        </HBox>
+      <Measure len="1/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="0"/>
+          <text>Flutter Tongue.</text>
+          </Text>
+        </HBox>
+      <Measure len="1/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="0"/>
+          <text>(Pitched) air sound, fingered notation.</text>
+          </Text>
+        </HBox>
+      <Measure len="1/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-5"/>
+          <text>For Clarinet and Bassoon. Maintain a short distance from the mouthpiece and blow air directly at its tip 
+(with pursed lips). For more stability, the Clarinet can also put the bottom lip on the reed while blowing. 
+This should result in a pitched air sound, possibly with more overtones / a slight whistle.</text>
+          </Text>
+        </HBox>
+      <Measure len="1/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="0"/>
+          <text>Shake the Clarinet while playing to get a vibrato-like effect.</text>
+          </Text>
+        </HBox>
+      <Measure len="4/4">
+        <stretch>0.9</stretch>
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="0"/>
+          <text>Glissando with embouchure, before or after note. 
+</text>
+          </Text>
+        </HBox>
+      <VBox>
+        <height>4</height>
+        <topGap>10</topGap>
+        <bottomGap>2</bottomGap>
+        <boxAutoSize>0</boxAutoSize>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>15</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <bold>1</bold>
+          <text>Brass</text>
+          </Text>
+        </VBox>
+      <VBox>
+        <height>10</height>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <color r="255" g="0" b="0" a="255"/>
+          <text>The French Horn is always notated a 5th higher than sounding, independent of Clef. 
+</text>
+          </Text>
+        </VBox>
+      <Measure>
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        </HBox>
+      <Measure len="2/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="0"/>
+          <text>Flutter Tongue.</text>
+          </Text>
+        </HBox>
+      <Measure len="4/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <color r="255" g="0" b="0" a="255"/>
+          <align>left,center</align>
+          <offset x="10" y="0"/>
+          <text>Play as low as possible (below pedal tones), to achieve an inconsistent, mumbling sound. It might be helpful
+to put only the upper lip into the mouthpiece.</text>
+          </Text>
+        </HBox>
+      <Measure len="1/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="0"/>
+          <text>Slap Tongue, fingered notation.</text>
+          </Text>
+        </HBox>
+      <Measure len="1/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-2.5"/>
+          <text>Smack mouthpiece with palm, fingered notation. Putting baking paper in between the mouthpiece and the
+instrument might help to prevent the mouthpiece from getting stuck.</text>
+          </Text>
+        </HBox>
+      <Measure len="1/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="0"/>
+          <text>Flick the bell of your instrument. Find a the purest possible sound.</text>
+          </Text>
+        </HBox>
+      <Measure>
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="0"/>
+          <text>(Pitched) air sound, fingered notation. Optionally a consonant or vowel sound might be notated above.</text>
+          </Text>
+        </HBox>
+      <Measure len="4/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>whole</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-7"/>
+          <text>High lip tension and a lot of pressure but do not let the lips vibrate. This way some kind of &quot;squeezing&quot;
+sound should emerge.</text>
+          </Text>
+        <LayoutBreak>
+          <subtype>page</subtype>
+          </LayoutBreak>
+        </HBox>
+      <VBox>
+        <height>4</height>
+        <topGap>10</topGap>
+        <bottomGap>5.5</bottomGap>
+        <boxAutoSize>0</boxAutoSize>
+        <visible>0</visible>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>15</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <bold>1</bold>
+          <text>Strings</text>
+          </Text>
+        </VBox>
+      <HBox>
+        <width>27.5</width>
+        <visible>0</visible>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>9</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <text>msp / sp / psp / ord / pst / st / mst   </text>
+          </Text>
+        </HBox>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <visible>0</visible>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-3"/>
+          <text>Contact point of the bow with the strings. Stays valid until new indication. 
+ord. means ordinary contact point as well as ordinary bow pressure.
+</text>
+          </Text>
+        </HBox>
+      <Measure len="2/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <visible>0</visible>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="0"/>
+          <text>(Molto) sul tasto, muted sound.</text>
+          </Text>
+        </HBox>
+      <Measure>
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <visible>0</visible>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="0"/>
+          <text>Bridge Clef, indicating the contact point of the bow. First note would be msp, second one mst.</text>
+          </Text>
+        </HBox>
+      <Measure len="2/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <visible>0</visible>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-3"/>
+          <text>Bow on the bridge, resulting in a very high screeching sound.</text>
+          </Text>
+        </HBox>
+      <Measure len="2/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <visible>0</visible>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-3"/>
+          <text>Flageolett and artificial flageolett. A diamond shaped notehead means the fvinger only touches the string.</text>
+          </Text>
+        </HBox>
+      <Measure len="2/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <visible>0</visible>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-3"/>
+          <text>Dampen Strings with left hand.</text>
+          </Text>
+        </HBox>
+      <Measure len="1/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <visible>0</visible>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-3"/>
+          <text>Bartok Pizzicato.</text>
+          </Text>
+        </HBox>
+      <Measure len="4/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <visible>0</visible>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-6.5"/>
+          <text>From left to right: almost no bow pressure (no discernable pitch), small bow pressure ('flautando'), 
+more bow pressure than usual (pitch still discernable), lots of bow pressure (no clear pitch).
+Stays valid until revoked by ord. or another indication.
+</text>
+          </Text>
+        </HBox>
+      <Measure len="2/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <visible>0</visible>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-3"/>
+          <text>Con crini battuto, col legno battuto. Either on a pitch (written in normal clef) or dampened with the left hand
+(written in bridge clef)
+</text>
+          </Text>
+        </HBox>
+      <Measure len="2/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <visible>0</visible>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-3"/>
+          <text>Con crini gettato. Only the first attack is to be played precisely. The following do not have to be synced. </text>
+          </Text>
+        </HBox>
+      <Measure len="2/4">
+        <stretch>0</stretch>
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <visible>0</visible>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-3"/>
+          <text>Col legno gettato. Either on a pitch (written in normal clef) or dampened with the left hand (written in 
+bridge clef). Only the first attack is to be played precisely. The following do not have to be synced. </text>
+          </Text>
+        </HBox>
+      <Measure>
+        <stretch>0.9</stretch>
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <visible>0</visible>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-3"/>
+          <text>Artificial harmonic glissando. Additionally, the upper finger moves relative to the lover one (like a slow but 
+exaggerated vibrato), so that the harmonic jumps between the different overtones. Do not follow the shape
+of the line exactly, as it just represents this action.
+</text>
+          </Text>
+        </HBox>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        </HBox>
+      <VBox>
+        <height>4</height>
+        <topGap>4.5</topGap>
+        <bottomGap>4</bottomGap>
+        <boxAutoSize>0</boxAutoSize>
+        <visible>0</visible>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>15</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <bold>1</bold>
+          <text>Double Bass</text>
+          </Text>
+        </VBox>
+      <VBox>
+        <height>4</height>
+        <topGap>4</topGap>
+        <bottomGap>4</bottomGap>
+        <boxAutoSize>0</boxAutoSize>
+        <visible>0</visible>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <text>For this piece you will need a Five-String Double Bass. The Double Bass is always notated an octave higher than sounding.</text>
+          </Text>
+        </VBox>
+      <Measure len="4/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <visible>0</visible>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-3"/>
+          <text>Scordatura: Tune the 5th string so low, that it starts to slap against the fingerboard when played with a lot
+of pressure. Tune the string in a way that maximizes this effect, the low G is only a suggestion. You will
+not have to use this string for ordinario pitches.</text>
+          </Text>
+        </HBox>
+      <Measure len="4/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <visible>0</visible>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-3"/>
+          <text>Play the detuned 5th string with a lot of pressure in such a way, that the string slaps against the 
+fingerboard. This percussive sound should be as consistent as possible! When doing an upwards glissando
+with this effect, the actual pitch is not as important as percussive sound, which should get quicker.</text>
+          </Text>
+        </HBox>
+      <Measure>
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <visible>0</visible>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-3"/>
+          <text>Pizzicato from above, so that the string slaps against the fingerboard, not sideways. 
+To be fast enough you might have to use alternating fingers.
+</text>
+          </Text>
+        </HBox>
+      <Measure len="2/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <visible>0</visible>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-3"/>
+          <text>Spiccato on the 5th string. Dampen all strings with the left hand. This way, the 5th string should slap 
+rhythmically against the fingerboard. The dynamics of that slap might vary between up-bow and down-bow.
+The rhythms that emerge from those accents are welcome.
+</text>
+          </Text>
+        </HBox>
+      <Measure len="2/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <visible>0</visible>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="0"/>
+          <text>The same spiccato effect but not dampened. 
+</text>
+          </Text>
+        </HBox>
+      <Measure len="4/4">
+        <stretch>0.8</stretch>
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <visible>0</visible>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-3"/>
+          <text>col legno battuto, con crini battuto, col legno gettato and con crini gettato on the 5th string should always
+produce that slapping sound. 
+</text>
+          </Text>
+        </HBox>
+      <Measure len="2/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <visible>0</visible>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="0"/>
+          <text>Con crini battuto and left hand slap. A Stem going upwards is for the right hand (slap the strings with your
+bow), downwards for the left (slap the strings with your pallm).  
+</text>
+          </Text>
+        </HBox>
+      <TBox>
+        <height>1</height>
+        <visible>0</visible>
+        <LayoutBreak>
+          <subtype>page</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <textLineSpacing>0.3</textLineSpacing>
+          <text></text>
+          </Text>
+        </TBox>
+      <VBox>
+        <height>4</height>
+        <topGap>4.5</topGap>
+        <bottomGap>11</bottomGap>
+        <boxAutoSize>0</boxAutoSize>
+        <visible>0</visible>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>15</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <bold>1</bold>
+          <text>Percussion</text>
+          </Text>
+        </VBox>
+      <Measure len="2/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          <Beam>
+            <StemDirection>up</StemDirection>
+            </Beam>
+          <Chord>
+            <durationType>eighth</durationType>
+            <StemDirection>down</StemDirection>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            <Tremolo>
+              <subtype>r8</subtype>
+              </Tremolo>
+            </Chord>
+          <Chord>
+            <durationType>eighth</durationType>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <StemDirection>up</StemDirection>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            <Tremolo>
+              <subtype>r64</subtype>
+              </Tremolo>
+            </Chord>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <color r="255" g="0" b="0" a="255"/>
+          <align>left,center</align>
+          <offset x="10" y="-4"/>
+          <text>One dash indicates a double stroke. 4 dashes indicate a roll (?)</text>
+          </Text>
+        </HBox>
+      <Measure len="5/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>whole</durationType>
+            </Rest>
+          <Rest>
+            <durationType>quarter</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-10"/>
+          <text>From left to right: Sticks, metal mallets (Glockenspiel), hard plastic mallets, wodden Xylophon mallets and
+soft timpani mallets.</text>
+          </Text>
+        </HBox>
+      <VBox>
+        <height>1</height>
+        <boxAutoSize>0</boxAutoSize>
+        <visible>0</visible>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <text>Hi-Hat
+</text>
+          </Text>
+        </VBox>
+      <Measure>
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          <Chord>
+            <durationType>quarter</durationType>
+            <StemDirection>down</StemDirection>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <StemDirection>down</StemDirection>
+            <Note>
+              <pitch>46</pitch>
+              <tpc>12</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <StemDirection>down</StemDirection>
+            <Note>
+              <pitch>44</pitch>
+              <tpc>22</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <visible>0</visible>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-3.5"/>
+          <text>The lines on which the notes are indicate the position at which to hit the Hi-Hat. From left to right:
+Hit on Bell (bright sound. When the Hihat is opened, hitting it on the bell should not make it buzz), 
+hit middle of Hi-Hat, hit edge of Hi-Hat. </text>
+          </Text>
+        </HBox>
+      <Measure len="4/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          <Chord>
+            <durationType>quarter</durationType>
+            <StemDirection>down</StemDirection>
+            <Note>
+              <Symbol>
+                <name>handbellsSwingDown</name>
+                <font>Bravura</font>
+                <offset x="0" y="-2.5"/>
+                </Symbol>
+              <pitch>44</pitch>
+              <tpc>22</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Articulation>
+              <subtype>brassMuteClosed</subtype>
+              <offset x="0" y="1"/>
+              </Articulation>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <Symbol>
+                <name>guitarHalfOpenPedal</name>
+                <font>Bravura</font>
+                <offset x="0" y="-1.5"/>
+                </Symbol>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Articulation>
+              <subtype>brassMuteOpen</subtype>
+              <offset x="0" y="1"/>
+              </Articulation>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <visible>0</visible>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-6"/>
+          <text>Symbols above the notes indicate what the pedal does. Left to right: 
+Sound of Hi-Hat closing (don't hit with stick), closed Hi-Hat, half opened-Hihat (lot of buzz, almost no 
+resonance), open Hi-Hat.</text>
+          </Text>
+        </HBox>
+      <Measure>
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Articulation>
+              <subtype>brassMuteClosed</subtype>
+              <offset x="0" y="0.5"/>
+              </Articulation>
+            <StemDirection>down</StemDirection>
+            <Note>
+              <pitch>46</pitch>
+              <tpc>12</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              <Spanner type="TextLine">
+                <TextLine>
+                  <endText>&gt;</endText>
+                  <anchor>3</anchor>
+                  <Segment>
+                    <subtype>0</subtype>
+                    <offset x="-5.20875" y="-1.99484"/>
+                    <off2 x="2.77061" y="0"/>
+                    </Segment>
+                  </TextLine>
+                <next>
+                  <location>
+                    <fractions>1/4</fractions>
+                    </location>
+                  </next>
+                </Spanner>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Articulation>
+              <subtype>brassMuteOpen</subtype>
+              <offset x="0" y="1"/>
+              </Articulation>
+            <Note>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              <Spanner type="TextLine">
+                <prev>
+                  <location>
+                    <fractions>-1/4</fractions>
+                    </location>
+                  </prev>
+                </Spanner>
+              </Note>
+            </Chord>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <visible>0</visible>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-4"/>
+          <text>An arrow indicates a transition. In this case from closed to opened and from hitting the Hi-Hat normally
+to hitting it on the bell.</text>
+          </Text>
+        </HBox>
+      <Measure>
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          <Chord>
+            <dots>1</dots>
+            <durationType>half</durationType>
+            <Stem>
+              <visible>0</visible>
+              </Stem>
+            <StemDirection>down</StemDirection>
+            <Note>
+              <visible>0</visible>
+              <Symbol>
+                <name>noteheadTriangleUpWhite</name>
+                <font>Bravura</font>
+                <Symbol>
+                  <name>pictBeaterBow</name>
+                  <font>Bravura</font>
+                  <offset x="-1.5" y="0"/>
+                  <z>499</z>
+                  </Symbol>
+                </Symbol>
+              <NoteDot>
+                <visible>0</visible>
+                </NoteDot>
+              <pitch>42</pitch>
+              <tpc>20</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <visible>0</visible>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-4"/>
+          <text>Bow the upper cymbal of the opened Hi-Hat.</text>
+          </Text>
+        </HBox>
+      <VBox>
+        <height>10</height>
+        <visible>0</visible>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <text>Stones / Tiles
+
+- 5 small ceramic tiles (e.g. one tile broken into 5 smaller pieces) that have different perceived pitches. They should be similar to the highest
+  octave of the Xylophon, i.e. have a very short decay and a distinct attack.
+- 3 stones / pebbles, that produce 3 differently coloured attack sounds when hit with a metal mallet.</text>
+          </Text>
+        </VBox>
+      <Measure len="5/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>whole</durationType>
+            </Rest>
+          <Rest>
+            <durationType>quarter</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <visible>0</visible>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="0"/>
+          <text>The 5 different tiles are represented with normal note heads, ordered by perceived pitch from low to high.</text>
+          </Text>
+        </HBox>
+      <Measure>
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <align>left,center</align>
+          <offset x="10" y="-4"/>
+          <text>The 3 stones are represented with crossed note heads on the same staff as the tiles, 
+order by perceived pitch/spectral content from low to high.</text>
+          </Text>
+        </HBox>
+      <Measure len="4/4">
+        <measureNumberMode>2</measureNumberMode>
+        <voice>
+          <Rest>
+            <durationType>whole</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <HBox>
+        <width>125</width>
+        <visible>0</visible>
+        <LayoutBreak>
+          <subtype>line</subtype>
+          </LayoutBreak>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <color r="255" g="0" b="0" a="255"/>
+          <align>left,center</align>
+          <offset x="10" y="-4"/>
+          <text>Use the stones to grind (?) on the tiles to create a continuous sound.</text>
+          </Text>
+        </HBox>
+      <VBox>
+        <height>10</height>
+        <topGap>10.5</topGap>
+        <visible>0</visible>
+        <Text>
+          <style>Frame</style>
+          <family>Leland</family>
+          <size>12</size>
+          <textLineSpacing>0.3</textLineSpacing>
+          <text>Xylophon
+
+The Xylophon is always notated an octave higher than sounding.</text>
+          </Text>
+        </VBox>
+      </Staff>
+    <Staff id="2">
+      <Measure len="3/4">
+        <voice>
+          <TimeSig>
+            <visible>0</visible>
+            <sigN>2</sigN>
+            <sigD>4</sigD>
+            </TimeSig>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="4/4">
+        <voice>
+          <TimeSig>
+            <visible>0</visible>
+            <sigN>3</sigN>
+            <sigD>4</sigD>
+            </TimeSig>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="1/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="1/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="1/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="1/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="1/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="1/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="4/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="4/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="1/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="1/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="1/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="4/4">
+        <voice>
+          <Rest>
+            <durationType>whole</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="1/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="4/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="4/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="4/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="4/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>half</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="5/4">
+        <voice>
+          <Rest>
+            <durationType>whole</durationType>
+            </Rest>
+          <Rest>
+            <durationType>quarter</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="4/4">
+        <voice>
+          <Rest>
+            <durationType>whole</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="5/4">
+        <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <pitch>84</pitch>
+              <tpc>14</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <pitch>86</pitch>
+              <tpc>16</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <pitch>88</pitch>
+              <tpc>18</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <pitch>89</pitch>
+              <tpc>13</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <pitch>91</pitch>
+              <tpc>15</tpc>
+              </Note>
+            </Chord>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <pitch>86</pitch>
+              <tpc>16</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <pitch>88</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <pitch>89</pitch>
+              <tpc>13</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          </voice>
+        </Measure>
+      <Measure len="4/4">
+        <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          <Chord>
+            <dots>1</dots>
+            <durationType>half</durationType>
+            <Note>
+              <Symbol>
+                <name>pictScrapeAroundRim</name>
+                <font>Bravura</font>
+                <offset x="-1" y="-1.5"/>
+                </Symbol>
+              <pitch>89</pitch>
+              <tpc>13</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <Symbol>
+                <name>pictScrapeAroundRim</name>
+                <font>Bravura</font>
+                <offset x="-1" y="-3"/>
+                </Symbol>
+              <pitch>86</pitch>
+              <tpc>16</tpc>
+              </Note>
+            </Chord>
+          <BarLine>
+            <subtype>end</subtype>
+            <visible>0</visible>
+            </BarLine>
+          </voice>
+        </Measure>
+      </Staff>
+    <Staff id="3">
+      <Measure len="3/4">
+        <voice>
+          <TimeSig>
+            <visible>0</visible>
+            <sigN>2</sigN>
+            <sigD>4</sigD>
+            </TimeSig>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="4/4">
+        <voice>
+          <TimeSig>
+            <visible>0</visible>
+            <sigN>3</sigN>
+            <sigD>4</sigD>
+            </TimeSig>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="1/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="1/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="1/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="1/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="1/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="1/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="4/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="4/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="1/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="1/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="1/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="4/4">
+        <voice>
+          <Rest>
+            <durationType>whole</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="1/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>1/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="4/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="4/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="4/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="4/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>2/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>half</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="5/4">
+        <voice>
+          <Rest>
+            <durationType>whole</durationType>
+            </Rest>
+          <Rest>
+            <durationType>quarter</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="4/4">
+        <voice>
+          <Rest>
+            <durationType>whole</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="5/4">
+        <voice>
+          <Rest>
+            <durationType>quarter</durationType>
+            </Rest>
+          <Rest>
+            <durationType>quarter</durationType>
+            </Rest>
+          <Rest>
+            <durationType>quarter</durationType>
+            </Rest>
+          <Rest>
+            <durationType>quarter</durationType>
+            </Rest>
+          <Rest>
+            <durationType>quarter</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="4/4">
+        <voice>
+          <Rest>
+            <durationType>whole</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      </Staff>
+    <Staff id="4">
+      <Measure len="3/4">
+        <voice>
           <BarLine>
             <visible>0</visible>
             </BarLine>
@@ -311,24 +3238,7 @@ Grace notes always come before the beat.
             </Chord>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="0"/>
-          <text>Slow, mid-tempo and fast tremolo.</text>
-          </Text>
-        </HBox>
       <Measure len="4/4">
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -371,9 +3281,6 @@ Grace notes always come before the beat.
                 </Spanner>
               </Note>
             </Chord>
-          <Segment>
-            <leadingSpace>3.5</leadingSpace>
-            </Segment>
           <Chord>
             <durationType>quarter</durationType>
             <Stem>
@@ -447,24 +3354,7 @@ Grace notes always come before the beat.
             </Chord>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="0"/>
-          <text>Arrows show a gradual change between the specified states.</text>
-          </Text>
-        </HBox>
       <Measure>
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -496,24 +3386,7 @@ Grace notes always come before the beat.
             </Chord>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="0"/>
-          <text>Triangular noteheads stand for as high / as low as possible.</text>
-          </Text>
-        </HBox>
       <Measure len="1/4">
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -533,41 +3406,7 @@ Grace notes always come before the beat.
             </Chord>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="0"/>
-          <text>Let ring.</text>
-          </Text>
-        </HBox>
-      <VBox>
-        <height>10</height>
-        <visible>0</visible>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <text>Box notation
-
-A box around staffs means, that this passage is to be played indipendently. This means the conductor does either not conduct, or that he 
-conducts in a different tempo than the one the contents of the box are supposed to be playing in. Sometimes multiple instruments will start
-with the same rhythmic patterns but then drift away from each other, indicated by accelerando and ritardanto marks. A thick barline represents 
-fixed, i.e. synchronized points in the score, which usually come after free passages.
-</text>
-          </Text>
-        </VBox>
       <Measure>
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -578,24 +3417,7 @@ fixed, i.e. synchronized points in the score, which usually come after free pass
             </Rest>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="0"/>
-          <text>If there is no other indication within the box, play its contents once and then move on.</text>
-          </Text>
-        </HBox>
       <Measure>
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <Rest>
             <durationType>measure</durationType>
@@ -603,25 +3425,7 @@ fixed, i.e. synchronized points in the score, which usually come after free pass
             </Rest>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="-2.5"/>
-          <text>When there is a fermata at the end of the box, this usually means to hold this note until the conductor
-gives the signal to move on to what comes after.</text>
-          </Text>
-        </HBox>
       <Measure>
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <Rest>
             <durationType>measure</durationType>
@@ -629,178 +3433,15 @@ gives the signal to move on to what comes after.</text>
             </Rest>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="-2.5"/>
-          <text>When the contents of the box are surrounded by repeat marks, repeat the indicated parts until the 
-conductor gives the signal to move on to what comes after.</text>
-          </Text>
-        </HBox>
       <Measure>
-        <measureNumberMode>2</measureNumberMode>
         <voice>
-          <Tempo>
-            <tempo>1.3333299999999999</tempo>
-            <followText>1</followText>
-            <offset x="0" y="-1"/>
-            <text><b></b><font face="ScoreText"></font><b><font face="Edwin"></font> ≈ 80</b></text>
-            </Tempo>
           <Rest>
             <durationType>measure</durationType>
             <duration>3/4</duration>
             </Rest>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="-2.5"/>
-          <text>A tempo mark inside of a box applies to this box only. Other players probably have other tempo marks. 
-Outside of and after the box is to be played a tempo, if not indicated otherwise. </text>
-          </Text>
-        </HBox>
-      <VBox>
-        <height>10</height>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <text>Dynamics
-
-Dynamics are notated to indicate the result of an action, not the effort to be put in.
-Dynamics in brackets indicate the intensity of the action, not the result. 
-</text>
-          </Text>
-        <LayoutBreak>
-          <subtype>page</subtype>
-          </LayoutBreak>
-        </VBox>
-      <VBox>
-        <height>10</height>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <text>Accidentals
-
-Accidentals apply until the end of the bar. As there a no barlines within boxes, accidentals within boxes only apply to the current note. 
-
-</text>
-          </Text>
-        </VBox>
-      <TBox>
-        <height>1</height>
-        <visible>0</visible>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <textLineSpacing>0.3</textLineSpacing>
-          <text></text>
-          </Text>
-        </TBox>
-      <VBox>
-        <height>8</height>
-        <topGap>0</topGap>
-        <bottomGap>2</bottomGap>
-        <boxAutoSize>0</boxAutoSize>
-        <visible>0</visible>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>15</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <bold>1</bold>
-          <text>Woodwinds</text>
-          </Text>
-        </VBox>
-      <TBox>
-        <height>1</height>
-        <topGap>4</topGap>
-        <bottomGap>5.5</bottomGap>
-        <visible>0</visible>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <textLineSpacing>0.3</textLineSpacing>
-          <text></text>
-          </Text>
-        </TBox>
-      <VBox>
-        <height>10</height>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <text>Glissandi
-
-Try to play glissandi as smoothly as possible. If it is too difficult to perform a &quot;real&quot; glissando over a large interval, playing a 
-chromatic scale and bending each note to the next using the embouchure can also work.
-</text>
-          </Text>
-        </VBox>
-      <Measure>
-        <measureNumberMode>2</measureNumberMode>
-        <voice>
-          <BarLine>
-            <visible>0</visible>
-            </BarLine>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>3/4</duration>
-            </Rest>
-          </voice>
-        </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="0"/>
-          <text>Multiphonic. If the specified fingering does not work for you, find one as close as possible. 
-Lowest note is most important.
-</text>
-          </Text>
-        </HBox>
-      <TBox>
-        <height>1</height>
-        <topGap>5</topGap>
-        <bottomGap>5.5</bottomGap>
-        <visible>0</visible>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <textLineSpacing>0.3</textLineSpacing>
-          <text></text>
-          </Text>
-        </TBox>
       <Measure len="1/4">
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -820,25 +3461,7 @@ Lowest note is most important.
             </Chord>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <color r="255" g="0" b="0" a="255"/>
-          <align>left,center</align>
-          <offset x="10" y="0"/>
-          <text>Slap Tongue (Flute, Clarinet, Bassoon without mouthpiece), notated in pitch (?).</text>
-          </Text>
-        </HBox>
       <Measure len="1/4">
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -855,24 +3478,7 @@ Lowest note is most important.
             </Chord>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="0"/>
-          <text>Flutter Tongue.</text>
-          </Text>
-        </HBox>
       <Measure len="1/4">
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -887,114 +3493,44 @@ Lowest note is most important.
             </Chord>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="0"/>
-          <text>(Pitched) air sound, fingered notation.
-Clarinet and Bassoon might be instructed to blow at the mouthpiece. This should result in an air sound 
-with some pitch and a whistling sound. https://heatherroche.net/2014/02/13/on-writing-air-sounds-for-clarinets/</text>
-          </Text>
-        </HBox>
       <Measure len="1/4">
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <BarLine>
             <visible>0</visible>
             </BarLine>
+          <StaffText>
+            <style>Expression</style>
+            <text>blow at moutpiece</text>
+            </StaffText>
           <Chord>
             <durationType>quarter</durationType>
             <Note>
-              <pitch>76</pitch>
-              <tpc>18</tpc>
-              <head>cross</head>
+              <pitch>65</pitch>
+              <tpc>13</tpc>
+              <head>la</head>
               </Note>
             </Chord>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="0"/>
-          <text>Key noise, notated in pitch.</text>
-          </Text>
-        </HBox>
-      <TBox>
-        <height>1</height>
-        <topGap>3.5</topGap>
-        <bottomGap>3.5</bottomGap>
-        <visible>0</visible>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <textLineSpacing>0.3</textLineSpacing>
-          <text></text>
-          </Text>
-        </TBox>
       <Measure len="1/4">
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <BarLine>
             <visible>0</visible>
             </BarLine>
+          <StaffText>
+            <style>Expression</style>
+            <text>shake</text>
+            </StaffText>
           <Chord>
             <durationType>quarter</durationType>
             <Note>
-              <Symbol>
-                <name>stringsHarmonic</name>
-                <font>Bravura</font>
-                <offset x="0" y="-2.5"/>
-                </Symbol>
-              <pitch>79</pitch>
-              <tpc>15</tpc>
-              </Note>
-            <Note>
-              <Symbol>
-                <name>stringsHarmonic</name>
-                <font>Bravura</font>
-                <offset x="0" y="-2.5"/>
-                </Symbol>
-              <pitch>84</pitch>
+              <pitch>72</pitch>
               <tpc>14</tpc>
               </Note>
             </Chord>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="-3"/>
-          <text>Double harmonic (Oboe).</text>
-          </Text>
-        </HBox>
       <Measure len="4/4">
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -1018,7 +3554,9 @@ with some pitch and a whistling sound. https://heatherroche.net/2014/02/13/on-wr
               <tpc>18</tpc>
               </Note>
             <ChordLine>
-              <subtype>4</subtype>
+              <subtype>3</subtype>
+              <straight>1</straight>
+              <offset x="-0.5" y="1.5"/>
               </ChordLine>
             </Chord>
           <Chord>
@@ -1040,55 +3578,14 @@ with some pitch and a whistling sound. https://heatherroche.net/2014/02/13/on-wr
               <tpc>18</tpc>
               </Note>
             <ChordLine>
-              <subtype>1</subtype>
+              <subtype>2</subtype>
+              <straight>1</straight>
+              <offset x="0" y="-0.5"/>
               </ChordLine>
             </Chord>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="0"/>
-          <text>Glissando with embouchure, before or after note, the curve of the line indicates. 
-</text>
-          </Text>
-        </HBox>
-      <VBox>
-        <height>4</height>
-        <topGap>10</topGap>
-        <bottomGap>2</bottomGap>
-        <boxAutoSize>0</boxAutoSize>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>15</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <bold>1</bold>
-          <text>Brass</text>
-          </Text>
-        </VBox>
-      <VBox>
-        <height>10</height>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <color r="255" g="0" b="0" a="255"/>
-          <text>The horn is always notated a 5th... 
-</text>
-          </Text>
-        </VBox>
       <Measure>
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -1099,25 +3596,7 @@ with some pitch and a whistling sound. https://heatherroche.net/2014/02/13/on-wr
             </Rest>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <color r="255" g="0" b="0" a="255"/>
-          <align>left,center</align>
-          <offset x="10" y="0"/>
-          <text>Dämpfer</text>
-          </Text>
-        </HBox>
       <Measure len="2/4">
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -1134,24 +3613,7 @@ with some pitch and a whistling sound. https://heatherroche.net/2014/02/13/on-wr
             </Chord>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="0"/>
-          <text>Flutter Tongue.</text>
-          </Text>
-        </HBox>
       <Measure len="4/4">
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -1161,33 +3623,26 @@ with some pitch and a whistling sound. https://heatherroche.net/2014/02/13/on-wr
             <text>???</text>
             </StaffText>
           <Chord>
-            <durationType>whole</durationType>
+            <durationType>half</durationType>
             <Note>
               <pitch>69</pitch>
               <tpc>17</tpc>
               </Note>
             </Chord>
+          <Chord>
+            <durationType>half</durationType>
+            <Stem>
+              <visible>0</visible>
+              </Stem>
+            <Note>
+              <pitch>62</pitch>
+              <tpc>16</tpc>
+              <head>triangle-down</head>
+              </Note>
+            </Chord>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <color r="255" g="0" b="0" a="255"/>
-          <align>left,center</align>
-          <offset x="10" y="0"/>
-          <text>Low pressure?</text>
-          </Text>
-        </HBox>
       <Measure len="1/4">
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -1207,24 +3662,7 @@ with some pitch and a whistling sound. https://heatherroche.net/2014/02/13/on-wr
             </Chord>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="0"/>
-          <text>Slap Tongue, notated in pitch.</text>
-          </Text>
-        </HBox>
       <Measure len="1/4">
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -1239,25 +3677,7 @@ with some pitch and a whistling sound. https://heatherroche.net/2014/02/13/on-wr
             </Chord>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="-2.5"/>
-          <text>Smack mouthpiece with palm, notated in pitch. Putting baking paper in between the mouthpiece and the
-instrument might help to prevent the mouthpiece from getting stuck.</text>
-          </Text>
-        </HBox>
       <Measure len="1/4">
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -1276,24 +3696,7 @@ instrument might help to prevent the mouthpiece from getting stuck.</text>
             </Chord>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="0"/>
-          <text>Flick the bell of your instrument. Try and get a clean sound.</text>
-          </Text>
-        </HBox>
       <Measure>
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -1326,69 +3729,44 @@ instrument might help to prevent the mouthpiece from getting stuck.</text>
             </Chord>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="0"/>
-          <text>(Pitched) air sound, notated in pitch. Optionally a consonant or vowel sound might be notated above.</text>
-          </Text>
-        <LayoutBreak>
-          <subtype>page</subtype>
-          </LayoutBreak>
-        </HBox>
-      <VBox>
-        <height>4</height>
-        <topGap>10</topGap>
-        <bottomGap>2</bottomGap>
-        <boxAutoSize>0</boxAutoSize>
-        <visible>0</visible>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>15</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <bold>1</bold>
-          <text>Strings</text>
-          </Text>
-        </VBox>
-      <HBox>
-        <width>27.5</width>
-        <visible>0</visible>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>9</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <text>msp / sp / psp / ord / pst / st / mst   </text>
-          </Text>
-        </HBox>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="-3"/>
-          <text>Contact point of the bow with the strings. Stays valid until new indication. 
-ord. means ordinary contact point as well as ordinary bow pressure.
-</text>
-          </Text>
-        </HBox>
+      <Measure len="4/4">
+        <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          <StaffText>
+            <style>Expression</style>
+            <text>squeeze tone</text>
+            </StaffText>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <pitch>74</pitch>
+              <tpc>16</tpc>
+              <head>triangle-up</head>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          <StaffText>
+            <style>Expression</style>
+            <text>flautando</text>
+            </StaffText>
+          <Chord>
+            <durationType>half</durationType>
+            <Note>
+              <pitch>74</pitch>
+              <tpc>16</tpc>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
       <Measure>
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <Rest>
             <durationType>measure</durationType>
@@ -1396,53 +3774,7 @@ ord. means ordinary contact point as well as ordinary bow pressure.
             </Rest>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="0"/>
-          <text>Bridge Clef, indicating the contact point of the bow. First note would be msp, second one mst.</text>
-          </Text>
-        </HBox>
-      <Measure len="4/4">
-        <measureNumberMode>2</measureNumberMode>
-        <voice>
-          <BarLine>
-            <visible>0</visible>
-            </BarLine>
-          <Rest>
-            <durationType>whole</durationType>
-            </Rest>
-          </voice>
-        </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="-3"/>
-          <text>Bridge Clef, indicating the contact point of the bow. First note would be on silk wrapped part of the strings,
-second one on the not wrapped part near the bridge. The third one indicates bowing on the tailpiece.
-</text>
-          </Text>
-        </HBox>
       <Measure len="2/4">
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -1453,24 +3785,7 @@ second one on the not wrapped part near the bridge. The third one indicates bowi
             </Rest>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="-3"/>
-          <text>Bow on the bridge, resulting in a very high screeching sound.</text>
-          </Text>
-        </HBox>
       <Measure len="2/4">
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -1499,24 +3814,7 @@ second one on the not wrapped part near the bridge. The third one indicates bowi
             </Chord>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="-3"/>
-          <text>Flageolett and artificial flageolett. A diamond shaped notehead means the fvinger only touches the string.</text>
-          </Text>
-        </HBox>
       <Measure len="2/4">
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -1543,30 +3841,13 @@ second one on the not wrapped part near the bridge. The third one indicates bowi
                 </Symbol>
               <pitch>76</pitch>
               <tpc>18</tpc>
-              <head>diamond</head>
-              <headType>half</headType>
+              <head>cross</head>
+              <headType>quarter</headType>
               </Note>
             </Chord>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="-3"/>
-          <text>Dampen Strings with left hand.</text>
-          </Text>
-        </HBox>
       <Measure len="1/4">
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -1584,24 +3865,7 @@ second one on the not wrapped part near the bridge. The third one indicates bowi
             </Chord>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="-3"/>
-          <text>Bartok Pizzicato.</text>
-          </Text>
-        </HBox>
       <Measure len="4/4">
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -1656,27 +3920,7 @@ second one on the not wrapped part near the bridge. The third one indicates bowi
             </Chord>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="-3"/>
-          <text>From left to right: almost no bow pressure (no discernable pitch), small bow pressure ('flautando'), 
-more bow pressure than usual (pitch still discernable), lots of bow pressure (no clear pitch).
-revoked by ord. or another indication.
-</text>
-          </Text>
-        </HBox>
       <Measure len="2/4">
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -1706,26 +3950,7 @@ revoked by ord. or another indication.
             </Chord>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="-3"/>
-          <text>Con crini battuto, col legno battuto. Dampen with left hand - pitch is determined through contact point 
-of the bow. When not specified, play at ordinario position.
-</text>
-          </Text>
-        </HBox>
       <Measure len="2/4">
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -1809,25 +4034,7 @@ of the bow. When not specified, play at ordinario position.
             </Chord>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="-3"/>
-          <text>Con crini gettato. Only the first attack is to be played precisely. The following do not have to be synced. </text>
-          </Text>
-        </HBox>
       <Measure len="2/4">
-        <stretch>0</stretch>
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -1919,25 +4126,7 @@ of the bow. When not specified, play at ordinario position.
             </Chord>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="-3"/>
-          <text>Col legno gettato. Either on a pitch (written in normal clef) or dampened (written in bridge clef).
-Only the first attack is to be played precisely. The following do not have to be synced. </text>
-          </Text>
-        </HBox>
       <Measure>
-        <measureNumberMode>2</measureNumberMode>
         <voice>
           <BarLine>
             <visible>0</visible>
@@ -1953,46 +4142,20 @@ Only the first attack is to be played precisely. The following do not have to be
             </Clef>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="-3"/>
-          <text>Artificial harmonic glissando. Additionally a slow but very exaggerated vibrato in only the upper finger, 
-so that the harmonic jumps between the different overtones. The shape of the line is not neccessarily 
-representative.
-</text>
-          </Text>
-        </HBox>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        </HBox>
-      <VBox>
-        <height>4</height>
-        <topGap>4.5</topGap>
-        <bottomGap>4</bottomGap>
-        <boxAutoSize>0</boxAutoSize>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>15</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <bold>1</bold>
-          <text>Double Bass</text>
-          </Text>
-        </VBox>
+      <Measure len="4/4">
+        <voice>
+          <Rest>
+            <durationType>whole</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="4/4">
+        <voice>
+          <Rest>
+            <durationType>whole</durationType>
+            </Rest>
+          </voice>
+        </Measure>
       <Measure>
         <voice>
           <Rest>
@@ -2001,82 +4164,158 @@ representative.
             </Rest>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="-3"/>
-          <text>Scordatura, minute 9 slaps
-</text>
-          </Text>
-        </HBox>
-      <TBox>
-        <height>1</height>
-        <visible>0</visible>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <textLineSpacing>0.3</textLineSpacing>
-          <text></text>
-          </Text>
-        </TBox>
-      <VBox>
-        <height>4</height>
-        <topGap>4.5</topGap>
-        <bottomGap>4</bottomGap>
-        <boxAutoSize>0</boxAutoSize>
-        <visible>0</visible>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>15</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <bold>1</bold>
-          <text>Percussion</text>
-          </Text>
-        </VBox>
-      <Measure len="1/4">
-        <measureNumberMode>2</measureNumberMode>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>half</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>half</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="4/4">
+        <voice>
+          <Rest>
+            <durationType>whole</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>half</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>half</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="5/4">
         <voice>
           <BarLine>
             <visible>0</visible>
             </BarLine>
+          <Rest>
+            <visible>0</visible>
+            <durationType>quarter</durationType>
+            <Symbol>
+              <name>pictDrumStick</name>
+              <font>Bravura</font>
+              <offset x="0" y="-2.5"/>
+              </Symbol>
+            </Rest>
           <Chord>
             <durationType>quarter</durationType>
+            <Stem>
+              <visible>0</visible>
+              </Stem>
             <Note>
-              <pitch>72</pitch>
-              <tpc>14</tpc>
-              <head>withx</head>
-              <headType>half</headType>
+              <visible>0</visible>
+              <Symbol>
+                <name>pictBeaterHardGlockenspielUp</name>
+                <font>Bravura</font>
+                <offset x="0" y="-2.5"/>
+                </Symbol>
+              <pitch>50</pitch>
+              <tpc>16</tpc>
               </Note>
             </Chord>
+          <Rest>
+            <visible>0</visible>
+            <durationType>quarter</durationType>
+            <Symbol>
+              <name>pictBeaterSoftGlockenspielUp</name>
+              <font>Bravura</font>
+              <offset x="0" y="-2.5"/>
+              </Symbol>
+            </Rest>
+          <Rest>
+            <visible>0</visible>
+            <durationType>quarter</durationType>
+            <Symbol>
+              <name>pictBeaterHardXylophoneUp</name>
+              <font>Bravura</font>
+              <offset x="0" y="-2.5"/>
+              </Symbol>
+            </Rest>
+          <Rest>
+            <visible>0</visible>
+            <durationType>quarter</durationType>
+            <Symbol>
+              <name>pictBeaterSoftXylophoneUp</name>
+              <font>Bravura</font>
+              <offset x="0" y="-2.5"/>
+              </Symbol>
+            </Rest>
           </voice>
         </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <align>left,center</align>
-          <offset x="10" y="0"/>
-          <text>Strings dampened with Hand/Finger inside piano.</text>
-          </Text>
-        </HBox>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="4/4">
+        <voice>
+          <Rest>
+            <durationType>whole</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="5/4">
+        <voice>
+          <Rest>
+            <durationType>whole</durationType>
+            </Rest>
+          <Rest>
+            <durationType>quarter</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="4/4">
+        <voice>
+          <Rest>
+            <durationType>whole</durationType>
+            </Rest>
+          </voice>
+        </Measure>
       </Staff>
-    <Staff id="2">
+    <Staff id="5">
       <Measure len="3/4">
         <voice>
           <TimeSig>
@@ -2219,6 +4458,11 @@ representative.
             <text>                             
 </text>
             </StaffText>
+          <StaffText>
+            <minDistance>0.203095</minDistance>
+            <offset x="-4.5" y="-0.5"/>
+            <text>4x</text>
+            </StaffText>
           <Chord>
             <durationType>quarter</durationType>
             <Note>
@@ -2290,62 +4534,6 @@ representative.
               <tpc>18</tpc>
               </Note>
             </Chord>
-          </voice>
-        </Measure>
-      <Measure>
-        <voice>
-          <BarLine>
-            <visible>0</visible>
-            </BarLine>
-          <Rest>
-            <visible>0</visible>
-            <durationType>quarter</durationType>
-            </Rest>
-          <Clef>
-            <concertClefType>F</concertClefType>
-            <transposingClefType>F</transposingClefType>
-            </Clef>
-          <Dynamic>
-            <subtype>mp</subtype>
-            <velocity>64</velocity>
-            </Dynamic>
-          <Chord>
-            <durationType>quarter</durationType>
-            <Note>
-              <pitch>48</pitch>
-              <tpc>14</tpc>
-              </Note>
-            <Note>
-              <Image>
-                <autoplace>0</autoplace>
-                <offset x="-8.82254" y="-6.87005"/>
-                <path>bassoon_mult_1_2446.svg</path>
-                <linkPath>bassoon_mult_1_2446.svg</linkPath>
-                <size w="11.0562" h="8.29215"/>
-                </Image>
-              <pitch>60</pitch>
-              <tpc>14</tpc>
-              <small>1</small>
-              <play>0</play>
-              </Note>
-            <Note>
-              <Accidental>
-                <subtype>accidentalFlat</subtype>
-                </Accidental>
-              <pitch>63</pitch>
-              <tpc>11</tpc>
-              <small>1</small>
-              <play>0</play>
-              </Note>
-            </Chord>
-          <Clef>
-            <concertClefType>G</concertClefType>
-            <transposingClefType>G</transposingClefType>
-            </Clef>
-          <Rest>
-            <visible>0</visible>
-            <durationType>quarter</durationType>
-            </Rest>
           </voice>
         </Measure>
       <Measure len="1/4">
@@ -2441,6 +4629,20 @@ representative.
             </Rest>
           </voice>
         </Measure>
+      <Measure len="4/4">
+        <voice>
+          <Rest>
+            <durationType>whole</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Rest>
+            <durationType>half</durationType>
+            </Rest>
+          </voice>
+        </Measure>
       <Measure>
         <voice>
           <Chord>
@@ -2460,8 +4662,8 @@ representative.
             <Note>
               <Image>
                 <autoplace>0</autoplace>
-                <offset x="-10.15" y="-2.63"/>
-                <path>../Notation/Kontaktstelle.svg</path>
+                <offset x="-10.54" y="-2.77"/>
+                <path>76f93fadc9a15f6d44a567a989e3d67f.svg</path>
                 <linkPath>../Notation/Kontaktstelle.svg</linkPath>
                 <size w="5.75479" h="8.13715"/>
                 </Image>
@@ -2476,52 +4678,6 @@ representative.
               <pitch>69</pitch>
               <tpc>17</tpc>
               <head>cross</head>
-              </Note>
-            </Chord>
-          </voice>
-        </Measure>
-      <Measure len="4/4">
-        <voice>
-          <Chord>
-            <durationType>quarter</durationType>
-            <Stem>
-              <visible>0</visible>
-              </Stem>
-            <Note>
-              <visible>0</visible>
-              <pitch>77</pitch>
-              <tpc>13</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>quarter</durationType>
-            <Note>
-              <Image>
-                <autoplace>0</autoplace>
-                <offset x="-9.12" y="-5.03"/>
-                <path>../Notation/vor_der_brücke.svg</path>
-                <linkPath>../Notation/vor_der_brücke.svg</linkPath>
-                <size w="8.46954" h="11.9757"/>
-                </Image>
-              <pitch>76</pitch>
-              <tpc>18</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>quarter</durationType>
-            <Note>
-              <pitch>65</pitch>
-              <tpc>13</tpc>
-              <head>cross</head>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>quarter</durationType>
-            <Note>
-              <pitch>81</pitch>
-              <tpc>17</tpc>
               </Note>
             </Chord>
           </voice>
@@ -2660,6 +4816,644 @@ representative.
             </Clef>
           </voice>
         </Measure>
+      <Measure len="4/4">
+        <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <pitch>31</pitch>
+              <tpc>15</tpc>
+              </Note>
+            <Note>
+              <pitch>40</pitch>
+              <tpc>18</tpc>
+              </Note>
+            <Note>
+              <pitch>45</pitch>
+              <tpc>17</tpc>
+              </Note>
+            <Note>
+              <pitch>50</pitch>
+              <tpc>16</tpc>
+              </Note>
+            <Note>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure len="4/4">
+        <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          <Dynamic>
+            <subtype>other-dynamics</subtype>
+            <velocity>112</velocity>
+            <offset x="-3" y="2.5"/>
+            <text><i>(</i><font face="ScoreText"></font><i><font face="Edwin"></font>)</i></text>
+            </Dynamic>
+          <Spanner type="Ottava">
+            <Ottava>
+              <subtype>8vb</subtype>
+              </Ottava>
+            <next>
+              <location>
+                <measures>1</measures>
+                </location>
+              </next>
+            </Spanner>
+          <Chord>
+            <durationType>whole</durationType>
+            <Note>
+              <Symbol>
+                <name>stemHarpStringNoise</name>
+                <font>Bravura</font>
+                <offset x="3.5" y="0"/>
+                </Symbol>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          <StaffText>
+            <style>Expression</style>
+            <text>pizz. from above</text>
+            </StaffText>
+          <Spanner type="Ottava">
+            <prev>
+              <location>
+                <measures>-1</measures>
+                </location>
+              </prev>
+            </Spanner>
+          <Spanner type="Ottava">
+            <Ottava>
+              <subtype>8vb</subtype>
+              </Ottava>
+            <next>
+              <location>
+                <fractions>1/2</fractions>
+                </location>
+              </next>
+            </Spanner>
+          <Chord>
+            <durationType>eighth</durationType>
+            <Note>
+              <Symbol>
+                <name>stemHarpStringNoise</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="-1" y="0"/>
+                </Symbol>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>eighth</durationType>
+            <Note>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>eighth</durationType>
+            <Note>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>eighth</durationType>
+            <Note>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Spanner type="Ottava">
+            <prev>
+              <location>
+                <fractions>-1/2</fractions>
+                </location>
+              </prev>
+            </Spanner>
+          <Rest>
+            <durationType>quarter</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          <Spanner type="Ottava">
+            <Ottava>
+              <subtype>8vb</subtype>
+              </Ottava>
+            <next>
+              <location>
+                <measures>1</measures>
+                </location>
+              </next>
+            </Spanner>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <Symbol>
+                <name>pictDamp1</name>
+                <font>Bravura</font>
+                <offset x="0" y="-5"/>
+                </Symbol>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          <Spanner type="Ottava">
+            <prev>
+              <location>
+                <measures>-1</measures>
+                </location>
+              </prev>
+            </Spanner>
+          <Spanner type="Ottava">
+            <Ottava>
+              <subtype>8vb</subtype>
+              </Ottava>
+            <next>
+              <location>
+                <measures>1</measures>
+                </location>
+              </next>
+            </Spanner>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Articulation>
+              <subtype>articStaccatoBelow</subtype>
+              </Articulation>
+            <Note>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure len="4/4">
+        <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          <StaffText>
+            <style>Expression</style>
+            <minDistance>0.404683</minDistance>
+            <size>8</size>
+            <offset x="0" y="-0.5"/>
+            <text>c.l.b.</text>
+            </StaffText>
+          <Spanner type="Ottava">
+            <prev>
+              <location>
+                <measures>-1</measures>
+                </location>
+              </prev>
+            </Spanner>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <StaffText>
+            <style>Expression</style>
+            <minDistance>0.404683</minDistance>
+            <size>8</size>
+            <offset x="0" y="-0.5"/>
+            <text>c.c.b.</text>
+            </StaffText>
+          <Chord>
+            <durationType>quarter</durationType>
+            <Note>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <StaffText>
+            <style>Expression</style>
+            <minDistance>0.12246</minDistance>
+            <size>8</size>
+            <offset x="1" y="-0.5"/>
+            <text>c.l.g.</text>
+            </StaffText>
+          <Beam>
+            <growLeft>0</growLeft>
+            </Beam>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <visible>0</visible>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <visible>0</visible>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <visible>0</visible>
+              <Symbol>
+                <name>graceNoteSlashStemDown</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="0" y="-3.5"/>
+                </Symbol>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <StaffText>
+            <style>Expression</style>
+            <minDistance>0.404683</minDistance>
+            <size>8</size>
+            <offset x="0" y="-0.5"/>
+            <text>c.c.b.</text>
+            </StaffText>
+          <Beam>
+            <growLeft>0</growLeft>
+            </Beam>
+          <Chord>
+            <BeamMode>begin</BeamMode>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <visible>0</visible>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <visible>0</visible>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <durationType>16th</durationType>
+            <Note>
+              <visible>0</visible>
+              <Symbol>
+                <name>graceNoteSlashStemDown</name>
+                <font>Bravura</font>
+                <autoplace>0</autoplace>
+                <offset x="0" y="-3.5"/>
+                </Symbol>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          <StaffText>
+            <text>c.c.b. / LHs</text>
+            </StaffText>
+          <Spanner type="Ottava">
+            <Ottava>
+              <subtype>8vb</subtype>
+              </Ottava>
+            <next>
+              <location>
+                <measures>1</measures>
+                </location>
+              </next>
+            </Spanner>
+          <Chord>
+            <BeamMode>begin</BeamMode>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            <Note>
+              <pitch>52</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <BeamMode>begin</BeamMode>
+            <durationType>16th</durationType>
+            <StemDirection>down</StemDirection>
+            <Note>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            <Note>
+              <pitch>52</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <BeamMode>begin</BeamMode>
+            <durationType>16th</durationType>
+            <StemDirection>down</StemDirection>
+            <Note>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            <Note>
+              <pitch>52</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <BeamMode>begin</BeamMode>
+            <durationType>16th</durationType>
+            <Note>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            <Note>
+              <pitch>52</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <BeamMode>begin</BeamMode>
+            <durationType>16th</durationType>
+            <StemDirection>down</StemDirection>
+            <Note>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            <Note>
+              <pitch>52</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Chord>
+            <BeamMode>begin</BeamMode>
+            <durationType>16th</durationType>
+            <StemDirection>down</StemDirection>
+            <Note>
+              <pitch>43</pitch>
+              <tpc>15</tpc>
+              <head>cross</head>
+              </Note>
+            <Note>
+              <pitch>52</pitch>
+              <tpc>18</tpc>
+              <head>cross</head>
+              </Note>
+            </Chord>
+          <Rest>
+            <visible>0</visible>
+            <durationType>eighth</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="2/4">
+        <voice>
+          <Spanner type="Ottava">
+            <prev>
+              <location>
+                <measures>-1</measures>
+                </location>
+              </prev>
+            </Spanner>
+          <Rest>
+            <durationType>half</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="5/4">
+        <voice>
+          <Rest>
+            <durationType>whole</durationType>
+            </Rest>
+          <Rest>
+            <durationType>quarter</durationType>
+            </Rest>
+          </voice>
+        </Measure>
       <Measure>
         <voice>
           <Rest>
@@ -2668,10 +5462,51 @@ representative.
             </Rest>
           </voice>
         </Measure>
-      <Measure len="1/4">
+      <Measure len="4/4">
         <voice>
           <Rest>
+            <durationType>whole</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="5/4">
+        <voice>
+          <Rest>
+            <durationType>whole</durationType>
+            </Rest>
+          <Rest>
             <durationType>quarter</durationType>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure>
+        <voice>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>3/4</duration>
+            </Rest>
+          </voice>
+        </Measure>
+      <Measure len="4/4">
+        <voice>
+          <Rest>
+            <durationType>whole</durationType>
             </Rest>
           </voice>
         </Measure>
