@@ -10,6 +10,7 @@
       <pageWidth>11.6902</pageWidth>
       <pageHeight>16.5402</pageHeight>
       <pagePrintableWidth>10.5091</pagePrintableWidth>
+      <minSystemDistance>5.5</minSystemDistance>
       <spreadSystem>2</spreadSystem>
       <spreadSquareBracket>1</spreadSquareBracket>
       <minSystemSpread>6</minSystemSpread>
@@ -509,8 +510,8 @@
           </Text>
         </VBox>
       <VBox>
-        <height>13</height>
-        <topGap>1</topGap>
+        <height>26</height>
+        <topGap>4.5</topGap>
         <bottomGap>5</bottomGap>
         <boxAutoSize>0</boxAutoSize>
         <visible>0</visible>
@@ -519,7 +520,12 @@
           <family>Leland</family>
           <size>12</size>
           <textLineSpacing>0.3</textLineSpacing>
-          <text>Play everything non-vibrato, except when specified.
+          <text>Dynamics are notated to indicate the result of an action, not the effort to be put in.
+Dynamics in brackets indicate the intensity of the action, not the result. 
+
+Accidentals apply until the end of the bar. As there a no barlines within boxes, accidentals within boxes only apply to the current note.
+
+Play everything non-vibrato, except when specified.
 
 Grace notes always come before the beat.
 </text>
@@ -769,40 +775,11 @@ repetitions. However for most boxes this is not specified.</text>
           <text>A tempo mark inside of a box applies to this box only. Other players probably have other tempo marks. 
 Outside of and after the box is to be played a tempo, if not indicated otherwise. </text>
           </Text>
-        </HBox>
-      <VBox>
-        <height>10</height>
-        <visible>0</visible>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <text>Dynamics
-
-Dynamics are notated to indicate the result of an action, not the effort to be put in.
-Dynamics in brackets indicate the intensity of the action, not the result. 
-</text>
-          </Text>
         <LayoutBreak>
+          <visible>0</visible>
           <subtype>page</subtype>
           </LayoutBreak>
-        </VBox>
-      <VBox>
-        <height>10</height>
-        <visible>0</visible>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <text>Accidentals
-
-Accidentals apply until the end of the bar. As there a no barlines within boxes, accidentals within boxes only apply to the current note. 
-
-</text>
-          </Text>
-        </VBox>
+        </HBox>
       <VBox>
         <height>8</height>
         <topGap>0</topGap>
@@ -1068,11 +1045,10 @@ This should result in a pitched air sound, possibly with more overtones / a slig
           <family>Leland</family>
           <size>12</size>
           <textLineSpacing>0.3</textLineSpacing>
-          <color r="255" g="0" b="0" a="255"/>
           <align>left,center</align>
-          <offset x="10" y="0"/>
-          <text>Play as low as possible (below pedal tones), to achieve an inconsistent, mumbling sound. It might be helpful
-to put only the upper lip into the mouthpiece.</text>
+          <offset x="10" y="-2.5"/>
+          <text>Play as low as possible (even below pedal tones), to achieve an inconsistent, mumbling sound. It might be helpful
+to use only the upper lip.</text>
           </Text>
         </HBox>
       <Measure len="1/4">
@@ -1548,16 +1524,9 @@ of the line exactly, as it just represents this action.
 </text>
           </Text>
         </HBox>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        </HBox>
       <VBox>
         <height>4</height>
-        <topGap>4.5</topGap>
+        <topGap>3.5</topGap>
         <bottomGap>4</bottomGap>
         <boxAutoSize>0</boxAutoSize>
         <visible>0</visible>
@@ -1765,10 +1734,6 @@ produce that slapping sound.
       <HBox>
         <width>125</width>
         <visible>0</visible>
-        <LayoutBreak>
-          <visible>0</visible>
-          <subtype>line</subtype>
-          </LayoutBreak>
         <Text>
           <style>Frame</style>
           <family>Leland</family>
@@ -1780,20 +1745,10 @@ produce that slapping sound.
 bow), downwards for the left (slap the strings with your pallm).  
 </text>
           </Text>
-        </HBox>
-      <TBox>
-        <height>1</height>
-        <visible>0</visible>
         <LayoutBreak>
           <subtype>page</subtype>
           </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <textLineSpacing>0.3</textLineSpacing>
-          <text></text>
-          </Text>
-        </TBox>
+        </HBox>
       <VBox>
         <height>4</height>
         <topGap>4.5</topGap>
@@ -3600,28 +3555,10 @@ The Xylophon is always notated an octave higher than sounding.</text>
           <BarLine>
             <visible>0</visible>
             </BarLine>
-          <StaffText>
-            <color r="255" g="0" b="0" a="255"/>
-            <text>???</text>
-            </StaffText>
-          <Chord>
-            <durationType>half</durationType>
-            <Note>
-              <pitch>69</pitch>
-              <tpc>17</tpc>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>half</durationType>
-            <Stem>
-              <visible>0</visible>
-              </Stem>
-            <Note>
-              <pitch>62</pitch>
-              <tpc>16</tpc>
-              <head>triangle-down</head>
-              </Note>
-            </Chord>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
           </voice>
         </Measure>
       <Measure len="1/4">
@@ -3716,18 +3653,10 @@ The Xylophon is always notated an octave higher than sounding.</text>
           <BarLine>
             <visible>0</visible>
             </BarLine>
-          <StaffText>
-            <style>Expression</style>
-            <text>squeeze tone</text>
-            </StaffText>
-          <Chord>
-            <durationType>whole</durationType>
-            <Note>
-              <pitch>74</pitch>
-              <tpc>16</tpc>
-              <head>triangle-up</head>
-              </Note>
-            </Chord>
+          <Rest>
+            <durationType>measure</durationType>
+            <duration>4/4</duration>
+            </Rest>
           </voice>
         </Measure>
       <Measure len="2/4">
@@ -4569,9 +4498,24 @@ The Xylophon is always notated an octave higher than sounding.</text>
         </Measure>
       <Measure len="4/4">
         <voice>
-          <Rest>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
+          <StaffText>
+            <style>Expression</style>
+            <minDistance>-999</minDistance>
+            <size>9</size>
+            <offset x="-2.5" y="-0.42"/>
+            <text>as low as possible, with loose lips</text>
+            </StaffText>
+          <Chord>
             <durationType>whole</durationType>
-            </Rest>
+            <Note>
+              <pitch>60</pitch>
+              <tpc>14</tpc>
+              <head>triangle-down</head>
+              </Note>
+            </Chord>
           </voice>
         </Measure>
       <Measure len="1/4">
@@ -4605,9 +4549,20 @@ The Xylophon is always notated an octave higher than sounding.</text>
         </Measure>
       <Measure len="4/4">
         <voice>
-          <Rest>
+          <StaffText>
+            <style>Expression</style>
+            <minDistance>0.408757</minDistance>
+            <offset x="3.35112" y="-0.907249"/>
+            <text>squeeze tone</text>
+            </StaffText>
+          <Chord>
             <durationType>whole</durationType>
-            </Rest>
+            <Note>
+              <pitch>81</pitch>
+              <tpc>17</tpc>
+              <head>triangle-up</head>
+              </Note>
+            </Chord>
           </voice>
         </Measure>
       <Measure len="2/4">
@@ -4619,6 +4574,9 @@ The Xylophon is always notated an octave higher than sounding.</text>
         </Measure>
       <Measure>
         <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
           <Chord>
             <durationType>quarter</durationType>
             <Stem>
@@ -4658,6 +4616,9 @@ The Xylophon is always notated an octave higher than sounding.</text>
         </Measure>
       <Measure len="2/4">
         <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
           <Chord>
             <durationType>half</durationType>
             <Stem>
