@@ -520,12 +520,12 @@
           <family>Leland</family>
           <size>12</size>
           <textLineSpacing>0.3</textLineSpacing>
-          <text>Dynamics are notated to indicate the result of an action, not the effort to be put in.
-Dynamics in brackets indicate the intensity of the action, not the result. 
+          <text>Normal dynamics indicate the sounding result of an action, not the effort to be put in.
+In contrast to this, dynamics in brackets indicate the intensity of the action, rather than the sounding result. 
 
-Accidentals apply until the end of the bar. As there a no barlines within boxes, accidentals within boxes only apply to the current note.
+Accidentals apply until the end of the bar, apart from within boxes: In this case, they only apply to the current note.
 
-Play everything non-vibrato, except when specified.
+Play everything without vibrato, except when otherwise notated.
 
 Grace notes always come before the beat.
 </text>
@@ -559,7 +559,7 @@ Grace notes always come before the beat.
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
           <offset x="10" y="0"/>
-          <text>Slow, mid-tempo and fast tremolo.</text>
+          <text>Slow, mid-tempo, and fast tremolo.</text>
           </Text>
         </HBox>
       <Measure len="4/4">
@@ -619,7 +619,7 @@ Grace notes always come before the beat.
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
           <offset x="10" y="0"/>
-          <text>Triangular noteheads stand for as high / as low as possible.</text>
+          <text>Triangular noteheads indicate notes as high or as low as possible.</text>
           </Text>
         </HBox>
       <Measure len="1/4">
@@ -645,7 +645,7 @@ Grace notes always come before the beat.
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
           <offset x="10" y="0"/>
-          <text>Let ring.</text>
+          <text>Let ring (l.v.).</text>
           </Text>
         </HBox>
       <VBox>
@@ -658,10 +658,10 @@ Grace notes always come before the beat.
           <textLineSpacing>0.3</textLineSpacing>
           <text>Box notation
 
-A box around staffs means, that this passage is to be played indipendently. This means the conductor does either not conduct, or that he 
-conducts in a different tempo than the one the contents of the box are supposed to be playing in. Sometimes multiple instruments will start
-with the same rhythmic patterns but then drift away from each other, indicated by accelerando and ritardanto marks. A thick barline represents 
-fixed, i.e. synchronized points in the score, which usually come after free passages.
+A box around a staff means that this passage is to be played independently, i.e. the tempo is independant of the other players and/or the
+conductor. Sometimes multiple instruments will start with the same rhythmic patterns but then drift away from each other.
+This is indicated by accelerando and ritardanto marks. A thick barline represents synchronisation points. If the synchronisation point is 
+indicated by the conductor mid-phrase, move on immediately, i.e. don't play to the end of the phrase/box.
 </text>
           </Text>
         </VBox>
@@ -742,9 +742,8 @@ gives the signal to move on to what comes after.</text>
           <align>left,center</align>
           <offset x="10" y="-7.5"/>
           <text>When the contents of the box are surrounded by repeat marks, repeat the indicated parts until the 
-conductor gives the signal to move on to what comes after. Alternatively the number of repetitions that
-are to be played might be indicated (4 times in this example). Move on after the correct amount of 
-repetitions. However for most boxes this is not specified.</text>
+conductor gives the signal to move on to what comes after. Alternatively the number of repetitions may be
+specified, as in this example (4 times).</text>
           </Text>
         </HBox>
       <Measure>
@@ -772,8 +771,7 @@ repetitions. However for most boxes this is not specified.</text>
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
           <offset x="10" y="-2.5"/>
-          <text>A tempo mark inside of a box applies to this box only. Other players probably have other tempo marks. 
-Outside of and after the box is to be played a tempo, if not indicated otherwise. </text>
+          <text>A tempo mark inside of a box applies to this box only. Other players may have other tempi. </text>
           </Text>
         <LayoutBreak>
           <visible>0</visible>
@@ -833,7 +831,8 @@ chromatic scale and bending each note to the next using the embouchure can also 
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
           <offset x="10" y="0"/>
-          <text>Slap Tongue (Flute, Clarinet, Bassoon without mouthpiece), fingered notation.</text>
+          <text>Slap Tongue (Flute, Clarinet, Bassoon without mouthpiece), fingered notation, i.e. resulting pitches 
+may deviate from these.</text>
           </Text>
         </HBox>
       <Measure len="1/4">
@@ -911,9 +910,9 @@ chromatic scale and bending each note to the next using the embouchure can also 
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
           <offset x="10" y="-5"/>
-          <text>For Clarinet and Bassoon. Maintain a short distance from the mouthpiece and blow air directly at its tip 
-(with pursed lips). For more stability, the Clarinet can also put the bottom lip on the reed while blowing. 
-This should result in a pitched air sound, possibly with more overtones / a slight whistle.</text>
+          <text>For clarinet and bassoon only: Maintain a short distance from the mouthpiece and blow air directly at its tip 
+with pursed lips. For more stability, the clarinet can also put the bottom lip on the reed while blowing. 
+This should result in a pitched air sound, possibly with more overtones and/or a slight whistle.</text>
           </Text>
         </HBox>
       <Measure len="1/4">
@@ -939,7 +938,7 @@ This should result in a pitched air sound, possibly with more overtones / a slig
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
           <offset x="10" y="0"/>
-          <text>Shake the Clarinet while playing to get a vibrato-like effect.</text>
+          <text>Shake the Clarinet while playing to achieve a vibrato-like effect.</text>
           </Text>
         </HBox>
       <Measure len="4/4">
@@ -966,7 +965,7 @@ This should result in a pitched air sound, possibly with more overtones / a slig
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
           <offset x="10" y="0"/>
-          <text>Glissando with embouchure, before or after note. 
+          <text>Embouchure glissano, before or after note. 
 </text>
           </Text>
         </HBox>
@@ -994,7 +993,7 @@ This should result in a pitched air sound, possibly with more overtones / a slig
           <size>12</size>
           <textLineSpacing>0.3</textLineSpacing>
           <color r="255" g="0" b="0" a="255"/>
-          <text>The French Horn is always notated a 5th higher than sounding, independent of Clef. 
+          <text>The French Horn sounds a 5th lower than notated, in both bass and treble clefs. 
 </text>
           </Text>
         </VBox>
@@ -1047,8 +1046,8 @@ This should result in a pitched air sound, possibly with more overtones / a slig
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
           <offset x="10" y="-2.5"/>
-          <text>Play as low as possible (even below pedal tones), to achieve an inconsistent, mumbling sound. It might be helpful
-to use only the upper lip.</text>
+          <text>Play as low as possible (even below pedal tones), to achieve an inconsistent, mumbling sound. 
+It may be helpful to use only the upper lip.</text>
           </Text>
         </HBox>
       <Measure len="1/4">
@@ -1127,7 +1126,7 @@ instrument might help to prevent the mouthpiece from getting stuck.</text>
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
           <offset x="10" y="0"/>
-          <text>Flick the bell of your instrument. Find a the purest possible sound.</text>
+          <text>Flick the bell of your instrument. Find the purest sound possible.</text>
           </Text>
         </HBox>
       <Measure>
@@ -1223,7 +1222,7 @@ sound should emerge.</text>
           <align>left,center</align>
           <offset x="10" y="-3"/>
           <text>Contact point of the bow with the strings. Stays valid until new indication. 
-ord. means ordinary contact point as well as ordinary bow pressure.
+ord. means ordinary contact point as well as ordinary bow pressure. 
 </text>
           </Text>
         </HBox>
@@ -1276,7 +1275,7 @@ ord. means ordinary contact point as well as ordinary bow pressure.
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
           <offset x="10" y="0"/>
-          <text>Bridge Clef, indicating the contact point of the bow. First note would be msp, second one mst.</text>
+          <text>Bridge Clef, indicating the contact point of the bow. The first note would be msp, the second one mst.</text>
           </Text>
         </HBox>
       <Measure len="2/4">
@@ -1326,9 +1325,10 @@ ord. means ordinary contact point as well as ordinary bow pressure.
           <family>Leland</family>
           <size>12</size>
           <textLineSpacing>0.3</textLineSpacing>
+          <color r="255" g="0" b="0" a="255"/>
           <align>left,center</align>
           <offset x="10" y="-3"/>
-          <text>Flageolett and artificial flageolett. A diamond shaped notehead means the fvinger only touches the string.</text>
+          <text>Flageolett and artificial flageolett. weglassen</text>
           </Text>
         </HBox>
       <Measure len="2/4">
@@ -1354,7 +1354,7 @@ ord. means ordinary contact point as well as ordinary bow pressure.
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
           <offset x="10" y="-3"/>
-          <text>Dampen Strings with left hand.</text>
+          <text>Dampen strings with left hand.</text>
           </Text>
         </HBox>
       <Measure len="1/4">
@@ -1380,7 +1380,7 @@ ord. means ordinary contact point as well as ordinary bow pressure.
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
           <offset x="10" y="-3"/>
-          <text>Bartok Pizzicato.</text>
+          <text>Bartok pizzicato.</text>
           </Text>
         </HBox>
       <Measure len="4/4">
@@ -1406,9 +1406,9 @@ ord. means ordinary contact point as well as ordinary bow pressure.
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
           <offset x="10" y="-6.5"/>
-          <text>From left to right: almost no bow pressure (no discernable pitch), small bow pressure ('flautando'), 
-more bow pressure than usual (pitch still discernable), lots of bow pressure (no clear pitch).
-Stays valid until revoked by ord. or another indication.
+          <text>From left to right: almost no bow pressure (no discernable pitch), light bow pressure ('flautando'), 
+more bow pressure than normal (pitch still discernable), lots of bow pressure (no clear pitch).
+These indications stay valid until revoked by ord. or another indication.
 </text>
           </Text>
         </HBox>
@@ -1436,7 +1436,7 @@ Stays valid until revoked by ord. or another indication.
           <align>left,center</align>
           <offset x="10" y="-3"/>
           <text>Con crini battuto, col legno battuto. Either on a pitch (written in normal clef) or dampened with the left hand
-(written in bridge clef)
+(written in bridge clef).
 </text>
           </Text>
         </HBox>
@@ -1463,7 +1463,7 @@ Stays valid until revoked by ord. or another indication.
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
           <offset x="10" y="-3"/>
-          <text>Con crini gettato. Only the first attack is to be played precisely. The following do not have to be synced. </text>
+          <text>Con crini gettato. The number of attacks can deviate from the number notated. </text>
           </Text>
         </HBox>
       <Measure len="2/4">
@@ -1491,7 +1491,7 @@ Stays valid until revoked by ord. or another indication.
           <align>left,center</align>
           <offset x="10" y="-3"/>
           <text>Col legno gettato. Either on a pitch (written in normal clef) or dampened with the left hand (written in 
-bridge clef). Only the first attack is to be played precisely. The following do not have to be synced. </text>
+bridge clef). The number of attacks can deviate from the number notated. </text>
           </Text>
         </HBox>
       <Measure>
@@ -1518,9 +1518,9 @@ bridge clef). Only the first attack is to be played precisely. The following do 
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
           <offset x="10" y="-3"/>
-          <text>Artificial harmonic glissando. Additionally, the upper finger moves relative to the lover one (like a slow but 
-exaggerated vibrato), so that the harmonic jumps between the different overtones. Do not follow the shape
-of the line exactly, as it just represents this action.
+          <text>Artificial harmonic broken glissando. The upper finger moves relative to the lower one, like a slow but 
+exaggerated vibrato, so that the harmonic jumps between different overtones. 
+Do not follow the shape of the line exactly, as it just represents this action.
 </text>
           </Text>
         </HBox>
@@ -1577,8 +1577,8 @@ of the line exactly, as it just represents this action.
           <align>left,center</align>
           <offset x="10" y="-3"/>
           <text>Scordatura: Tune the 5th string so low, that it starts to slap against the fingerboard when played with a lot
-of pressure. Tune the string in a way that maximizes this effect, the low G is only a suggestion. You will
-not have to use this string for ordinario pitches.</text>
+of pressure. Tune the string such a way that this effect is maximized. The low G is only a suggestion. You will
+not have to use this string for normal pitches.</text>
           </Text>
         </HBox>
       <Measure len="4/4">
@@ -1605,8 +1605,8 @@ not have to use this string for ordinario pitches.</text>
           <align>left,center</align>
           <offset x="10" y="-3"/>
           <text>Play the detuned 5th string with a lot of pressure in such a way, that the string slaps against the 
-fingerboard. This percussive sound should be as consistent as possible! When doing an upwards glissando
-with this effect, the actual pitch is not as important as percussive sound, which should get quicker.</text>
+fingerboard. This percussive sound should be as consistent as possible. When doing an upwards glissando
+with this effect, the actual pitch is not as important as the percussive sound, which becomes quicker.</text>
           </Text>
         </HBox>
       <Measure>
@@ -1632,8 +1632,8 @@ with this effect, the actual pitch is not as important as percussive sound, whic
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
           <offset x="10" y="-3"/>
-          <text>Pizzicato from above, so that the string slaps against the fingerboard, not sideways. 
-To be fast enough you might have to use alternating fingers.
+          <text>Pizz. perpendicular to the string, i.e. not sideways as usual, so that the string slaps against the fingerboard. 
+In order to be quick enough, you might have to use alternating fingers.
 </text>
           </Text>
         </HBox>
@@ -1661,8 +1661,8 @@ To be fast enough you might have to use alternating fingers.
           <align>left,center</align>
           <offset x="10" y="-3"/>
           <text>Spiccato on the 5th string. Dampen all strings with the left hand. This way, the 5th string should slap 
-rhythmically against the fingerboard. The dynamics of that slap might vary between up-bow and down-bow.
-The rhythms that emerge from those accents are welcome.
+rhythmically against the fingerboard. The dynamics of the slap might vary between up-bow and down-bow.
+The rhythms that emerge from resulting accents are welcome.
 </text>
           </Text>
         </HBox>
@@ -1718,7 +1718,7 @@ The rhythms that emerge from those accents are welcome.
           <align>left,center</align>
           <offset x="10" y="-3"/>
           <text>col legno battuto, con crini battuto, col legno gettato and con crini gettato on the 5th string should always
-produce that slapping sound. 
+produce the slapping sound. 
 </text>
           </Text>
         </HBox>
@@ -1741,8 +1741,8 @@ produce that slapping sound.
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
           <offset x="10" y="0"/>
-          <text>Con crini battuto and left hand slap. A Stem going upwards is for the right hand (slap the strings with your
-bow), downwards for the left (slap the strings with your pallm).  
+          <text>Con crini battuto and left hand slap. A stem going upwards is for the right hand (slap the strings with your
+bow), downwards for the left (slap the strings with your palm).  
 </text>
           </Text>
         <LayoutBreak>
@@ -1821,7 +1821,7 @@ bow), downwards for the left (slap the strings with your pallm).
           <color r="255" g="0" b="0" a="255"/>
           <align>left,center</align>
           <offset x="10" y="-4"/>
-          <text>One dash indicates a double stroke. 4 dashes indicate a roll (?)</text>
+          <text>One tremolo dash indicates a double stroke. 4 dashes indicate a roll.</text>
           </Text>
         </HBox>
       <Measure len="5/4">
@@ -1848,7 +1848,7 @@ bow), downwards for the left (slap the strings with your pallm).
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
           <offset x="10" y="-10"/>
-          <text>From left to right: Sticks, metal mallets (Glockenspiel), hard plastic mallets, wodden Xylophon mallets and
+          <text>From left to right: Sticks, metal mallets (glockenspiel), hard plastic mallets, wooden xylophone mallets and
 soft timpani mallets.</text>
           </Text>
         </HBox>
@@ -1917,9 +1917,9 @@ soft timpani mallets.</text>
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
           <offset x="10" y="-3.5"/>
-          <text>The lines on which the notes are indicate the position at which to hit the Hi-Hat. From left to right:
-Hit on Bell (bright sound. When the Hihat is opened, hitting it on the bell should not make it buzz), 
-hit middle of Hi-Hat, hit edge of Hi-Hat. </text>
+          <text>The staff lines indicate the position at which to hit the hi-hat. From left to right:
+Hit the bell (bright sound: when the hi-hat is opened, hitting the bell should not make it buzz); 
+hit the middle of the hi-hat; hit the edge. </text>
           </Text>
         </HBox>
       <Measure len="4/4">
@@ -1999,8 +1999,8 @@ hit middle of Hi-Hat, hit edge of Hi-Hat. </text>
           <align>left,center</align>
           <offset x="10" y="-6"/>
           <text>Symbols above the notes indicate what the pedal does. Left to right: 
-Sound of Hi-Hat closing (don't hit with stick), closed Hi-Hat, half opened-Hihat (lot of buzz, almost no 
-resonance), open Hi-Hat.</text>
+Sound of hi-hat closing itself, i.e. don't hit with the stick; closed hi-hat; half opened-hi-hat (lot of buzz, 
+almost no resonance); open hi-hat.</text>
           </Text>
         </HBox>
       <Measure>
@@ -2084,7 +2084,7 @@ resonance), open Hi-Hat.</text>
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
           <offset x="10" y="-4"/>
-          <text>An arrow indicates a transition. In this case from closed to opened and from hitting the Hi-Hat normally
+          <text>An arrow indicates a transition. In this case from closed to open and from hitting the hi-hat normally
 to hitting it on the bell.</text>
           </Text>
         </HBox>
@@ -2140,7 +2140,7 @@ to hitting it on the bell.</text>
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
           <offset x="10" y="-4"/>
-          <text>Bow the upper cymbal of the opened Hi-Hat.</text>
+          <text>Bow the upper cymbal of the opened hi-hat.</text>
           </Text>
         </HBox>
       <VBox>
@@ -2154,8 +2154,8 @@ to hitting it on the bell.</text>
           <text>Stones / Tiles
 
 - 5 small ceramic tiles (e.g. one tile broken into 5 smaller pieces) that have different perceived pitches. They should be similar to the highest
-  octave of the Xylophon, i.e. have a very short decay and a distinct attack.
-- 3 stones / pebbles, that produce 3 differently coloured attack sounds when hit with a metal mallet.</text>
+  octave of the xylophone, i.e. have a very short decay and a distinct attack.
+- 3 stones / pebbles, that produce 3 different-sounding unpitched attacks when hit with a metal mallet.</text>
           </Text>
         </VBox>
       <Measure len="5/4">
@@ -2209,7 +2209,7 @@ to hitting it on the bell.</text>
           <align>left,center</align>
           <offset x="10" y="-4"/>
           <text>The 3 stones are represented with crossed note heads on the same staff as the tiles, 
-order by perceived pitch/spectral content from low to high.</text>
+order by perceived spectral content from low to high.</text>
           </Text>
         </HBox>
       <Measure len="4/4">
@@ -2234,7 +2234,7 @@ order by perceived pitch/spectral content from low to high.</text>
           <color r="255" g="0" b="0" a="255"/>
           <align>left,center</align>
           <offset x="10" y="-4"/>
-          <text>Use the stones to grind (?) on the tiles to create a continuous sound.</text>
+          <text>Use the stones to rub on the tiles, in order to create a continuous sound.</text>
           </Text>
         </HBox>
       <VBox>
@@ -2246,9 +2246,9 @@ order by perceived pitch/spectral content from low to high.</text>
           <family>Leland</family>
           <size>12</size>
           <textLineSpacing>0.3</textLineSpacing>
-          <text>Xylophon
+          <text>Xylophone
 
-The Xylophon is always notated an octave higher than sounding.</text>
+The xylophone sounds an octave higher than notated.</text>
           </Text>
         </VBox>
       </Staff>
@@ -4595,7 +4595,7 @@ The Xylophon is always notated an octave higher than sounding.</text>
               <Image>
                 <autoplace>0</autoplace>
                 <offset x="-10.54" y="-2.77"/>
-                <path>76f93fadc9a15f6d44a567a989e3d67f.svg</path>
+                <path>../Notation/Kontaktstelle.svg</path>
                 <linkPath>../Notation/Kontaktstelle.svg</linkPath>
                 <size w="5.75479" h="8.13715"/>
                 </Image>
