@@ -4438,8 +4438,8 @@ The xylophone sounds an octave higher than notated.</text>
           <Chord>
             <durationType>whole</durationType>
             <Note>
-              <pitch>60</pitch>
-              <tpc>14</tpc>
+              <pitch>57</pitch>
+              <tpc>17</tpc>
               <head>triangle-down</head>
               </Note>
             </Chord>
