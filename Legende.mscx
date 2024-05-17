@@ -492,7 +492,7 @@
           <textLineSpacing>0.3</textLineSpacing>
           <bold>1</bold>
           <align>left,top</align>
-          <text>Legend</text>
+          <text>Key to symbols</text>
           </Text>
         </VBox>
       <VBox>
@@ -992,7 +992,6 @@ This should result in a pitched air sound, possibly with more overtones and/or a
           <family>Leland</family>
           <size>12</size>
           <textLineSpacing>0.3</textLineSpacing>
-          <color r="255" g="0" b="0" a="255"/>
           <text>The French Horn sounds a 5th lower than notated, in both bass and treble clefs. 
 </text>
           </Text>
@@ -1073,7 +1072,7 @@ It may be helpful to use only the upper lip.</text>
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
           <offset x="10" y="0"/>
-          <text>Slap Tongue, fingered notation.</text>
+          <text>Slap Tongue, fingered notation, i.e. resulting pitches may deviate from these..</text>
           </Text>
         </HBox>
       <Measure len="1/4">
@@ -1220,9 +1219,10 @@ sound should emerge.</text>
           <size>12</size>
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
-          <offset x="10" y="-3"/>
+          <offset x="10" y="-6"/>
           <text>Contact point of the bow with the strings. Stays valid until new indication. 
-ord. means ordinary contact point as well as ordinary bow pressure. 
+ord. means ordinary contact point as well as ordinary bow pressure. From left to right:
+molto sul ponticello, sul ponticello, pocco sul ponticello, ordinario, pocco sul tasto, sul tasto, molto sul tasto. 
 </text>
           </Text>
         </HBox>
@@ -1249,7 +1249,7 @@ ord. means ordinary contact point as well as ordinary bow pressure.
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
           <offset x="10" y="0"/>
-          <text>(Molto) sul tasto, muted sound.</text>
+          <text>(Molto) sul tasto, light bow pressure, muted sound.</text>
           </Text>
         </HBox>
       <Measure>
@@ -1300,35 +1300,8 @@ ord. means ordinary contact point as well as ordinary bow pressure.
           <size>12</size>
           <textLineSpacing>0.3</textLineSpacing>
           <align>left,center</align>
-          <offset x="10" y="-3"/>
+          <offset x="10" y="-0.5"/>
           <text>Bow on the bridge, resulting in a very high screeching sound.</text>
-          </Text>
-        </HBox>
-      <Measure len="2/4">
-        <measureNumberMode>2</measureNumberMode>
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>2/4</duration>
-            </Rest>
-          </voice>
-        </Measure>
-      <HBox>
-        <width>125</width>
-        <visible>0</visible>
-        <LayoutBreak>
-          <visible>0</visible>
-          <subtype>line</subtype>
-          </LayoutBreak>
-        <Text>
-          <style>Frame</style>
-          <family>Leland</family>
-          <size>12</size>
-          <textLineSpacing>0.3</textLineSpacing>
-          <color r="255" g="0" b="0" a="255"/>
-          <align>left,center</align>
-          <offset x="10" y="-3"/>
-          <text>Flageolett and artificial flageolett. weglassen</text>
           </Text>
         </HBox>
       <Measure len="2/4">
@@ -1818,7 +1791,6 @@ bow), downwards for the left (slap the strings with your palm).
           <family>Leland</family>
           <size>12</size>
           <textLineSpacing>0.3</textLineSpacing>
-          <color r="255" g="0" b="0" a="255"/>
           <align>left,center</align>
           <offset x="10" y="-4"/>
           <text>One tremolo dash indicates a double stroke. 4 dashes indicate a roll.</text>
@@ -2231,7 +2203,6 @@ order by perceived spectral content from low to high.</text>
           <family>Leland</family>
           <size>12</size>
           <textLineSpacing>0.3</textLineSpacing>
-          <color r="255" g="0" b="0" a="255"/>
           <align>left,center</align>
           <offset x="10" y="-4"/>
           <text>Use the stones to rub on the tiles, in order to create a continuous sound.</text>
@@ -2443,14 +2414,6 @@ The xylophone sounds an octave higher than notated.</text>
           <Rest>
             <durationType>measure</durationType>
             <duration>3/4</duration>
-            </Rest>
-          </voice>
-        </Measure>
-      <Measure len="2/4">
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>2/4</duration>
             </Rest>
           </voice>
         </Measure>
@@ -2929,14 +2892,6 @@ The xylophone sounds an octave higher than notated.</text>
           <Rest>
             <durationType>measure</durationType>
             <duration>3/4</duration>
-            </Rest>
-          </voice>
-        </Measure>
-      <Measure len="2/4">
-        <voice>
-          <Rest>
-            <durationType>measure</durationType>
-            <duration>2/4</duration>
             </Rest>
           </voice>
         </Measure>
@@ -3543,6 +3498,7 @@ The xylophone sounds an octave higher than notated.</text>
             <Note>
               <pitch>69</pitch>
               <tpc>17</tpc>
+              <headType>quarter</headType>
               </Note>
             <Tremolo>
               <subtype>buzzroll</subtype>
@@ -3694,35 +3650,6 @@ The xylophone sounds an octave higher than notated.</text>
             <durationType>measure</durationType>
             <duration>2/4</duration>
             </Rest>
-          </voice>
-        </Measure>
-      <Measure len="2/4">
-        <voice>
-          <BarLine>
-            <visible>0</visible>
-            </BarLine>
-          <Chord>
-            <durationType>quarter</durationType>
-            <Note>
-              <pitch>76</pitch>
-              <tpc>18</tpc>
-              <head>diamond</head>
-              <headType>half</headType>
-              </Note>
-            </Chord>
-          <Chord>
-            <durationType>quarter</durationType>
-            <Note>
-              <pitch>71</pitch>
-              <tpc>19</tpc>
-              </Note>
-            <Note>
-              <pitch>76</pitch>
-              <tpc>18</tpc>
-              <head>diamond</head>
-              <headType>half</headType>
-              </Note>
-            </Chord>
           </voice>
         </Measure>
       <Measure len="2/4">
@@ -4283,7 +4210,7 @@ The xylophone sounds an octave higher than notated.</text>
             <framePadding>5</framePadding>
             <frameWidth>0.3</frameWidth>
             <frameBgColor r="255" g="85" b="0" a="0"/>
-            <text>                             
+            <text>                           
 </text>
             </StaffText>
           <Chord>
@@ -4323,7 +4250,7 @@ The xylophone sounds an octave higher than notated.</text>
             <framePadding>5</framePadding>
             <frameWidth>0.3</frameWidth>
             <frameBgColor r="255" g="85" b="0" a="0"/>
-            <text>                             
+            <text>                           
 </text>
             </StaffText>
           <Chord>
@@ -4366,7 +4293,7 @@ The xylophone sounds an octave higher than notated.</text>
             <framePadding>5</framePadding>
             <frameWidth>0.3</frameWidth>
             <frameBgColor r="255" g="85" b="0" a="0"/>
-            <text>                             
+            <text>                           
 </text>
             </StaffText>
           <StaffText>
@@ -4421,7 +4348,7 @@ The xylophone sounds an octave higher than notated.</text>
             <framePadding>5</framePadding>
             <frameWidth>0.3</frameWidth>
             <frameBgColor r="255" g="85" b="0" a="0"/>
-            <text>                             
+            <text>                           
 </text>
             </StaffText>
           <Chord>
@@ -4549,17 +4476,19 @@ The xylophone sounds an octave higher than notated.</text>
         </Measure>
       <Measure len="4/4">
         <voice>
+          <BarLine>
+            <visible>0</visible>
+            </BarLine>
           <StaffText>
             <style>Expression</style>
-            <minDistance>0.408757</minDistance>
-            <offset x="3.35112" y="-0.907249"/>
+            <offset x="3.7002" y="-1.32614"/>
             <text>squeeze tone</text>
             </StaffText>
           <Chord>
             <durationType>whole</durationType>
             <Note>
-              <pitch>81</pitch>
-              <tpc>17</tpc>
+              <pitch>84</pitch>
+              <tpc>14</tpc>
               <head>triangle-up</head>
               </Note>
             </Chord>
@@ -4594,8 +4523,8 @@ The xylophone sounds an octave higher than notated.</text>
             <Note>
               <Image>
                 <autoplace>0</autoplace>
-                <offset x="-10.54" y="-2.77"/>
-                <path>../Notation/Kontaktstelle.svg</path>
+                <offset x="-9.78" y="-2.7"/>
+                <path>76f93fadc9a15f6d44a567a989e3d67f.svg</path>
                 <linkPath>../Notation/Kontaktstelle.svg</linkPath>
                 <size w="5.75479" h="8.13715"/>
                 </Image>
@@ -4635,13 +4564,6 @@ The xylophone sounds an octave higher than notated.</text>
               <head>triangle-up</head>
               </Note>
             </Chord>
-          </voice>
-        </Measure>
-      <Measure len="2/4">
-        <voice>
-          <Rest>
-            <durationType>half</durationType>
-            </Rest>
           </voice>
         </Measure>
       <Measure len="2/4">
