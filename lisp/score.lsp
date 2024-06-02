@@ -7,14 +7,7 @@
 
 ;; ** todo
 
-;;; interpretation functions for each instrument, that are then placed within
-;;;  interpret-layer-by-instrument.
-;;; maybe we don't need to discern between tape and instrument layers? as tape
-;;;  is just another instrument?
 ;;; what about crescendi at the end? add extra minute (with rests) to not lose them?
-;;; idea: double-bass is a solo-instrument and strings are sometimes coupled
-;;;  with ww or bass.
-;;; respect lowest and highest notes for each instrument.
 ;;; should interpret-layer-by-instrument be able to see other layers in minute?
 ;;;  this way it knows wheter it is solo etc.
 
@@ -132,7 +125,7 @@
 
 ;; *** instruments
 
-;;; very simple distribution for now:
+;;; very simple distribution:
 (let ((strings '(violin-1 violin-2 viola cello double-bass))
       (woodwinds '(flute oboe b-flat-clarinet bassoon))
       (brass '(c-trumpet french-horn tuBa))
@@ -148,14 +141,14 @@
 		    (when (= (number layer) fib1) (push perc (instruments layer)))
 		    (when (= (number layer) fib2) (push tromb (instruments layer))))))
 
-;; VISUALIZE MINUTES
-#+nil(visualize-minutes (access-minutes) '(3 2 1 0 111)
-		   (format nil "~a~a" +ens-src-dir+ "test.png") 1 nil)
-
 ;; update start-times of all layers just to be sure:
 (loop for i in (access-minutes) do (update-layer-start-times i))
 
 ;; ** ...and conquer (interpret the minute objects)
+
+;; *** visualize minutes
+;; (visualize-minutes (access-minutes) '(3 2 1 0 111)
+;; 		   (format nil "~a~a" +ens-src-dir+ "test.png") 1 nil)
 
 ;; *** write entire score
 (lists-to-xml (interpret-minutes (access-minutes))
@@ -187,23 +180,23 @@
 ;; interpret everything as state 3 (morphing rhythms)
 ;; moving threshold...
 
-(set-lsim (access-minutes) 10 1 'divisor 8)
-(set-lsim (access-minutes) 10 1 'i-div 20)
-(set-lsim (access-minutes) 10 1 'states
-	  (ml 3 (length (get-lsim (access-minutes) 10 1 'states))))
-(set-lsim (access-minutes) 10 2 'divisor 6)
-(set-lsim (access-minutes) 10 2 'i-div 13)
-(set-lsim (access-minutes) 10 2 'states
-	  (ml 3 (length (get-lsim (access-minutes) 10 2 'states))))
-(set-lsim (access-minutes) 10 3 'divisor 6)
-(set-lsim (access-minutes) 10 3 'i-div 7)
-(set-lsim (access-minutes) 10 3 'states
-	  (ml 3 (length (get-lsim (access-minutes) 10 3 'states))))
+;; (set-lsim (access-minutes) 10 1 'divisor 8)
+;; (set-lsim (access-minutes) 10 1 'i-div 20)
+;; (set-lsim (access-minutes) 10 1 'states
+;; 	  (ml 3 (length (get-lsim (access-minutes) 10 1 'states))))
+;; (set-lsim (access-minutes) 10 2 'divisor 6)
+;; (set-lsim (access-minutes) 10 2 'i-div 13)
+;; (set-lsim (access-minutes) 10 2 'states
+;; 	  (ml 3 (length (get-lsim (access-minutes) 10 2 'states))))
+;; (set-lsim (access-minutes) 10 3 'divisor 6)
+;; (set-lsim (access-minutes) 10 3 'i-div 7)
+;; (set-lsim (access-minutes) 10 3 'states
+;; 	  (ml 3 (length (get-lsim (access-minutes) 10 3 'states))))
 
-(lists-to-xml (append (interpret-layer (third (layers (nth 10 (access-minutes)))))
-		      (interpret-layer (fourth (layers (nth 10 (access-minutes)))))
-		      (interpret-layer (second (layers (nth 10 (access-minutes))))))
-	      (format nil "~a~a" +ens-src-dir+ "patters_last_minute.xml")
-	      :tempo 60)
+;; (lists-to-xml (append (interpret-layer (third (layers (nth 10 (access-minutes)))))
+;; 		      (interpret-layer (fourth (layers (nth 10 (access-minutes)))))
+;; 		      (interpret-layer (second (layers (nth 10 (access-minutes))))))
+;; 	      (format nil "~a~a" +ens-src-dir+ "patters_last_minute.xml")
+;; 	      :tempo 60)
 
 ;; EOF score.lsp
