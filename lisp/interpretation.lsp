@@ -694,7 +694,7 @@
 		     (case state
 		       (2 (ins-get-static-rhythm instrument dur index sum chord start-time))
 		       (3 (ins-get-morphing-rhythms instrument dur index sum
-						    chord start-time divisor i-div))
+		       				    chord start-time divisor i-div))
 		       (4 (ins-get-changing-timbres instrument dur chord))
 		       (5 (ins-get-isorhythmic-rhythms instrument dur index sum chord))
 		       (6 (ins-get-converging-pitches instrument dur index sum chord))
@@ -715,9 +715,9 @@
 		  (push `(,(nth (1+ i) indices) cresc-end) marks))
 		 (2 (push `(,(nth i indices) dim-beg) marks)
 		  (push `(,(nth (1+ i) indices) dim-end) marks))
-		 (3 (push `(,i p) marks))
-		 (4 (push `(,i mf) marks))
-		 (5 (push `(,i ff) marks))))
+		 (3 (push `(,(nth i indices) p) marks))
+		 (4 (push `(,(nth i indices) mf) marks))
+		 (5 (push `(,(nth i indices) ff) marks))))
     (setf marks (reverse marks))    ; important, idk why exactly
     ;; assemble lists for lists-to-xml
     `(,instrument
