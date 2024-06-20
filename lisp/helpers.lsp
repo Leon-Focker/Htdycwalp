@@ -326,12 +326,52 @@
 
 ;; ** clm-macros
 
+;; (defmacro wsound (name &body body)
+;; `(with-sound (:header-type clm::mus-riff :samplingq-rate 48000
+;; 	      :output (format nil "~a~a~a" +ens-src-dir+ ,name ".wav")
+;; 	      :channels 2 :play nil :scaled-to 0.98
+;; 	      :force-recomputation nil)
+;;    ,@body))
+
 (defmacro wsound (name &body body)
-`(with-sound (:header-type clm::mus-riff :samplingq-rate 48000
-	      :output (format nil "~a~a~a" +ens-src-dir+ ,name ".wav")
-	      :channels 2 :play nil :scaled-to 0.98
-	      :force-recomputation nil)
-   ,@body))
+  (let* ((body-string (write-to-string body))
+	 (index1 (search "OUT-CHANNELS" body-string))
+	 (index2 (when index1 (search ")" body-string :start2 index1)))
+	 (out-channels 2))
+    (when (and index1 index2)
+      (setf out-channels
+	    (parse-integer (subseq body-string (+ index1 13) index2)))
+      (format t "~&set number of channels for ~a to ~a" name out-channels))
+    `(with-sound (:header-type clm::mus-riff :samplingq-rate 48000
+		  :output (format nil "~a~a~a" +ens-src-dir+ ,name ".wav")
+		  :channels ,out-channels :play nil :scaled-to 0.98
+		  :force-recomputation nil)
+       ,@body)))
+
+(defmacro unpack_3chan_file (name)
+  `(progn
+     (with-sound (:header-type clm::mus-riff :samplingq-rate 48000
+ 		  :output (format nil "~a~a~a" +ens-src-dir+ ,name "_mid.wav")
+ 		  :channels 1 :play nil :scaled-to 0.98
+ 		  :force-recomputation nil)
+       (samp0 (format nil "~a~a~a" +ens-src-dir+ ,name ".wav") 0 :out-channels 1
+								 :channel 0))
+     (with-sound (:header-type clm::mus-riff :samplingq-rate 48000
+ 		  :output (format nil "~a~a~a" +ens-src-dir+ ,name "_sides.wav")
+ 		  :channels 2 :play nil :scaled-to 0.98
+ 		  :force-recomputation nil)
+       (samp0 (format nil "~a~a~a" +ens-src-dir+ ,name ".wav") 0 :out-channels 2
+								 :channel 1
+								 :degree 0)
+       (samp0 (format nil "~a~a~a" +ens-src-dir+ ,name ".wav") 0 :out-channels 2
+								 :channel 2
+								 :degree 90))))
+
+(defmacro resample (src channels degrees &body body)
+  `(sound-let
+       ((tempo-60 () ,@body))
+     (loop for chan in ,channels and deg in ,degrees do
+       (samp0 tempo-60 0 :amp 1 :srt ,src :channel chan :degree deg))))
 
 ;; ** notation
 
