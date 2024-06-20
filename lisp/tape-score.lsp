@@ -80,30 +80,45 @@
 
 ;; ** minute 4
 
+;; simple, steady pulse with rthm = 1/13
+(wsound "minute_4_sides"
+  (let* ((sound-list (reverse (data (getf *soundfiles* :noise)))))
+    (fplay 0 20
+	   (sound (nth 6 sound-list))
+	   (rhythm 1/13)
+	   (srt .5)
+	   (duration .01)
+	   (amp 0.9)
+	   (degree 0 90))))
+
 ;; simple, steady pulse train
 ;; rthm = 1/13, rqq rhythm with 13 units divided by 3 5 2 3.
 ;; the srt is slowly going up and the soundfile is rhythmically changed.
-(wsound "minute_4"
-  (let* ((sound-list (reverse (data (getf *soundfiles* :noise)))))
-    (multiple-value-bind (start-times score-indisp score-rhythm score-srt
-			  score-amp score-time-mult)
-	(interpret-tape (first (layers (fourth (access-minutes)))))
-      (declare (ignore start-times score-srt score-amp score-time-mult))
-      (fplay 0 60
-	     ;; don't use dynamics, would be a kind of cresc anyways
-	     ;; (dynamics (interpolate (min time 60) score-amp))
-	     (indisp-fun (funcall score-indisp 'time time))
-	     (sound (nth (case (funcall indisp-fun (* time 4/13))
-			   ((0 1 2) 0)
-			   ((3 4 5 6 7) 2)
-			   ((8 9) 4)
-			   (t 6))
-			 sound-list))
-	     (rhythm (funcall (funcall score-rhythm time) 'line line))
-	     (srt (interpolate line '(0 .5  1 2) :warn nil))
-	     (duration .01)
-	     (amp (* 1/13 (1+ (funcall indisp-fun (mod time 1)))))
-	     (degree 45)))))
+;; DIVIDED in two parts: fast and slow pulses, switching between them is PDs job
+;; part two is elongated in the DAW
+(loop for part from 1 to 2 do
+  (wsound (format nil "minute_4_~a_mid" part)
+    (let* ((sound-list (reverse (data (getf *soundfiles* :noise)))))
+      (multiple-value-bind (start-times score-indisp score-rhythm score-srt
+			    score-amp score-time-mult)
+	  (interpret-tape (first (layers (fourth (access-minutes)))))
+	(declare (ignore start-times score-srt score-amp score-time-mult))
+	(fplay 0 60
+	       ;; don't use dynamics, would be a kind of cresc anyways
+	       ;; (dynamics (interpolate (min time 60) score-amp))
+	       (indisp-fun (funcall score-indisp 'time time))
+	       (sound (nth (case (funcall indisp-fun (* time 4/13))
+			     ((0 1 2) 0)
+			     ((3 4 5 6 7) 2)
+			     ((8 9) 4)
+			     (t 6))
+			   sound-list))
+	       ;; (rhythm (funcall (funcall score-rhythm time) 'line line))
+	       (rhythm (funcall (funcall score-rhythm (if (= part 1) 0 55)) 'line line))
+	       (srt (interpolate (expt line 2) '(0 .5  1 2) :warn nil))
+	       (duration .01)
+	       (amp (* 1/13 (1+ (funcall indisp-fun (mod time 1)))))
+	       (degree 45))))))
 
 ;; ** minute 5
 
