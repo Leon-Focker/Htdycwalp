@@ -1,0 +1,89 @@
+#N canvas 172 420 947 531 12;
+#X obj 61 65 vu 15 120 meter-0 empty -1 -8 0 10 #404040 #000000 1 0
+;
+#X obj 35 57 vsl 15 128 0 1 0 0 fader-0 fader-0 empty 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 148 64 vu 15 120 meter-1 empty -1 -8 0 10 #404040 #000000 1
+0;
+#X obj 123 57 vsl 15 128 0 1 0 0 fader-1 fader-1 empty 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 236 64 vu 15 120 meter-2 empty -1 -8 0 10 #404040 #000000 1
+0;
+#X obj 211 57 vsl 15 128 0 1 0 0 fader-2 fader-2 empty 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 324 64 vu 15 120 meter-3 empty -1 -8 0 10 #404040 #000000 1
+0;
+#X obj 299 57 vsl 15 128 0 1 0 0 fader-3 fader-3 empty 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 412 64 vu 15 120 meter-4 empty -1 -8 0 10 #404040 #000000 1
+0;
+#X obj 387 57 vsl 15 128 0 1 0 0 fader-4 fader-4 empty 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 35 194 tgl 15 0 mute-0 mute-all empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 123 194 tgl 15 0 mute-1 mute-all empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 211 194 tgl 15 0 mute-2 mute-all empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 299 194 tgl 15 0 mute-3 mute-all empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 387 194 tgl 15 0 mute-4 mute-all empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 9 334 mixer 0;
+#X obj 326 318 throw~ master;
+#X obj 430 317 throw~ master;
+#X obj 111 333 mixer 1;
+#X obj 222 333 mixer 2;
+#X obj 326 294 mixer 3;
+#X obj 430 293 mixer 4;
+#X obj 222 242 catch~ mixer-2;
+#X obj 111 242 catch~ mixer-1;
+#X text 300 34 mixer-3;
+#X obj 326 242 catch~ mixer-3;
+#X obj 9 411 expr~ max(min($v1 \, 1) \, -1);
+#X obj 430 242 catch~ mixer-4;
+#X text 387 34 mixer-4;
+#X obj 9 457 dac~ 1 2 3, f 65;
+#X text 23 35 Center;
+#X text 116 34 left;
+#X text 202 33 right;
+#X obj 198 411 expr~ max(min($v1 \, 1) \, -1);
+#X obj 387 411 expr~ max(min($v1 \, 1) \, -1);
+#X obj 490 76 r mute-all-inverted;
+#X obj 490 100 == 0;
+#X obj 490 124 s mute-all;
+#X obj 665 78 s fader-0;
+#X obj 665 99 s fader-1;
+#X obj 665 120 s fader-2;
+#X obj 665 141 s fader-3;
+#X obj 665 162 s fader-4;
+#X obj 665 30 r reset-faders;
+#X floatatom 605 12 5 0 0 0 - fader-init - 0;
+#X msg 605 35 set \$1;
+#X obj 9 242 catch~ mixer-0;
+#X msg 665 54 0.5;
+#X connect 15 0 26 0;
+#X connect 18 0 33 0;
+#X connect 19 0 34 0;
+#X connect 20 0 16 0;
+#X connect 21 0 17 0;
+#X connect 22 0 19 0;
+#X connect 23 0 18 0;
+#X connect 25 0 20 0;
+#X connect 26 0 29 0;
+#X connect 26 0 29 1;
+#X connect 27 0 21 0;
+#X connect 33 0 29 0;
+#X connect 34 0 29 1;
+#X connect 35 0 36 0;
+#X connect 36 0 37 0;
+#X connect 43 0 47 0;
+#X connect 44 0 45 0;
+#X connect 45 0 47 0;
+#X connect 46 0 15 0;
+#X connect 47 0 42 0;
+#X connect 47 0 41 0;
+#X connect 47 0 40 0;
+#X connect 47 0 39 0;
+#X connect 47 0 38 0;
+#X coords 0 -1 1 1 280 210 1 10 10;

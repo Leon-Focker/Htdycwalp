@@ -1,0 +1,16 @@
+#N canvas 441 264 939 589 12;
+#X obj 0 0 cnv 15 550 350 empty empty How\\\ to\\\ disentrain\\\ your\\\ cat\\\ with\\\ a\\\ laser\\\ pointer
+20 12 0 18 #dfdfdf #202020 0;
+#X obj 405 50 program;
+#X obj 21 43 triggers;
+#X obj 21 123 outputs;
+#X obj 472 65 init;
+#X obj 339 138 tgl 45 0 mute-all-inverted global-mute MUTE 0 -7 0 20
+#ff342f #000000 #000000 0 1;
+#X floatatom 411 160 10 0 1 2 Fader\ init - fader-init 16;
+#X text 308 192 Navigate through the cues with \; the 'triggers' section
+\; In the 'trigger-input' section \; you can set a key or midi input
+\; to progress through the cues \; 'reset' resets everything for the
+\; beginning of the piece \, also the \; faders. To set that initial
+fader \; value \, use 'fader init' \;;
+#X text 171 414 Todo: explain routing;

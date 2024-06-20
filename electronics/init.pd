@@ -1,0 +1,18 @@
+#N canvas 1044 510 489 246 12;
+#X obj 64 31 s init;
+#X obj 140 31 samplerate~;
+#X obj 140 55 s samplerate;
+#X obj 9 31 s reset;
+#X obj 277 6 r reset;
+#X obj 9 7 loadbang;
+#X obj 140 7 r init;
+#X obj 140 110 s global-mute;
+#X msg 140 88 0;
+#X obj 277 30 s reset-faders;
+#X connect 1 0 2 0;
+#X connect 4 0 9 0;
+#X connect 5 0 3 0;
+#X connect 5 0 0 0;
+#X connect 6 0 1 0;
+#X connect 6 0 8 0;
+#X connect 8 0 7 0;
