@@ -131,61 +131,122 @@
 
 ;; using samp0 to resample and adjust for tempo 64
 (wsound "minute_5"
-  (sound-let
-      ((tempo-60 ()
-		 (let* ((sound-list (reverse (data (getf *soundfiles* :noise))))
-			(sound-list1 (reverse (data (getf *soundfiles* :percussive))))
-			(cnt 0))
-		   (multiple-value-bind (start-times score-indisp score-rhythm score-srt
-					 score-amp score-time-mult)
-		       (interpret-tape (first (layers (fifth (access-minutes)))))
-		     (declare (ignore score-rhythm score-srt score-amp))
-		     (fplay 0 60
-			    (indisp-fun (funcall score-indisp 'time time))
-			    (rhythm (case (funcall indisp-fun (* time .25))
-				      ((0 1 2) 1/13)
-				      ((3 4 5 6 7) .1)
-				      ((8 9) 1/12)
-				      (t .25))
-				    (* rhythm 1.001)
-				    (case (funcall indisp-fun (* time .25))
-				      ((0 1) (+ 18/13))
-				      ((2 3 4 5 6 7) 2/13)
-				      ((8 9) 1/13)
-				      (t 15/13))
-				    (case (funcall indisp-fun (* time .25))
-				      ((0 1) (+ 17/13))
-				      ((2 3 4 5 6 7) 1/13)
-				      ((8 9) 2/13)
-				      (t 16/13)))
-			    (stub (case (funcall indisp-fun (* time 1/5)) ;; change sound?
-				    ((0 1 2 3) (incf cnt)))
-				  ;; "quantise" time to 1/8th of a second:
-				  (when (or (<= 13 time 24) (<= 44 time 48))
-				    (setf rhythm (+ 1/8 (- (/ (ceiling (* time 8)) 8) time))
-					  rhythm2 (+ 1/8 (- (/ (ceiling (* time2 8)) 8) time2)))))
-			    (sound (nth-mod cnt (if (or (<= 24 time 34) (<= 44 time)) sound-list1 sound-list)))
-			    (start (/ (peak-index sound) 48000))
-			    (amp-mult (if (<= 44 time) (/ 1 (peak sound)) 1))	     
+  (resample 64/60
+    (let* ((sound-list (reverse (data (getf *soundfiles* :noise))))
+	   (sound-list1 (reverse (data (getf *soundfiles* :percussive))))
+	   (cnt 0))
+      (multiple-value-bind (start-times score-indisp score-rhythm score-srt
+			    score-amp score-time-mult)
+	  (interpret-tape (first (layers (fifth (access-minutes)))))
+	(declare (ignore score-rhythm score-srt score-amp))
+	(fplay 0 60
+	       (indisp-fun (funcall score-indisp 'time time))
+	       (rhythm (case (funcall indisp-fun (* time .25))
+			 ((0 1 2) 1/13)
+			 ((3 4 5 6 7) .1)
+			 ((8 9) 1/12)
+			 (t .25))
+		       (* rhythm 1.001)
+		       (case (funcall indisp-fun (* time .25))
+			 ((0 1) (+ 18/13))
+			 ((2 3 4 5 6 7) 2/13)
+			 ((8 9) 1/13)
+			 (t 15/13))
+		       (case (funcall indisp-fun (* time .25))
+			 ((0 1) (+ 17/13))
+			 ((2 3 4 5 6 7) 1/13)
+			 ((8 9) 2/13)
+			 (t 16/13)))
+	       (stub (case (funcall indisp-fun (* time 1/5)) ;; change sound?
+		       ((0 1 2 3) (incf cnt)))
+		     ;; "quantise" time to 1/8th of a second:
+		     (when (or (<= 13 time 24) (<= 44 time 48))
+		       (setf rhythm (+ 1/8 (- (/ (ceiling (* time 8)) 8) time))
+			     rhythm2 (+ 1/8 (- (/ (ceiling (* time2 8)) 8) time2)))))
+	       (sound (nth-mod cnt (if (or (<= 24 time 34) (<= 44 time)) sound-list1 sound-list)))
+	       (start (/ (peak-index sound) 48000))
+	       (amp-mult (if (<= 44 time) (/ 1 (peak sound)) 1))	     
 
-			    (srt-mod (section-val time
-						  (nth-mod 0 start-times) 1
-						  (nth-mod 1 start-times) 2
-						  (nth-mod 2 start-times) .8
-						  (nth-mod 3 start-times) 1))
-			    (srt (interpolate (* line srt-mod) '(0 .5  1 8) :warn nil)
-				 srt
-				 5)
-			    (duration 0.01)
-			    (time-mult (funcall (funcall score-time-mult time)))
-			    (amp (if (or (<= 44 time 48) (> time 58))
-				     1
-				     (* 1/13 (1+ (funcall indisp-fun (mod (* time time-mult) 1)))
-					(/ 1 (peak sound))))
-				 amp
-				 (if (<= time3 48) amp 0))
-			    (degree 0 90 30 60))))))
-    (samp0 tempo-60 0 :amp 1 :srt 64/60)))
+	       (srt-mod (section-val time
+				     (nth-mod 0 start-times) 1
+				     (nth-mod 1 start-times) 2
+				     (nth-mod 2 start-times) .8
+				     (nth-mod 3 start-times) 1))
+	       (srt (interpolate (* line srt-mod) '(0 .5  1 8) :warn nil)
+		    srt
+		    5)
+	       (duration 0.008)
+	       (time-mult (funcall (funcall score-time-mult time)))
+	       (amp (if (or (<= 44 time 48) (> time 58))
+			1
+			(* 1/13 (1+ (funcall indisp-fun (mod (* time time-mult) 1)))
+			   (/ 1 (peak sound))))
+		    amp
+		    (if (<= time3 48) amp 0))
+	       (degree 0 90 30 60))))))
+
+
+;; PD version in two parts:
+(loop for part from 1 to 2 do
+  (wsound (format nil "minute_5_~a" part)
+    (resample 64/60 '(0 1 2) '(0 120 240)
+      (let* ((sound-list (reverse (data (getf *soundfiles* :noise))))
+	     (sound-list1 (reverse (data (getf *soundfiles* :percussive))))
+	     (cnt 0))
+	(multiple-value-bind (start-times score-indisp score-rhythm score-srt
+			      score-amp score-time-mult)
+	    (interpret-tape (first (layers (fifth (access-minutes)))))
+	  (declare (ignore score-rhythm score-srt score-amp))
+	  (fplay 0 (if (= part 2) 80 60)
+		 (indisp-fun (funcall score-indisp 'time time))
+		 (rhythm (case (funcall indisp-fun (* time .25))
+			   ((0 1 2) 1/13)
+			   ((3 4 5 6 7) .1)
+			   ((8 9) 1/12)
+			   (t .25))
+			 (* rhythm 1.001)
+			 (case (funcall indisp-fun (* time .25))
+			   ((0 1) (+ 18/13))
+			   ((2 3 4 5 6 7) 2/13)
+			   ((8 9) 1/13)
+			   (t 15/13))
+			 (case (funcall indisp-fun (* time .25))
+			   ((0 1) (+ 17/13))
+			   ((2 3 4 5 6 7) 1/13)
+			   ((8 9) 2/13)
+			   (t 16/13)))
+		 (stub (case (funcall indisp-fun (* time 1/5)) ;; change sound?
+			 ((0 1 2 3) (incf cnt)))
+		       ;; "quantise" time to 1/8th of a second:
+		       (when (= part 2) ;;(or (<= 13 time 24) (<= 44 time 48))
+			 (setf rhythm (+ 1/8 (- (/ (ceiling (* time 8)) 8) time))
+			       rhythm2 (+ 1/8 (- (/ (ceiling (* time2 8)) 8) time2)))))
+		 (sound (nth-mod cnt (if (or (<= 24 time 34) (<= 44 time) (= part 2))
+					 sound-list1 sound-list)))
+		 (start (/ (peak-index sound) 48000))
+		 (amp-mult (if (<= 44 time) (/ 1 (peak sound)) 1))	     
+
+		 (srt-mod (section-val time
+				       (nth-mod 0 start-times) 1
+				       (nth-mod 1 start-times) 2
+				       (nth-mod 2 start-times) .8
+				       (nth-mod 3 start-times) 1))
+		 (srt (interpolate (* line srt-mod) '(0 .5  1 8) :warn nil)
+		      srt
+		      5)
+		 (duration 0.008)
+		 (time-mult (funcall (funcall score-time-mult time)))
+		 (amp (if (or (<= 44 time 48) (> time 58) (= part 2))
+		      	  1
+		      	  (* 1/13 (1+ (funcall indisp-fun (mod (* time time-mult) 1)))
+		      	     (/ 1 (peak sound))))
+		      amp
+		      (if (<= time3 48) amp 0))
+		 (out-channels 3)
+		 (degree 0 180 120 240)))))))
+
+(unpack_3chan_file "minute_5_1")
+(unpack_3chan_file "minute_5_2")
 
 ;; ** minute 6
 
