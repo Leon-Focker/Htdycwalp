@@ -151,12 +151,12 @@
 ;; 		   (format nil "~a~a" +ens-src-dir+ "test.png") 1 nil)
 
 ;; *** write entire score
-(lists-to-xml (interpret-minutes (access-minutes))
-	      (format nil "~a~a" +ens-src-dir+ "Score_from_Lisp.xml")
-	      :tempo 60
-	      :time-sig '(4 4)
-	      :print-rehearsal-letters t
-	      :set-new-dynamics t)
+;; (lists-to-xml (interpret-minutes (access-minutes))
+;; 	      (format nil "~a~a" +ens-src-dir+ "Score_from_Lisp.xml")
+;; 	      :tempo 60
+;; 	      :time-sig '(4 4)
+;; 	      :print-rehearsal-letters t
+;; 	      :set-new-dynamics t)
 
 ;; *** generate patterns and alternative versions
 
