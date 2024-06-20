@@ -322,26 +322,57 @@
 
 ;; rthm = 1/13, rqq rhythm with 13 divisions
 ;; difference in amplitude is increased, until smaller amp values go into the negative
-(wsound "minute_7"
-  (let* ((sound-list (reverse (data (getf *soundfiles* :noise)))))
+(wsound "minute_7_sides"
+  (let* ((sound-list (reverse (data (getf *soundfiles* :noise))))
+	 (end-time 60))
     (multiple-value-bind (start-times score-indisp score-rhythm score-srt
 			  score-amp score-time-mult)
 	(interpret-tape (first (layers (seventh (access-minutes)))))
-      (setf *test* score-indisp)
-      (fplay 0 60
-	    (sound (nth 6 sound-list))
-	    (rhythm 1/13 3/13)
-	    (indisp-fun (funcall score-indisp 'time time))
-	    (srt .5)
-	    (duration .01)
-	    (tim-mult (+ 1 (* line 5)))
-	    (dynamics (interpolate (min time 60) score-amp)
-		      (interpolate (min time2 60) score-amp))
-	    (amp (* (- 1 (* (1+ (funcall indisp-fun (mod time 1))) (+ .05 (* line .125))))
-		    dynamics)
-		 (* (- 1 (* (1+ (funcall indisp-fun (mod time2 1))) (+ .05 (* line2 .125))))
-		    dynamics))
-	    (degree 0 90)))))
+      (declare (ignore start-times score-rhythm score-srt score-time-mult))
+      (fplay 0 end-time
+	     (sound (nth 6 sound-list))
+	     (rhythm 1/13 3/13)
+	     (indisp-fun (funcall score-indisp 'time time))
+	     (srt .5)
+	     (duration .01)
+	     (dynamics (interpolate (min time 60) score-amp)
+		       (interpolate (min time2 60) score-amp))
+	     (amp (* (- 1 (* (1+ (funcall indisp-fun (mod time 1)))
+			     (+ .05 (* (min (* line (/ end-time 60)) 1) .125))))
+		     dynamics)
+		  (* (- 1 (* (1+ (funcall indisp-fun (mod time2 1)))
+			     (+ .05 (* (min (* line2 (/ end-time 60)) 1) .125))))
+		     dynamics))
+	     (degree 0 90)))))
+
+;; mostly the same as above but altered to add a mess on mid channel.
+(wsound "minute_7_mid"
+  (let* ((sound-list (reverse (data (getf *soundfiles* :noise))))
+	 (end-time 80))
+    (multiple-value-bind (start-times score-indisp score-rhythm score-srt
+			  score-amp score-time-mult)
+	(interpret-tape (first (layers (seventh (access-minutes)))))
+      (declare (ignore start-times score-rhythm score-srt score-time-mult score-amp))
+      (fplay 0 end-time
+	     (sound (nth 6 sound-list))
+	     (rhythm 1/12 1/14 1/20) ;;(rhythm 2/13 4/13 3/26)
+	     (indisp-fun (funcall score-indisp 'time time))
+	     (srt .5)
+	     (duration .008)
+	     (dynamics (min (* line (/ end-time 60)) 1)
+		       (max (min (- (* (min (* line2 (/ end-time 60)) 1) 1.5) .5) 1) 0)
+		       (max (min (- (* (min (* line3 (/ end-time 60)) 1) 2) .7) 1) 0))
+	     (amp (* (- 1 (* (1+ (funcall indisp-fun (mod time 1)))
+			     (+ .05 (* (min (* line (/ end-time 60)) 1) .125))))
+		     dynamics)
+		  (* (* (1+ (funcall indisp-fun (mod time2 1)))
+			(+ .05 (* (min (* line2 (/ end-time 60)) 1) .125)))
+		     dynamics2)
+		  (* (- 1 (* (1+ (funcall indisp-fun (mod time2 1)))
+			     (+ .05 (* (min (* line3 (/ end-time 60)) 1) .125))))
+		     dynamics3))
+	     (out-channels 1)
+	     (degree 0)))))
 
 ;; ** minute 8
 
