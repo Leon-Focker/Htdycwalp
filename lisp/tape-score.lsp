@@ -378,12 +378,14 @@
 
 ;; start with rthm = 1/13 and an rqq rhythm with 13 divisions
 ;; left channel accelerates (sides) while right channel decelerates (mid)
-(wsound "minute_8"
+(wsounds "minute_8" 
   (let* ((sound-list (reverse (data (getf *soundfiles* :noise)))))
     (multiple-value-bind (start-times score-indisp score-rhythm score-srt
 			  score-amp score-time-mult)
 	(interpret-tape (first (layers (eighth (access-minutes)))))
-      (fplay 0 60
+      (declare (ignore start-times score-rhythm score-srt score-time-mult
+		       score-amp))
+      (fplay 0 90
 	     (sound (nth 6 sound-list))
 	     (rhythm (* (/ 1 13) (- 1 (* .5 line)))
 		     (* (/ 1 13) (+ 1 (* 1 line))))
@@ -391,11 +393,16 @@
 	     (srt .5)
 	     (duration .01)
 	     (tim-mult (+ 1 (* line 5)))
-	     (dynamics (interpolate (min time 60) score-amp)
-		      (interpolate (min time2 60) score-amp))
+	     ;; do the volume automation manually in PD
+	     ;; (dynamics (interpolate (min time 60) score-amp)
+	     ;; 	       (interpolate (min time2 60) score-amp))
+	     (dynamics 1 1)
 	     (amp (* (/ 1 (1+ (funcall indisp-fun (mod time 1)))) dynamics)
 		  (* (/ 1 (1+ (funcall indisp-fun (mod time2 1)))) dynamics2))
-	     (degree 0 90)))))
+	     (out-channels 3)
+	     (degree 180 0)))))
+
+(unpack_3chan_file "minute_8")
 
 ;; ** minute 9
 
