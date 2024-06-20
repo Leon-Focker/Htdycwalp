@@ -2,6 +2,8 @@
 
 (in-package :ly)
 
+(load (format nil "~a~a" +ens-src-dir+ "score.lsp"))
+
 ;; ** minute 1
 ;; simple, steady pulse train
 ;; rthm = 1/13, rqq rhythm with 13 equal divisions
@@ -25,7 +27,8 @@
 	     (amp (funcall (sections 0  (dry-wet 0.9 amp-val (* line 2))
 				     30 amp-val)
 			   time))
-	     (degree 45)))))
+	     (out-channels 1)
+	     (degree 0)))))
 
 ;; ** minute 2
 ;; simple, steady pulse train
@@ -49,7 +52,8 @@
 	     (amp (funcall (sections 0  .9
 				     (* 8/13 60) amp-val)
 			   time))
-	     (degree 45)))))
+	     (out-channels 1)
+	     (degree 0)))))
 
 ;; ** minute 3
 
@@ -71,7 +75,8 @@
 	     (amp (dry-wet (* (interpolate (min time 60) score-amp) amp-val)
 			   .9
 			   (max (- 1 (* line 3)) 0)))
-	     (degree 45)))))
+	     (out-channels 1)
+	     (degree 0)))))
 
 ;; ** minute 4
 
