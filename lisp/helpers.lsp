@@ -327,7 +327,7 @@
 ;; ** clm-macros
 
 ;; (defmacro wsound (name &body body)
-;; `(with-sound (:header-type clm::mus-riff :samplingq-rate 48000
+;; `(with-sound (:header-type clm::mus-riff :sampling-rate 48000
 ;; 	      :output (format nil "~a~a~a" +ens-src-dir+ ,name ".wav")
 ;; 	      :channels 2 :play nil :scaled-to 0.98
 ;; 	      :force-recomputation nil)
@@ -342,7 +342,7 @@
       (setf out-channels
 	    (parse-integer (subseq body-string (+ index1 13) index2)))
       (format t "~&set number of channels for ~a to ~a" name out-channels))
-    `(with-sound (:header-type clm::mus-riff :samplingq-rate 48000
+    `(with-sound (:header-type clm::mus-riff :sampling-rate 48000
 		  :output (format nil "~a~a~a" +ens-src-dir+ ,name ".wav")
 		  :channels ,out-channels :play nil :scaled-to 0.98
 		  :force-recomputation nil)
@@ -350,13 +350,13 @@
 
 (defmacro unpack_3chan_file (name)
   `(progn
-     (with-sound (:header-type clm::mus-riff :samplingq-rate 48000
+     (with-sound (:header-type clm::mus-riff :sampling-rate 48000
  		  :output (format nil "~a~a~a" +ens-src-dir+ ,name "_mid.wav")
  		  :channels 1 :play nil :scaled-to 0.98
  		  :force-recomputation nil)
        (samp0 (format nil "~a~a~a" +ens-src-dir+ ,name ".wav") 0 :out-channels 1
 								 :channel 0))
-     (with-sound (:header-type clm::mus-riff :samplingq-rate 48000
+     (with-sound (:header-type clm::mus-riff :sampling-rate 48000
  		  :output (format nil "~a~a~a" +ens-src-dir+ ,name "_sides.wav")
  		  :channels 2 :play nil :scaled-to 0.98
  		  :force-recomputation nil)
