@@ -459,7 +459,6 @@
 	     (sound (nth 6 sound-list))
 	     (rhythm (funcall (funcall score-rhythm time) 'line line))
 	     (indisp-fun (funcall score-indisp 'time time))
-	     (indisp-fun (lambda (x) x))
 	     (duration .01)
 	     (tim-mult (- 5 (* line 2.5)))
 	     (amp-val (* 1/13 (1+ (funcall indisp-fun (mod (* time tim-mult) 1)))))
@@ -474,16 +473,15 @@
     (multiple-value-bind (start-times score-indisp score-rhythm score-srt
 			  score-amp score-time-mult)
 	(interpret-tape (first (layers (nth 10 (access-minutes)))))
-      (fplay 0 60
+	(declare (ignore start-times score-amp score-time-mult score-srt
+			 score-rhythm))
+	(fplay 0 80
 	     (sound (nth 6 sound-list))
-	     (rhythm (funcall (funcall score-rhythm time) 'line line))
-	     (indisp-fun (funcall score-indisp 'time time))
-	     (indisp-fun (lambda (x) x))
 	     (duration .01)
-	     (tim-mult (- 5 (* line 2.5)))
-	     (amp-val (* 1/13 (1+ (funcall indisp-fun (mod (* time tim-mult) 1)))))
-	     (srt (funcall (funcall score-srt time) 'amp-val amp-val 'line line))
-	     (amp (* (interpolate time score-amp) amp-val))
+	     (rhythm (* 1/20 (1+ (* line 13))))
+	     (indisp-fun (funcall score-indisp 'time time))
+	     (tim-mult (- 5 (* line .5)))
+	     (amp (* 1/13 (1+ (funcall indisp-fun (mod (* time tim-mult) 1)))))
 	     (degree 45)))))
 
 ;; EOF tape-score.lsp
