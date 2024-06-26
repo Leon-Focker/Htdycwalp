@@ -250,6 +250,8 @@
 
 ;; ** minute 6
 
+;; original version, no longer needed
+#|
 (wsound "minute_6"
   (let* ((sound-list (reverse (data (getf *soundfiles* :noise))))
 	 (sound-list1 (reverse (data (getf *soundfiles* :percussive)))))
@@ -316,7 +318,281 @@
 			       0 0
 			       24 (- 1 (* amp3 20))
 			       40 0))
-	     (degree 0 0 90 45)))))
+	     (out-channels 3)
+	     (degree 120 120 240 0)))))
+|#
+
+;; *** minute 6 part 1
+
+;;; different rhythms and sounds
+(wsound "minute_6_1"
+  (let* ((sound-list1 (reverse (data (getf *soundfiles* :percussive)))))
+    (multiple-value-bind (start-times score-indisp score-rhythm score-srt
+			  score-amp score-time-mult)
+	(interpret-tape (first (layers (sixth (access-minutes)))))
+      (declare (ignore start-times score-time-mult))
+      (fplay 0 80
+	     (dynamics (interpolate (min time 60) score-amp))
+	     (rhythm (if (< time 4)
+			 .25
+		       (funcall (funcall score-rhythm (cond ((< 36 time 48) 30)
+							    ((> time 50) (+ time 8))
+							    (t time)))
+				'line line))
+		     rhythm
+		     rhythm)
+	     (indisp-fun (funcall score-indisp 'time time))
+	     (sound (nth 6 sound-list1))
+	     (duration 0.1)
+	     (tim-mult (- 5 (* line 2.5)))
+	     (amp-val (* 1/13 (1+ (funcall indisp-fun (mod (* time tim-mult) 1))))
+		      amp-val
+		      (- 1 amp-val))
+	     (srt (funcall (funcall score-srt time) 'amp-val amp-val 'line line)
+		  2
+ 		  1)
+	     (amp (if (> time 36) (* 1 amp-val (- 1 dynamics)) (* amp-val dynamics))
+		  amp
+		  (* 1 amp-val3 (- 1 dynamics))) 
+	     (out-channels 3)
+	     (degree 0 240 120)))))
+
+(unpack_3chan_file "minute_6_1")
+
+;; *** minute 6 part 2
+
+;;; background noise
+(wsound "minute_6_2"
+  (let* (;(sound-list (reverse (data (getf *soundfiles* :noise))))
+	 (sound-list1 (reverse (data (getf *soundfiles* :percussive)))))
+    (multiple-value-bind (start-times score-indisp score-rhythm score-srt
+			  score-amp score-time-mult)
+	(interpret-tape (first (layers (sixth (access-minutes)))))
+      (declare (ignore start-times score-time-mult score-srt))
+      (fplay 0 80
+	     (dynamics (interpolate (min time 60) score-amp))
+	     (rhythm (* 3/13 (mirrors (abs (sin (* time 1/2))) .2 1)))
+	     (indisp-fun (funcall score-indisp 'time time))
+	     (sound (nth 6 sound-list1))
+	     (duration .2)
+	     (tim-mult line)
+	     (amp-val (* 1/13 (1+ (funcall indisp-fun (mod (* time tim-mult) 1))))
+		      amp-val
+		      (- 1 amp-val))
+	     (srt 23 25 24 1)
+	     (start (* (- (mirrors line 0 4/5) 2/3) .2))
+	     (amp (* amp-val dynamics .0007)
+		  amp
+		  (* .07 amp-val3 (- 1 dynamics) .007)
+		  0)
+	     (out-channels 3)
+	     (degree 240 120 0)))))
+
+(unpack_3chan_file "minute_6_2")
+
+;; *** minute 6 part 3
+
+#|
+(wsound "minute_6_3"
+  (let* (;(sound-list (reverse (data (getf *soundfiles* :noise))))
+	 (sound-list1 (reverse (data (getf *soundfiles* :percussive)))))
+    (multiple-value-bind (start-times score-indisp score-rhythm score-srt
+			  score-amp score-time-mult)
+	(interpret-tape (first (layers (sixth (access-minutes)))))
+      (declare (ignore start-times score-time-mult score-srt))
+      (fplay 0 80
+	     (dynamics (interpolate (min time 60) score-amp))
+	     (rhythm (* 3/13 (mirrors (abs (sin (* time 1/2))) .2 1)))
+	     (indisp-fun (funcall score-indisp 'time time))
+	     (sound (nth 6 sound-list1))
+	     (duration .2)
+	     (tim-mult line)
+	     (amp-val (* 1/13 (1+ (funcall indisp-fun (mod (* time tim-mult) 1))))
+		      amp-val
+		      (- 1 amp-val))
+	     (srt 1 25 24 1)
+	     (start (* (- (mirrors line 0 4/5) 2/3) .2))
+	     (amp (* amp-val .0007)
+		  amp
+		  (* .07 amp-val3 .007))
+	     (out-channels 3)
+	     (degree 240 120 0)))))
+
+(unpack_3chan_file "minute_6_3")
+|#
+
+;; *** minute 6 part 4
+
+;;; rhythmic pattern that dissovles 
+
+(wsound "minute_6_4_1"
+  (let* ((sound-list1 (reverse (data (getf *soundfiles* :percussive))))
+	 (pattern '(0 0 1 1 1 1 0 0 0 1 0 1 1 0 0 1)))
+    (multiple-value-bind (start-times score-indisp score-rhythm score-srt
+			  score-amp score-time-mult)
+ 	(interpret-tape (first (layers (sixth (access-minutes)))))
+      (declare (ignore start-times score-time-mult score-indisp score-rhythm))
+      (fplay 0 80
+	     (dynamics (interpolate (min time 60) score-amp))
+	     (rhythm .125 .25 (if (< time 30) .125 (* .125 (1+ (* (- line .5) .1)))))
+	     (indisp-fun (lambda (x) (nth-mod (round x) pattern)))
+	     (sound (nth 6 sound-list1))
+	     (duration 0.1)
+	     (tim-mult (- 5 (* line 2.5)))
+	     (amp-val (* 1/13 (1+ (funcall indisp-fun (mod (* time tim-mult) 1)))))
+	     (srt 2
+		  (mirrors (funcall (funcall score-srt time) 'amp-val amp-val 'line line) .25 1)
+ 		  1)
+	     (amp (funcall indisp-fun (* time (/ 1 rhythm)))
+		  (funcall indisp-fun (* time2 (/ 1 rhythm2)))
+		  (funcall indisp-fun (* time3 (/ 1 rhythm3)))) 
+	     (out-channels 3)
+	     (degree 120 0 240)))))
+
+(unpack_3chan_file "minute_6_4_1")
+
+;;; minute_6_4_1" but with clicks
+(wsound "minute_6_4_2"
+  (let* ((sound-list1 (reverse (data (getf *soundfiles* :percussive))))
+	 (sound-list (reverse (data (getf *soundfiles* :noise))))
+	 (pattern '(0 0 1 1 1 1 0 0 0 1 0 1 1 0 0 1)))
+    (multiple-value-bind (start-times score-indisp score-rhythm score-srt
+			  score-amp score-time-mult)
+	(interpret-tape (first (layers (sixth (access-minutes)))))
+      (declare (ignore start-times score-time-mult score-indisp score-rhythm))
+      (fplay 0 80
+	     (dynamics (interpolate (min time 60) score-amp))
+	     (rhythm .25 .125 (if (< time 30) .25 (* .25 (1+ (* (- line .5) .1)))))
+	     (indisp-fun (lambda (x) (nth-mod (round x) pattern)))
+	     (sound (nth 6 sound-list))
+	     (duration 0.01)
+	     (tim-mult (- 5 (* line 2.5)))
+	     (amp-val (* 1/13 (1+ (funcall indisp-fun (mod (* time tim-mult) 1)))))
+	     (srt .5
+		  (funcall (funcall score-srt time) 'amp-val amp-val 'line line)
+ 		  1)
+	     (amp (funcall indisp-fun (* time (/ 1 rhythm)))
+		  (funcall indisp-fun (* time2 (/ 1 rhythm2)))
+		  (funcall indisp-fun (* time3 (/ 1 rhythm3)))) 
+	     (out-channels 3)
+	     (degree 120 0 240)))))
+
+(unpack_3chan_file "minute_6_4_2")
+
+;; *** minute 6 part 5
+
+;;; rhythmic pattern that dissovles faster than 6_4_1
+(wsound "minute_6_5_1"
+  (let* ((sound-list1 (reverse (data (getf *soundfiles* :percussive))))
+	 (pattern '(0 0 1 1 1 1 0 0 0 1 0 1 1 0 0 1)))
+    (multiple-value-bind (start-times score-indisp score-rhythm score-srt
+			  score-amp score-time-mult)
+	(interpret-tape (first (layers (sixth (access-minutes)))))
+      (declare (ignore start-times score-time-mult score-indisp score-rhythm
+		       score-srt))
+      (fplay 0 60
+	     (dynamics (interpolate (min time 60) score-amp))
+	     (rhythm .125
+		     (if (< time 5) .25 (* .25 (1+ (* (- line 5/60) .1))))
+		     (if (< time 5) .125 (* .125 (1+ (* (- line 5/60) .15)))))
+	     (indisp-fun (lambda (x) (nth-mod (round x) pattern)))
+	     (sound (nth 6 sound-list1))
+	     (duration 0.1)
+	     (tim-mult (- 5 (* line 2.5)))
+	     (amp-val (* 1/13 (1+ (funcall indisp-fun (mod (* time tim-mult) 1)))))
+	     (srt (mirrors (sin (* line 10)) 1 3)
+		  (mirrors (sin (* line2 36)) .25 1)
+ 		  (mirrors (sin (* line3 25)) .75 1.5))
+	     (amp (funcall indisp-fun (* time (/ 1 rhythm)))
+		  (funcall indisp-fun (* time2 (/ 1 rhythm2)))
+		  (funcall indisp-fun (* time3 (/ 1 rhythm3)))) 
+	     (out-channels 3)
+	     (degree 120 0 240)))))
+
+(unpack_3chan_file "minute_6_5_1")
+
+;;; minute_6_5_1" but with clicks
+(wsound "minute_6_5_2"
+  (let* ((sound-list1 (reverse (data (getf *soundfiles* :percussive))))
+	 (sound-list (reverse (data (getf *soundfiles* :noise))))
+	 (pattern '(0 0 1 1 1 1 0 0 0 1 0 1 1 0 0 1)))
+    (multiple-value-bind (start-times score-indisp score-rhythm score-srt
+			  score-amp score-time-mult)
+	(interpret-tape (first (layers (sixth (access-minutes)))))
+      (declare (ignore start-times score-time-mult score-indisp score-rhythm))
+      (fplay 0 60
+	     (dynamics (interpolate (min time 60) score-amp))
+	     (rhythm (if (< time 5) .25 (* .25 (1+ (* (- line 5/60) .2))))
+		     (if (< time 5) .125 (* .125 (1+ (* (- line 5/60) .09))))
+		     .25)
+	     (indisp-fun (lambda (x) (nth-mod (round x) pattern)))
+	     (sound (nth 6 sound-list))
+	     (duration 0.01)
+	     (tim-mult (- 5 (* line 2.5)))
+	     (amp-val (* 1/13 (1+ (funcall indisp-fun (mod (* time tim-mult) 1)))))
+	     (srt .5
+		  (funcall (funcall score-srt time) 'amp-val amp-val 'line line)
+ 		  1)
+	     (amp (funcall indisp-fun (* time (/ 1 rhythm)))
+		  (funcall indisp-fun (* time2 (/ 1 rhythm2)))
+		  (funcall indisp-fun (* time3 (/ 1 rhythm3)))) 
+	     (out-channels 3)
+	     (degree 120 0 240)))))
+
+(unpack_3chan_file "minute_6_5_2")
+
+#|
+(wsound "minute_6_5"
+  (let* ((sound-list (reverse (data (getf *soundfiles* :noise))))
+	 (sound-list1 (reverse (data (getf *soundfiles* :percussive)))))
+    (multiple-value-bind (start-times score-indisp score-rhythm score-srt
+			  score-amp score-time-mult)
+	(interpret-tape (first (layers (sixth (access-minutes)))))
+      (declare (ignore start-times score-time-mult))
+      (fplay 0 60
+	     (magic 10 13 16)
+	     (test (< (mod time magic) 2.5)
+		   (< (mod time2 magic2) 2)
+		   (< (mod time3 magic3) 3))
+	     (duration .01)
+	     (srt 0.5)
+	     (sound (if test (nth 6 sound-list) (nth 6 sound-list1))
+		    (if test2 (nth 6 sound-list) (nth 6 sound-list1))
+		    (if test3 (nth 6 sound-list) (nth 6 sound-list1)))
+	     (rhythm (if test 1/13 1/6)
+		     (if test2 1/13 1/6)
+		     (if test3 1/13 1/6))
+	     (amp (if test 1 1/600)
+		  (if test2 1 1/600)
+		  (if test3 1 1/600))
+	     (out-channels 3)
+	     (degree 0 120 240)))))
+|#
+
+(wsound "minute_6_5_3"
+  (let* ((sound-list (reverse (data (getf *soundfiles* :noise))))
+	 (sound-list1 (reverse (data (getf *soundfiles* :percussive)))))
+    (multiple-value-bind (start-times score-indisp score-rhythm score-srt
+			  score-amp score-time-mult)
+	(interpret-tape (first (layers (sixth (access-minutes)))))
+      (declare (ignore start-times score-time-mult score-indisp score-rhythm
+			 score-srt score-amp))
+      (fplay 0 60
+	     (magic 10 13 16)
+	     (test (< (mod time magic) 2.5)
+		   (< (mod time2 magic2) 2)
+		   (< (mod time3 magic3) 3))
+	     (duration .01)
+	     (srt 0.5)
+	     (sound (nth 6 sound-list))
+	     (rhythm 1/13 1/13 1/13)
+	     (amp (if test 1 0)
+		  (if test2 1 0)
+		  (if test3 1 0))
+	     (out-channels 3)
+	     (degree 0 120 240)))))
+
+(unpack_3chan_file "minute_6_5_3")
 
 ;; ** minute 7
 
