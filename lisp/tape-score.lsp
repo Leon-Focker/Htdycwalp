@@ -484,4 +484,22 @@
 	     (amp (* 1/13 (1+ (funcall indisp-fun (mod (* time tim-mult) 1)))))
 	     (degree 45)))))
 
+
+;;; reverse minute 11
+(wsound "minute_11_reverse"
+  (let* ((sound-list (reverse (data (getf *soundfiles* :noise)))))
+    (multiple-value-bind (start-times score-indisp score-rhythm score-srt
+			  score-amp score-time-mult)
+	(interpret-tape (first (layers (nth 10 (access-minutes)))))
+	(declare (ignore start-times score-amp score-time-mult score-srt
+			 score-rhythm))
+	(fplay 0 80
+	     (sound (nth 6 sound-list))
+	     (duration .01)
+	     (rhythm (* 1/20 (1+ (* (- 1 line) 13))))
+	     (indisp-fun (funcall score-indisp 'time time))
+	     (tim-mult (- 5 (* (- 1 line) .5)))
+	     (amp (* 1/13 (1+ (funcall indisp-fun (mod (* time tim-mult) 1)))))
+	     (degree 45)))))
+
 ;; EOF tape-score.lsp
