@@ -682,45 +682,59 @@
 
 ;; ** minute 9
 
-(wsound "minute_9"
-  (let* ((sound-list (reverse (data (getf *soundfiles* :noise)))))
-    (multiple-value-bind (start-times score-indisp score-rhythm score-srt
-			  score-amp score-time-mult)
-	(interpret-tape (first (layers (ninth (access-minutes)))))
-      (declare (ignore score-time-mult score-srt score-amp))
-      (fplay 0 90
-	     (sound (nth 6 sound-list))
-	     (duration .01)
-	     ;; start second voice 4.5 beats later, etc.
-	     (time 0 (* 4.5 60/72) (* 9.7 60/72))
-	     (rhythm (section-val
-		      time
-		      ;; first part
-		      (nth-mod 0 start-times)
-		      1
-		      ;; second part 
-		      (nth-mod 1 start-times)
-		      (funcall (funcall score-rhythm time)
-			       'line line)
-		      ;; quantising to 60 bpm (later adjust to 72)
-		      (nth-mod 2 start-times)
-		      (* (+ 60/72 (- (/ (ceiling (* time 72/60)) 72/60) time))
-			 72/60)
-		      ;; fourth part
-		      (+ (nth-mod 3 start-times) 10)
-		      (funcall (funcall score-rhythm time)
-			       'line line)))
-	     ;; adjust for tempo 72
-	     (stub (setf rhythm  (* rhythm  60/72))
-		   (when (< 30 time2 32) (setf time2 (+ time2 300/72)))
-		   (when (< 36 time3 38) (setf time3 (+ time3 100/72))))
-	     (indisp-fun (funcall score-indisp 'time time))
-	     (tim-mult (- 5 (* line 2.5)))
-	     (amp (* 1/13 (1+ (funcall indisp-fun (mod (* time tim-mult) 1)))))
-	     (out-channels 3)
-	     (degree 0 120 240)))))
+(loop for part from 0 to 1 do
+  (wsound (format nil "minute_9_~a" part)
+    (let* ((sound-list (reverse (data (getf *soundfiles* :noise)))))
+      (multiple-value-bind (start-times score-indisp score-rhythm score-srt
+			    score-amp score-time-mult)
+	  (interpret-tape (first (layers (ninth (access-minutes)))))
+	(declare (ignore score-time-mult score-srt score-amp))
+	(fplay 0 90
+	       (sound (nth 6 sound-list))
+	       (duration .01)
+	       ;; start second voice 4.5 beats later, etc.
+	       (time 0 (* 4.5 60/72) (* 9.7 60/72))
+	       (sect (section-val time
+				  (nth-mod 0 start-times)
+				  0
+				  (nth-mod 1 start-times)
+				  1
+				  (nth-mod 2 start-times)
+				  2
+				  (+ (nth-mod 3 start-times) 10)
+				  3))
+	       (test (if (or (= sect 1) (= sect 3)) 0 1))
+	       (mute-voice (if (= part 0) test (abs (1- test))))
+	       (rhythm (cond
+			 ;; first sect
+			 ((= sect 0)
+			  1)
+			 ;; second sect 
+			 ((= sect 1)
+			  (funcall (funcall score-rhythm time)
+				   'line line))
+			 ;; quantising to 60 bpm (later adjust to 72)
+			 ((= sect 2)
+			  (* (+ 60/72 (- (/ (ceiling (* time 72/60)) 72/60) time))
+			     72/60))
+			 ;; fourth sect
+			 ((= sect 3)
+			  (funcall (funcall score-rhythm time)
+				   'line line))))
+	     
+	       ;; adjust for tempo 72
+	       (stub (setf rhythm  (* rhythm  60/72))
+		     (when (< 30 time2 32) (setf time2 (+ time2 300/72)))
+		     (when (< 36 time3 38) (setf time3 (+ time3 100/72))))
+	       (indisp-fun (funcall score-indisp 'time time))
+	       (tim-mult (- 5 (* line 2.5)))
+	       (amp (* 1/13 (1+ (funcall indisp-fun (mod (* time tim-mult) 1)))
+		       mute-voice))
+	       (out-channels 3)
+	       (degree 0 120 240))))))
 
-(unpack_3chan_file "minute_9")
+(unpack_3chan_file "minute_9_0")
+(unpack_3chan_file "minute_9_1")
 
 ;; ** minute 10
 
