@@ -9,7 +9,7 @@
 ;; rthm = 1/13, rqq rhythm with 13 equal divisions
 ;; going slower through the indisp-function to get kind of iso-rhythmic
 ;; displacements.
-(wsound "minute_1"
+(wsound "minute_1_light"
   (let* ((sound-list (reverse (data (getf *soundfiles* :noise)))))
     (multiple-value-bind (start-times score-indisp score-rhythm score-srt
 			  score-amp score-time-mult)
@@ -24,9 +24,11 @@
 	     (duration .01)
 	     (tim-mult (- 5 (* line 2.5)))
 	     (amp-val (* 1/13 (1+ (funcall indisp-fun (mod (* time tim-mult) 1)))))
-	     (amp (funcall (sections 0  (dry-wet 0.9 amp-val (* line 2))
-				     30 amp-val)
-			   time))
+	     (amp (* (funcall (sections 0  (dry-wet 0.9 amp-val (* line 2))
+					30 amp-val)
+			      time)
+		     ;; set .3 to 1 for the "not light" version
+		     (if (= (mod i 2) 1) .3 1)))
 	     (out-channels 1)
 	     (degree 0)))))
 
@@ -35,7 +37,7 @@
 ;; rthm = 1/13, rqq rhythm with 13 equal divisions
 ;; going slower through the indisp-function to get kind of iso-rhythmic
 ;; displacements.
-(wsound "minute_2"
+(wsound "minute_2_light"
   (let* ((sound-list (reverse (data (getf *soundfiles* :noise)))))
     (multiple-value-bind (start-times score-indisp score-rhythm score-srt
 			  score-amp score-time-mult)
@@ -49,9 +51,11 @@
 	     (duration .01)
 	     (tim-mult (- 5 (* line 2.5))(- 5 (* line 2.5)))
 	     (amp-val (* 1/13 (1+ (funcall indisp-fun (mod (* time tim-mult) 1)))))
-	     (amp (funcall (sections 0  .9
+	     (amp (* (funcall (sections 0  .9
 				     (* 8/13 60) amp-val)
-			   time))
+			      time)
+		     ;; set .3 to 1 for the "not light" version
+		     (if (= (mod i 2) 1) .3 1))) 
 	     (out-channels 1)
 	     (degree 0)))))
 
