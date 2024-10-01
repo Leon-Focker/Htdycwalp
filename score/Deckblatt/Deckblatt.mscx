@@ -180,7 +180,7 @@
                 <offset x="200" y="-33.05"/>
                 <visible>0</visible>
                 <z>100</z>
-                <path>f6e1ba507c1c2a9fa04e0ef4a1ecd633.png</path>
+                <path>C:/Users/leonf/Desktop/Deckblatt.png</path>
                 <linkPath>C:/Users/leonf/Desktop/Deckblatt.png</linkPath>
                 <size w="169.653" h="240.08"/>
                 </Image>
@@ -245,7 +245,7 @@ WITH A LASER POINTER</text>
           <size>19</size>
           <align>center,top</align>
           <offset x="0" y="-3"/>
-          <text>For Large Ensemble</text>
+          <text>For Large Ensemble And Loudspeakers</text>
           </Text>
         </VBox>
       <VBox>
