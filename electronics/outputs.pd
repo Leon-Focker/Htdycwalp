@@ -61,7 +61,7 @@
 #X floatatom 605 12 5 0 0 0 - fader-init - 0;
 #X msg 605 35 set \$1;
 #X obj 9 242 catch~ mixer-0;
-#X msg 665 54 0.5;
+#X msg 665 54 1;
 #X obj 10 441 hip~ 1;
 #X obj 69 441 hip~ 4000;
 #X obj 198 441 hip~ 1;
@@ -95,7 +95,6 @@
 #X connect 47 0 39 0;
 #X connect 47 0 38 0;
 #X connect 48 0 29 0;
-#X connect 48 0 29 1;
-#X connect 50 0 29 0;
-#X connect 52 0 29 1;
+#X connect 50 0 29 1;
+#X connect 52 0 29 2;
 #X coords 0 -1 1 1 280 210 1 10 10;
